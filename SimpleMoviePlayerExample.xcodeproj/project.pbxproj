@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -15,6 +15,20 @@
 		DEA47540263F40AC00090DA5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DEA4753E263F40AC00090DA5 /* LaunchScreen.storyboard */; };
 		DEA4754B263F40AC00090DA5 /* SimpleMoviePlayerExampleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEA4754A263F40AC00090DA5 /* SimpleMoviePlayerExampleTests.swift */; };
 		DEA47556263F40AC00090DA5 /* SimpleMoviePlayerExampleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEA47555263F40AC00090DA5 /* SimpleMoviePlayerExampleUITests.swift */; };
+		DEC3B53F2642E3000040E3C6 /* UICircularProgressRing in Frameworks */ = {isa = PBXBuildFile; productRef = DEC3B53E2642E3000040E3C6 /* UICircularProgressRing */; };
+		DEC3B54D2642E37B0040E3C6 /* Cosmos in Frameworks */ = {isa = PBXBuildFile; productRef = DEC3B54C2642E37B0040E3C6 /* Cosmos */; };
+		DEC3B5502642E3BA0040E3C6 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = DEC3B54F2642E3BA0040E3C6 /* Alamofire */; };
+		DEC3B5532642E3D00040E3C6 /* SwiftyUserDefaults in Frameworks */ = {isa = PBXBuildFile; productRef = DEC3B5522642E3D00040E3C6 /* SwiftyUserDefaults */; };
+		DEC3B5562642E44B0040E3C6 /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = DEC3B5552642E44B0040E3C6 /* SDWebImage */; };
+		DEC3B5642642E7010040E3C6 /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = DEC3B5632642E7010040E3C6 /* RxSwift */; };
+		DEC3B5662642E7010040E3C6 /* RxTest in Frameworks */ = {isa = PBXBuildFile; productRef = DEC3B5652642E7010040E3C6 /* RxTest */; };
+		DEC3B5682642E7010040E3C6 /* RxRelay in Frameworks */ = {isa = PBXBuildFile; productRef = DEC3B5672642E7010040E3C6 /* RxRelay */; };
+		DEC3B56A2642E7010040E3C6 /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = DEC3B5692642E7010040E3C6 /* RxCocoa */; };
+		DEC3B56C2642E7010040E3C6 /* RxBlocking in Frameworks */ = {isa = PBXBuildFile; productRef = DEC3B56B2642E7010040E3C6 /* RxBlocking */; };
+		DEC3B56F2642E78D0040E3C6 /* SwiftyPrototype in Frameworks */ = {isa = PBXBuildFile; productRef = DEC3B56E2642E78D0040E3C6 /* SwiftyPrototype */; };
+		DEC3B5712642E78D0040E3C6 /* SwiftyMocky in Frameworks */ = {isa = PBXBuildFile; productRef = DEC3B5702642E78D0040E3C6 /* SwiftyMocky */; };
+		DEC3B5742642E7BD0040E3C6 /* Nimble in Frameworks */ = {isa = PBXBuildFile; productRef = DEC3B5732642E7BD0040E3C6 /* Nimble */; };
+		DEC3B5772642E7D30040E3C6 /* Quick in Frameworks */ = {isa = PBXBuildFile; productRef = DEC3B5762642E7D30040E3C6 /* Quick */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +70,14 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DEC3B5502642E3BA0040E3C6 /* Alamofire in Frameworks */,
+				DEC3B5642642E7010040E3C6 /* RxSwift in Frameworks */,
+				DEC3B54D2642E37B0040E3C6 /* Cosmos in Frameworks */,
+				DEC3B5562642E44B0040E3C6 /* SDWebImage in Frameworks */,
+				DEC3B5532642E3D00040E3C6 /* SwiftyUserDefaults in Frameworks */,
+				DEC3B56A2642E7010040E3C6 /* RxCocoa in Frameworks */,
+				DEC3B53F2642E3000040E3C6 /* UICircularProgressRing in Frameworks */,
+				DEC3B5682642E7010040E3C6 /* RxRelay in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,6 +85,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DEC3B5772642E7D30040E3C6 /* Quick in Frameworks */,
+				DEC3B5742642E7BD0040E3C6 /* Nimble in Frameworks */,
+				DEC3B5712642E78D0040E3C6 /* SwiftyMocky in Frameworks */,
+				DEC3B5662642E7010040E3C6 /* RxTest in Frameworks */,
+				DEC3B56F2642E78D0040E3C6 /* SwiftyPrototype in Frameworks */,
+				DEC3B56C2642E7010040E3C6 /* RxBlocking in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -144,6 +172,16 @@
 			dependencies = (
 			);
 			name = SimpleMoviePlayerExample;
+			packageProductDependencies = (
+				DEC3B53E2642E3000040E3C6 /* UICircularProgressRing */,
+				DEC3B54C2642E37B0040E3C6 /* Cosmos */,
+				DEC3B54F2642E3BA0040E3C6 /* Alamofire */,
+				DEC3B5522642E3D00040E3C6 /* SwiftyUserDefaults */,
+				DEC3B5552642E44B0040E3C6 /* SDWebImage */,
+				DEC3B5632642E7010040E3C6 /* RxSwift */,
+				DEC3B5672642E7010040E3C6 /* RxRelay */,
+				DEC3B5692642E7010040E3C6 /* RxCocoa */,
+			);
 			productName = SimpleMoviePlayerExample;
 			productReference = DEA47530263F40AA00090DA5 /* SimpleMoviePlayerExample.app */;
 			productType = "com.apple.product-type.application";
@@ -162,6 +200,14 @@
 				DEA47548263F40AC00090DA5 /* PBXTargetDependency */,
 			);
 			name = SimpleMoviePlayerExampleTests;
+			packageProductDependencies = (
+				DEC3B5652642E7010040E3C6 /* RxTest */,
+				DEC3B56B2642E7010040E3C6 /* RxBlocking */,
+				DEC3B56E2642E78D0040E3C6 /* SwiftyPrototype */,
+				DEC3B5702642E78D0040E3C6 /* SwiftyMocky */,
+				DEC3B5732642E7BD0040E3C6 /* Nimble */,
+				DEC3B5762642E7D30040E3C6 /* Quick */,
+			);
 			productName = SimpleMoviePlayerExampleTests;
 			productReference = DEA47546263F40AC00090DA5 /* SimpleMoviePlayerExampleTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
@@ -215,6 +261,17 @@
 				Base,
 			);
 			mainGroup = DEA47527263F40AA00090DA5;
+			packageReferences = (
+				DEC3B53D2642E3000040E3C6 /* XCRemoteSwiftPackageReference "UICircularProgressRing" */,
+				DEC3B54B2642E37B0040E3C6 /* XCRemoteSwiftPackageReference "Cosmos" */,
+				DEC3B54E2642E3BA0040E3C6 /* XCRemoteSwiftPackageReference "Alamofire" */,
+				DEC3B5512642E3D00040E3C6 /* XCRemoteSwiftPackageReference "SwiftyUserDefaults" */,
+				DEC3B5542642E44B0040E3C6 /* XCRemoteSwiftPackageReference "SDWebImage" */,
+				DEC3B5622642E7010040E3C6 /* XCRemoteSwiftPackageReference "RxSwift" */,
+				DEC3B56D2642E78D0040E3C6 /* XCRemoteSwiftPackageReference "SwiftyMocky" */,
+				DEC3B5722642E7BD0040E3C6 /* XCRemoteSwiftPackageReference "Nimble" */,
+				DEC3B5752642E7D30040E3C6 /* XCRemoteSwiftPackageReference "Quick" */,
+			);
 			productRefGroup = DEA47531263F40AA00090DA5 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -593,6 +650,154 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		DEC3B53D2642E3000040E3C6 /* XCRemoteSwiftPackageReference "UICircularProgressRing" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "git@github.com:luispadron/UICircularProgressRing.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 8.0.0;
+			};
+		};
+		DEC3B54B2642E37B0040E3C6 /* XCRemoteSwiftPackageReference "Cosmos" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "git@github.com:evgenyneu/Cosmos.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 23.0.0;
+			};
+		};
+		DEC3B54E2642E3BA0040E3C6 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "git@github.com:Alamofire/Alamofire.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.4.3;
+			};
+		};
+		DEC3B5512642E3D00040E3C6 /* XCRemoteSwiftPackageReference "SwiftyUserDefaults" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "git@github.com:sunshinejr/SwiftyUserDefaults.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.3.0;
+			};
+		};
+		DEC3B5542642E44B0040E3C6 /* XCRemoteSwiftPackageReference "SDWebImage" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SDWebImage/SDWebImage.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.11.1;
+			};
+		};
+		DEC3B5622642E7010040E3C6 /* XCRemoteSwiftPackageReference "RxSwift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "git@github.com:ReactiveX/RxSwift.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 6.1.0;
+			};
+		};
+		DEC3B56D2642E78D0040E3C6 /* XCRemoteSwiftPackageReference "SwiftyMocky" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "git@github.com:MakeAWishFoundation/SwiftyMocky.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.0.4;
+			};
+		};
+		DEC3B5722642E7BD0040E3C6 /* XCRemoteSwiftPackageReference "Nimble" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "git@github.com:Quick/Nimble.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 9.0.1;
+			};
+		};
+		DEC3B5752642E7D30040E3C6 /* XCRemoteSwiftPackageReference "Quick" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "git@github.com:Quick/Quick.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.1.2;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		DEC3B53E2642E3000040E3C6 /* UICircularProgressRing */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DEC3B53D2642E3000040E3C6 /* XCRemoteSwiftPackageReference "UICircularProgressRing" */;
+			productName = UICircularProgressRing;
+		};
+		DEC3B54C2642E37B0040E3C6 /* Cosmos */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DEC3B54B2642E37B0040E3C6 /* XCRemoteSwiftPackageReference "Cosmos" */;
+			productName = Cosmos;
+		};
+		DEC3B54F2642E3BA0040E3C6 /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DEC3B54E2642E3BA0040E3C6 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+		DEC3B5522642E3D00040E3C6 /* SwiftyUserDefaults */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DEC3B5512642E3D00040E3C6 /* XCRemoteSwiftPackageReference "SwiftyUserDefaults" */;
+			productName = SwiftyUserDefaults;
+		};
+		DEC3B5552642E44B0040E3C6 /* SDWebImage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DEC3B5542642E44B0040E3C6 /* XCRemoteSwiftPackageReference "SDWebImage" */;
+			productName = SDWebImage;
+		};
+		DEC3B5632642E7010040E3C6 /* RxSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DEC3B5622642E7010040E3C6 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxSwift;
+		};
+		DEC3B5652642E7010040E3C6 /* RxTest */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DEC3B5622642E7010040E3C6 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxTest;
+		};
+		DEC3B5672642E7010040E3C6 /* RxRelay */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DEC3B5622642E7010040E3C6 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxRelay;
+		};
+		DEC3B5692642E7010040E3C6 /* RxCocoa */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DEC3B5622642E7010040E3C6 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxCocoa;
+		};
+		DEC3B56B2642E7010040E3C6 /* RxBlocking */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DEC3B5622642E7010040E3C6 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxBlocking;
+		};
+		DEC3B56E2642E78D0040E3C6 /* SwiftyPrototype */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DEC3B56D2642E78D0040E3C6 /* XCRemoteSwiftPackageReference "SwiftyMocky" */;
+			productName = SwiftyPrototype;
+		};
+		DEC3B5702642E78D0040E3C6 /* SwiftyMocky */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DEC3B56D2642E78D0040E3C6 /* XCRemoteSwiftPackageReference "SwiftyMocky" */;
+			productName = SwiftyMocky;
+		};
+		DEC3B5732642E7BD0040E3C6 /* Nimble */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DEC3B5722642E7BD0040E3C6 /* XCRemoteSwiftPackageReference "Nimble" */;
+			productName = Nimble;
+		};
+		DEC3B5762642E7D30040E3C6 /* Quick */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DEC3B5752642E7D30040E3C6 /* XCRemoteSwiftPackageReference "Quick" */;
+			productName = Quick;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = DEA47528263F40AA00090DA5 /* Project object */;
 }
