@@ -3,32 +3,24 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 52;
+	objectVersion = 50;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DE5F6E79267FC11F00FCD3A1 /* CustomViewBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE5F6E78267FC11F00FCD3A1 /* CustomViewBase.swift */; };
+		DE5F6E7B267FC19F00FCD3A1 /* NSObjectProtocolExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE5F6E7A267FC19F00FCD3A1 /* NSObjectProtocolExtension.swift */; };
+		DE5F6E7D267FC1AB00FCD3A1 /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE5F6E7C267FC1AB00FCD3A1 /* UIColorExtension.swift */; };
+		DE5F6E7F267FC1E100FCD3A1 /* UICollectionViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE5F6E7E267FC1E100FCD3A1 /* UICollectionViewExtension.swift */; };
+		DE5F6E81267FC23500FCD3A1 /* UITableViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE5F6E80267FC23500FCD3A1 /* UITableViewExtension.swift */; };
+		DE5F6E83267FC27100FCD3A1 /* UIViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE5F6E82267FC27100FCD3A1 /* UIViewControllerExtension.swift */; };
 		DEA47534263F40AA00090DA5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEA47533263F40AA00090DA5 /* AppDelegate.swift */; };
 		DEA47536263F40AA00090DA5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEA47535263F40AA00090DA5 /* SceneDelegate.swift */; };
-		DEA47538263F40AA00090DA5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEA47537263F40AA00090DA5 /* ViewController.swift */; };
-		DEA4753B263F40AA00090DA5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DEA47539263F40AA00090DA5 /* Main.storyboard */; };
+		DEA47538263F40AA00090DA5 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEA47537263F40AA00090DA5 /* MainViewController.swift */; };
+		DEA4753B263F40AA00090DA5 /* MainViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DEA47539263F40AA00090DA5 /* MainViewController.storyboard */; };
 		DEA4753D263F40AC00090DA5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DEA4753C263F40AC00090DA5 /* Assets.xcassets */; };
 		DEA47540263F40AC00090DA5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DEA4753E263F40AC00090DA5 /* LaunchScreen.storyboard */; };
 		DEA4754B263F40AC00090DA5 /* SimpleMoviePlayerExampleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEA4754A263F40AC00090DA5 /* SimpleMoviePlayerExampleTests.swift */; };
 		DEA47556263F40AC00090DA5 /* SimpleMoviePlayerExampleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEA47555263F40AC00090DA5 /* SimpleMoviePlayerExampleUITests.swift */; };
-		DEC3B53F2642E3000040E3C6 /* UICircularProgressRing in Frameworks */ = {isa = PBXBuildFile; productRef = DEC3B53E2642E3000040E3C6 /* UICircularProgressRing */; };
-		DEC3B54D2642E37B0040E3C6 /* Cosmos in Frameworks */ = {isa = PBXBuildFile; productRef = DEC3B54C2642E37B0040E3C6 /* Cosmos */; };
-		DEC3B5502642E3BA0040E3C6 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = DEC3B54F2642E3BA0040E3C6 /* Alamofire */; };
-		DEC3B5532642E3D00040E3C6 /* SwiftyUserDefaults in Frameworks */ = {isa = PBXBuildFile; productRef = DEC3B5522642E3D00040E3C6 /* SwiftyUserDefaults */; };
-		DEC3B5562642E44B0040E3C6 /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = DEC3B5552642E44B0040E3C6 /* SDWebImage */; };
-		DEC3B5642642E7010040E3C6 /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = DEC3B5632642E7010040E3C6 /* RxSwift */; };
-		DEC3B5662642E7010040E3C6 /* RxTest in Frameworks */ = {isa = PBXBuildFile; productRef = DEC3B5652642E7010040E3C6 /* RxTest */; };
-		DEC3B5682642E7010040E3C6 /* RxRelay in Frameworks */ = {isa = PBXBuildFile; productRef = DEC3B5672642E7010040E3C6 /* RxRelay */; };
-		DEC3B56A2642E7010040E3C6 /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = DEC3B5692642E7010040E3C6 /* RxCocoa */; };
-		DEC3B56C2642E7010040E3C6 /* RxBlocking in Frameworks */ = {isa = PBXBuildFile; productRef = DEC3B56B2642E7010040E3C6 /* RxBlocking */; };
-		DEC3B56F2642E78D0040E3C6 /* SwiftyPrototype in Frameworks */ = {isa = PBXBuildFile; productRef = DEC3B56E2642E78D0040E3C6 /* SwiftyPrototype */; };
-		DEC3B5712642E78D0040E3C6 /* SwiftyMocky in Frameworks */ = {isa = PBXBuildFile; productRef = DEC3B5702642E78D0040E3C6 /* SwiftyMocky */; };
-		DEC3B5742642E7BD0040E3C6 /* Nimble in Frameworks */ = {isa = PBXBuildFile; productRef = DEC3B5732642E7BD0040E3C6 /* Nimble */; };
-		DEC3B5772642E7D30040E3C6 /* Quick in Frameworks */ = {isa = PBXBuildFile; productRef = DEC3B5762642E7D30040E3C6 /* Quick */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,11 +41,17 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		DE5F6E78267FC11F00FCD3A1 /* CustomViewBase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomViewBase.swift; sourceTree = "<group>"; };
+		DE5F6E7A267FC19F00FCD3A1 /* NSObjectProtocolExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSObjectProtocolExtension.swift; sourceTree = "<group>"; };
+		DE5F6E7C267FC1AB00FCD3A1 /* UIColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
+		DE5F6E7E267FC1E100FCD3A1 /* UICollectionViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UICollectionViewExtension.swift; sourceTree = "<group>"; };
+		DE5F6E80267FC23500FCD3A1 /* UITableViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableViewExtension.swift; sourceTree = "<group>"; };
+		DE5F6E82267FC27100FCD3A1 /* UIViewControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtension.swift; sourceTree = "<group>"; };
 		DEA47530263F40AA00090DA5 /* SimpleMoviePlayerExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SimpleMoviePlayerExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DEA47533263F40AA00090DA5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DEA47535263F40AA00090DA5 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		DEA47537263F40AA00090DA5 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		DEA4753A263F40AA00090DA5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		DEA47537263F40AA00090DA5 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		DEA4753A263F40AA00090DA5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainViewController.storyboard; sourceTree = "<group>"; };
 		DEA4753C263F40AC00090DA5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DEA4753F263F40AC00090DA5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DEA47541263F40AC00090DA5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -70,14 +68,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DEC3B5502642E3BA0040E3C6 /* Alamofire in Frameworks */,
-				DEC3B5642642E7010040E3C6 /* RxSwift in Frameworks */,
-				DEC3B54D2642E37B0040E3C6 /* Cosmos in Frameworks */,
-				DEC3B5562642E44B0040E3C6 /* SDWebImage in Frameworks */,
-				DEC3B5532642E3D00040E3C6 /* SwiftyUserDefaults in Frameworks */,
-				DEC3B56A2642E7010040E3C6 /* RxCocoa in Frameworks */,
-				DEC3B53F2642E3000040E3C6 /* UICircularProgressRing in Frameworks */,
-				DEC3B5682642E7010040E3C6 /* RxRelay in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -85,12 +75,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DEC3B5772642E7D30040E3C6 /* Quick in Frameworks */,
-				DEC3B5742642E7BD0040E3C6 /* Nimble in Frameworks */,
-				DEC3B5712642E78D0040E3C6 /* SwiftyMocky in Frameworks */,
-				DEC3B5662642E7010040E3C6 /* RxTest in Frameworks */,
-				DEC3B56F2642E78D0040E3C6 /* SwiftyPrototype in Frameworks */,
-				DEC3B56C2642E7010040E3C6 /* RxBlocking in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -104,6 +88,114 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		DE5F6E69267FBEEA00FCD3A1 /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				DEA47539263F40AA00090DA5 /* MainViewController.storyboard */,
+			);
+			path = Storyboard;
+			sourceTree = "<group>";
+		};
+		DE5F6E6A267FBEF300FCD3A1 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				DE5F6E78267FC11F00FCD3A1 /* CustomViewBase.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		DE5F6E6B267FBF0100FCD3A1 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				DE5F6E7A267FC19F00FCD3A1 /* NSObjectProtocolExtension.swift */,
+				DE5F6E7C267FC1AB00FCD3A1 /* UIColorExtension.swift */,
+				DE5F6E7E267FC1E100FCD3A1 /* UICollectionViewExtension.swift */,
+				DE5F6E80267FC23500FCD3A1 /* UITableViewExtension.swift */,
+				DE5F6E82267FC27100FCD3A1 /* UIViewControllerExtension.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		DE5F6E6C267FBF0700FCD3A1 /* Enum */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Enum;
+			sourceTree = "<group>";
+		};
+		DE5F6E6D267FBF2D00FCD3A1 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				DEA47537263F40AA00090DA5 /* MainViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		DE5F6E6E267FBFBA00FCD3A1 /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Repository;
+			sourceTree = "<group>";
+		};
+		DE5F6E6F267FBFC400FCD3A1 /* Contract */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Contract;
+			sourceTree = "<group>";
+		};
+		DE5F6E70267FBFCB00FCD3A1 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		DE5F6E71267FBFD600FCD3A1 /* ApiClient */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ApiClient;
+			sourceTree = "<group>";
+		};
+		DE5F6E72267FBFFB00FCD3A1 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		DE5F6E73267FC00200FCD3A1 /* LocalDatabase */ = {
+			isa = PBXGroup;
+			children = (
+				DE5F6E76267FC06400FCD3A1 /* SQLite */,
+				DE5F6E75267FC05700FCD3A1 /* UserDefault */,
+			);
+			path = LocalDatabase;
+			sourceTree = "<group>";
+		};
+		DE5F6E75267FC05700FCD3A1 /* UserDefault */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = UserDefault;
+			sourceTree = "<group>";
+		};
+		DE5F6E76267FC06400FCD3A1 /* SQLite */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = SQLite;
+			sourceTree = "<group>";
+		};
+		DE5F6E84267FC30200FCD3A1 /* ViewObject */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewObject;
+			sourceTree = "<group>";
+		};
 		DEA47527263F40AA00090DA5 = {
 			isa = PBXGroup;
 			children = (
@@ -127,13 +219,23 @@
 		DEA47532263F40AA00090DA5 /* SimpleMoviePlayerExample */ = {
 			isa = PBXGroup;
 			children = (
+				DEA47541263F40AC00090DA5 /* Info.plist */,
 				DEA47533263F40AA00090DA5 /* AppDelegate.swift */,
 				DEA47535263F40AA00090DA5 /* SceneDelegate.swift */,
-				DEA47537263F40AA00090DA5 /* ViewController.swift */,
-				DEA47539263F40AA00090DA5 /* Main.storyboard */,
 				DEA4753C263F40AC00090DA5 /* Assets.xcassets */,
 				DEA4753E263F40AC00090DA5 /* LaunchScreen.storyboard */,
-				DEA47541263F40AC00090DA5 /* Info.plist */,
+				DE5F6E71267FBFD600FCD3A1 /* ApiClient */,
+				DE5F6E6F267FBFC400FCD3A1 /* Contract */,
+				DE5F6E6C267FBF0700FCD3A1 /* Enum */,
+				DE5F6E6B267FBF0100FCD3A1 /* Extension */,
+				DE5F6E73267FC00200FCD3A1 /* LocalDatabase */,
+				DE5F6E72267FBFFB00FCD3A1 /* Modules */,
+				DE5F6E70267FBFCB00FCD3A1 /* Presenter */,
+				DE5F6E6E267FBFBA00FCD3A1 /* Repository */,
+				DE5F6E69267FBEEA00FCD3A1 /* Storyboard */,
+				DE5F6E6A267FBEF300FCD3A1 /* View */,
+				DE5F6E6D267FBF2D00FCD3A1 /* ViewController */,
+				DE5F6E84267FC30200FCD3A1 /* ViewObject */,
 			);
 			path = SimpleMoviePlayerExample;
 			sourceTree = "<group>";
@@ -173,14 +275,6 @@
 			);
 			name = SimpleMoviePlayerExample;
 			packageProductDependencies = (
-				DEC3B53E2642E3000040E3C6 /* UICircularProgressRing */,
-				DEC3B54C2642E37B0040E3C6 /* Cosmos */,
-				DEC3B54F2642E3BA0040E3C6 /* Alamofire */,
-				DEC3B5522642E3D00040E3C6 /* SwiftyUserDefaults */,
-				DEC3B5552642E44B0040E3C6 /* SDWebImage */,
-				DEC3B5632642E7010040E3C6 /* RxSwift */,
-				DEC3B5672642E7010040E3C6 /* RxRelay */,
-				DEC3B5692642E7010040E3C6 /* RxCocoa */,
 			);
 			productName = SimpleMoviePlayerExample;
 			productReference = DEA47530263F40AA00090DA5 /* SimpleMoviePlayerExample.app */;
@@ -201,12 +295,6 @@
 			);
 			name = SimpleMoviePlayerExampleTests;
 			packageProductDependencies = (
-				DEC3B5652642E7010040E3C6 /* RxTest */,
-				DEC3B56B2642E7010040E3C6 /* RxBlocking */,
-				DEC3B56E2642E78D0040E3C6 /* SwiftyPrototype */,
-				DEC3B5702642E78D0040E3C6 /* SwiftyMocky */,
-				DEC3B5732642E7BD0040E3C6 /* Nimble */,
-				DEC3B5762642E7D30040E3C6 /* Quick */,
 			);
 			productName = SimpleMoviePlayerExampleTests;
 			productReference = DEA47546263F40AC00090DA5 /* SimpleMoviePlayerExampleTests.xctest */;
@@ -262,15 +350,6 @@
 			);
 			mainGroup = DEA47527263F40AA00090DA5;
 			packageReferences = (
-				DEC3B53D2642E3000040E3C6 /* XCRemoteSwiftPackageReference "UICircularProgressRing" */,
-				DEC3B54B2642E37B0040E3C6 /* XCRemoteSwiftPackageReference "Cosmos" */,
-				DEC3B54E2642E3BA0040E3C6 /* XCRemoteSwiftPackageReference "Alamofire" */,
-				DEC3B5512642E3D00040E3C6 /* XCRemoteSwiftPackageReference "SwiftyUserDefaults" */,
-				DEC3B5542642E44B0040E3C6 /* XCRemoteSwiftPackageReference "SDWebImage" */,
-				DEC3B5622642E7010040E3C6 /* XCRemoteSwiftPackageReference "RxSwift" */,
-				DEC3B56D2642E78D0040E3C6 /* XCRemoteSwiftPackageReference "SwiftyMocky" */,
-				DEC3B5722642E7BD0040E3C6 /* XCRemoteSwiftPackageReference "Nimble" */,
-				DEC3B5752642E7D30040E3C6 /* XCRemoteSwiftPackageReference "Quick" */,
 			);
 			productRefGroup = DEA47531263F40AA00090DA5 /* Products */;
 			projectDirPath = "";
@@ -290,7 +369,7 @@
 			files = (
 				DEA47540263F40AC00090DA5 /* LaunchScreen.storyboard in Resources */,
 				DEA4753D263F40AC00090DA5 /* Assets.xcassets in Resources */,
-				DEA4753B263F40AA00090DA5 /* Main.storyboard in Resources */,
+				DEA4753B263F40AA00090DA5 /* MainViewController.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -315,9 +394,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DEA47538263F40AA00090DA5 /* ViewController.swift in Sources */,
+				DE5F6E79267FC11F00FCD3A1 /* CustomViewBase.swift in Sources */,
+				DEA47538263F40AA00090DA5 /* MainViewController.swift in Sources */,
+				DE5F6E83267FC27100FCD3A1 /* UIViewControllerExtension.swift in Sources */,
+				DE5F6E7F267FC1E100FCD3A1 /* UICollectionViewExtension.swift in Sources */,
+				DE5F6E81267FC23500FCD3A1 /* UITableViewExtension.swift in Sources */,
 				DEA47534263F40AA00090DA5 /* AppDelegate.swift in Sources */,
 				DEA47536263F40AA00090DA5 /* SceneDelegate.swift in Sources */,
+				DE5F6E7B267FC19F00FCD3A1 /* NSObjectProtocolExtension.swift in Sources */,
+				DE5F6E7D267FC1AB00FCD3A1 /* UIColorExtension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -353,12 +438,12 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		DEA47539263F40AA00090DA5 /* Main.storyboard */ = {
+		DEA47539263F40AA00090DA5 /* MainViewController.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				DEA4753A263F40AA00090DA5 /* Base */,
 			);
-			name = Main.storyboard;
+			name = MainViewController.storyboard;
 			sourceTree = "<group>";
 		};
 		DEA4753E263F40AC00090DA5 /* LaunchScreen.storyboard */ = {
@@ -650,154 +735,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCRemoteSwiftPackageReference section */
-		DEC3B53D2642E3000040E3C6 /* XCRemoteSwiftPackageReference "UICircularProgressRing" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "git@github.com:luispadron/UICircularProgressRing.git";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 8.0.0;
-			};
-		};
-		DEC3B54B2642E37B0040E3C6 /* XCRemoteSwiftPackageReference "Cosmos" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "git@github.com:evgenyneu/Cosmos.git";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 23.0.0;
-			};
-		};
-		DEC3B54E2642E3BA0040E3C6 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "git@github.com:Alamofire/Alamofire.git";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 5.4.3;
-			};
-		};
-		DEC3B5512642E3D00040E3C6 /* XCRemoteSwiftPackageReference "SwiftyUserDefaults" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "git@github.com:sunshinejr/SwiftyUserDefaults.git";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 5.3.0;
-			};
-		};
-		DEC3B5542642E44B0040E3C6 /* XCRemoteSwiftPackageReference "SDWebImage" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/SDWebImage/SDWebImage.git";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 5.11.1;
-			};
-		};
-		DEC3B5622642E7010040E3C6 /* XCRemoteSwiftPackageReference "RxSwift" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "git@github.com:ReactiveX/RxSwift.git";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 6.1.0;
-			};
-		};
-		DEC3B56D2642E78D0040E3C6 /* XCRemoteSwiftPackageReference "SwiftyMocky" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "git@github.com:MakeAWishFoundation/SwiftyMocky.git";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 4.0.4;
-			};
-		};
-		DEC3B5722642E7BD0040E3C6 /* XCRemoteSwiftPackageReference "Nimble" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "git@github.com:Quick/Nimble.git";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 9.0.1;
-			};
-		};
-		DEC3B5752642E7D30040E3C6 /* XCRemoteSwiftPackageReference "Quick" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "git@github.com:Quick/Quick.git";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 3.1.2;
-			};
-		};
-/* End XCRemoteSwiftPackageReference section */
-
-/* Begin XCSwiftPackageProductDependency section */
-		DEC3B53E2642E3000040E3C6 /* UICircularProgressRing */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = DEC3B53D2642E3000040E3C6 /* XCRemoteSwiftPackageReference "UICircularProgressRing" */;
-			productName = UICircularProgressRing;
-		};
-		DEC3B54C2642E37B0040E3C6 /* Cosmos */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = DEC3B54B2642E37B0040E3C6 /* XCRemoteSwiftPackageReference "Cosmos" */;
-			productName = Cosmos;
-		};
-		DEC3B54F2642E3BA0040E3C6 /* Alamofire */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = DEC3B54E2642E3BA0040E3C6 /* XCRemoteSwiftPackageReference "Alamofire" */;
-			productName = Alamofire;
-		};
-		DEC3B5522642E3D00040E3C6 /* SwiftyUserDefaults */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = DEC3B5512642E3D00040E3C6 /* XCRemoteSwiftPackageReference "SwiftyUserDefaults" */;
-			productName = SwiftyUserDefaults;
-		};
-		DEC3B5552642E44B0040E3C6 /* SDWebImage */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = DEC3B5542642E44B0040E3C6 /* XCRemoteSwiftPackageReference "SDWebImage" */;
-			productName = SDWebImage;
-		};
-		DEC3B5632642E7010040E3C6 /* RxSwift */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = DEC3B5622642E7010040E3C6 /* XCRemoteSwiftPackageReference "RxSwift" */;
-			productName = RxSwift;
-		};
-		DEC3B5652642E7010040E3C6 /* RxTest */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = DEC3B5622642E7010040E3C6 /* XCRemoteSwiftPackageReference "RxSwift" */;
-			productName = RxTest;
-		};
-		DEC3B5672642E7010040E3C6 /* RxRelay */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = DEC3B5622642E7010040E3C6 /* XCRemoteSwiftPackageReference "RxSwift" */;
-			productName = RxRelay;
-		};
-		DEC3B5692642E7010040E3C6 /* RxCocoa */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = DEC3B5622642E7010040E3C6 /* XCRemoteSwiftPackageReference "RxSwift" */;
-			productName = RxCocoa;
-		};
-		DEC3B56B2642E7010040E3C6 /* RxBlocking */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = DEC3B5622642E7010040E3C6 /* XCRemoteSwiftPackageReference "RxSwift" */;
-			productName = RxBlocking;
-		};
-		DEC3B56E2642E78D0040E3C6 /* SwiftyPrototype */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = DEC3B56D2642E78D0040E3C6 /* XCRemoteSwiftPackageReference "SwiftyMocky" */;
-			productName = SwiftyPrototype;
-		};
-		DEC3B5702642E78D0040E3C6 /* SwiftyMocky */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = DEC3B56D2642E78D0040E3C6 /* XCRemoteSwiftPackageReference "SwiftyMocky" */;
-			productName = SwiftyMocky;
-		};
-		DEC3B5732642E7BD0040E3C6 /* Nimble */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = DEC3B5722642E7BD0040E3C6 /* XCRemoteSwiftPackageReference "Nimble" */;
-			productName = Nimble;
-		};
-		DEC3B5762642E7D30040E3C6 /* Quick */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = DEC3B5752642E7D30040E3C6 /* XCRemoteSwiftPackageReference "Quick" */;
-			productName = Quick;
-		};
-/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = DEA47528263F40AA00090DA5 /* Project object */;
 }
