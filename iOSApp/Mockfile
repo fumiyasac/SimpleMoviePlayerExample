@@ -1,0 +1,13 @@
+sourceryCommand: null
+sourceryTemplate: null
+SimpleMoviePlayerExampleTests:
+  sources:
+    include:
+    - ./SimpleMoviePlayerExample
+  output: ./SimpleMoviePlayerExampleTests/Mock.generated.swift
+  targets:
+  - SimpleMoviePlayerExampleTests
+  testable:
+  - SimpleMoviePlayerExample
+  import:
+  - Foundation

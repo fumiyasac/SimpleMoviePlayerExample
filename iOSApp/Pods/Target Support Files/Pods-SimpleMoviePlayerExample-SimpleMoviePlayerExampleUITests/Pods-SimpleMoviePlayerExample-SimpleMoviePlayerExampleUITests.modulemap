@@ -1,0 +1,6 @@
+framework module Pods_SimpleMoviePlayerExample_SimpleMoviePlayerExampleUITests {
+  umbrella header "Pods-SimpleMoviePlayerExample-SimpleMoviePlayerExampleUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}

@@ -1,0 +1,5 @@
+#import <Foundation/Foundation.h>
+@interface PodsDummy_Pods_SimpleMoviePlayerExample_SimpleMoviePlayerExampleUITests : NSObject
+@end
+@implementation PodsDummy_Pods_SimpleMoviePlayerExample_SimpleMoviePlayerExampleUITests
+@end

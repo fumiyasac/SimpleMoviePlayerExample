@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		49D1B7EF0A40F4BE6139D66A /* Pods_SimpleMoviePlayerExample_SimpleMoviePlayerExampleUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8EB340B7D1322CC9C702AB91 /* Pods_SimpleMoviePlayerExample_SimpleMoviePlayerExampleUITests.framework */; };
+		53E89A3FFAD1A4BBC30E2E41 /* Pods_SimpleMoviePlayerExample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0F6E8B24C46852484C8DFBCD /* Pods_SimpleMoviePlayerExample.framework */; };
+		A98499EE6E510602F60CF7DB /* Pods_SimpleMoviePlayerExampleTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 820A67EF4479DEF9E9CC0642 /* Pods_SimpleMoviePlayerExampleTests.framework */; };
 		DE5F6E79267FC11F00FCD3A1 /* CustomViewBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE5F6E78267FC11F00FCD3A1 /* CustomViewBase.swift */; };
 		DE5F6E7B267FC19F00FCD3A1 /* NSObjectProtocolExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE5F6E7A267FC19F00FCD3A1 /* NSObjectProtocolExtension.swift */; };
 		DE5F6E7D267FC1AB00FCD3A1 /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE5F6E7C267FC1AB00FCD3A1 /* UIColorExtension.swift */; };
@@ -21,8 +24,9 @@
 		DEA47540263F40AC00090DA5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DEA4753E263F40AC00090DA5 /* LaunchScreen.storyboard */; };
 		DEA4754B263F40AC00090DA5 /* SimpleMoviePlayerExampleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEA4754A263F40AC00090DA5 /* SimpleMoviePlayerExampleTests.swift */; };
 		DEA47556263F40AC00090DA5 /* SimpleMoviePlayerExampleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEA47555263F40AC00090DA5 /* SimpleMoviePlayerExampleUITests.swift */; };
-		DEB529DF267FC4E4000C33A2 /* GRDB in Frameworks */ = {isa = PBXBuildFile; productRef = DEB529DE267FC4E4000C33A2 /* GRDB */; };
-		DEB529E2267FC527000C33A2 /* UICircularProgressRing in Frameworks */ = {isa = PBXBuildFile; productRef = DEB529E1267FC527000C33A2 /* UICircularProgressRing */; };
+		DEB529DF267FC4E4000C33A2 /* BuildFile in Frameworks */ = {isa = PBXBuildFile; productRef = DEB529DE267FC4E4000C33A2 /* SwiftPackageProductDependency */; };
+		DEB529E2267FC527000C33A2 /* BuildFile in Frameworks */ = {isa = PBXBuildFile; productRef = DEB529E1267FC527000C33A2 /* SwiftPackageProductDependency */; };
+		DEB529EA267FCE08000C33A2 /* Mock.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEB529E9267FCE08000C33A2 /* Mock.generated.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,6 +47,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0F6E8B24C46852484C8DFBCD /* Pods_SimpleMoviePlayerExample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SimpleMoviePlayerExample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5E1905F42DB80AB013F874A3 /* Pods-SimpleMoviePlayerExample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SimpleMoviePlayerExample.debug.xcconfig"; path = "Target Support Files/Pods-SimpleMoviePlayerExample/Pods-SimpleMoviePlayerExample.debug.xcconfig"; sourceTree = "<group>"; };
+		6F13436F8520BF6EBFA7AE90 /* Pods-SimpleMoviePlayerExampleTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SimpleMoviePlayerExampleTests.release.xcconfig"; path = "Target Support Files/Pods-SimpleMoviePlayerExampleTests/Pods-SimpleMoviePlayerExampleTests.release.xcconfig"; sourceTree = "<group>"; };
+		820A67EF4479DEF9E9CC0642 /* Pods_SimpleMoviePlayerExampleTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SimpleMoviePlayerExampleTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8C57B49AB9115919FBA2592C /* Pods-SimpleMoviePlayerExample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SimpleMoviePlayerExample.release.xcconfig"; path = "Target Support Files/Pods-SimpleMoviePlayerExample/Pods-SimpleMoviePlayerExample.release.xcconfig"; sourceTree = "<group>"; };
+		8EB340B7D1322CC9C702AB91 /* Pods_SimpleMoviePlayerExample_SimpleMoviePlayerExampleUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SimpleMoviePlayerExample_SimpleMoviePlayerExampleUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BC9841BE6F00408A52C81066 /* Pods-SimpleMoviePlayerExample-SimpleMoviePlayerExampleUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SimpleMoviePlayerExample-SimpleMoviePlayerExampleUITests.debug.xcconfig"; path = "Target Support Files/Pods-SimpleMoviePlayerExample-SimpleMoviePlayerExampleUITests/Pods-SimpleMoviePlayerExample-SimpleMoviePlayerExampleUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		CF32871968371738901CE35F /* Pods-SimpleMoviePlayerExampleTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SimpleMoviePlayerExampleTests.debug.xcconfig"; path = "Target Support Files/Pods-SimpleMoviePlayerExampleTests/Pods-SimpleMoviePlayerExampleTests.debug.xcconfig"; sourceTree = "<group>"; };
+		D7A777ED43B2100757C4421E /* Pods-SimpleMoviePlayerExample-SimpleMoviePlayerExampleUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SimpleMoviePlayerExample-SimpleMoviePlayerExampleUITests.release.xcconfig"; path = "Target Support Files/Pods-SimpleMoviePlayerExample-SimpleMoviePlayerExampleUITests/Pods-SimpleMoviePlayerExample-SimpleMoviePlayerExampleUITests.release.xcconfig"; sourceTree = "<group>"; };
 		DE5F6E78267FC11F00FCD3A1 /* CustomViewBase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomViewBase.swift; sourceTree = "<group>"; };
 		DE5F6E7A267FC19F00FCD3A1 /* NSObjectProtocolExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSObjectProtocolExtension.swift; sourceTree = "<group>"; };
 		DE5F6E7C267FC1AB00FCD3A1 /* UIColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
@@ -63,6 +76,7 @@
 		DEA47551263F40AC00090DA5 /* SimpleMoviePlayerExampleUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SimpleMoviePlayerExampleUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DEA47555263F40AC00090DA5 /* SimpleMoviePlayerExampleUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleMoviePlayerExampleUITests.swift; sourceTree = "<group>"; };
 		DEA47557263F40AC00090DA5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DEB529E9267FCE08000C33A2 /* Mock.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Mock.generated.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,8 +84,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DEB529E2267FC527000C33A2 /* UICircularProgressRing in Frameworks */,
-				DEB529DF267FC4E4000C33A2 /* GRDB in Frameworks */,
+				DEB529E2267FC527000C33A2 /* BuildFile in Frameworks */,
+				DEB529DF267FC4E4000C33A2 /* BuildFile in Frameworks */,
+				53E89A3FFAD1A4BBC30E2E41 /* Pods_SimpleMoviePlayerExample.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -79,6 +94,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A98499EE6E510602F60CF7DB /* Pods_SimpleMoviePlayerExampleTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -86,12 +102,36 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				49D1B7EF0A40F4BE6139D66A /* Pods_SimpleMoviePlayerExample_SimpleMoviePlayerExampleUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		00680F934A8438B677DBAC6B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0F6E8B24C46852484C8DFBCD /* Pods_SimpleMoviePlayerExample.framework */,
+				8EB340B7D1322CC9C702AB91 /* Pods_SimpleMoviePlayerExample_SimpleMoviePlayerExampleUITests.framework */,
+				820A67EF4479DEF9E9CC0642 /* Pods_SimpleMoviePlayerExampleTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		07E3E0A78364C0FC9DE40B1C /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				5E1905F42DB80AB013F874A3 /* Pods-SimpleMoviePlayerExample.debug.xcconfig */,
+				8C57B49AB9115919FBA2592C /* Pods-SimpleMoviePlayerExample.release.xcconfig */,
+				BC9841BE6F00408A52C81066 /* Pods-SimpleMoviePlayerExample-SimpleMoviePlayerExampleUITests.debug.xcconfig */,
+				D7A777ED43B2100757C4421E /* Pods-SimpleMoviePlayerExample-SimpleMoviePlayerExampleUITests.release.xcconfig */,
+				CF32871968371738901CE35F /* Pods-SimpleMoviePlayerExampleTests.debug.xcconfig */,
+				6F13436F8520BF6EBFA7AE90 /* Pods-SimpleMoviePlayerExampleTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		DE5F6E69267FBEEA00FCD3A1 /* Storyboard */ = {
 			isa = PBXGroup;
 			children = (
@@ -207,6 +247,8 @@
 				DEA47549263F40AC00090DA5 /* SimpleMoviePlayerExampleTests */,
 				DEA47554263F40AC00090DA5 /* SimpleMoviePlayerExampleUITests */,
 				DEA47531263F40AA00090DA5 /* Products */,
+				07E3E0A78364C0FC9DE40B1C /* Pods */,
+				00680F934A8438B677DBAC6B /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -247,6 +289,7 @@
 		DEA47549263F40AC00090DA5 /* SimpleMoviePlayerExampleTests */ = {
 			isa = PBXGroup;
 			children = (
+				DEB529E9267FCE08000C33A2 /* Mock.generated.swift */,
 				DEA4754A263F40AC00090DA5 /* SimpleMoviePlayerExampleTests.swift */,
 				DEA4754C263F40AC00090DA5 /* Info.plist */,
 			);
@@ -269,6 +312,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = DEA4755A263F40AC00090DA5 /* Build configuration list for PBXNativeTarget "SimpleMoviePlayerExample" */;
 			buildPhases = (
+				F1EB25D549FBA7E9F214034D /* [CP] Check Pods Manifest.lock */,
 				DEA4752C263F40AA00090DA5 /* Sources */,
 				DEA4752D263F40AA00090DA5 /* Frameworks */,
 				DEA4752E263F40AA00090DA5 /* Resources */,
@@ -279,8 +323,8 @@
 			);
 			name = SimpleMoviePlayerExample;
 			packageProductDependencies = (
-				DEB529DE267FC4E4000C33A2 /* GRDB */,
-				DEB529E1267FC527000C33A2 /* UICircularProgressRing */,
+				DEB529DE267FC4E4000C33A2 /* SwiftPackageProductDependency */,
+				DEB529E1267FC527000C33A2 /* SwiftPackageProductDependency */,
 			);
 			productName = SimpleMoviePlayerExample;
 			productReference = DEA47530263F40AA00090DA5 /* SimpleMoviePlayerExample.app */;
@@ -290,6 +334,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = DEA4755D263F40AC00090DA5 /* Build configuration list for PBXNativeTarget "SimpleMoviePlayerExampleTests" */;
 			buildPhases = (
+				4FFE8027B9E864F7C201D517 /* [CP] Check Pods Manifest.lock */,
 				DEA47542263F40AC00090DA5 /* Sources */,
 				DEA47543263F40AC00090DA5 /* Frameworks */,
 				DEA47544263F40AC00090DA5 /* Resources */,
@@ -300,8 +345,6 @@
 				DEA47548263F40AC00090DA5 /* PBXTargetDependency */,
 			);
 			name = SimpleMoviePlayerExampleTests;
-			packageProductDependencies = (
-			);
 			productName = SimpleMoviePlayerExampleTests;
 			productReference = DEA47546263F40AC00090DA5 /* SimpleMoviePlayerExampleTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
@@ -310,6 +353,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = DEA47560263F40AC00090DA5 /* Build configuration list for PBXNativeTarget "SimpleMoviePlayerExampleUITests" */;
 			buildPhases = (
+				C7A807C4973B77DC31946FB9 /* [CP] Check Pods Manifest.lock */,
 				DEA4754D263F40AC00090DA5 /* Sources */,
 				DEA4754E263F40AC00090DA5 /* Frameworks */,
 				DEA4754F263F40AC00090DA5 /* Resources */,
@@ -356,14 +400,13 @@
 			);
 			mainGroup = DEA47527263F40AA00090DA5;
 			packageReferences = (
-				DEB529DD267FC4E4000C33A2 /* XCRemoteSwiftPackageReference "GRDB.swift" */,
-				DEB529E0267FC527000C33A2 /* XCRemoteSwiftPackageReference "UICircularProgressRing" */,
-				DEB529E3267FC56F000C33A2 /* XCRemoteSwiftPackageReference "Cosmos" */,
-				DEB529E4267FC5BB000C33A2 /* XCRemoteSwiftPackageReference "SwiftyMocky" */,
-				DEB529E5267FC87D000C33A2 /* XCRemoteSwiftPackageReference "SDWebImage" */,
-				DEB529E6267FC8C6000C33A2 /* XCRemoteSwiftPackageReference "Quick" */,
-				DEB529E7267FC8E5000C33A2 /* XCRemoteSwiftPackageReference "Nimble" */,
-				DEB529E8267FCCFD000C33A2 /* XCRemoteSwiftPackageReference "RxSwift" */,
+				DEB529DD267FC4E4000C33A2 /* RemoteSwiftPackageReference */,
+				DEB529E0267FC527000C33A2 /* RemoteSwiftPackageReference */,
+				DEB529E4267FC5BB000C33A2 /* RemoteSwiftPackageReference */,
+				DEB529E5267FC87D000C33A2 /* RemoteSwiftPackageReference */,
+				DEB529E6267FC8C6000C33A2 /* RemoteSwiftPackageReference */,
+				DEB529E7267FC8E5000C33A2 /* RemoteSwiftPackageReference */,
+				DEB529E8267FCCFD000C33A2 /* RemoteSwiftPackageReference */,
 			);
 			productRefGroup = DEA47531263F40AA00090DA5 /* Products */;
 			projectDirPath = "";
@@ -403,6 +446,75 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		4FFE8027B9E864F7C201D517 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SimpleMoviePlayerExampleTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C7A807C4973B77DC31946FB9 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SimpleMoviePlayerExample-SimpleMoviePlayerExampleUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F1EB25D549FBA7E9F214034D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SimpleMoviePlayerExample-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		DEA4752C263F40AA00090DA5 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -424,6 +536,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DEB529EA267FCE08000C33A2 /* Mock.generated.swift in Sources */,
 				DEA4754B263F40AC00090DA5 /* SimpleMoviePlayerExampleTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -589,7 +702,9 @@
 		};
 		DEA4755B263F40AC00090DA5 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5E1905F42DB80AB013F874A3 /* Pods-SimpleMoviePlayerExample.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
@@ -608,7 +723,9 @@
 		};
 		DEA4755C263F40AC00090DA5 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8C57B49AB9115919FBA2592C /* Pods-SimpleMoviePlayerExample.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
@@ -627,8 +744,9 @@
 		};
 		DEA4755E263F40AC00090DA5 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CF32871968371738901CE35F /* Pods-SimpleMoviePlayerExampleTests.debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = S5BF5553KY;
@@ -649,8 +767,9 @@
 		};
 		DEA4755F263F40AC00090DA5 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6F13436F8520BF6EBFA7AE90 /* Pods-SimpleMoviePlayerExampleTests.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = S5BF5553KY;
@@ -671,8 +790,9 @@
 		};
 		DEA47561263F40AC00090DA5 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BC9841BE6F00408A52C81066 /* Pods-SimpleMoviePlayerExample-SimpleMoviePlayerExampleUITests.debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = S5BF5553KY;
 				INFOPLIST_FILE = SimpleMoviePlayerExampleUITests/Info.plist;
@@ -691,8 +811,9 @@
 		};
 		DEA47562263F40AC00090DA5 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D7A777ED43B2100757C4421E /* Pods-SimpleMoviePlayerExample-SimpleMoviePlayerExampleUITests.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = S5BF5553KY;
 				INFOPLIST_FILE = SimpleMoviePlayerExampleUITests/Info.plist;
@@ -751,7 +872,7 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		DEB529DD267FC4E4000C33A2 /* XCRemoteSwiftPackageReference "GRDB.swift" */ = {
+		DEB529DD267FC4E4000C33A2 /* RemoteSwiftPackageReference */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/groue/GRDB.swift.git";
 			requirement = {
@@ -759,7 +880,7 @@
 				minimumVersion = 5.0.0;
 			};
 		};
-		DEB529E0267FC527000C33A2 /* XCRemoteSwiftPackageReference "UICircularProgressRing" */ = {
+		DEB529E0267FC527000C33A2 /* RemoteSwiftPackageReference */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/luispadron/UICircularProgressRing.git";
 			requirement = {
@@ -767,15 +888,7 @@
 				minimumVersion = 8.0.0;
 			};
 		};
-		DEB529E3267FC56F000C33A2 /* XCRemoteSwiftPackageReference "Cosmos" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/evgenyneu/Cosmos.git";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 9.0.0;
-			};
-		};
-		DEB529E4267FC5BB000C33A2 /* XCRemoteSwiftPackageReference "SwiftyMocky" */ = {
+		DEB529E4267FC5BB000C33A2 /* RemoteSwiftPackageReference */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/MakeAWishFoundation/SwiftyMocky.git";
 			requirement = {
@@ -783,7 +896,7 @@
 				minimumVersion = 4.0.0;
 			};
 		};
-		DEB529E5267FC87D000C33A2 /* XCRemoteSwiftPackageReference "SDWebImage" */ = {
+		DEB529E5267FC87D000C33A2 /* RemoteSwiftPackageReference */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/SDWebImage/SDWebImage.git";
 			requirement = {
@@ -791,7 +904,7 @@
 				minimumVersion = 5.0.0;
 			};
 		};
-		DEB529E6267FC8C6000C33A2 /* XCRemoteSwiftPackageReference "Quick" */ = {
+		DEB529E6267FC8C6000C33A2 /* RemoteSwiftPackageReference */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Quick/Quick.git";
 			requirement = {
@@ -799,7 +912,7 @@
 				minimumVersion = 4.0.0;
 			};
 		};
-		DEB529E7267FC8E5000C33A2 /* XCRemoteSwiftPackageReference "Nimble" */ = {
+		DEB529E7267FC8E5000C33A2 /* RemoteSwiftPackageReference */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Quick/Nimble.git";
 			requirement = {
@@ -807,7 +920,7 @@
 				minimumVersion = 9.0.0;
 			};
 		};
-		DEB529E8267FCCFD000C33A2 /* XCRemoteSwiftPackageReference "RxSwift" */ = {
+		DEB529E8267FCCFD000C33A2 /* RemoteSwiftPackageReference */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/ReactiveX/RxSwift.git";
 			requirement = {
@@ -818,14 +931,14 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		DEB529DE267FC4E4000C33A2 /* GRDB */ = {
+		DEB529DE267FC4E4000C33A2 /* SwiftPackageProductDependency */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = DEB529DD267FC4E4000C33A2 /* XCRemoteSwiftPackageReference "GRDB.swift" */;
+			package = DEB529DD267FC4E4000C33A2 /* RemoteSwiftPackageReference */;
 			productName = GRDB;
 		};
-		DEB529E1267FC527000C33A2 /* UICircularProgressRing */ = {
+		DEB529E1267FC527000C33A2 /* SwiftPackageProductDependency */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = DEB529E0267FC527000C33A2 /* XCRemoteSwiftPackageReference "UICircularProgressRing" */;
+			package = DEB529E0267FC527000C33A2 /* RemoteSwiftPackageReference */;
 			productName = UICircularProgressRing;
 		};
 /* End XCSwiftPackageProductDependency section */
