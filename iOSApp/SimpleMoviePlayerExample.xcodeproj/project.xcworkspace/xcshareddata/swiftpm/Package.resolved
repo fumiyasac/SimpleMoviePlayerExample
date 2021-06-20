@@ -1,0 +1,25 @@
+{
+  "object": {
+    "pins": [
+      {
+        "package": "GRDB.swift",
+        "repositoryURL": "https://github.com/groue/GRDB.swift.git",
+        "state": {
+          "branch": null,
+          "revision": "af13c91744ad8607c94ffbca3b0f98fa00692417",
+          "version": "5.8.0"
+        }
+      },
+      {
+        "package": "UICircularProgressRing",
+        "repositoryURL": "https://github.com/luispadron/UICircularProgressRing.git",
+        "state": {
+          "branch": null,
+          "revision": "e41b35ffbff734f39d6b4b2ca488a17f487e73a3",
+          "version": "8.0.0"
+        }
+      }
+    ]
+  },
+  "version": 1
+}

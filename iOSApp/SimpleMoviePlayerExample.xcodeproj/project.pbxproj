@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -21,6 +21,8 @@
 		DEA47540263F40AC00090DA5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DEA4753E263F40AC00090DA5 /* LaunchScreen.storyboard */; };
 		DEA4754B263F40AC00090DA5 /* SimpleMoviePlayerExampleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEA4754A263F40AC00090DA5 /* SimpleMoviePlayerExampleTests.swift */; };
 		DEA47556263F40AC00090DA5 /* SimpleMoviePlayerExampleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEA47555263F40AC00090DA5 /* SimpleMoviePlayerExampleUITests.swift */; };
+		DEB529DF267FC4E4000C33A2 /* GRDB in Frameworks */ = {isa = PBXBuildFile; productRef = DEB529DE267FC4E4000C33A2 /* GRDB */; };
+		DEB529E2267FC527000C33A2 /* UICircularProgressRing in Frameworks */ = {isa = PBXBuildFile; productRef = DEB529E1267FC527000C33A2 /* UICircularProgressRing */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -68,6 +70,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DEB529E2267FC527000C33A2 /* UICircularProgressRing in Frameworks */,
+				DEB529DF267FC4E4000C33A2 /* GRDB in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -275,6 +279,8 @@
 			);
 			name = SimpleMoviePlayerExample;
 			packageProductDependencies = (
+				DEB529DE267FC4E4000C33A2 /* GRDB */,
+				DEB529E1267FC527000C33A2 /* UICircularProgressRing */,
 			);
 			productName = SimpleMoviePlayerExample;
 			productReference = DEA47530263F40AA00090DA5 /* SimpleMoviePlayerExample.app */;
@@ -350,6 +356,13 @@
 			);
 			mainGroup = DEA47527263F40AA00090DA5;
 			packageReferences = (
+				DEB529DD267FC4E4000C33A2 /* XCRemoteSwiftPackageReference "GRDB.swift" */,
+				DEB529E0267FC527000C33A2 /* XCRemoteSwiftPackageReference "UICircularProgressRing" */,
+				DEB529E3267FC56F000C33A2 /* XCRemoteSwiftPackageReference "Cosmos" */,
+				DEB529E4267FC5BB000C33A2 /* XCRemoteSwiftPackageReference "SwiftyMocky" */,
+				DEB529E5267FC87D000C33A2 /* XCRemoteSwiftPackageReference "SDWebImage" */,
+				DEB529E6267FC8C6000C33A2 /* XCRemoteSwiftPackageReference "Quick" */,
+				DEB529E7267FC8E5000C33A2 /* XCRemoteSwiftPackageReference "Nimble" */,
 			);
 			productRefGroup = DEA47531263F40AA00090DA5 /* Products */;
 			projectDirPath = "";
@@ -735,6 +748,78 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		DEB529DD267FC4E4000C33A2 /* XCRemoteSwiftPackageReference "GRDB.swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/groue/GRDB.swift.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+		DEB529E0267FC527000C33A2 /* XCRemoteSwiftPackageReference "UICircularProgressRing" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/luispadron/UICircularProgressRing.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 8.0.0;
+			};
+		};
+		DEB529E3267FC56F000C33A2 /* XCRemoteSwiftPackageReference "Cosmos" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/evgenyneu/Cosmos.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 9.0.0;
+			};
+		};
+		DEB529E4267FC5BB000C33A2 /* XCRemoteSwiftPackageReference "SwiftyMocky" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/MakeAWishFoundation/SwiftyMocky.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.0.0;
+			};
+		};
+		DEB529E5267FC87D000C33A2 /* XCRemoteSwiftPackageReference "SDWebImage" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SDWebImage/SDWebImage.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+		DEB529E6267FC8C6000C33A2 /* XCRemoteSwiftPackageReference "Quick" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Quick/Quick.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.0.0;
+			};
+		};
+		DEB529E7267FC8E5000C33A2 /* XCRemoteSwiftPackageReference "Nimble" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Quick/Nimble.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 9.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		DEB529DE267FC4E4000C33A2 /* GRDB */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DEB529DD267FC4E4000C33A2 /* XCRemoteSwiftPackageReference "GRDB.swift" */;
+			productName = GRDB;
+		};
+		DEB529E1267FC527000C33A2 /* UICircularProgressRing */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DEB529E0267FC527000C33A2 /* XCRemoteSwiftPackageReference "UICircularProgressRing" */;
+			productName = UICircularProgressRing;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = DEA47528263F40AA00090DA5 /* Project object */;
 }

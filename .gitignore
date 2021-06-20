@@ -22,4 +22,7 @@ DerivedData
 .DS_Store
 
 # CocoaPods
-/Pods/*
+/SimpleMoviePlayerExample/Pods/*
+
+# Backend
+/SimpleMoviePlayerExample/Backend/node_modules/
