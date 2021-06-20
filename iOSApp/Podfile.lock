@@ -1,3 +1,24 @@
-PODFILE CHECKSUM: 121badfaed0831a6ed85f09b625c02442b980c64
+PODS:
+  - ActiveLabel (1.1.0)
+  - Cosmos (23.0.0)
+  - GrowingTextView (0.7.2)
+
+DEPENDENCIES:
+  - ActiveLabel
+  - Cosmos (~> 23.0)
+  - GrowingTextView (= 0.7.2)
+
+SPEC REPOS:
+  trunk:
+    - ActiveLabel
+    - Cosmos
+    - GrowingTextView
+
+SPEC CHECKSUMS:
+  ActiveLabel: 5e3f4de79a1952d4604b845a0610d4776e4b82b3
+  Cosmos: b5c6a9a637e28a061b54c8f8b1d8529d7d4db73f
+  GrowingTextView: 876bf42005b5e4a4fd740597db12caaf41f0fe6c
+
+PODFILE CHECKSUM: 84fa756c285323bbbb20b48e645d6d3f048fb5b2
 
 COCOAPODS: 1.10.1

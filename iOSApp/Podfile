@@ -5,9 +5,9 @@ target 'SimpleMoviePlayerExample' do
   use_frameworks!
 
   # Pods for SimpleMoviePlayerExample
-  #pod 'Cosmos', '~> 23.0'
-  #pod 'ActiveLabel'
-  #pod 'GrowingTextView', '0.7.2'  
+  pod 'Cosmos', '~> 23.0'
+  pod 'ActiveLabel'
+  pod 'GrowingTextView', '0.7.2'  
 
   target 'SimpleMoviePlayerExampleTests' do
     inherit! :search_paths

@@ -316,6 +316,7 @@
 				DEA4752C263F40AA00090DA5 /* Sources */,
 				DEA4752D263F40AA00090DA5 /* Frameworks */,
 				DEA4752E263F40AA00090DA5 /* Resources */,
+				DE57E635C71FC5F3B5F82231 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -357,6 +358,7 @@
 				DEA4754D263F40AC00090DA5 /* Sources */,
 				DEA4754E263F40AC00090DA5 /* Frameworks */,
 				DEA4754F263F40AC00090DA5 /* Resources */,
+				A10835F4ACACC0D19004D295 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -469,6 +471,23 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		A10835F4ACACC0D19004D295 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SimpleMoviePlayerExample-SimpleMoviePlayerExampleUITests/Pods-SimpleMoviePlayerExample-SimpleMoviePlayerExampleUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SimpleMoviePlayerExample-SimpleMoviePlayerExampleUITests/Pods-SimpleMoviePlayerExample-SimpleMoviePlayerExampleUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SimpleMoviePlayerExample-SimpleMoviePlayerExampleUITests/Pods-SimpleMoviePlayerExample-SimpleMoviePlayerExampleUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		C7A807C4973B77DC31946FB9 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -489,6 +508,23 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DE57E635C71FC5F3B5F82231 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SimpleMoviePlayerExample/Pods-SimpleMoviePlayerExample-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SimpleMoviePlayerExample/Pods-SimpleMoviePlayerExample-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SimpleMoviePlayerExample/Pods-SimpleMoviePlayerExample-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		F1EB25D549FBA7E9F214034D /* [CP] Check Pods Manifest.lock */ = {
