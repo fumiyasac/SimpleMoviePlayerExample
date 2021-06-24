@@ -1,13 +1,13 @@
 //
-//  MainViewController.swift
+//  GlobalTabBarController.swift
 //  SimpleMoviePlayerExample
 //
-//  Created by 酒井文也 on 2021/05/03.
+//  Created by 酒井文也 on 2021/06/23.
 //
 
 import UIKit
 
-final class MainViewController: UIViewController {
+final class GlobalTabBarController: UITabBarController {
 
     // MARK: - Override
 
