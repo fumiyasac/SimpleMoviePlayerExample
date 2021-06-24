@@ -5,13 +5,25 @@ target 'SimpleMoviePlayerExample' do
   use_frameworks!
 
   # Pods for SimpleMoviePlayerExample
+
+  # UI Libraries
   pod 'Cosmos', '~> 23.0'
   pod 'ActiveLabel'
   pod 'GrowingTextView', '0.7.2'  
+  pod 'EasyTipView', '~> 2.1'
+  
+  # RxSwift & RxCocoa
+  pod 'RxSwift'
+  pod 'RxCocoa'
+
+  # UserDefault
+  pod 'SwiftyUserDefaults', '~> 5.0'
 
   target 'SimpleMoviePlayerExampleTests' do
     inherit! :search_paths
     # Pods for testing
+    pod 'RxBlocking'
+    pod 'RxTest'
   end
 
   target 'SimpleMoviePlayerExampleUITests' do

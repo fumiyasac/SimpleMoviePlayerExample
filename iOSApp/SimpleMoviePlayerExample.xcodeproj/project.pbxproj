@@ -24,8 +24,8 @@
 		DEA47540263F40AC00090DA5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DEA4753E263F40AC00090DA5 /* LaunchScreen.storyboard */; };
 		DEA4754B263F40AC00090DA5 /* SimpleMoviePlayerExampleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEA4754A263F40AC00090DA5 /* SimpleMoviePlayerExampleTests.swift */; };
 		DEA47556263F40AC00090DA5 /* SimpleMoviePlayerExampleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEA47555263F40AC00090DA5 /* SimpleMoviePlayerExampleUITests.swift */; };
-		DEB529DF267FC4E4000C33A2 /* GRDB in Frameworks */ = {isa = PBXBuildFile; productRef = DEB529DE267FC4E4000C33A2 /* GRDB */; };
-		DEB529E2267FC527000C33A2 /* UICircularProgressRing in Frameworks */ = {isa = PBXBuildFile; productRef = DEB529E1267FC527000C33A2 /* UICircularProgressRing */; };
+		DEB529DF267FC4E4000C33A2 /* BuildFile in Frameworks */ = {isa = PBXBuildFile; productRef = DEB529DE267FC4E4000C33A2 /* SwiftPackageProductDependency */; };
+		DEB529E2267FC527000C33A2 /* BuildFile in Frameworks */ = {isa = PBXBuildFile; productRef = DEB529E1267FC527000C33A2 /* SwiftPackageProductDependency */; };
 		DEB529EA267FCE08000C33A2 /* Mock.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEB529E9267FCE08000C33A2 /* Mock.generated.swift */; };
 		DEB529EE2682B84A000C33A2 /* GlobalTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEB529ED2682B84A000C33A2 /* GlobalTabBarController.swift */; };
 		DEB529F62684B705000C33A2 /* FavoriteViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DEB529F42684B705000C33A2 /* FavoriteViewController.storyboard */; };
@@ -35,6 +35,8 @@
 		DEB52A002684BDEE000C33A2 /* FeaturedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEB529FF2684BDEE000C33A2 /* FeaturedViewController.swift */; };
 		DEB52A032684CA68000C33A2 /* SettingsViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DEB52A012684CA68000C33A2 /* SettingsViewController.storyboard */; };
 		DEB52A052684CA8B000C33A2 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEB52A042684CA8B000C33A2 /* SettingsViewController.swift */; };
+		DEB52A072684CD12000C33A2 /* DependeciesContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEB52A062684CD12000C33A2 /* DependeciesContainer.swift */; };
+		DEB52A092684CD6A000C33A2 /* DependenciesDefinition.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEB52A082684CD6A000C33A2 /* DependenciesDefinition.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -93,6 +95,8 @@
 		DEB529FF2684BDEE000C33A2 /* FeaturedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeaturedViewController.swift; sourceTree = "<group>"; };
 		DEB52A022684CA68000C33A2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/SettingsViewController.storyboard; sourceTree = "<group>"; };
 		DEB52A042684CA8B000C33A2 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		DEB52A062684CD12000C33A2 /* DependeciesContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DependeciesContainer.swift; sourceTree = "<group>"; };
+		DEB52A082684CD6A000C33A2 /* DependenciesDefinition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DependenciesDefinition.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,8 +104,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DEB529E2267FC527000C33A2 /* UICircularProgressRing in Frameworks */,
-				DEB529DF267FC4E4000C33A2 /* GRDB in Frameworks */,
+				DEB529E2267FC527000C33A2 /* BuildFile in Frameworks */,
+				DEB529DF267FC4E4000C33A2 /* BuildFile in Frameworks */,
 				53E89A3FFAD1A4BBC30E2E41 /* Pods_SimpleMoviePlayerExample.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -333,6 +337,8 @@
 		DEB529EF2684B0ED000C33A2 /* Dependencies */ = {
 			isa = PBXGroup;
 			children = (
+				DEB52A062684CD12000C33A2 /* DependeciesContainer.swift */,
+				DEB52A082684CD6A000C33A2 /* DependenciesDefinition.swift */,
 			);
 			path = Dependencies;
 			sourceTree = "<group>";
@@ -356,8 +362,8 @@
 			);
 			name = SimpleMoviePlayerExample;
 			packageProductDependencies = (
-				DEB529DE267FC4E4000C33A2 /* GRDB */,
-				DEB529E1267FC527000C33A2 /* UICircularProgressRing */,
+				DEB529DE267FC4E4000C33A2 /* SwiftPackageProductDependency */,
+				DEB529E1267FC527000C33A2 /* SwiftPackageProductDependency */,
 			);
 			productName = SimpleMoviePlayerExample;
 			productReference = DEA47530263F40AA00090DA5 /* SimpleMoviePlayerExample.app */;
@@ -371,6 +377,7 @@
 				DEA47542263F40AC00090DA5 /* Sources */,
 				DEA47543263F40AC00090DA5 /* Frameworks */,
 				DEA47544263F40AC00090DA5 /* Resources */,
+				184804C0545A5A53290C66FE /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -434,13 +441,12 @@
 			);
 			mainGroup = DEA47527263F40AA00090DA5;
 			packageReferences = (
-				DEB529DD267FC4E4000C33A2 /* XCRemoteSwiftPackageReference "GRDB.swift" */,
-				DEB529E0267FC527000C33A2 /* XCRemoteSwiftPackageReference "UICircularProgressRing" */,
-				DEB529E4267FC5BB000C33A2 /* XCRemoteSwiftPackageReference "SwiftyMocky" */,
-				DEB529E5267FC87D000C33A2 /* XCRemoteSwiftPackageReference "SDWebImage" */,
-				DEB529E6267FC8C6000C33A2 /* XCRemoteSwiftPackageReference "Quick" */,
-				DEB529E7267FC8E5000C33A2 /* XCRemoteSwiftPackageReference "Nimble" */,
-				DEB529E8267FCCFD000C33A2 /* XCRemoteSwiftPackageReference "RxSwift" */,
+				DEB529DD267FC4E4000C33A2 /* RemoteSwiftPackageReference */,
+				DEB529E0267FC527000C33A2 /* RemoteSwiftPackageReference */,
+				DEB529E4267FC5BB000C33A2 /* RemoteSwiftPackageReference */,
+				DEB529E5267FC87D000C33A2 /* RemoteSwiftPackageReference */,
+				DEB529E6267FC8C6000C33A2 /* RemoteSwiftPackageReference */,
+				DEB529E7267FC8E5000C33A2 /* RemoteSwiftPackageReference */,
 			);
 			productRefGroup = DEA47531263F40AA00090DA5 /* Products */;
 			projectDirPath = "";
@@ -485,6 +491,23 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		184804C0545A5A53290C66FE /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SimpleMoviePlayerExampleTests/Pods-SimpleMoviePlayerExampleTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SimpleMoviePlayerExampleTests/Pods-SimpleMoviePlayerExampleTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SimpleMoviePlayerExampleTests/Pods-SimpleMoviePlayerExampleTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		4FFE8027B9E864F7C201D517 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -599,10 +622,12 @@
 				DE5F6E7F267FC1E100FCD3A1 /* UICollectionViewExtension.swift in Sources */,
 				DE5F6E81267FC23500FCD3A1 /* UITableViewExtension.swift in Sources */,
 				DEA47534263F40AA00090DA5 /* AppDelegate.swift in Sources */,
+				DEB52A092684CD6A000C33A2 /* DependenciesDefinition.swift in Sources */,
 				DEB529EE2682B84A000C33A2 /* GlobalTabBarController.swift in Sources */,
 				DEA47536263F40AA00090DA5 /* SceneDelegate.swift in Sources */,
 				DE5F6E7B267FC19F00FCD3A1 /* NSObjectProtocolExtension.swift in Sources */,
 				DEB52A052684CA8B000C33A2 /* SettingsViewController.swift in Sources */,
+				DEB52A072684CD12000C33A2 /* DependeciesContainer.swift in Sources */,
 				DEB52A002684BDEE000C33A2 /* FeaturedViewController.swift in Sources */,
 				DE5F6E7D267FC1AB00FCD3A1 /* UIColorExtension.swift in Sources */,
 			);
@@ -980,7 +1005,7 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		DEB529DD267FC4E4000C33A2 /* XCRemoteSwiftPackageReference "GRDB.swift" */ = {
+		DEB529DD267FC4E4000C33A2 /* RemoteSwiftPackageReference */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/groue/GRDB.swift.git";
 			requirement = {
@@ -988,7 +1013,7 @@
 				minimumVersion = 5.0.0;
 			};
 		};
-		DEB529E0267FC527000C33A2 /* XCRemoteSwiftPackageReference "UICircularProgressRing" */ = {
+		DEB529E0267FC527000C33A2 /* RemoteSwiftPackageReference */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/luispadron/UICircularProgressRing.git";
 			requirement = {
@@ -996,7 +1021,7 @@
 				minimumVersion = 8.0.0;
 			};
 		};
-		DEB529E4267FC5BB000C33A2 /* XCRemoteSwiftPackageReference "SwiftyMocky" */ = {
+		DEB529E4267FC5BB000C33A2 /* RemoteSwiftPackageReference */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/MakeAWishFoundation/SwiftyMocky.git";
 			requirement = {
@@ -1004,7 +1029,7 @@
 				minimumVersion = 4.0.0;
 			};
 		};
-		DEB529E5267FC87D000C33A2 /* XCRemoteSwiftPackageReference "SDWebImage" */ = {
+		DEB529E5267FC87D000C33A2 /* RemoteSwiftPackageReference */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/SDWebImage/SDWebImage.git";
 			requirement = {
@@ -1012,7 +1037,7 @@
 				minimumVersion = 5.0.0;
 			};
 		};
-		DEB529E6267FC8C6000C33A2 /* XCRemoteSwiftPackageReference "Quick" */ = {
+		DEB529E6267FC8C6000C33A2 /* RemoteSwiftPackageReference */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Quick/Quick.git";
 			requirement = {
@@ -1020,7 +1045,7 @@
 				minimumVersion = 4.0.0;
 			};
 		};
-		DEB529E7267FC8E5000C33A2 /* XCRemoteSwiftPackageReference "Nimble" */ = {
+		DEB529E7267FC8E5000C33A2 /* RemoteSwiftPackageReference */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Quick/Nimble.git";
 			requirement = {
@@ -1028,25 +1053,17 @@
 				minimumVersion = 9.0.0;
 			};
 		};
-		DEB529E8267FCCFD000C33A2 /* XCRemoteSwiftPackageReference "RxSwift" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/ReactiveX/RxSwift.git";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 6.0.0;
-			};
-		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		DEB529DE267FC4E4000C33A2 /* GRDB */ = {
+		DEB529DE267FC4E4000C33A2 /* SwiftPackageProductDependency */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = DEB529DD267FC4E4000C33A2 /* XCRemoteSwiftPackageReference "GRDB.swift" */;
+			package = DEB529DD267FC4E4000C33A2 /* RemoteSwiftPackageReference */;
 			productName = GRDB;
 		};
-		DEB529E1267FC527000C33A2 /* UICircularProgressRing */ = {
+		DEB529E1267FC527000C33A2 /* SwiftPackageProductDependency */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = DEB529E0267FC527000C33A2 /* XCRemoteSwiftPackageReference "UICircularProgressRing" */;
+			package = DEB529E0267FC527000C33A2 /* RemoteSwiftPackageReference */;
 			productName = UICircularProgressRing;
 		};
 /* End XCSwiftPackageProductDependency section */

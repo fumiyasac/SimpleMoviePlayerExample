@@ -1,24 +1,56 @@
 PODS:
   - ActiveLabel (1.1.0)
   - Cosmos (23.0.0)
+  - EasyTipView (2.1.0)
   - GrowingTextView (0.7.2)
+  - RxBlocking (6.1.0):
+    - RxSwift (= 6.1.0)
+  - RxCocoa (6.1.0):
+    - RxRelay (= 6.1.0)
+    - RxSwift (= 6.1.0)
+  - RxRelay (6.1.0):
+    - RxSwift (= 6.1.0)
+  - RxSwift (6.1.0)
+  - RxTest (6.1.0):
+    - RxSwift (= 6.1.0)
+  - SwiftyUserDefaults (5.3.0)
 
 DEPENDENCIES:
   - ActiveLabel
   - Cosmos (~> 23.0)
+  - EasyTipView (~> 2.1)
   - GrowingTextView (= 0.7.2)
+  - RxBlocking
+  - RxCocoa
+  - RxSwift
+  - RxTest
+  - SwiftyUserDefaults (~> 5.0)
 
 SPEC REPOS:
   trunk:
     - ActiveLabel
     - Cosmos
+    - EasyTipView
     - GrowingTextView
+    - RxBlocking
+    - RxCocoa
+    - RxRelay
+    - RxSwift
+    - RxTest
+    - SwiftyUserDefaults
 
 SPEC CHECKSUMS:
   ActiveLabel: 5e3f4de79a1952d4604b845a0610d4776e4b82b3
   Cosmos: b5c6a9a637e28a061b54c8f8b1d8529d7d4db73f
+  EasyTipView: a92b6edc377b81c5ac18e9fd35d5ee78e9409488
   GrowingTextView: 876bf42005b5e4a4fd740597db12caaf41f0fe6c
+  RxBlocking: 602095fba0bce7b16b56ccec89edf780c248b7d9
+  RxCocoa: 5c51f02d562cbd94629f6c26cf0c80fe4ab8d343
+  RxRelay: 483e1a19fad961b41f0b0c0bee506f46c1ae14fe
+  RxSwift: a834e5c538e89eca0cae86f403f4fbf0336786ce
+  RxTest: 9d26616eaff4a7e75f4ecae9b2c24840f2e8218d
+  SwiftyUserDefaults: 63f80248cf5bfb3458825d9a78f2eb7e1293a040
 
-PODFILE CHECKSUM: 84fa756c285323bbbb20b48e645d6d3f048fb5b2
+PODFILE CHECKSUM: 7dd0c2879a5322b2d0a0a3511ca17f8bdeabbc43
 
 COCOAPODS: 1.10.1
