@@ -11,6 +11,10 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+        
+        // MEMO: DIコンテナの適用
+        DependenciesDefinition().inject()
+
         return true
     }
 
