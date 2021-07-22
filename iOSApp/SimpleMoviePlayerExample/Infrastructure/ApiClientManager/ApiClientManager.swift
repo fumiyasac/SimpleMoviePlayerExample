@@ -53,7 +53,6 @@ class ApiClientManager {
     // MEMO: API Mock ServerへのURLに関する情報
     private static let host = "http://localhost:8080/api"
     private static let version = "v1"
-    private static let path = "summer_pieces"
  
     private let session = URLSession.shared
 
@@ -72,7 +71,7 @@ class ApiClientManager {
         case featuredContents = "featured_contents"
 
         func getBaseUrl() -> String {
-            return [host, version, path, self.rawValue].joined(separator: "/")
+            return [host, version, self.rawValue].joined(separator: "/")
         }
     }
 
