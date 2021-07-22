@@ -16,6 +16,7 @@
 		DE5F6E7F267FC1E100FCD3A1 /* UICollectionViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE5F6E7E267FC1E100FCD3A1 /* UICollectionViewExtension.swift */; };
 		DE5F6E81267FC23500FCD3A1 /* UITableViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE5F6E80267FC23500FCD3A1 /* UITableViewExtension.swift */; };
 		DE5F6E83267FC27100FCD3A1 /* UIViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE5F6E82267FC27100FCD3A1 /* UIViewControllerExtension.swift */; };
+		DE82CF1B26A9B26C00033A62 /* ApiClientManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE82CF1A26A9B26C00033A62 /* ApiClientManager.swift */; };
 		DEA47534263F40AA00090DA5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEA47533263F40AA00090DA5 /* AppDelegate.swift */; };
 		DEA47536263F40AA00090DA5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEA47535263F40AA00090DA5 /* SceneDelegate.swift */; };
 		DEA47538263F40AA00090DA5 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEA47537263F40AA00090DA5 /* MainViewController.swift */; };
@@ -32,8 +33,6 @@
 		DEB529F62684B705000C33A2 /* FavoriteViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DEB529F42684B705000C33A2 /* FavoriteViewController.storyboard */; };
 		DEB529F92684B72B000C33A2 /* GlobalTabBarController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DEB529F72684B72B000C33A2 /* GlobalTabBarController.storyboard */; };
 		DEB529FB2684BA71000C33A2 /* FavoriteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEB529FA2684BA71000C33A2 /* FavoriteViewController.swift */; };
-		DEB529FE2684BDC7000C33A2 /* FeaturedViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DEB529FC2684BDC7000C33A2 /* FeaturedViewController.storyboard */; };
-		DEB52A002684BDEE000C33A2 /* FeaturedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEB529FF2684BDEE000C33A2 /* FeaturedViewController.swift */; };
 		DEB52A032684CA68000C33A2 /* SettingsViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DEB52A012684CA68000C33A2 /* SettingsViewController.storyboard */; };
 		DEB52A052684CA8B000C33A2 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEB52A042684CA8B000C33A2 /* SettingsViewController.swift */; };
 		DEB52A072684CD12000C33A2 /* DependeciesContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEB52A062684CD12000C33A2 /* DependeciesContainer.swift */; };
@@ -73,6 +72,7 @@
 		DE5F6E7E267FC1E100FCD3A1 /* UICollectionViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UICollectionViewExtension.swift; sourceTree = "<group>"; };
 		DE5F6E80267FC23500FCD3A1 /* UITableViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableViewExtension.swift; sourceTree = "<group>"; };
 		DE5F6E82267FC27100FCD3A1 /* UIViewControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtension.swift; sourceTree = "<group>"; };
+		DE82CF1A26A9B26C00033A62 /* ApiClientManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiClientManager.swift; sourceTree = "<group>"; };
 		DEA47530263F40AA00090DA5 /* SimpleMoviePlayerExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SimpleMoviePlayerExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DEA47533263F40AA00090DA5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DEA47535263F40AA00090DA5 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -93,8 +93,6 @@
 		DEB529F52684B705000C33A2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/FavoriteViewController.storyboard; sourceTree = "<group>"; };
 		DEB529F82684B72B000C33A2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/GlobalTabBarController.storyboard; sourceTree = "<group>"; };
 		DEB529FA2684BA71000C33A2 /* FavoriteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteViewController.swift; sourceTree = "<group>"; };
-		DEB529FD2684BDC7000C33A2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/FeaturedViewController.storyboard; sourceTree = "<group>"; };
-		DEB529FF2684BDEE000C33A2 /* FeaturedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeaturedViewController.swift; sourceTree = "<group>"; };
 		DEB52A022684CA68000C33A2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/SettingsViewController.storyboard; sourceTree = "<group>"; };
 		DEB52A042684CA8B000C33A2 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		DEB52A062684CD12000C33A2 /* DependeciesContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DependeciesContainer.swift; sourceTree = "<group>"; };
@@ -158,7 +156,6 @@
 			isa = PBXGroup;
 			children = (
 				DEB529F42684B705000C33A2 /* FavoriteViewController.storyboard */,
-				DEB529FC2684BDC7000C33A2 /* FeaturedViewController.storyboard */,
 				DEB529F72684B72B000C33A2 /* GlobalTabBarController.storyboard */,
 				DEA47539263F40AA00090DA5 /* MainViewController.storyboard */,
 				DEB52A012684CA68000C33A2 /* SettingsViewController.storyboard */,
@@ -198,7 +195,6 @@
 			isa = PBXGroup;
 			children = (
 				DEB529FA2684BA71000C33A2 /* FavoriteViewController.swift */,
-				DEB529FF2684BDEE000C33A2 /* FeaturedViewController.swift */,
 				DEB529ED2682B84A000C33A2 /* GlobalTabBarController.swift */,
 				DEA47537263F40AA00090DA5 /* MainViewController.swift */,
 				DEB52A042684CA8B000C33A2 /* SettingsViewController.swift */,
@@ -227,11 +223,12 @@
 			path = Presenter;
 			sourceTree = "<group>";
 		};
-		DE5F6E71267FBFD600FCD3A1 /* ApiClient */ = {
+		DE5F6E71267FBFD600FCD3A1 /* ApiClientManager */ = {
 			isa = PBXGroup;
 			children = (
+				DE82CF1A26A9B26C00033A62 /* ApiClientManager.swift */,
 			);
-			path = ApiClient;
+			path = ApiClientManager;
 			sourceTree = "<group>";
 		};
 		DE5F6E72267FBFFB00FCD3A1 /* Modules */ = {
@@ -241,27 +238,18 @@
 			path = Modules;
 			sourceTree = "<group>";
 		};
-		DE5F6E73267FC00200FCD3A1 /* LocalDatabase */ = {
+		DE5F6E75267FC05700FCD3A1 /* UserDefaultManager */ = {
 			isa = PBXGroup;
 			children = (
-				DE5F6E76267FC06400FCD3A1 /* SQLite */,
-				DE5F6E75267FC05700FCD3A1 /* UserDefault */,
 			);
-			path = LocalDatabase;
+			path = UserDefaultManager;
 			sourceTree = "<group>";
 		};
-		DE5F6E75267FC05700FCD3A1 /* UserDefault */ = {
+		DE5F6E76267FC06400FCD3A1 /* SQLiteManager */ = {
 			isa = PBXGroup;
 			children = (
 			);
-			path = UserDefault;
-			sourceTree = "<group>";
-		};
-		DE5F6E76267FC06400FCD3A1 /* SQLite */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = SQLite;
+			path = SQLiteManager;
 			sourceTree = "<group>";
 		};
 		DE5F6E84267FC30200FCD3A1 /* ViewObject */ = {
@@ -269,6 +257,16 @@
 			children = (
 			);
 			path = ViewObject;
+			sourceTree = "<group>";
+		};
+		DE82CF1926A9B1E700033A62 /* Infrastructure */ = {
+			isa = PBXGroup;
+			children = (
+				DE5F6E71267FBFD600FCD3A1 /* ApiClientManager */,
+				DE5F6E75267FC05700FCD3A1 /* UserDefaultManager */,
+				DE5F6E76267FC06400FCD3A1 /* SQLiteManager */,
+			);
+			path = Infrastructure;
 			sourceTree = "<group>";
 		};
 		DEA47527263F40AA00090DA5 = {
@@ -301,12 +299,11 @@
 				DEA47535263F40AA00090DA5 /* SceneDelegate.swift */,
 				DEA4753C263F40AC00090DA5 /* Assets.xcassets */,
 				DEA4753E263F40AC00090DA5 /* LaunchScreen.storyboard */,
-				DE5F6E71267FBFD600FCD3A1 /* ApiClient */,
 				DE5F6E6F267FBFC400FCD3A1 /* Contract */,
 				DEB529EF2684B0ED000C33A2 /* Dependencies */,
 				DE5F6E6C267FBF0700FCD3A1 /* Enum */,
 				DE5F6E6B267FBF0100FCD3A1 /* Extension */,
-				DE5F6E73267FC00200FCD3A1 /* LocalDatabase */,
+				DE82CF1926A9B1E700033A62 /* Infrastructure */,
 				DE5F6E72267FBFFB00FCD3A1 /* Modules */,
 				DE5F6E70267FBFCB00FCD3A1 /* Presenter */,
 				DE5F6E6E267FBFBA00FCD3A1 /* Repository */,
@@ -471,7 +468,6 @@
 				DEA47540263F40AC00090DA5 /* LaunchScreen.storyboard in Resources */,
 				DEB529F62684B705000C33A2 /* FavoriteViewController.storyboard in Resources */,
 				DEA4753D263F40AC00090DA5 /* Assets.xcassets in Resources */,
-				DEB529FE2684BDC7000C33A2 /* FeaturedViewController.storyboard in Resources */,
 				DEB529F92684B72B000C33A2 /* GlobalTabBarController.storyboard in Resources */,
 				DEA4753B263F40AA00090DA5 /* MainViewController.storyboard in Resources */,
 			);
@@ -630,9 +626,9 @@
 				DEB529EE2682B84A000C33A2 /* GlobalTabBarController.swift in Sources */,
 				DEA47536263F40AA00090DA5 /* SceneDelegate.swift in Sources */,
 				DE5F6E7B267FC19F00FCD3A1 /* NSObjectProtocolExtension.swift in Sources */,
+				DE82CF1B26A9B26C00033A62 /* ApiClientManager.swift in Sources */,
 				DEB52A052684CA8B000C33A2 /* SettingsViewController.swift in Sources */,
 				DEB52A072684CD12000C33A2 /* DependeciesContainer.swift in Sources */,
-				DEB52A002684BDEE000C33A2 /* FeaturedViewController.swift in Sources */,
 				DE5F6E7D267FC1AB00FCD3A1 /* UIColorExtension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -700,14 +696,6 @@
 				DEB529F82684B72B000C33A2 /* Base */,
 			);
 			name = GlobalTabBarController.storyboard;
-			sourceTree = "<group>";
-		};
-		DEB529FC2684BDC7000C33A2 /* FeaturedViewController.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				DEB529FD2684BDC7000C33A2 /* Base */,
-			);
-			name = FeaturedViewController.storyboard;
 			sourceTree = "<group>";
 		};
 		DEB52A012684CA68000C33A2 /* SettingsViewController.storyboard */ = {
