@@ -17,6 +17,7 @@
 		DE5F6E81267FC23500FCD3A1 /* UITableViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE5F6E80267FC23500FCD3A1 /* UITableViewExtension.swift */; };
 		DE5F6E83267FC27100FCD3A1 /* UIViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE5F6E82267FC27100FCD3A1 /* UIViewControllerExtension.swift */; };
 		DE82CF1B26A9B26C00033A62 /* ApiClientManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE82CF1A26A9B26C00033A62 /* ApiClientManager.swift */; };
+		DE82CF1E26A9C65900033A62 /* SwiftyUserDefaults in Frameworks */ = {isa = PBXBuildFile; productRef = DE82CF1D26A9C65900033A62 /* SwiftyUserDefaults */; };
 		DEA47534263F40AA00090DA5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEA47533263F40AA00090DA5 /* AppDelegate.swift */; };
 		DEA47536263F40AA00090DA5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEA47535263F40AA00090DA5 /* SceneDelegate.swift */; };
 		DEA47538263F40AA00090DA5 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEA47537263F40AA00090DA5 /* MainViewController.swift */; };
@@ -107,6 +108,7 @@
 				DEB529E2267FC527000C33A2 /* UICircularProgressRing in Frameworks */,
 				DEB529DF267FC4E4000C33A2 /* GRDB in Frameworks */,
 				53E89A3FFAD1A4BBC30E2E41 /* Pods_SimpleMoviePlayerExample.framework in Frameworks */,
+				DE82CF1E26A9C65900033A62 /* SwiftyUserDefaults in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -205,6 +207,8 @@
 		DE5F6E6E267FBFBA00FCD3A1 /* Repository */ = {
 			isa = PBXGroup;
 			children = (
+				DE82CF1F26A9C67500033A62 /* DataTransfer */,
+				DE82CF2026A9C6E400033A62 /* Entity */,
 			);
 			path = Repository;
 			sourceTree = "<group>";
@@ -216,11 +220,13 @@
 			path = Contract;
 			sourceTree = "<group>";
 		};
-		DE5F6E70267FBFCB00FCD3A1 /* Presenter */ = {
+		DE5F6E70267FBFCB00FCD3A1 /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
+				DE5F6E6F267FBFC400FCD3A1 /* Contract */,
+				DE82CF2226A9C7F700033A62 /* Presenter */,
 			);
-			path = Presenter;
+			path = Presentation;
 			sourceTree = "<group>";
 		};
 		DE5F6E71267FBFD600FCD3A1 /* ApiClientManager */ = {
@@ -262,11 +268,40 @@
 		DE82CF1926A9B1E700033A62 /* Infrastructure */ = {
 			isa = PBXGroup;
 			children = (
+				DE82CF2126A9C6EC00033A62 /* Manager */,
+			);
+			path = Infrastructure;
+			sourceTree = "<group>";
+		};
+		DE82CF1F26A9C67500033A62 /* DataTransfer */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = DataTransfer;
+			sourceTree = "<group>";
+		};
+		DE82CF2026A9C6E400033A62 /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
+		DE82CF2126A9C6EC00033A62 /* Manager */ = {
+			isa = PBXGroup;
+			children = (
 				DE5F6E71267FBFD600FCD3A1 /* ApiClientManager */,
 				DE5F6E75267FC05700FCD3A1 /* UserDefaultManager */,
 				DE5F6E76267FC06400FCD3A1 /* SQLiteManager */,
 			);
-			path = Infrastructure;
+			path = Manager;
+			sourceTree = "<group>";
+		};
+		DE82CF2226A9C7F700033A62 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Presenter;
 			sourceTree = "<group>";
 		};
 		DEA47527263F40AA00090DA5 = {
@@ -299,13 +334,12 @@
 				DEA47535263F40AA00090DA5 /* SceneDelegate.swift */,
 				DEA4753C263F40AC00090DA5 /* Assets.xcassets */,
 				DEA4753E263F40AC00090DA5 /* LaunchScreen.storyboard */,
-				DE5F6E6F267FBFC400FCD3A1 /* Contract */,
 				DEB529EF2684B0ED000C33A2 /* Dependencies */,
 				DE5F6E6C267FBF0700FCD3A1 /* Enum */,
 				DE5F6E6B267FBF0100FCD3A1 /* Extension */,
 				DE82CF1926A9B1E700033A62 /* Infrastructure */,
 				DE5F6E72267FBFFB00FCD3A1 /* Modules */,
-				DE5F6E70267FBFCB00FCD3A1 /* Presenter */,
+				DE5F6E70267FBFCB00FCD3A1 /* Presentation */,
 				DE5F6E6E267FBFBA00FCD3A1 /* Repository */,
 				DE5F6E69267FBEEA00FCD3A1 /* Storyboard */,
 				DE5F6E6A267FBEF300FCD3A1 /* View */,
@@ -364,6 +398,7 @@
 			packageProductDependencies = (
 				DEB529DE267FC4E4000C33A2 /* GRDB */,
 				DEB529E1267FC527000C33A2 /* UICircularProgressRing */,
+				DE82CF1D26A9C65900033A62 /* SwiftyUserDefaults */,
 			);
 			productName = SimpleMoviePlayerExample;
 			productReference = DEA47530263F40AA00090DA5 /* SimpleMoviePlayerExample.app */;
@@ -447,6 +482,7 @@
 				DEB529E5267FC87D000C33A2 /* XCRemoteSwiftPackageReference "SDWebImage" */,
 				DEB529E6267FC8C6000C33A2 /* XCRemoteSwiftPackageReference "Quick" */,
 				DEB529E7267FC8E5000C33A2 /* XCRemoteSwiftPackageReference "Nimble" */,
+				DE82CF1C26A9C65900033A62 /* XCRemoteSwiftPackageReference "SwiftyUserDefaults" */,
 			);
 			productRefGroup = DEA47531263F40AA00090DA5 /* Products */;
 			projectDirPath = "";
@@ -997,6 +1033,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		DE82CF1C26A9C65900033A62 /* XCRemoteSwiftPackageReference "SwiftyUserDefaults" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/sunshinejr/SwiftyUserDefaults";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.3.0;
+			};
+		};
 		DEB529DD267FC4E4000C33A2 /* XCRemoteSwiftPackageReference "GRDB.swift" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/groue/GRDB.swift.git";
@@ -1048,6 +1092,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		DE82CF1D26A9C65900033A62 /* SwiftyUserDefaults */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DE82CF1C26A9C65900033A62 /* XCRemoteSwiftPackageReference "SwiftyUserDefaults" */;
+			productName = SwiftyUserDefaults;
+		};
 		DEB529DE267FC4E4000C33A2 /* GRDB */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = DEB529DD267FC4E4000C33A2 /* XCRemoteSwiftPackageReference "GRDB.swift" */;
