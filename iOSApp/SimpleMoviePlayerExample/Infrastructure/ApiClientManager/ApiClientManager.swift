@@ -65,10 +65,10 @@ class ApiClientManager {
     // MARK: - Enum
 
     private enum EndPoint: String {
-        case topBanners = "main_banners"
-        case recentAnnouncements = "main_news"
-        case regularMovies = "main_photos"
-        case featuredContents = "featured_contents"
+        case topBanners = "top_banners"
+        case recentAnnouncements = "recent_announcements"
+        case regularMovies = "regular_movies"
+        case featuredMovies = "featured_movies"
 
         func getBaseUrl() -> String {
             return [host, version, self.rawValue].joined(separator: "/")
