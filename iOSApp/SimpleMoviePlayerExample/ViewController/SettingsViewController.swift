@@ -13,5 +13,7 @@ final class SettingsViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+
+        setupNavigationBarTitle(GlobalTabBarItems.settings.getTabBarTitle())
     }
 }

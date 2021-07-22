@@ -20,6 +20,7 @@
 		DE82CF1E26A9C65900033A62 /* SwiftyUserDefaults in Frameworks */ = {isa = PBXBuildFile; productRef = DE82CF1D26A9C65900033A62 /* SwiftyUserDefaults */; };
 		DE82CF2826A9CC4000033A62 /* UserDefaultManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE82CF2726A9CC4000033A62 /* UserDefaultManager.swift */; };
 		DE82CF2A26A9CCAA00033A62 /* SQLiteManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE82CF2926A9CCAA00033A62 /* SQLiteManager.swift */; };
+		DE82CF2C26A9E5D200033A62 /* GlobalTabBarItems.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE82CF2B26A9E5D200033A62 /* GlobalTabBarItems.swift */; };
 		DEA47534263F40AA00090DA5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEA47533263F40AA00090DA5 /* AppDelegate.swift */; };
 		DEA47536263F40AA00090DA5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEA47535263F40AA00090DA5 /* SceneDelegate.swift */; };
 		DEA47538263F40AA00090DA5 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEA47537263F40AA00090DA5 /* MainViewController.swift */; };
@@ -78,6 +79,7 @@
 		DE82CF1A26A9B26C00033A62 /* ApiClientManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiClientManager.swift; sourceTree = "<group>"; };
 		DE82CF2726A9CC4000033A62 /* UserDefaultManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultManager.swift; sourceTree = "<group>"; };
 		DE82CF2926A9CCAA00033A62 /* SQLiteManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SQLiteManager.swift; sourceTree = "<group>"; };
+		DE82CF2B26A9E5D200033A62 /* GlobalTabBarItems.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalTabBarItems.swift; sourceTree = "<group>"; };
 		DEA47530263F40AA00090DA5 /* SimpleMoviePlayerExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SimpleMoviePlayerExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DEA47533263F40AA00090DA5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DEA47535263F40AA00090DA5 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -193,6 +195,7 @@
 		DE5F6E6C267FBF0700FCD3A1 /* Enum */ = {
 			isa = PBXGroup;
 			children = (
+				DE82CF2B26A9E5D200033A62 /* GlobalTabBarItems.swift */,
 			);
 			path = Enum;
 			sourceTree = "<group>";
@@ -638,6 +641,7 @@
 				DE5F6E7B267FC19F00FCD3A1 /* NSObjectProtocolExtension.swift in Sources */,
 				DE82CF1B26A9B26C00033A62 /* ApiClientManager.swift in Sources */,
 				DEB52A052684CA8B000C33A2 /* SettingsViewController.swift in Sources */,
+				DE82CF2C26A9E5D200033A62 /* GlobalTabBarItems.swift in Sources */,
 				DEB52A072684CD12000C33A2 /* DependeciesContainer.swift in Sources */,
 				DE82CF2A26A9CCAA00033A62 /* SQLiteManager.swift in Sources */,
 				DE82CF2826A9CC4000033A62 /* UserDefaultManager.swift in Sources */,
