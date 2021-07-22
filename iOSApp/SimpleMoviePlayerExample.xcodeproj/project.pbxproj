@@ -18,6 +18,8 @@
 		DE5F6E83267FC27100FCD3A1 /* UIViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE5F6E82267FC27100FCD3A1 /* UIViewControllerExtension.swift */; };
 		DE82CF1B26A9B26C00033A62 /* ApiClientManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE82CF1A26A9B26C00033A62 /* ApiClientManager.swift */; };
 		DE82CF1E26A9C65900033A62 /* SwiftyUserDefaults in Frameworks */ = {isa = PBXBuildFile; productRef = DE82CF1D26A9C65900033A62 /* SwiftyUserDefaults */; };
+		DE82CF2826A9CC4000033A62 /* UserDefaultManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE82CF2726A9CC4000033A62 /* UserDefaultManager.swift */; };
+		DE82CF2A26A9CCAA00033A62 /* SQLiteManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE82CF2926A9CCAA00033A62 /* SQLiteManager.swift */; };
 		DEA47534263F40AA00090DA5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEA47533263F40AA00090DA5 /* AppDelegate.swift */; };
 		DEA47536263F40AA00090DA5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEA47535263F40AA00090DA5 /* SceneDelegate.swift */; };
 		DEA47538263F40AA00090DA5 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEA47537263F40AA00090DA5 /* MainViewController.swift */; };
@@ -74,6 +76,8 @@
 		DE5F6E80267FC23500FCD3A1 /* UITableViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableViewExtension.swift; sourceTree = "<group>"; };
 		DE5F6E82267FC27100FCD3A1 /* UIViewControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtension.swift; sourceTree = "<group>"; };
 		DE82CF1A26A9B26C00033A62 /* ApiClientManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiClientManager.swift; sourceTree = "<group>"; };
+		DE82CF2726A9CC4000033A62 /* UserDefaultManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultManager.swift; sourceTree = "<group>"; };
+		DE82CF2926A9CCAA00033A62 /* SQLiteManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SQLiteManager.swift; sourceTree = "<group>"; };
 		DEA47530263F40AA00090DA5 /* SimpleMoviePlayerExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SimpleMoviePlayerExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DEA47533263F40AA00090DA5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DEA47535263F40AA00090DA5 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -229,33 +233,11 @@
 			path = Presentation;
 			sourceTree = "<group>";
 		};
-		DE5F6E71267FBFD600FCD3A1 /* ApiClientManager */ = {
-			isa = PBXGroup;
-			children = (
-				DE82CF1A26A9B26C00033A62 /* ApiClientManager.swift */,
-			);
-			path = ApiClientManager;
-			sourceTree = "<group>";
-		};
 		DE5F6E72267FBFFB00FCD3A1 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
 			);
 			path = Modules;
-			sourceTree = "<group>";
-		};
-		DE5F6E75267FC05700FCD3A1 /* UserDefaultManager */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = UserDefaultManager;
-			sourceTree = "<group>";
-		};
-		DE5F6E76267FC06400FCD3A1 /* SQLiteManager */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = SQLiteManager;
 			sourceTree = "<group>";
 		};
 		DE5F6E84267FC30200FCD3A1 /* ViewObject */ = {
@@ -268,7 +250,9 @@
 		DE82CF1926A9B1E700033A62 /* Infrastructure */ = {
 			isa = PBXGroup;
 			children = (
-				DE82CF2126A9C6EC00033A62 /* Manager */,
+				DE82CF1A26A9B26C00033A62 /* ApiClientManager.swift */,
+				DE82CF2726A9CC4000033A62 /* UserDefaultManager.swift */,
+				DE82CF2926A9CCAA00033A62 /* SQLiteManager.swift */,
 			);
 			path = Infrastructure;
 			sourceTree = "<group>";
@@ -285,16 +269,6 @@
 			children = (
 			);
 			path = Entity;
-			sourceTree = "<group>";
-		};
-		DE82CF2126A9C6EC00033A62 /* Manager */ = {
-			isa = PBXGroup;
-			children = (
-				DE5F6E71267FBFD600FCD3A1 /* ApiClientManager */,
-				DE5F6E75267FC05700FCD3A1 /* UserDefaultManager */,
-				DE5F6E76267FC06400FCD3A1 /* SQLiteManager */,
-			);
-			path = Manager;
 			sourceTree = "<group>";
 		};
 		DE82CF2226A9C7F700033A62 /* Presenter */ = {
@@ -665,6 +639,8 @@
 				DE82CF1B26A9B26C00033A62 /* ApiClientManager.swift in Sources */,
 				DEB52A052684CA8B000C33A2 /* SettingsViewController.swift in Sources */,
 				DEB52A072684CD12000C33A2 /* DependeciesContainer.swift in Sources */,
+				DE82CF2A26A9CCAA00033A62 /* SQLiteManager.swift in Sources */,
+				DE82CF2826A9CC4000033A62 /* UserDefaultManager.swift in Sources */,
 				DE5F6E7D267FC1AB00FCD3A1 /* UIColorExtension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
