@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import FontAwesome_swift
 
 final class GlobalTabBarController: UITabBarController {
 
@@ -74,17 +75,18 @@ final class GlobalTabBarController: UITabBarController {
             self.viewControllers?[index].tabBarItem.tag = index
             self.viewControllers?[index].tabBarItem.setTitleTextAttributes(normalAttributes, for: [])
             self.viewControllers?[index].tabBarItem.setTitleTextAttributes(selectedAttributes, for: .selected)
-            self.viewControllers?[index].tabBarItem.titlePositionAdjustment = UIOffset(horizontal: 0.0, vertical: 0.0)
-            self.viewControllers?[index].tabBarItem.image
-                = UIImage(
-                    systemName: tabBarItem.getTabBarSymbolName(),
-                    withConfiguration: UIImage.SymbolConfiguration(pointSize: 12, weight: .black)
-                    )!.withTintColor(normalColor, renderingMode: .alwaysOriginal)
-            self.viewControllers?[index].tabBarItem.selectedImage
-                = UIImage(
-                    systemName: tabBarItem.getTabBarSymbolName(),
-                    withConfiguration: UIImage.SymbolConfiguration(pointSize: 12, weight: .black)
-                    )!.withTintColor(selectedColor, renderingMode: .alwaysOriginal)
+            self.viewControllers?[index].tabBarItem.titlePositionAdjustment = UIOffset(horizontal: 0.0, vertical: -1.5)
+            self.viewControllers?[index].tabBarItem.image = UIImage.fontAwesomeIcon(
+                name: tabBarItem.getTabBarIconName(),
+                style: .solid,
+                textColor: normalColor,
+                size: itemSize
+            ).withRenderingMode(.alwaysOriginal)
+            self.viewControllers?[index].tabBarItem.selectedImage = UIImage.fontAwesomeIcon(
+                name: tabBarItem.getTabBarIconName(),
+                style: .solid, textColor: selectedColor,
+                size: itemSize
+            ).withRenderingMode(.alwaysOriginal)
         }
     }
 }

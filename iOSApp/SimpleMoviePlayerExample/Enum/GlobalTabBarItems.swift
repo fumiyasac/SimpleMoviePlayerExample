@@ -6,6 +6,11 @@
 //
 
 import Foundation
+import FontAwesome_swift
+
+// MEMO: SFSymbolsではUIEdgeInsetでTabBarItemに表示する画像位置が調整できなかった
+// ➡️ ライブラリ「FontAwesome_swift」で代用する
+// ➡️ 参考: https://stackoverflow.com/questions/58185158/how-to-center-a-sf-symbols-image-vertically-in-uitabbaritem
 
 enum GlobalTabBarItems: CaseIterable {
     case main
@@ -24,15 +29,15 @@ enum GlobalTabBarItems: CaseIterable {
         }
     }
 
-    // 配置するSF Symbolsのアイコン名前を取得する
-    func getTabBarSymbolName() -> String {
+    // TabBarに使うFontAwesomeアイコン名を取得する
+    func getTabBarIconName() -> FontAwesome {
         switch self {
         case .main:
-            return "house.fill"
+            return .home
         case .favorite:
-            return "star.square.fill"
+            return .heart
         case .settings:
-            return "person.circle.fill"
+            return .cog
         }
     }
 }
