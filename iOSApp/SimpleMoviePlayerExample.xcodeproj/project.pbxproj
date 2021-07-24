@@ -21,6 +21,8 @@
 		DE82CF2826A9CC4000033A62 /* UserDefaultManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE82CF2726A9CC4000033A62 /* UserDefaultManager.swift */; };
 		DE82CF2A26A9CCAA00033A62 /* SQLiteManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE82CF2926A9CCAA00033A62 /* SQLiteManager.swift */; };
 		DE82CF2C26A9E5D200033A62 /* GlobalTabBarItems.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE82CF2B26A9E5D200033A62 /* GlobalTabBarItems.swift */; };
+		DE82CF2F26ABF1A000033A62 /* MovieDetailViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DE82CF2D26ABF1A000033A62 /* MovieDetailViewController.storyboard */; };
+		DE82CF3526ABF38400033A62 /* MovieDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE82CF3426ABF38400033A62 /* MovieDetailViewController.swift */; };
 		DEA47534263F40AA00090DA5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEA47533263F40AA00090DA5 /* AppDelegate.swift */; };
 		DEA47536263F40AA00090DA5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEA47535263F40AA00090DA5 /* SceneDelegate.swift */; };
 		DEA47538263F40AA00090DA5 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEA47537263F40AA00090DA5 /* MainViewController.swift */; };
@@ -80,6 +82,8 @@
 		DE82CF2726A9CC4000033A62 /* UserDefaultManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultManager.swift; sourceTree = "<group>"; };
 		DE82CF2926A9CCAA00033A62 /* SQLiteManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SQLiteManager.swift; sourceTree = "<group>"; };
 		DE82CF2B26A9E5D200033A62 /* GlobalTabBarItems.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalTabBarItems.swift; sourceTree = "<group>"; };
+		DE82CF2E26ABF1A000033A62 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MovieDetailViewController.storyboard; sourceTree = "<group>"; };
+		DE82CF3426ABF38400033A62 /* MovieDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailViewController.swift; sourceTree = "<group>"; };
 		DEA47530263F40AA00090DA5 /* SimpleMoviePlayerExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SimpleMoviePlayerExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DEA47533263F40AA00090DA5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DEA47535263F40AA00090DA5 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -163,10 +167,8 @@
 		DE5F6E69267FBEEA00FCD3A1 /* Storyboard */ = {
 			isa = PBXGroup;
 			children = (
-				DEB529F42684B705000C33A2 /* FavoriteViewController.storyboard */,
-				DEB529F72684B72B000C33A2 /* GlobalTabBarController.storyboard */,
-				DEA47539263F40AA00090DA5 /* MainViewController.storyboard */,
-				DEB52A012684CA68000C33A2 /* SettingsViewController.storyboard */,
+				DE82CF3026ABF1AE00033A62 /* GlobalTabContents */,
+				DE82CF3126ABF1C800033A62 /* MovieDetailPlayer */,
 			);
 			path = Storyboard;
 			sourceTree = "<group>";
@@ -203,10 +205,8 @@
 		DE5F6E6D267FBF2D00FCD3A1 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
-				DEB529FA2684BA71000C33A2 /* FavoriteViewController.swift */,
-				DEB529ED2682B84A000C33A2 /* GlobalTabBarController.swift */,
-				DEA47537263F40AA00090DA5 /* MainViewController.swift */,
-				DEB52A042684CA8B000C33A2 /* SettingsViewController.swift */,
+				DE82CF3326ABF1E900033A62 /* GlobalTabContents */,
+				DE82CF3226ABF1DF00033A62 /* MovieDetailPlayer */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -279,6 +279,44 @@
 			children = (
 			);
 			path = Presenter;
+			sourceTree = "<group>";
+		};
+		DE82CF3026ABF1AE00033A62 /* GlobalTabContents */ = {
+			isa = PBXGroup;
+			children = (
+				DEB529F42684B705000C33A2 /* FavoriteViewController.storyboard */,
+				DEB529F72684B72B000C33A2 /* GlobalTabBarController.storyboard */,
+				DEA47539263F40AA00090DA5 /* MainViewController.storyboard */,
+				DEB52A012684CA68000C33A2 /* SettingsViewController.storyboard */,
+			);
+			path = GlobalTabContents;
+			sourceTree = "<group>";
+		};
+		DE82CF3126ABF1C800033A62 /* MovieDetailPlayer */ = {
+			isa = PBXGroup;
+			children = (
+				DE82CF2D26ABF1A000033A62 /* MovieDetailViewController.storyboard */,
+			);
+			path = MovieDetailPlayer;
+			sourceTree = "<group>";
+		};
+		DE82CF3226ABF1DF00033A62 /* MovieDetailPlayer */ = {
+			isa = PBXGroup;
+			children = (
+				DE82CF3426ABF38400033A62 /* MovieDetailViewController.swift */,
+			);
+			path = MovieDetailPlayer;
+			sourceTree = "<group>";
+		};
+		DE82CF3326ABF1E900033A62 /* GlobalTabContents */ = {
+			isa = PBXGroup;
+			children = (
+				DEB529FA2684BA71000C33A2 /* FavoriteViewController.swift */,
+				DEB529ED2682B84A000C33A2 /* GlobalTabBarController.swift */,
+				DEA47537263F40AA00090DA5 /* MainViewController.swift */,
+				DEB52A042684CA8B000C33A2 /* SettingsViewController.swift */,
+			);
+			path = GlobalTabContents;
 			sourceTree = "<group>";
 		};
 		DEA47527263F40AA00090DA5 = {
@@ -482,6 +520,7 @@
 				DEB529F62684B705000C33A2 /* FavoriteViewController.storyboard in Resources */,
 				DEA4753D263F40AC00090DA5 /* Assets.xcassets in Resources */,
 				DEB529F92684B72B000C33A2 /* GlobalTabBarController.storyboard in Resources */,
+				DE82CF2F26ABF1A000033A62 /* MovieDetailViewController.storyboard in Resources */,
 				DEA4753B263F40AA00090DA5 /* MainViewController.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -643,6 +682,7 @@
 				DEB52A052684CA8B000C33A2 /* SettingsViewController.swift in Sources */,
 				DE82CF2C26A9E5D200033A62 /* GlobalTabBarItems.swift in Sources */,
 				DEB52A072684CD12000C33A2 /* DependeciesContainer.swift in Sources */,
+				DE82CF3526ABF38400033A62 /* MovieDetailViewController.swift in Sources */,
 				DE82CF2A26A9CCAA00033A62 /* SQLiteManager.swift in Sources */,
 				DE82CF2826A9CC4000033A62 /* UserDefaultManager.swift in Sources */,
 				DE5F6E7D267FC1AB00FCD3A1 /* UIColorExtension.swift in Sources */,
@@ -682,6 +722,14 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		DE82CF2D26ABF1A000033A62 /* MovieDetailViewController.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DE82CF2E26ABF1A000033A62 /* Base */,
+			);
+			name = MovieDetailViewController.storyboard;
+			sourceTree = "<group>";
+		};
 		DEA47539263F40AA00090DA5 /* MainViewController.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
