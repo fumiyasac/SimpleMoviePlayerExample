@@ -53,7 +53,8 @@ class ApiClientManager {
     // MEMO: API Mock ServerへのURLに関する情報
     private static let host = "http://localhost:8080/api"
     private static let version = "v1"
- 
+    private static let path = "simple_movie"
+
     private let session = URLSession.shared
 
     // MARK: - Singleton Instance
@@ -65,13 +66,13 @@ class ApiClientManager {
     // MARK: - Enum
 
     private enum EndPoint: String {
-        case topBanners = "top_banners"
-        case recentAnnouncements = "recent_announcements"
-        case regularMovies = "regular_movies"
+        case banners = "banners"
+        case news = "news"
+        case mainMovies = "main_movies"
         case featuredMovies = "featured_movies"
 
         func getBaseUrl() -> String {
-            return [host, version, self.rawValue].joined(separator: "/")
+            return [host, version, path, self.rawValue].joined(separator: "/")
         }
     }
 
