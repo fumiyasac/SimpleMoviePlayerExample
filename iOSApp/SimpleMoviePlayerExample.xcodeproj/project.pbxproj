@@ -31,6 +31,8 @@
 		DEA47540263F40AC00090DA5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DEA4753E263F40AC00090DA5 /* LaunchScreen.storyboard */; };
 		DEA4754B263F40AC00090DA5 /* SimpleMoviePlayerExampleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEA4754A263F40AC00090DA5 /* SimpleMoviePlayerExampleTests.swift */; };
 		DEA47556263F40AC00090DA5 /* SimpleMoviePlayerExampleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEA47555263F40AC00090DA5 /* SimpleMoviePlayerExampleUITests.swift */; };
+		DEA6BCFD26B5779700196CC3 /* FeaturedDetailPlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEA6BCFC26B5779700196CC3 /* FeaturedDetailPlayerViewController.swift */; };
+		DEA6BD0126B577D700196CC3 /* FeaturedDetailPlayerViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DEA6BD0026B577D700196CC3 /* FeaturedDetailPlayerViewController.storyboard */; };
 		DEAE7EFA268A19EF009ACBD9 /* PlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEAE7EF9268A19EE009ACBD9 /* PlayerView.swift */; };
 		DEB529DF267FC4E4000C33A2 /* GRDB in Frameworks */ = {isa = PBXBuildFile; productRef = DEB529DE267FC4E4000C33A2 /* GRDB */; };
 		DEB529E2267FC527000C33A2 /* UICircularProgressRing in Frameworks */ = {isa = PBXBuildFile; productRef = DEB529E1267FC527000C33A2 /* UICircularProgressRing */; };
@@ -98,6 +100,8 @@
 		DEA47551263F40AC00090DA5 /* SimpleMoviePlayerExampleUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SimpleMoviePlayerExampleUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DEA47555263F40AC00090DA5 /* SimpleMoviePlayerExampleUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleMoviePlayerExampleUITests.swift; sourceTree = "<group>"; };
 		DEA47557263F40AC00090DA5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DEA6BCFC26B5779700196CC3 /* FeaturedDetailPlayerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeaturedDetailPlayerViewController.swift; sourceTree = "<group>"; };
+		DEA6BD0026B577D700196CC3 /* FeaturedDetailPlayerViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = FeaturedDetailPlayerViewController.storyboard; sourceTree = "<group>"; };
 		DEAE7EF9268A19EE009ACBD9 /* PlayerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerView.swift; sourceTree = "<group>"; };
 		DEB529E9267FCE08000C33A2 /* Mock.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Mock.generated.swift; sourceTree = "<group>"; };
 		DEB529ED2682B84A000C33A2 /* GlobalTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalTabBarController.swift; sourceTree = "<group>"; };
@@ -167,6 +171,7 @@
 		DE5F6E69267FBEEA00FCD3A1 /* Storyboard */ = {
 			isa = PBXGroup;
 			children = (
+				DEA6BCFF26B577BC00196CC3 /* FeaturedDetailPlayer */,
 				DE82CF3026ABF1AE00033A62 /* GlobalTabContents */,
 				DE82CF3126ABF1C800033A62 /* MovieDetailPlayer */,
 			);
@@ -205,6 +210,7 @@
 		DE5F6E6D267FBF2D00FCD3A1 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				DEA6BCFE26B5779E00196CC3 /* FeaturedDetailPlayer */,
 				DE82CF3326ABF1E900033A62 /* GlobalTabContents */,
 				DE82CF3226ABF1DF00033A62 /* MovieDetailPlayer */,
 			);
@@ -383,6 +389,22 @@
 			path = SimpleMoviePlayerExampleUITests;
 			sourceTree = "<group>";
 		};
+		DEA6BCFE26B5779E00196CC3 /* FeaturedDetailPlayer */ = {
+			isa = PBXGroup;
+			children = (
+				DEA6BCFC26B5779700196CC3 /* FeaturedDetailPlayerViewController.swift */,
+			);
+			path = FeaturedDetailPlayer;
+			sourceTree = "<group>";
+		};
+		DEA6BCFF26B577BC00196CC3 /* FeaturedDetailPlayer */ = {
+			isa = PBXGroup;
+			children = (
+				DEA6BD0026B577D700196CC3 /* FeaturedDetailPlayerViewController.storyboard */,
+			);
+			path = FeaturedDetailPlayer;
+			sourceTree = "<group>";
+		};
 		DEB529EF2684B0ED000C33A2 /* Dependencies */ = {
 			isa = PBXGroup;
 			children = (
@@ -518,6 +540,7 @@
 				DEB52A032684CA68000C33A2 /* SettingsViewController.storyboard in Resources */,
 				DEA47540263F40AC00090DA5 /* LaunchScreen.storyboard in Resources */,
 				DEB529F62684B705000C33A2 /* FavoriteViewController.storyboard in Resources */,
+				DEA6BD0126B577D700196CC3 /* FeaturedDetailPlayerViewController.storyboard in Resources */,
 				DEA4753D263F40AC00090DA5 /* Assets.xcassets in Resources */,
 				DEB529F92684B72B000C33A2 /* GlobalTabBarController.storyboard in Resources */,
 				DE82CF2F26ABF1A000033A62 /* MovieDetailViewController.storyboard in Resources */,
@@ -670,6 +693,7 @@
 				DE5F6E79267FC11F00FCD3A1 /* CustomViewBase.swift in Sources */,
 				DEA47538263F40AA00090DA5 /* MainViewController.swift in Sources */,
 				DEAE7EFA268A19EF009ACBD9 /* PlayerView.swift in Sources */,
+				DEA6BCFD26B5779700196CC3 /* FeaturedDetailPlayerViewController.swift in Sources */,
 				DE5F6E83267FC27100FCD3A1 /* UIViewControllerExtension.swift in Sources */,
 				DE5F6E7F267FC1E100FCD3A1 /* UICollectionViewExtension.swift in Sources */,
 				DE5F6E81267FC23500FCD3A1 /* UITableViewExtension.swift in Sources */,
