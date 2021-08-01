@@ -12,6 +12,7 @@ target 'SimpleMoviePlayerExample' do
   pod 'GrowingTextView', '0.7.2'  
   pod 'EasyTipView', '~> 2.1'
   pod 'FontAwesome.swift'
+  pod 'AnimatedCollectionViewLayout'
   
   # RxSwift & RxCocoa
   pod 'RxSwift'

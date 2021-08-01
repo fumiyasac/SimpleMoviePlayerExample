@@ -1,5 +1,6 @@
 PODS:
   - ActiveLabel (1.1.0)
+  - AnimatedCollectionViewLayout (1.1.0)
   - Cosmos (23.0.0)
   - EasyTipView (2.1.0)
   - FontAwesome.swift (1.9.1)
@@ -18,6 +19,7 @@ PODS:
 
 DEPENDENCIES:
   - ActiveLabel
+  - AnimatedCollectionViewLayout
   - Cosmos (~> 23.0)
   - EasyTipView (~> 2.1)
   - FontAwesome.swift
@@ -31,6 +33,7 @@ DEPENDENCIES:
 SPEC REPOS:
   trunk:
     - ActiveLabel
+    - AnimatedCollectionViewLayout
     - Cosmos
     - EasyTipView
     - FontAwesome.swift
@@ -44,6 +47,7 @@ SPEC REPOS:
 
 SPEC CHECKSUMS:
   ActiveLabel: 5e3f4de79a1952d4604b845a0610d4776e4b82b3
+  AnimatedCollectionViewLayout: 0c1a38c4be115c525c887be183fc91ef65737c5d
   Cosmos: b5c6a9a637e28a061b54c8f8b1d8529d7d4db73f
   EasyTipView: a92b6edc377b81c5ac18e9fd35d5ee78e9409488
   FontAwesome.swift: 6b52cb7be66eacd28cbfaa0ca7ffd0de4a186a1d
@@ -55,6 +59,6 @@ SPEC CHECKSUMS:
   RxTest: 9d26616eaff4a7e75f4ecae9b2c24840f2e8218d
   SwiftyUserDefaults: 63f80248cf5bfb3458825d9a78f2eb7e1293a040
 
-PODFILE CHECKSUM: d1a9d521dd4bee7d8d80d6e74ea8f4b20759f136
+PODFILE CHECKSUM: a23a235b6af7413baf9a85f751fe4e36234adcd8
 
 COCOAPODS: 1.10.1
