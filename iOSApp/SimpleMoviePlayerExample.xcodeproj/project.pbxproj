@@ -33,6 +33,8 @@
 		DEA47556263F40AC00090DA5 /* SimpleMoviePlayerExampleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEA47555263F40AC00090DA5 /* SimpleMoviePlayerExampleUITests.swift */; };
 		DEA6BCFD26B5779700196CC3 /* FeaturedDetailPlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEA6BCFC26B5779700196CC3 /* FeaturedDetailPlayerViewController.swift */; };
 		DEA6BD0126B577D700196CC3 /* FeaturedDetailPlayerViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DEA6BD0026B577D700196CC3 /* FeaturedDetailPlayerViewController.storyboard */; };
+		DEA6BD0326B6FBE800196CC3 /* NotificationNameExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEA6BD0226B6FBE800196CC3 /* NotificationNameExtension.swift */; };
+		DEA6BD0526B7CC4700196CC3 /* CGExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEA6BD0426B7CC4700196CC3 /* CGExtension.swift */; };
 		DEAE7EFA268A19EF009ACBD9 /* PlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEAE7EF9268A19EE009ACBD9 /* PlayerView.swift */; };
 		DEB529DF267FC4E4000C33A2 /* GRDB in Frameworks */ = {isa = PBXBuildFile; productRef = DEB529DE267FC4E4000C33A2 /* GRDB */; };
 		DEB529E2267FC527000C33A2 /* UICircularProgressRing in Frameworks */ = {isa = PBXBuildFile; productRef = DEB529E1267FC527000C33A2 /* UICircularProgressRing */; };
@@ -102,6 +104,8 @@
 		DEA47557263F40AC00090DA5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DEA6BCFC26B5779700196CC3 /* FeaturedDetailPlayerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeaturedDetailPlayerViewController.swift; sourceTree = "<group>"; };
 		DEA6BD0026B577D700196CC3 /* FeaturedDetailPlayerViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = FeaturedDetailPlayerViewController.storyboard; sourceTree = "<group>"; };
+		DEA6BD0226B6FBE800196CC3 /* NotificationNameExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationNameExtension.swift; sourceTree = "<group>"; };
+		DEA6BD0426B7CC4700196CC3 /* CGExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CGExtension.swift; sourceTree = "<group>"; };
 		DEAE7EF9268A19EE009ACBD9 /* PlayerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerView.swift; sourceTree = "<group>"; };
 		DEB529E9267FCE08000C33A2 /* Mock.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Mock.generated.swift; sourceTree = "<group>"; };
 		DEB529ED2682B84A000C33A2 /* GlobalTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalTabBarController.swift; sourceTree = "<group>"; };
@@ -190,6 +194,8 @@
 		DE5F6E6B267FBF0100FCD3A1 /* Extension */ = {
 			isa = PBXGroup;
 			children = (
+				DEA6BD0426B7CC4700196CC3 /* CGExtension.swift */,
+				DEA6BD0226B6FBE800196CC3 /* NotificationNameExtension.swift */,
 				DE5F6E7A267FC19F00FCD3A1 /* NSObjectProtocolExtension.swift */,
 				DE5F6E7C267FC1AB00FCD3A1 /* UIColorExtension.swift */,
 				DE5F6E7E267FC1E100FCD3A1 /* UICollectionViewExtension.swift */,
@@ -696,6 +702,8 @@
 				DEA6BCFD26B5779700196CC3 /* FeaturedDetailPlayerViewController.swift in Sources */,
 				DE5F6E83267FC27100FCD3A1 /* UIViewControllerExtension.swift in Sources */,
 				DE5F6E7F267FC1E100FCD3A1 /* UICollectionViewExtension.swift in Sources */,
+				DEA6BD0526B7CC4700196CC3 /* CGExtension.swift in Sources */,
+				DEA6BD0326B6FBE800196CC3 /* NotificationNameExtension.swift in Sources */,
 				DE5F6E81267FC23500FCD3A1 /* UITableViewExtension.swift in Sources */,
 				DEA47534263F40AA00090DA5 /* AppDelegate.swift in Sources */,
 				DEB52A092684CD6A000C33A2 /* DependenciesDefinition.swift in Sources */,
