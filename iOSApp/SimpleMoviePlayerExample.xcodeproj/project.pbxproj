@@ -35,6 +35,9 @@
 		DEA6BD0126B577D700196CC3 /* FeaturedDetailPlayerViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DEA6BD0026B577D700196CC3 /* FeaturedDetailPlayerViewController.storyboard */; };
 		DEA6BD0326B6FBE800196CC3 /* NotificationNameExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEA6BD0226B6FBE800196CC3 /* NotificationNameExtension.swift */; };
 		DEA6BD0526B7CC4700196CC3 /* CGExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEA6BD0426B7CC4700196CC3 /* CGExtension.swift */; };
+		DEA6BD0726B80D9600196CC3 /* ValueObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEA6BD0626B80D9600196CC3 /* ValueObject.swift */; };
+		DEA6BD0B26B8FAFB00196CC3 /* ProfileViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DEA6BD0A26B8FAFB00196CC3 /* ProfileViewController.storyboard */; };
+		DEA6BD0E26B8FB4B00196CC3 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEA6BD0D26B8FB4B00196CC3 /* ProfileViewController.swift */; };
 		DEAE7EFA268A19EF009ACBD9 /* PlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEAE7EF9268A19EE009ACBD9 /* PlayerView.swift */; };
 		DEB529DF267FC4E4000C33A2 /* GRDB in Frameworks */ = {isa = PBXBuildFile; productRef = DEB529DE267FC4E4000C33A2 /* GRDB */; };
 		DEB529E2267FC527000C33A2 /* UICircularProgressRing in Frameworks */ = {isa = PBXBuildFile; productRef = DEB529E1267FC527000C33A2 /* UICircularProgressRing */; };
@@ -106,6 +109,9 @@
 		DEA6BD0026B577D700196CC3 /* FeaturedDetailPlayerViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = FeaturedDetailPlayerViewController.storyboard; sourceTree = "<group>"; };
 		DEA6BD0226B6FBE800196CC3 /* NotificationNameExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationNameExtension.swift; sourceTree = "<group>"; };
 		DEA6BD0426B7CC4700196CC3 /* CGExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CGExtension.swift; sourceTree = "<group>"; };
+		DEA6BD0626B80D9600196CC3 /* ValueObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValueObject.swift; sourceTree = "<group>"; };
+		DEA6BD0A26B8FAFB00196CC3 /* ProfileViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ProfileViewController.storyboard; sourceTree = "<group>"; };
+		DEA6BD0D26B8FB4B00196CC3 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		DEAE7EF9268A19EE009ACBD9 /* PlayerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerView.swift; sourceTree = "<group>"; };
 		DEB529E9267FCE08000C33A2 /* Mock.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Mock.generated.swift; sourceTree = "<group>"; };
 		DEB529ED2682B84A000C33A2 /* GlobalTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalTabBarController.swift; sourceTree = "<group>"; };
@@ -178,6 +184,7 @@
 				DEA6BCFF26B577BC00196CC3 /* FeaturedDetailPlayer */,
 				DE82CF3026ABF1AE00033A62 /* GlobalTabContents */,
 				DE82CF3126ABF1C800033A62 /* MovieDetailPlayer */,
+				DEA6BD0926B8FAB300196CC3 /* Profile */,
 			);
 			path = Storyboard;
 			sourceTree = "<group>";
@@ -219,6 +226,7 @@
 				DEA6BCFE26B5779E00196CC3 /* FeaturedDetailPlayer */,
 				DE82CF3326ABF1E900033A62 /* GlobalTabContents */,
 				DE82CF3226ABF1DF00033A62 /* MovieDetailPlayer */,
+				DEA6BD0C26B8FB3600196CC3 /* Profile */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -226,6 +234,7 @@
 		DE5F6E6E267FBFBA00FCD3A1 /* Repository */ = {
 			isa = PBXGroup;
 			children = (
+				DEA6BD0626B80D9600196CC3 /* ValueObject.swift */,
 				DE82CF1F26A9C67500033A62 /* DataTransfer */,
 				DE82CF2026A9C6E400033A62 /* Entity */,
 			);
@@ -282,6 +291,7 @@
 		DE82CF2026A9C6E400033A62 /* Entity */ = {
 			isa = PBXGroup;
 			children = (
+				DEA6BD0826B80F8E00196CC3 /* MainMovie */,
 			);
 			path = Entity;
 			sourceTree = "<group>";
@@ -409,6 +419,29 @@
 				DEA6BD0026B577D700196CC3 /* FeaturedDetailPlayerViewController.storyboard */,
 			);
 			path = FeaturedDetailPlayer;
+			sourceTree = "<group>";
+		};
+		DEA6BD0826B80F8E00196CC3 /* MainMovie */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = MainMovie;
+			sourceTree = "<group>";
+		};
+		DEA6BD0926B8FAB300196CC3 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				DEA6BD0A26B8FAFB00196CC3 /* ProfileViewController.storyboard */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
+		DEA6BD0C26B8FB3600196CC3 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				DEA6BD0D26B8FB4B00196CC3 /* ProfileViewController.swift */,
+			);
+			path = Profile;
 			sourceTree = "<group>";
 		};
 		DEB529EF2684B0ED000C33A2 /* Dependencies */ = {
@@ -548,6 +581,7 @@
 				DEB529F62684B705000C33A2 /* FavoriteViewController.storyboard in Resources */,
 				DEA6BD0126B577D700196CC3 /* FeaturedDetailPlayerViewController.storyboard in Resources */,
 				DEA4753D263F40AC00090DA5 /* Assets.xcassets in Resources */,
+				DEA6BD0B26B8FAFB00196CC3 /* ProfileViewController.storyboard in Resources */,
 				DEB529F92684B72B000C33A2 /* GlobalTabBarController.storyboard in Resources */,
 				DE82CF2F26ABF1A000033A62 /* MovieDetailViewController.storyboard in Resources */,
 				DEA4753B263F40AA00090DA5 /* MainViewController.storyboard in Resources */,
@@ -695,6 +729,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DEA6BD0726B80D9600196CC3 /* ValueObject.swift in Sources */,
 				DEB529FB2684BA71000C33A2 /* FavoriteViewController.swift in Sources */,
 				DE5F6E79267FC11F00FCD3A1 /* CustomViewBase.swift in Sources */,
 				DEA47538263F40AA00090DA5 /* MainViewController.swift in Sources */,
@@ -716,6 +751,7 @@
 				DEB52A072684CD12000C33A2 /* DependeciesContainer.swift in Sources */,
 				DE82CF3526ABF38400033A62 /* MovieDetailViewController.swift in Sources */,
 				DE82CF2A26A9CCAA00033A62 /* SQLiteManager.swift in Sources */,
+				DEA6BD0E26B8FB4B00196CC3 /* ProfileViewController.swift in Sources */,
 				DE82CF2826A9CC4000033A62 /* UserDefaultManager.swift in Sources */,
 				DE5F6E7D267FC1AB00FCD3A1 /* UIColorExtension.swift in Sources */,
 			);
