@@ -6,3 +6,14 @@
 //
 
 import Foundation
+
+struct MainMovieId: ValueObject {
+
+    let value: Int
+
+    // MARK: - Initializer
+
+    init(value: Int) {
+        self.value = value
+    }
+}
