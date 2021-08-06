@@ -28,6 +28,8 @@
 		DE8DFD6126BD859B00CAB778 /* MainMovieEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE8DFD6026BD859B00CAB778 /* MainMovieEntity.swift */; };
 		DE8DFD6426BD911E00CAB778 /* FeaturedMovieId.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE8DFD6326BD911E00CAB778 /* FeaturedMovieId.swift */; };
 		DE8DFD6626BD912800CAB778 /* FeaturedMovieEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE8DFD6526BD912800CAB778 /* FeaturedMovieEntity.swift */; };
+		DE8DFD6926BD91E600CAB778 /* MainBannerId.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE8DFD6826BD91E600CAB778 /* MainBannerId.swift */; };
+		DE8DFD6B26BD921D00CAB778 /* MainBannerEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE8DFD6A26BD921D00CAB778 /* MainBannerEntity.swift */; };
 		DEA47534263F40AA00090DA5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEA47533263F40AA00090DA5 /* AppDelegate.swift */; };
 		DEA47536263F40AA00090DA5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEA47535263F40AA00090DA5 /* SceneDelegate.swift */; };
 		DEA47538263F40AA00090DA5 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEA47537263F40AA00090DA5 /* MainViewController.swift */; };
@@ -102,6 +104,8 @@
 		DE8DFD6026BD859B00CAB778 /* MainMovieEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMovieEntity.swift; sourceTree = "<group>"; };
 		DE8DFD6326BD911E00CAB778 /* FeaturedMovieId.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeaturedMovieId.swift; sourceTree = "<group>"; };
 		DE8DFD6526BD912800CAB778 /* FeaturedMovieEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeaturedMovieEntity.swift; sourceTree = "<group>"; };
+		DE8DFD6826BD91E600CAB778 /* MainBannerId.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainBannerId.swift; sourceTree = "<group>"; };
+		DE8DFD6A26BD921D00CAB778 /* MainBannerEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainBannerEntity.swift; sourceTree = "<group>"; };
 		DEA47530263F40AA00090DA5 /* SimpleMoviePlayerExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SimpleMoviePlayerExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DEA47533263F40AA00090DA5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DEA47535263F40AA00090DA5 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -303,6 +307,7 @@
 		DE82CF2026A9C6E400033A62 /* Entity */ = {
 			isa = PBXGroup;
 			children = (
+				DE8DFD6726BD91D200CAB778 /* MainBanner */,
 				DE8DFD6226BD90E300CAB778 /* FeaturedMovie */,
 				DEA6BD0826B80F8E00196CC3 /* MainMovie */,
 				DE8DFD5C26BD850400CAB778 /* MoviesEntity.swift */,
@@ -362,6 +367,15 @@
 				DE8DFD6526BD912800CAB778 /* FeaturedMovieEntity.swift */,
 			);
 			path = FeaturedMovie;
+			sourceTree = "<group>";
+		};
+		DE8DFD6726BD91D200CAB778 /* MainBanner */ = {
+			isa = PBXGroup;
+			children = (
+				DE8DFD6826BD91E600CAB778 /* MainBannerId.swift */,
+				DE8DFD6A26BD921D00CAB778 /* MainBannerEntity.swift */,
+			);
+			path = MainBanner;
 			sourceTree = "<group>";
 		};
 		DEA47527263F40AA00090DA5 = {
@@ -765,9 +779,11 @@
 				DEAE7EFA268A19EF009ACBD9 /* PlayerView.swift in Sources */,
 				DEA6BCFD26B5779700196CC3 /* FeaturedDetailPlayerViewController.swift in Sources */,
 				DE5F6E83267FC27100FCD3A1 /* UIViewControllerExtension.swift in Sources */,
+				DE8DFD6B26BD921D00CAB778 /* MainBannerEntity.swift in Sources */,
 				DE5F6E7F267FC1E100FCD3A1 /* UICollectionViewExtension.swift in Sources */,
 				DEA6BD0526B7CC4700196CC3 /* CGExtension.swift in Sources */,
 				DEA6BD0326B6FBE800196CC3 /* NotificationNameExtension.swift in Sources */,
+				DE8DFD6926BD91E600CAB778 /* MainBannerId.swift in Sources */,
 				DE8DFD5F26BD858900CAB778 /* MainMovieId.swift in Sources */,
 				DE5F6E81267FC23500FCD3A1 /* UITableViewExtension.swift in Sources */,
 				DEA47534263F40AA00090DA5 /* AppDelegate.swift in Sources */,
