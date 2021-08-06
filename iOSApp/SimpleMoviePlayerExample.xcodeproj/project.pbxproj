@@ -30,6 +30,8 @@
 		DE8DFD6626BD912800CAB778 /* FeaturedMovieEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE8DFD6526BD912800CAB778 /* FeaturedMovieEntity.swift */; };
 		DE8DFD6926BD91E600CAB778 /* MainBannerId.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE8DFD6826BD91E600CAB778 /* MainBannerId.swift */; };
 		DE8DFD6B26BD921D00CAB778 /* MainBannerEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE8DFD6A26BD921D00CAB778 /* MainBannerEntity.swift */; };
+		DE8DFD6E26BD939800CAB778 /* MainNewsId.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE8DFD6D26BD939800CAB778 /* MainNewsId.swift */; };
+		DE8DFD7026BD93B100CAB778 /* MainNewsEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE8DFD6F26BD93B100CAB778 /* MainNewsEntity.swift */; };
 		DEA47534263F40AA00090DA5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEA47533263F40AA00090DA5 /* AppDelegate.swift */; };
 		DEA47536263F40AA00090DA5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEA47535263F40AA00090DA5 /* SceneDelegate.swift */; };
 		DEA47538263F40AA00090DA5 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEA47537263F40AA00090DA5 /* MainViewController.swift */; };
@@ -106,6 +108,8 @@
 		DE8DFD6526BD912800CAB778 /* FeaturedMovieEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeaturedMovieEntity.swift; sourceTree = "<group>"; };
 		DE8DFD6826BD91E600CAB778 /* MainBannerId.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainBannerId.swift; sourceTree = "<group>"; };
 		DE8DFD6A26BD921D00CAB778 /* MainBannerEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainBannerEntity.swift; sourceTree = "<group>"; };
+		DE8DFD6D26BD939800CAB778 /* MainNewsId.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainNewsId.swift; sourceTree = "<group>"; };
+		DE8DFD6F26BD93B100CAB778 /* MainNewsEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainNewsEntity.swift; sourceTree = "<group>"; };
 		DEA47530263F40AA00090DA5 /* SimpleMoviePlayerExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SimpleMoviePlayerExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DEA47533263F40AA00090DA5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DEA47535263F40AA00090DA5 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -307,9 +311,10 @@
 		DE82CF2026A9C6E400033A62 /* Entity */ = {
 			isa = PBXGroup;
 			children = (
-				DE8DFD6726BD91D200CAB778 /* MainBanner */,
 				DE8DFD6226BD90E300CAB778 /* FeaturedMovie */,
+				DE8DFD6726BD91D200CAB778 /* MainBanner */,
 				DEA6BD0826B80F8E00196CC3 /* MainMovie */,
+				DE8DFD6C26BD936E00CAB778 /* MainNews */,
 				DE8DFD5C26BD850400CAB778 /* MoviesEntity.swift */,
 			);
 			path = Entity;
@@ -376,6 +381,15 @@
 				DE8DFD6A26BD921D00CAB778 /* MainBannerEntity.swift */,
 			);
 			path = MainBanner;
+			sourceTree = "<group>";
+		};
+		DE8DFD6C26BD936E00CAB778 /* MainNews */ = {
+			isa = PBXGroup;
+			children = (
+				DE8DFD6D26BD939800CAB778 /* MainNewsId.swift */,
+				DE8DFD6F26BD93B100CAB778 /* MainNewsEntity.swift */,
+			);
+			path = MainNews;
 			sourceTree = "<group>";
 		};
 		DEA47527263F40AA00090DA5 = {
@@ -774,11 +788,13 @@
 				DEB529FB2684BA71000C33A2 /* FavoriteViewController.swift in Sources */,
 				DE8DFD6126BD859B00CAB778 /* MainMovieEntity.swift in Sources */,
 				DE8DFD6426BD911E00CAB778 /* FeaturedMovieId.swift in Sources */,
+				DE8DFD7026BD93B100CAB778 /* MainNewsEntity.swift in Sources */,
 				DE5F6E79267FC11F00FCD3A1 /* CustomViewBase.swift in Sources */,
 				DEA47538263F40AA00090DA5 /* MainViewController.swift in Sources */,
 				DEAE7EFA268A19EF009ACBD9 /* PlayerView.swift in Sources */,
 				DEA6BCFD26B5779700196CC3 /* FeaturedDetailPlayerViewController.swift in Sources */,
 				DE5F6E83267FC27100FCD3A1 /* UIViewControllerExtension.swift in Sources */,
+				DE8DFD6E26BD939800CAB778 /* MainNewsId.swift in Sources */,
 				DE8DFD6B26BD921D00CAB778 /* MainBannerEntity.swift in Sources */,
 				DE5F6E7F267FC1E100FCD3A1 /* UICollectionViewExtension.swift in Sources */,
 				DEA6BD0526B7CC4700196CC3 /* CGExtension.swift in Sources */,
