@@ -26,6 +26,8 @@
 		DE8DFD5D26BD850400CAB778 /* MoviesEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE8DFD5C26BD850400CAB778 /* MoviesEntity.swift */; };
 		DE8DFD5F26BD858900CAB778 /* MainMovieId.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE8DFD5E26BD858900CAB778 /* MainMovieId.swift */; };
 		DE8DFD6126BD859B00CAB778 /* MainMovieEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE8DFD6026BD859B00CAB778 /* MainMovieEntity.swift */; };
+		DE8DFD6426BD911E00CAB778 /* FeaturedMovieId.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE8DFD6326BD911E00CAB778 /* FeaturedMovieId.swift */; };
+		DE8DFD6626BD912800CAB778 /* FeaturedMovieEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE8DFD6526BD912800CAB778 /* FeaturedMovieEntity.swift */; };
 		DEA47534263F40AA00090DA5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEA47533263F40AA00090DA5 /* AppDelegate.swift */; };
 		DEA47536263F40AA00090DA5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEA47535263F40AA00090DA5 /* SceneDelegate.swift */; };
 		DEA47538263F40AA00090DA5 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEA47537263F40AA00090DA5 /* MainViewController.swift */; };
@@ -98,6 +100,8 @@
 		DE8DFD5C26BD850400CAB778 /* MoviesEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesEntity.swift; sourceTree = "<group>"; };
 		DE8DFD5E26BD858900CAB778 /* MainMovieId.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMovieId.swift; sourceTree = "<group>"; };
 		DE8DFD6026BD859B00CAB778 /* MainMovieEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMovieEntity.swift; sourceTree = "<group>"; };
+		DE8DFD6326BD911E00CAB778 /* FeaturedMovieId.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeaturedMovieId.swift; sourceTree = "<group>"; };
+		DE8DFD6526BD912800CAB778 /* FeaturedMovieEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeaturedMovieEntity.swift; sourceTree = "<group>"; };
 		DEA47530263F40AA00090DA5 /* SimpleMoviePlayerExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SimpleMoviePlayerExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DEA47533263F40AA00090DA5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DEA47535263F40AA00090DA5 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -299,6 +303,7 @@
 		DE82CF2026A9C6E400033A62 /* Entity */ = {
 			isa = PBXGroup;
 			children = (
+				DE8DFD6226BD90E300CAB778 /* FeaturedMovie */,
 				DEA6BD0826B80F8E00196CC3 /* MainMovie */,
 				DE8DFD5C26BD850400CAB778 /* MoviesEntity.swift */,
 			);
@@ -348,6 +353,15 @@
 				DEB52A042684CA8B000C33A2 /* SettingsViewController.swift */,
 			);
 			path = GlobalTabContents;
+			sourceTree = "<group>";
+		};
+		DE8DFD6226BD90E300CAB778 /* FeaturedMovie */ = {
+			isa = PBXGroup;
+			children = (
+				DE8DFD6326BD911E00CAB778 /* FeaturedMovieId.swift */,
+				DE8DFD6526BD912800CAB778 /* FeaturedMovieEntity.swift */,
+			);
+			path = FeaturedMovie;
 			sourceTree = "<group>";
 		};
 		DEA47527263F40AA00090DA5 = {
@@ -745,6 +759,7 @@
 				DEA6BD0726B80D9600196CC3 /* ValueObject.swift in Sources */,
 				DEB529FB2684BA71000C33A2 /* FavoriteViewController.swift in Sources */,
 				DE8DFD6126BD859B00CAB778 /* MainMovieEntity.swift in Sources */,
+				DE8DFD6426BD911E00CAB778 /* FeaturedMovieId.swift in Sources */,
 				DE5F6E79267FC11F00FCD3A1 /* CustomViewBase.swift in Sources */,
 				DEA47538263F40AA00090DA5 /* MainViewController.swift in Sources */,
 				DEAE7EFA268A19EF009ACBD9 /* PlayerView.swift in Sources */,
@@ -768,6 +783,7 @@
 				DE82CF2A26A9CCAA00033A62 /* SQLiteManager.swift in Sources */,
 				DE8DFD5D26BD850400CAB778 /* MoviesEntity.swift in Sources */,
 				DEA6BD0E26B8FB4B00196CC3 /* ProfileViewController.swift in Sources */,
+				DE8DFD6626BD912800CAB778 /* FeaturedMovieEntity.swift in Sources */,
 				DE82CF2826A9CC4000033A62 /* UserDefaultManager.swift in Sources */,
 				DE5F6E7D267FC1AB00FCD3A1 /* UIColorExtension.swift in Sources */,
 			);
