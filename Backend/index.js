@@ -14,7 +14,7 @@ const rewrite_rules = jsonServer.rewriter({
     "/api/v1/simple_movie/banners" : "/get_main_banners",
     "/api/v1/simple_movie/news" : "/get_main_news",
     "/api/v1/simple_movie/main_movies" : "/get_main_movies",
-    "/api/v1/simple_movie/main_movies?id=:id" : "/get_main_movies/:id",
+    "/api/v1/simple_movie/main_movies/:id" : "/get_main_movies/:id",
     "/api/v1/simple_movie/featured_movies" : "/get_featured_movies",
 });
 

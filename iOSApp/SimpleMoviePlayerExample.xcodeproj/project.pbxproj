@@ -32,6 +32,7 @@
 		DE8DFD6B26BD921D00CAB778 /* MainBannerEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE8DFD6A26BD921D00CAB778 /* MainBannerEntity.swift */; };
 		DE8DFD6E26BD939800CAB778 /* MainNewsId.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE8DFD6D26BD939800CAB778 /* MainNewsId.swift */; };
 		DE8DFD7026BD93B100CAB778 /* MainNewsEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE8DFD6F26BD93B100CAB778 /* MainNewsEntity.swift */; };
+		DE8DFD7426BE7C1900CAB778 /* ApiClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE8DFD7326BE7C1900CAB778 /* ApiClient.swift */; };
 		DEA47534263F40AA00090DA5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEA47533263F40AA00090DA5 /* AppDelegate.swift */; };
 		DEA47536263F40AA00090DA5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEA47535263F40AA00090DA5 /* SceneDelegate.swift */; };
 		DEA47538263F40AA00090DA5 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEA47537263F40AA00090DA5 /* MainViewController.swift */; };
@@ -110,6 +111,7 @@
 		DE8DFD6A26BD921D00CAB778 /* MainBannerEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainBannerEntity.swift; sourceTree = "<group>"; };
 		DE8DFD6D26BD939800CAB778 /* MainNewsId.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainNewsId.swift; sourceTree = "<group>"; };
 		DE8DFD6F26BD93B100CAB778 /* MainNewsEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainNewsEntity.swift; sourceTree = "<group>"; };
+		DE8DFD7326BE7C1900CAB778 /* ApiClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiClient.swift; sourceTree = "<group>"; };
 		DEA47530263F40AA00090DA5 /* SimpleMoviePlayerExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SimpleMoviePlayerExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DEA47533263F40AA00090DA5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DEA47535263F40AA00090DA5 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -294,9 +296,8 @@
 		DE82CF1926A9B1E700033A62 /* Infrastructure */ = {
 			isa = PBXGroup;
 			children = (
-				DE82CF1A26A9B26C00033A62 /* ApiClientManager.swift */,
-				DE82CF2726A9CC4000033A62 /* UserDefaultManager.swift */,
-				DE82CF2926A9CCAA00033A62 /* SQLiteManager.swift */,
+				DE8DFD7226BE7AE000CAB778 /* API */,
+				DE8DFD7126BE7ACE00CAB778 /* Manager */,
 			);
 			path = Infrastructure;
 			sourceTree = "<group>";
@@ -390,6 +391,24 @@
 				DE8DFD6F26BD93B100CAB778 /* MainNewsEntity.swift */,
 			);
 			path = MainNews;
+			sourceTree = "<group>";
+		};
+		DE8DFD7126BE7ACE00CAB778 /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				DE82CF1A26A9B26C00033A62 /* ApiClientManager.swift */,
+				DE82CF2726A9CC4000033A62 /* UserDefaultManager.swift */,
+				DE82CF2926A9CCAA00033A62 /* SQLiteManager.swift */,
+			);
+			path = Manager;
+			sourceTree = "<group>";
+		};
+		DE8DFD7226BE7AE000CAB778 /* API */ = {
+			isa = PBXGroup;
+			children = (
+				DE8DFD7326BE7C1900CAB778 /* ApiClient.swift */,
+			);
+			path = API;
 			sourceTree = "<group>";
 		};
 		DEA47527263F40AA00090DA5 = {
@@ -798,6 +817,7 @@
 				DE8DFD6B26BD921D00CAB778 /* MainBannerEntity.swift in Sources */,
 				DE5F6E7F267FC1E100FCD3A1 /* UICollectionViewExtension.swift in Sources */,
 				DEA6BD0526B7CC4700196CC3 /* CGExtension.swift in Sources */,
+				DE8DFD7426BE7C1900CAB778 /* ApiClient.swift in Sources */,
 				DEA6BD0326B6FBE800196CC3 /* NotificationNameExtension.swift in Sources */,
 				DE8DFD6926BD91E600CAB778 /* MainBannerId.swift in Sources */,
 				DE8DFD5F26BD858900CAB778 /* MainMovieId.swift in Sources */,

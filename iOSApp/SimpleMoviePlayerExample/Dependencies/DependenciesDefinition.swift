@@ -39,7 +39,15 @@ final class DependenciesDefinition {
 
         // MARK: - Infra
 
-        // MEMO: (1) UserDefault関連処理部分
+        // MEMO: (1) API関連処理部分
+        dependecies.register(
+            ApiClient.self,
+            impl: ApiClientManager.shared
+        )
+
+        // MEMO: (2) UserDefault関連処理部分
+
+        // MEMO: (3) SQLite関連処理部分
 
         // MARK: - Repository
 

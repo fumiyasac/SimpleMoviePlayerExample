@@ -31,24 +31,9 @@ enum APIRequestState {
     case error
 }
 
-
-// MARK: - Protocol
-
-protocol ApiClientManagerProtocol {
-
-//    // 一覧画面で利用するAPIレスポンス
-//    func getTopBanners() -> Single<TopBannersAPIResponse>
-//    func getRecentAnnouncements() -> Single<RecentAnnouncementsAPIResponse>
-//    func getRegularMovies() -> Single<RegularMoviesAPIResponse>
-//    func getFeaturedMovies() -> Single<FeaturedMoviesAPIResponse>
-//
-//    // 詳細画面で利用するAPIレスポンス
-//    func getMovie(movieId: Int) -> Single<MovieAPIResponse>
-}
-
 // MARK: - Class
 
-class ApiClientManager {
+final class ApiClientManager {
     
     // MEMO: API Mock ServerへのURLに関する情報
     private static let host = "http://localhost:8080/api"
@@ -65,7 +50,7 @@ class ApiClientManager {
 
     // MARK: - Enum
 
-    private enum EndPoint: String {
+    enum EndPoint: String {
         case banners = "banners"
         case news = "news"
         case mainMovies = "main_movies"
@@ -182,7 +167,3 @@ class ApiClientManager {
         }
     }
 }
-
-// MARK: - ApiClientManagerProtocol
-
-extension ApiClientManager: ApiClientManagerProtocol {}

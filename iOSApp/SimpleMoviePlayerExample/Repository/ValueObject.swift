@@ -21,8 +21,10 @@ protocol ValueObject: Codable, CustomStringConvertible, Equatable {
     init(value: Value)
 }
 
+// MARK: - ValueObject
+
 extension ValueObject {
-    
+
     // MARK: - Initializer
 
     init(from decoder: Decoder) throws {
