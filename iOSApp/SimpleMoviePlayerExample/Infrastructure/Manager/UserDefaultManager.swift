@@ -12,8 +12,8 @@ extension DefaultsKeys {
 
     // MARK: - Property
 
-    // MEMO: 初めてメイン画面を開いたか
-    var isMainOpenFirstTime: DefaultsKey<Bool> {
-        .init("isMainOpenFirstTime", defaultValue: false)
+    // MEMO: 初めてアプリを開いたか
+    var initialAppOpen: DefaultsKey<Bool> {
+        .init("initialAppOpen", defaultValue: false)
     }
 }

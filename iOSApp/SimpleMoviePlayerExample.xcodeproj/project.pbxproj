@@ -33,6 +33,7 @@
 		DE8DFD6E26BD939800CAB778 /* MainNewsId.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE8DFD6D26BD939800CAB778 /* MainNewsId.swift */; };
 		DE8DFD7026BD93B100CAB778 /* MainNewsEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE8DFD6F26BD93B100CAB778 /* MainNewsEntity.swift */; };
 		DE8DFD7426BE7C1900CAB778 /* ApiClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE8DFD7326BE7C1900CAB778 /* ApiClient.swift */; };
+		DE8DFD7726BFB54B00CAB778 /* InitialAppOpenLocalStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE8DFD7626BFB54B00CAB778 /* InitialAppOpenLocalStore.swift */; };
 		DEA47534263F40AA00090DA5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEA47533263F40AA00090DA5 /* AppDelegate.swift */; };
 		DEA47536263F40AA00090DA5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEA47535263F40AA00090DA5 /* SceneDelegate.swift */; };
 		DEA47538263F40AA00090DA5 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEA47537263F40AA00090DA5 /* MainViewController.swift */; };
@@ -112,6 +113,7 @@
 		DE8DFD6D26BD939800CAB778 /* MainNewsId.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainNewsId.swift; sourceTree = "<group>"; };
 		DE8DFD6F26BD93B100CAB778 /* MainNewsEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainNewsEntity.swift; sourceTree = "<group>"; };
 		DE8DFD7326BE7C1900CAB778 /* ApiClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiClient.swift; sourceTree = "<group>"; };
+		DE8DFD7626BFB54B00CAB778 /* InitialAppOpenLocalStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialAppOpenLocalStore.swift; sourceTree = "<group>"; };
 		DEA47530263F40AA00090DA5 /* SimpleMoviePlayerExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SimpleMoviePlayerExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DEA47533263F40AA00090DA5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DEA47535263F40AA00090DA5 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -296,6 +298,7 @@
 		DE82CF1926A9B1E700033A62 /* Infrastructure */ = {
 			isa = PBXGroup;
 			children = (
+				DE8DFD7526BFB49E00CAB778 /* LocalStore */,
 				DE8DFD7226BE7AE000CAB778 /* API */,
 				DE8DFD7126BE7ACE00CAB778 /* Manager */,
 			);
@@ -406,9 +409,33 @@
 		DE8DFD7226BE7AE000CAB778 /* API */ = {
 			isa = PBXGroup;
 			children = (
+				DE8DFD7926BFB66E00CAB778 /* Stub */,
+				DE8DFD7826BFB65600CAB778 /* Mock */,
 				DE8DFD7326BE7C1900CAB778 /* ApiClient.swift */,
 			);
 			path = API;
+			sourceTree = "<group>";
+		};
+		DE8DFD7526BFB49E00CAB778 /* LocalStore */ = {
+			isa = PBXGroup;
+			children = (
+				DE8DFD7626BFB54B00CAB778 /* InitialAppOpenLocalStore.swift */,
+			);
+			path = LocalStore;
+			sourceTree = "<group>";
+		};
+		DE8DFD7826BFB65600CAB778 /* Mock */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Mock;
+			sourceTree = "<group>";
+		};
+		DE8DFD7926BFB66E00CAB778 /* Stub */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Stub;
 			sourceTree = "<group>";
 		};
 		DEA47527263F40AA00090DA5 = {
@@ -807,6 +834,7 @@
 				DEB529FB2684BA71000C33A2 /* FavoriteViewController.swift in Sources */,
 				DE8DFD6126BD859B00CAB778 /* MainMovieEntity.swift in Sources */,
 				DE8DFD6426BD911E00CAB778 /* FeaturedMovieId.swift in Sources */,
+				DE8DFD7726BFB54B00CAB778 /* InitialAppOpenLocalStore.swift in Sources */,
 				DE8DFD7026BD93B100CAB778 /* MainNewsEntity.swift in Sources */,
 				DE5F6E79267FC11F00FCD3A1 /* CustomViewBase.swift in Sources */,
 				DEA47538263F40AA00090DA5 /* MainViewController.swift in Sources */,
