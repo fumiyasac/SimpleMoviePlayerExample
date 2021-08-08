@@ -34,6 +34,8 @@
 		DE8DFD7026BD93B100CAB778 /* MainNewsEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE8DFD6F26BD93B100CAB778 /* MainNewsEntity.swift */; };
 		DE8DFD7426BE7C1900CAB778 /* ApiClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE8DFD7326BE7C1900CAB778 /* ApiClient.swift */; };
 		DE8DFD7726BFB54B00CAB778 /* InitialAppOpenLocalStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE8DFD7626BFB54B00CAB778 /* InitialAppOpenLocalStore.swift */; };
+		DE8DFD7B26BFC09600CAB778 /* LastShownMainMoviePlayTimeLocalStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE8DFD7A26BFC09600CAB778 /* LastShownMainMoviePlayTimeLocalStore.swift */; };
+		DE8DFD7D26BFC0AD00CAB778 /* LastShownFeaturedMoviePlayTimeLocalStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE8DFD7C26BFC0AD00CAB778 /* LastShownFeaturedMoviePlayTimeLocalStore.swift */; };
 		DEA47534263F40AA00090DA5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEA47533263F40AA00090DA5 /* AppDelegate.swift */; };
 		DEA47536263F40AA00090DA5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEA47535263F40AA00090DA5 /* SceneDelegate.swift */; };
 		DEA47538263F40AA00090DA5 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEA47537263F40AA00090DA5 /* MainViewController.swift */; };
@@ -114,6 +116,8 @@
 		DE8DFD6F26BD93B100CAB778 /* MainNewsEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainNewsEntity.swift; sourceTree = "<group>"; };
 		DE8DFD7326BE7C1900CAB778 /* ApiClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiClient.swift; sourceTree = "<group>"; };
 		DE8DFD7626BFB54B00CAB778 /* InitialAppOpenLocalStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialAppOpenLocalStore.swift; sourceTree = "<group>"; };
+		DE8DFD7A26BFC09600CAB778 /* LastShownMainMoviePlayTimeLocalStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LastShownMainMoviePlayTimeLocalStore.swift; sourceTree = "<group>"; };
+		DE8DFD7C26BFC0AD00CAB778 /* LastShownFeaturedMoviePlayTimeLocalStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LastShownFeaturedMoviePlayTimeLocalStore.swift; sourceTree = "<group>"; };
 		DEA47530263F40AA00090DA5 /* SimpleMoviePlayerExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SimpleMoviePlayerExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DEA47533263F40AA00090DA5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DEA47535263F40AA00090DA5 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -420,6 +424,8 @@
 			isa = PBXGroup;
 			children = (
 				DE8DFD7626BFB54B00CAB778 /* InitialAppOpenLocalStore.swift */,
+				DE8DFD7C26BFC0AD00CAB778 /* LastShownFeaturedMoviePlayTimeLocalStore.swift */,
+				DE8DFD7A26BFC09600CAB778 /* LastShownMainMoviePlayTimeLocalStore.swift */,
 			);
 			path = LocalStore;
 			sourceTree = "<group>";
@@ -849,6 +855,7 @@
 				DEA6BD0326B6FBE800196CC3 /* NotificationNameExtension.swift in Sources */,
 				DE8DFD6926BD91E600CAB778 /* MainBannerId.swift in Sources */,
 				DE8DFD5F26BD858900CAB778 /* MainMovieId.swift in Sources */,
+				DE8DFD7D26BFC0AD00CAB778 /* LastShownFeaturedMoviePlayTimeLocalStore.swift in Sources */,
 				DE5F6E81267FC23500FCD3A1 /* UITableViewExtension.swift in Sources */,
 				DEA47534263F40AA00090DA5 /* AppDelegate.swift in Sources */,
 				DEB52A092684CD6A000C33A2 /* DependenciesDefinition.swift in Sources */,
@@ -864,6 +871,7 @@
 				DE8DFD5D26BD850400CAB778 /* MoviesEntity.swift in Sources */,
 				DEA6BD0E26B8FB4B00196CC3 /* ProfileViewController.swift in Sources */,
 				DE8DFD6626BD912800CAB778 /* FeaturedMovieEntity.swift in Sources */,
+				DE8DFD7B26BFC09600CAB778 /* LastShownMainMoviePlayTimeLocalStore.swift in Sources */,
 				DE82CF2826A9CC4000033A62 /* UserDefaultManager.swift in Sources */,
 				DE5F6E7D267FC1AB00FCD3A1 /* UIColorExtension.swift in Sources */,
 			);

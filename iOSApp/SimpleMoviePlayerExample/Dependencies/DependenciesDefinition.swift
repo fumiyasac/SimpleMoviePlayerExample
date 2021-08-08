@@ -46,6 +46,18 @@ final class DependenciesDefinition {
         )
 
         // MEMO: (2) UserDefault関連処理部分
+        dependecies.register(
+            InitialAppOpenLocalStore.self,
+            impl: InitialAppOpenLocalStoreImpl()
+        )
+        dependecies.register(
+            LastShownFeaturedMoviePlayTimeLocalStore.self,
+            impl: LastShownFeaturedMoviePlayTimeLocalStoreImpl()
+        )
+        dependecies.register(
+            LastShownMainMoviePlayTimeLocalStore.self,
+            impl: LastShownMainMoviePlayTimeLocalStoreImpl()
+        )
 
         // MEMO: (3) SQLite関連処理部分
 
