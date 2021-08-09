@@ -1,0 +1,174 @@
+[
+    {
+        "id": 1,
+        "category": "調理動画",
+        "author_name": "me😄",
+        "date_string": "2021.07.31",
+        "thumbnail_url": "https://simple-movie-example.s3.ap-northeast-1.amazonaws.com/main_movies/main_sample1_thumb.png",
+        "rating": 3.6,
+        "total_views": 1678,
+        "movies": {
+            "low": "https://simple-movie-example.s3.ap-northeast-1.amazonaws.com/main_movies/main_sample1_l.mp4",
+            "medium": "https://simple-movie-example.s3.ap-northeast-1.amazonaws.com/main_movies/main_sample1_m.mp4",
+            "high": "https://simple-movie-example.s3.ap-northeast-1.amazonaws.com/main_movies/main_sample1_h.mp4"
+        },
+        "title": "牛肉のスパイシー煮込み料理",
+        "description": "カレー風味が心地よさをかもしだす贅沢な一皿。日本風のカレーとは一味違った牛肉カレーはご飯にかけてもビールのおつまみにもベストマッチ！そしてしかも簡単に作れる料理です。ナムプラーとパクチーがポイントです。",
+        "tags": "#牛肉,#肉料理,#カレー,#エスニック風"
+    },
+    {
+        "id": 2,
+        "category": "料理",
+        "author_name": "me😄",
+        "date_string": "2021.07.31",
+        "thumbnail_url": "https://simple-movie-example.s3.ap-northeast-1.amazonaws.com/main_movies/main_sample2_thumb.png",
+        "rating": 4.2,
+        "total_views": 678,
+        "movies": {
+            "low": "https://simple-movie-example.s3.ap-northeast-1.amazonaws.com/main_movies/main_sample2_l.mp4",
+            "medium": "https://simple-movie-example.s3.ap-northeast-1.amazonaws.com/main_movies/main_sample2_m.mp4",
+            "high": "https://simple-movie-example.s3.ap-northeast-1.amazonaws.com/main_movies/main_sample2_h.mp4"
+        },
+        "title": "牛肉とニンニクの炒め物",
+        "description": "牛肉の絶妙な焼き加減とニンニクが強烈に効いた濃い目の醤油味がとてもパンチが効いた一皿。思わずご飯もビールも止まらなくなる、子供から大人まで大好物になる一皿です。",
+        "tags": "#牛肉,#肉料理,#炒め物,#エスニック風"
+    },
+    {
+        "id": 3,
+        "category": "包丁さばき",
+        "author_name": "me😄",
+        "date_string": "2021.07.31",
+        "thumbnail_url": "https://simple-movie-example.s3.ap-northeast-1.amazonaws.com/main_movies/main_sample3_thumb.png",
+        "rating": 3.3,
+        "total_views": 3245,
+        "movies": {
+            "low": "https://simple-movie-example.s3.ap-northeast-1.amazonaws.com/main_movies/main_sample3_l.mp4",
+            "medium": "https://simple-movie-example.s3.ap-northeast-1.amazonaws.com/main_movies/main_sample3_m.mp4",
+            "high": "https://simple-movie-example.s3.ap-northeast-1.amazonaws.com/main_movies/main_sample3_h.mp4"
+        },
+        "title": "空芯菜とパプリカの炒め物を作る",
+        "description": "中華では割とポピュラーだけども栄養価が高くてあると嬉しくなる空芯菜の炒め物を作る過程を記録しました。この動画では最初の下拵えとして野菜の切り方の部分を解説しております。",
+        "tags": "#野菜,#切り方,#包丁,#中華,#空芯菜,#定番一皿"
+    },
+    {
+        "id": 4,
+        "category": "包丁さばき",
+        "author_name": "me😄",
+        "date_string": "2021.07.31",
+        "thumbnail_url": "https://simple-movie-example.s3.ap-northeast-1.amazonaws.com/main_movies/main_sample4_thumb.png",
+        "rating": 4.3,
+        "total_views": 1635,
+        "movies": {
+            "low": "https://simple-movie-example.s3.ap-northeast-1.amazonaws.com/main_movies/main_sample4_l.mp4",
+            "medium": "https://simple-movie-example.s3.ap-northeast-1.amazonaws.com/main_movies/main_sample4_m.mp4",
+            "high": "https://simple-movie-example.s3.ap-northeast-1.amazonaws.com/main_movies/main_sample4_h.mp4"
+        },
+        "title": "ジャガイモを細かく切る",
+        "description": "これはただジャガイモを切っているだけの動画です...。他の野菜も少しだけ映っているんですが一体何が出来上がるんだろうか？ポテトサラダ？それとも...（気になる）",
+        "tags": "#野菜,#切り方,#包丁,#じゃがいも"
+    },
+    {
+        "id": 5,
+        "category": "調理動画",
+        "author_name": "me😄",
+        "date_string": "2021.07.31",
+        "thumbnail_url": "https://simple-movie-example.s3.ap-northeast-1.amazonaws.com/main_movies/main_sample5_thumb.png",
+        "rating": 4.5,
+        "total_views": 4789,
+        "movies": {
+            "low": "https://simple-movie-example.s3.ap-northeast-1.amazonaws.com/main_movies/main_sample5_l.mp4",
+            "medium": "https://simple-movie-example.s3.ap-northeast-1.amazonaws.com/main_movies/main_sample5_m.mp4",
+            "high": "https://simple-movie-example.s3.ap-northeast-1.amazonaws.com/main_movies/main_sample5_h.mp4"
+        },
+        "title": "サバのトマト煮込み",
+        "description": "サバって何をしても美味な魚ですがスパイスが効いたトマト風味で食べるイタリアンもまた良いものです。パンと一緒に食べるともちろん相性は抜群ですが、意外とご飯にも会うんですよ。",
+        "tags": "#サバ,#魚料理,#トマト,#煮込み料理,#イタリアン"
+    },
+    {
+        "id": 6,
+        "category": "調理動画",
+        "author_name": "me😄",
+        "date_string": "2021.07.31",
+        "thumbnail_url": "https://simple-movie-example.s3.ap-northeast-1.amazonaws.com/main_movies/main_sample6_thumb.png",
+        "rating": 4.0,
+        "total_views": 1345,
+        "movies": {
+            "low": "https://simple-movie-example.s3.ap-northeast-1.amazonaws.com/main_movies/main_sample6_l.mp4",
+            "medium": "https://simple-movie-example.s3.ap-northeast-1.amazonaws.com/main_movies/main_sample6_m.mp4",
+            "high": "https://simple-movie-example.s3.ap-northeast-1.amazonaws.com/main_movies/main_sample6_h.mp4"
+        },
+        "title": "殻付きエビのチリソース",
+        "description": "中華やエスニックのエビ料理は似ている様で実はその味は全然違う所が興味深いですね。今回みたいに大振りで殻付きのエビを豪快にチリソースに絡めるスタイルは結構珍しい印象もありますね",
+        "tags": "#エビ,#エビチリ,#中華,#定番一皿"
+    },
+    {
+        "id": 7,
+        "category": "包丁さばき",
+        "author_name": "me😄",
+        "date_string": "2021.07.31",
+        "thumbnail_url": "https://simple-movie-example.s3.ap-northeast-1.amazonaws.com/main_movies/main_sample7_thumb.png",
+        "rating": 3.3,
+        "total_views": 653,
+        "movies": {
+            "low": "https://simple-movie-example.s3.ap-northeast-1.amazonaws.com/main_movies/main_sample7_l.mp4",
+            "medium": "https://simple-movie-example.s3.ap-northeast-1.amazonaws.com/main_movies/main_sample7_m.mp4",
+            "high": "https://simple-movie-example.s3.ap-northeast-1.amazonaws.com/main_movies/main_sample7_h.mp4"
+        },
+        "title": "キャベツの千切り",
+        "description": "一見すると「なんだ簡単じゃないか」と思うんだけどやってみると結構難しいキャベツの千切り。太さを均一にして切り揃えられる様になるまでには決して平坦な道のりではないはず...",
+        "tags": "#野菜,#切り方,#包丁,#キャベツ"
+    },
+    {
+        "id": 8,
+        "category": "包丁さばき",
+        "author_name": "me😄",
+        "date_string": "2021.07.31",
+        "thumbnail_url": "https://simple-movie-example.s3.ap-northeast-1.amazonaws.com/main_movies/main_sample8_thumb.png",
+        "rating": 3.2,
+        "total_views": 433,
+        "movies": {
+            "low": "https://simple-movie-example.s3.ap-northeast-1.amazonaws.com/main_movies/main_sample8_l.mp4",
+            "medium": "https://simple-movie-example.s3.ap-northeast-1.amazonaws.com/main_movies/main_sample8_m.mp4",
+            "high": "https://simple-movie-example.s3.ap-northeast-1.amazonaws.com/main_movies/main_sample8_h.mp4"
+        },
+        "title": "ピーマンの細切り",
+        "description": "きっとこれは中華の定番「青椒肉絲」での一コマだと思います。こちらも手際良く太さを均一にかつ早く仕上げるのはやっぱり難しいものですね。",
+        "tags": "#野菜,#切り方,#包丁,#ピーマン"
+    },
+    {
+        "id": 9,
+        "category": "料理",
+        "author_name": "me😄",
+        "date_string": "2021.07.31",
+        "thumbnail_url": "https://simple-movie-example.s3.ap-northeast-1.amazonaws.com/main_movies/main_sample9_thumb.png",
+        "rating": 4.4,
+        "total_views": 1283,
+        "movies": {
+            "low": "https://simple-movie-example.s3.ap-northeast-1.amazonaws.com/main_movies/main_sample9_l.mp4",
+            "medium": "https://simple-movie-example.s3.ap-northeast-1.amazonaws.com/main_movies/main_sample9_m.mp4",
+            "high": "https://simple-movie-example.s3.ap-northeast-1.amazonaws.com/main_movies/main_sample9_h.mp4"
+        },
+        "title": "少し変わったサーモンのお寿司",
+        "description": "日本の握り寿司とはまた少し違った個性的なスタイルのサーモンのお寿司。上に掛かったマヨネーズとパプリカパウダーも雰囲気があって興味深さを感じてしまう。",
+        "tags": "#サーモン,#鮭,#寿司"
+    },
+    {
+        "id": 10,
+        "category": "調理動画",
+        "author_name": "me😄",
+        "date_string": "2021.07.31",
+        "thumbnail_url": "https://simple-movie-example.s3.ap-northeast-1.amazonaws.com/main_movies/main_sample10_thumb.png",
+        "rating": 3.7,
+        "total_views": 1903,
+        "movies": [
+            {
+                "low": "https://simple-movie-example.s3.ap-northeast-1.amazonaws.com/main_movies/main_sample10_l.mp4",
+                "medium": "https://simple-movie-example.s3.ap-northeast-1.amazonaws.com/main_movies/main_sample10_m.mp4",
+                "high": "https://simple-movie-example.s3.ap-northeast-1.amazonaws.com/main_movies/main_sample10_h.mp4"
+            }
+        ],
+        "title": "海苔入りスープ",
+        "description": "海苔が入った少し変わったスープ。パスタっぽいものやきゅうりが入ってるちょっと味の想像がつかないけれども、きっと美味しいと思っている。",
+        "tags": "#海苔,#スープ,#汁物"
+    }
+]
