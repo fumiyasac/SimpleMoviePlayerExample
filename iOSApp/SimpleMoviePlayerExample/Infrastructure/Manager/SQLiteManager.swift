@@ -8,11 +8,10 @@
 import Foundation
 import GRDB
 
-// MARK: - Protocol
+// MEMO: ライブラリ「GRDB.swift」を利用する形
+// https://github.com/groue/GRDB.swift
 
-protocol SQLiteManagerProtocol {}
-
-final class SQLiteManager: SQLiteManagerProtocol {
+final class SQLiteManager {
 
     // MARK: - Singleton Instance
 
@@ -20,7 +19,55 @@ final class SQLiteManager: SQLiteManagerProtocol {
 
     // MARK: - Properies
 
-    private let databaseQueue = DatabaseQueue()
+    private let fileManager = FileManager.default
+    private let databaseFileName = "application.db"
+
+    // MARK: - Initializer
+
+    init() {
+        createDatabase()
+    }
 
     // MARK: - Function
+
+    func inDatabase(_ block: (Database) throws -> Void) -> Bool {
+        do {
+            let databaseQueue = try DatabaseQueue(path: getDatabaseFilePath())
+            try databaseQueue.inDatabase(block)
+        } catch let error {
+            print("[SQLite] DB操作に失敗しました: " + error.localizedDescription)
+            return false
+        }
+        return true
+    }
+
+    // MARK: - Private Function
+
+    // DB新規作成処理
+    private func createDatabase() {
+        if fileManager.fileExists(atPath: getDatabaseFilePath()) {
+            return
+        }
+        let result = inDatabase { (db) in
+            // TODO: テーブルの作成処理
+        }
+        if !result {
+            removeDatabase()
+        }
+    }
+
+    // DB削除処理
+    private func removeDatabase() {
+        do {
+           try fileManager.removeItem(atPath: getDatabaseFilePath())
+        } catch let error {
+            print("[SQLite] DBファイル削除に失敗しました: " + error.localizedDescription)
+        }
+    }
+
+    // DB格納先ファイルパス取得処理
+    private func getDatabaseFilePath() -> String {
+        let documentPath = fileManager.urls(for: .documentDirectory, in: .userDomainMask)[0].absoluteString
+        return documentPath + databaseFileName
+    }
 }
