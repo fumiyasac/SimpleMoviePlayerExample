@@ -90,8 +90,6 @@ final class ApiClientManager {
                     singleEvent(.failure(error))
                     return
                 }
-                // MEMO: Debug用にエラー発生時のJSONを出力する
-                //self.displayErrorForDebug(targetResponse: response, targetData: data)
                 // MEMO: ステータスコードの精査及びエラーハンドリング
                 if let response = response as? HTTPURLResponse, case 400...500 = response.statusCode {
                     singleEvent(.failure(APIError.error("Error: StatusCodeが200~399以外です。")))
@@ -154,16 +152,5 @@ final class ApiClientManager {
             urlRequest.addValue(authraizationHeader , forHTTPHeaderField: "Authorization")
         }
         return urlRequest
-    }
-
-    // MEMO: デバッグ用にエラー時に出力されるJSONを表示する
-    private func displayErrorForDebug(targetResponse: URLResponse?, targetData: Data?) {
-        if let debugResponse = targetResponse as? HTTPURLResponse {
-            print("StatusCode:", debugResponse.statusCode)
-            if let debugData = targetData {
-                let debugJson = String(data: debugData, encoding: String.Encoding.utf8) ?? "No Response found."
-                print("ErrorResponse:", debugJson)
-            }
-        }
     }
 }
