@@ -44,6 +44,13 @@ final class DependenciesDefinition {
             ApiClient.self,
             impl: ApiClientManager.shared
         )
+        // MEMO: Simulator検証時にはこちらを利用
+        /*
+        dependecies.register(
+            ApiClient.self,
+            impl: ApiClientMock.shared
+        )
+        */
 
         // MEMO: (2) UserDefault関連処理部分
         dependecies.register(

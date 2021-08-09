@@ -40,6 +40,7 @@
 		DE8DFD8326C16F0200CAB778 /* main_banner_stub.json in Resources */ = {isa = PBXBuildFile; fileRef = DE8DFD7F26C16F0200CAB778 /* main_banner_stub.json */; };
 		DE8DFD8426C16F0200CAB778 /* featured_movie_stub.json in Resources */ = {isa = PBXBuildFile; fileRef = DE8DFD8026C16F0200CAB778 /* featured_movie_stub.json */; };
 		DE8DFD8526C16F0200CAB778 /* main_news_stub.json in Resources */ = {isa = PBXBuildFile; fileRef = DE8DFD8126C16F0200CAB778 /* main_news_stub.json */; };
+		DE8DFD8726C16F6200CAB778 /* ApiClientMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE8DFD8626C16F6200CAB778 /* ApiClientMock.swift */; };
 		DEA47534263F40AA00090DA5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEA47533263F40AA00090DA5 /* AppDelegate.swift */; };
 		DEA47536263F40AA00090DA5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEA47535263F40AA00090DA5 /* SceneDelegate.swift */; };
 		DEA47538263F40AA00090DA5 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEA47537263F40AA00090DA5 /* MainViewController.swift */; };
@@ -126,6 +127,7 @@
 		DE8DFD7F26C16F0200CAB778 /* main_banner_stub.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = main_banner_stub.json; sourceTree = "<group>"; };
 		DE8DFD8026C16F0200CAB778 /* featured_movie_stub.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = featured_movie_stub.json; sourceTree = "<group>"; };
 		DE8DFD8126C16F0200CAB778 /* main_news_stub.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = main_news_stub.json; sourceTree = "<group>"; };
+		DE8DFD8626C16F6200CAB778 /* ApiClientMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiClientMock.swift; sourceTree = "<group>"; };
 		DEA47530263F40AA00090DA5 /* SimpleMoviePlayerExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SimpleMoviePlayerExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DEA47533263F40AA00090DA5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DEA47535263F40AA00090DA5 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -441,6 +443,7 @@
 		DE8DFD7826BFB65600CAB778 /* Mock */ = {
 			isa = PBXGroup;
 			children = (
+				DE8DFD8626C16F6200CAB778 /* ApiClientMock.swift */,
 			);
 			path = Mock;
 			sourceTree = "<group>";
@@ -880,6 +883,7 @@
 				DE5F6E7B267FC19F00FCD3A1 /* NSObjectProtocolExtension.swift in Sources */,
 				DE82CF1B26A9B26C00033A62 /* ApiClientManager.swift in Sources */,
 				DEB52A052684CA8B000C33A2 /* SettingsViewController.swift in Sources */,
+				DE8DFD8726C16F6200CAB778 /* ApiClientMock.swift in Sources */,
 				DE82CF2C26A9E5D200033A62 /* GlobalTabBarItems.swift in Sources */,
 				DEB52A072684CD12000C33A2 /* DependeciesContainer.swift in Sources */,
 				DE82CF3526ABF38400033A62 /* MovieDetailViewController.swift in Sources */,
