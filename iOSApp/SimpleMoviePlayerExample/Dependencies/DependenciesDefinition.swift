@@ -14,9 +14,6 @@ final class DependenciesDefinition {
 
     func inject() {
 
-        // MEMO: 同じProtocolを適合させるがLocalに保持したデータを利用したい際につける名前
-        let local = "local"
-
         // MEMO: 処理を実行する際にバックグラウンドスレッドにしたい際につける名前
         let background = "background"
 
@@ -69,6 +66,56 @@ final class DependenciesDefinition {
         // MEMO: (3) SQLite関連処理部分
 
         // MARK: - Repository
+
+        dependecies.register(
+            InitialAppOpenRepository.self,
+            impl: InitialAppOpenRepositoryImpl(
+                initialAppOpenLocalStore: dependecies.resolve(InitialAppOpenLocalStore.self),
+                backgroundScheduler: dependecies.resolve(ImmediateSchedulerType.self, name: background)
+            )
+        )
+        dependecies.register(
+            LastShownFeaturedMoviePlayTimeRepository.self,
+            impl: LastShownFeaturedMoviePlayTimeRepositoryImpl(
+                lastShownFeaturedMoviePlayTimeLocalStore: dependecies.resolve(LastShownFeaturedMoviePlayTimeLocalStore.self),
+                backgroundScheduler: dependecies.resolve(ImmediateSchedulerType.self, name: background)
+            )
+        )
+        dependecies.register(
+            LastShownMainMoviePlayTimeRepository.self,
+            impl: LastShownMainMoviePlayTimeRepositoryImpl(
+                lastShownMainMoviePlayTimeLocalStore: dependecies.resolve(LastShownMainMoviePlayTimeLocalStore.self),
+                backgroundScheduler: dependecies.resolve(ImmediateSchedulerType.self, name: background)
+            )
+        )
+        dependecies.register(
+            FeaturedMovieRepository.self,
+            impl: FeaturedMovieRepositoryImpl(
+                apiClient: dependecies.resolve(ApiClient.self),
+                backgroundScheduler: dependecies.resolve(ImmediateSchedulerType.self, name: background)
+            )
+        )
+        dependecies.register(
+            MainBannerRepository.self,
+            impl: MainBannerRepositoryImpl(
+                apiClient: dependecies.resolve(ApiClient.self),
+                backgroundScheduler: dependecies.resolve(ImmediateSchedulerType.self, name: background)
+            )
+        )
+        dependecies.register(
+            MainMovieRepository.self,
+            impl: MainMovieRepositoryImpl(
+                apiClient: dependecies.resolve(ApiClient.self),
+                backgroundScheduler: dependecies.resolve(ImmediateSchedulerType.self, name: background)
+            )
+        )
+        dependecies.register(
+            MainNewsRepository.self,
+            impl: MainNewsRepositoryImpl(
+                apiClient: dependecies.resolve(ApiClient.self),
+                backgroundScheduler: dependecies.resolve(ImmediateSchedulerType.self, name: background)
+            )
+        )
 
         // MARK: - Scheduler
 
