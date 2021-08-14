@@ -23,11 +23,11 @@ final class MainMovieTable: Record {
 
     enum Columns {
         static let id = Column("id")
-        static let mainMovieId = Column("mainMovieId")
+        static let mainMovieId = Column("main_movie_id")
         static let category = Column("category")
-        static let authorName = Column("authorName")
-        static let dateString = Column("dateString")
-        static let thumbnailUrl = Column("thumbnailUrl")
+        static let authorName = Column("author_name")
+        static let dateString = Column("date_string")
+        static let thumbnailUrl = Column("thumbnail_url")
         static let title = Column("title")
         static let description = Column("description")
     }
@@ -72,11 +72,11 @@ final class MainMovieTable: Record {
 
     required init(row: Row) {
         self.id = row["id"]
-        self.mainMovieId = row["mainMovieId"]
+        self.mainMovieId = row["main_movie_id"]
         self.category = row["category"]
-        self.authorName = row["authorName"]
-        self.dateString = row["dateString"]
-        self.thumbnailUrl = row["thumbnailUrl"]
+        self.authorName = row["author_name"]
+        self.dateString = row["date_string"]
+        self.thumbnailUrl = row["thumbnail_url"]
         self.title = row["title"]
         self.description = row["description"]
         super.init(row: row)
@@ -89,8 +89,13 @@ final class MainMovieTable: Record {
             table: databaseTableName,
             body: { (t: TableDefinition) in
                 t.column("id", .integer).primaryKey(onConflict: .replace, autoincrement: false)
+                t.column("main_movie_id", .integer).notNull()
+                t.column("category", .text).notNull()
+                t.column("author_name", .text).notNull()
+                t.column("date_string", .text).notNull()
+                t.column("thumbnail_url", .text).notNull()
                 t.column("title", .text).notNull()
-                t.column("body", .text).notNull()
+                t.column("description", .text).notNull()
             }
         )
     }
