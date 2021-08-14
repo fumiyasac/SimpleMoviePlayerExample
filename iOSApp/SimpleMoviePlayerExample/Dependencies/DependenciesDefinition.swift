@@ -117,7 +117,23 @@ final class DependenciesDefinition {
             )
         )
 
-        // MARK: - Scheduler
+        // MARK: - UseCase
+
+        dependecies.register(
+            MainUseCase.self,
+            impl: MainUseCaseImpl(
+                initialAppOpenRepository: dependecies.resolve(InitialAppOpenRepository.self),
+                mainNewsRepository: dependecies.resolve(MainNewsRepository.self),
+                featuredMovieRepository: dependecies.resolve(FeaturedMovieRepository.self),
+                mainMovieRepository: dependecies.resolve(MainMovieRepository.self)
+            )
+        )
+        dependecies.register(
+            CarouselMainBannerUseCase.self,
+            impl: CarouselMainBannerUseCaseImpl(
+                mainBannerRepository: dependecies.resolve(MainBannerRepository.self)
+            )
+        )
 
         // MARK: - Presenter
     }
