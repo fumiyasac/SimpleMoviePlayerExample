@@ -48,6 +48,11 @@
 		DE8DFD9626C55EBB00CAB778 /* InitialAppOpenRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE8DFD9526C55EBB00CAB778 /* InitialAppOpenRepository.swift */; };
 		DE8DFD9826C5602F00CAB778 /* LastShownMainMoviePlayTimeRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE8DFD9726C5602F00CAB778 /* LastShownMainMoviePlayTimeRepository.swift */; };
 		DE8DFD9A26C5605B00CAB778 /* LastShownFeaturedMoviePlayTimeRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE8DFD9926C5605B00CAB778 /* LastShownFeaturedMoviePlayTimeRepository.swift */; };
+		DE8DFD9C26C5641500CAB778 /* MainDto.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE8DFD9B26C5641500CAB778 /* MainDto.swift */; };
+		DE8DFD9E26C5642800CAB778 /* MainUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE8DFD9D26C5642800CAB778 /* MainUseCase.swift */; };
+		DE8DFDA026C7B8E800CAB778 /* CarouselMainBannerDto.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE8DFD9F26C7B8E800CAB778 /* CarouselMainBannerDto.swift */; };
+		DE8DFDA226C7B8F900CAB778 /* CarouselMainBannerUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE8DFDA126C7B8F900CAB778 /* CarouselMainBannerUseCase.swift */; };
+		DE8DFDA426C7BE4E00CAB778 /* MoviePlayerError.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE8DFDA326C7BE4E00CAB778 /* MoviePlayerError.swift */; };
 		DEA47534263F40AA00090DA5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEA47533263F40AA00090DA5 /* AppDelegate.swift */; };
 		DEA47536263F40AA00090DA5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEA47535263F40AA00090DA5 /* SceneDelegate.swift */; };
 		DEA47538263F40AA00090DA5 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEA47537263F40AA00090DA5 /* MainViewController.swift */; };
@@ -142,6 +147,11 @@
 		DE8DFD9526C55EBB00CAB778 /* InitialAppOpenRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialAppOpenRepository.swift; sourceTree = "<group>"; };
 		DE8DFD9726C5602F00CAB778 /* LastShownMainMoviePlayTimeRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LastShownMainMoviePlayTimeRepository.swift; sourceTree = "<group>"; };
 		DE8DFD9926C5605B00CAB778 /* LastShownFeaturedMoviePlayTimeRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LastShownFeaturedMoviePlayTimeRepository.swift; sourceTree = "<group>"; };
+		DE8DFD9B26C5641500CAB778 /* MainDto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainDto.swift; sourceTree = "<group>"; };
+		DE8DFD9D26C5642800CAB778 /* MainUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainUseCase.swift; sourceTree = "<group>"; };
+		DE8DFD9F26C7B8E800CAB778 /* CarouselMainBannerDto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarouselMainBannerDto.swift; sourceTree = "<group>"; };
+		DE8DFDA126C7B8F900CAB778 /* CarouselMainBannerUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarouselMainBannerUseCase.swift; sourceTree = "<group>"; };
+		DE8DFDA326C7BE4E00CAB778 /* MoviePlayerError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviePlayerError.swift; sourceTree = "<group>"; };
 		DEA47530263F40AA00090DA5 /* SimpleMoviePlayerExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SimpleMoviePlayerExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DEA47533263F40AA00090DA5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DEA47535263F40AA00090DA5 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -267,6 +277,7 @@
 		DE5F6E6C267FBF0700FCD3A1 /* Enum */ = {
 			isa = PBXGroup;
 			children = (
+				DE8DFDA326C7BE4E00CAB778 /* MoviePlayerError.swift */,
 				DE82CF2B26A9E5D200033A62 /* GlobalTabBarItems.swift */,
 			);
 			path = Enum;
@@ -476,6 +487,8 @@
 			isa = PBXGroup;
 			children = (
 				DE8DFD9026C55B4000CAB778 /* DataTransferObject */,
+				DE8DFD9D26C5642800CAB778 /* MainUseCase.swift */,
+				DE8DFDA126C7B8F900CAB778 /* CarouselMainBannerUseCase.swift */,
 			);
 			path = UseCase;
 			sourceTree = "<group>";
@@ -483,6 +496,8 @@
 		DE8DFD9026C55B4000CAB778 /* DataTransferObject */ = {
 			isa = PBXGroup;
 			children = (
+				DE8DFD9B26C5641500CAB778 /* MainDto.swift */,
+				DE8DFD9F26C7B8E800CAB778 /* CarouselMainBannerDto.swift */,
 			);
 			path = DataTransferObject;
 			sourceTree = "<group>";
@@ -894,9 +909,11 @@
 				DE5F6E79267FC11F00FCD3A1 /* CustomViewBase.swift in Sources */,
 				DEA47538263F40AA00090DA5 /* MainViewController.swift in Sources */,
 				DEAE7EFA268A19EF009ACBD9 /* PlayerView.swift in Sources */,
+				DE8DFDA426C7BE4E00CAB778 /* MoviePlayerError.swift in Sources */,
 				DEA6BCFD26B5779700196CC3 /* FeaturedDetailPlayerViewController.swift in Sources */,
 				DE8DFD8E26C55AFA00CAB778 /* FeaturedMovieRepository.swift in Sources */,
 				DE5F6E83267FC27100FCD3A1 /* UIViewControllerExtension.swift in Sources */,
+				DE8DFDA026C7B8E800CAB778 /* CarouselMainBannerDto.swift in Sources */,
 				DE8DFD6E26BD939800CAB778 /* MainNewsId.swift in Sources */,
 				DE8DFD6B26BD921D00CAB778 /* MainBannerEntity.swift in Sources */,
 				DE5F6E7F267FC1E100FCD3A1 /* UICollectionViewExtension.swift in Sources */,
@@ -910,15 +927,18 @@
 				DEA47534263F40AA00090DA5 /* AppDelegate.swift in Sources */,
 				DEB52A092684CD6A000C33A2 /* DependenciesDefinition.swift in Sources */,
 				DEB529EE2682B84A000C33A2 /* GlobalTabBarController.swift in Sources */,
+				DE8DFD9E26C5642800CAB778 /* MainUseCase.swift in Sources */,
 				DEA47536263F40AA00090DA5 /* SceneDelegate.swift in Sources */,
 				DE8DFD9A26C5605B00CAB778 /* LastShownFeaturedMoviePlayTimeRepository.swift in Sources */,
 				DE8DFD8926C553FE00CAB778 /* MainMovieRepository.swift in Sources */,
 				DE5F6E7B267FC19F00FCD3A1 /* NSObjectProtocolExtension.swift in Sources */,
 				DE82CF1B26A9B26C00033A62 /* ApiClientManager.swift in Sources */,
+				DE8DFD9C26C5641500CAB778 /* MainDto.swift in Sources */,
 				DEB52A052684CA8B000C33A2 /* SettingsViewController.swift in Sources */,
 				DE8DFD8726C16F6200CAB778 /* ApiClientMock.swift in Sources */,
 				DE82CF2C26A9E5D200033A62 /* GlobalTabBarItems.swift in Sources */,
 				DE8DFD9226C55BDA00CAB778 /* MainBannerRepository.swift in Sources */,
+				DE8DFDA226C7B8F900CAB778 /* CarouselMainBannerUseCase.swift in Sources */,
 				DEB52A072684CD12000C33A2 /* DependeciesContainer.swift in Sources */,
 				DE82CF3526ABF38400033A62 /* MovieDetailViewController.swift in Sources */,
 				DE82CF2A26A9CCAA00033A62 /* SQLiteManager.swift in Sources */,
