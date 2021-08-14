@@ -64,6 +64,10 @@ final class DependenciesDefinition {
         )
 
         // MEMO: (3) SQLite関連処理部分
+        dependecies.register(
+            SQLiteHelper.self,
+            impl: SQLiteManager.shared
+        )
 
         // MARK: - Repository
 

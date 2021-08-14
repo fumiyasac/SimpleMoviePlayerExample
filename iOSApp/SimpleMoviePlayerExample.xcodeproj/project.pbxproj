@@ -53,6 +53,7 @@
 		DE8DFDA026C7B8E800CAB778 /* CarouselMainBannerDto.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE8DFD9F26C7B8E800CAB778 /* CarouselMainBannerDto.swift */; };
 		DE8DFDA226C7B8F900CAB778 /* CarouselMainBannerUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE8DFDA126C7B8F900CAB778 /* CarouselMainBannerUseCase.swift */; };
 		DE8DFDA426C7BE4E00CAB778 /* MoviePlayerError.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE8DFDA326C7BE4E00CAB778 /* MoviePlayerError.swift */; };
+		DE8DFDA826C7E30000CAB778 /* MainMovieTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE8DFDA726C7E30000CAB778 /* MainMovieTable.swift */; };
 		DEA47534263F40AA00090DA5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEA47533263F40AA00090DA5 /* AppDelegate.swift */; };
 		DEA47536263F40AA00090DA5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEA47535263F40AA00090DA5 /* SceneDelegate.swift */; };
 		DEA47538263F40AA00090DA5 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEA47537263F40AA00090DA5 /* MainViewController.swift */; };
@@ -152,6 +153,7 @@
 		DE8DFD9F26C7B8E800CAB778 /* CarouselMainBannerDto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarouselMainBannerDto.swift; sourceTree = "<group>"; };
 		DE8DFDA126C7B8F900CAB778 /* CarouselMainBannerUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarouselMainBannerUseCase.swift; sourceTree = "<group>"; };
 		DE8DFDA326C7BE4E00CAB778 /* MoviePlayerError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviePlayerError.swift; sourceTree = "<group>"; };
+		DE8DFDA726C7E30000CAB778 /* MainMovieTable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMovieTable.swift; sourceTree = "<group>"; };
 		DEA47530263F40AA00090DA5 /* SimpleMoviePlayerExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SimpleMoviePlayerExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DEA47533263F40AA00090DA5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DEA47535263F40AA00090DA5 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -342,8 +344,9 @@
 		DE82CF1926A9B1E700033A62 /* Infrastructure */ = {
 			isa = PBXGroup;
 			children = (
-				DE8DFD7526BFB49E00CAB778 /* LocalStore */,
 				DE8DFD7226BE7AE000CAB778 /* API */,
+				DE8DFD7526BFB49E00CAB778 /* LocalStore */,
+				DE8DFDA626C7E2C700CAB778 /* SQLiteTable */,
 				DE8DFD7126BE7ACE00CAB778 /* Manager */,
 			);
 			path = Infrastructure;
@@ -500,6 +503,14 @@
 				DE8DFD9F26C7B8E800CAB778 /* CarouselMainBannerDto.swift */,
 			);
 			path = DataTransferObject;
+			sourceTree = "<group>";
+		};
+		DE8DFDA626C7E2C700CAB778 /* SQLiteTable */ = {
+			isa = PBXGroup;
+			children = (
+				DE8DFDA726C7E30000CAB778 /* MainMovieTable.swift */,
+			);
+			path = SQLiteTable;
 			sourceTree = "<group>";
 		};
 		DEA47527263F40AA00090DA5 = {
@@ -934,6 +945,7 @@
 				DE5F6E7B267FC19F00FCD3A1 /* NSObjectProtocolExtension.swift in Sources */,
 				DE82CF1B26A9B26C00033A62 /* ApiClientManager.swift in Sources */,
 				DE8DFD9C26C5641500CAB778 /* MainDto.swift in Sources */,
+				DE8DFDA826C7E30000CAB778 /* MainMovieTable.swift in Sources */,
 				DEB52A052684CA8B000C33A2 /* SettingsViewController.swift in Sources */,
 				DE8DFD8726C16F6200CAB778 /* ApiClientMock.swift in Sources */,
 				DE82CF2C26A9E5D200033A62 /* GlobalTabBarItems.swift in Sources */,

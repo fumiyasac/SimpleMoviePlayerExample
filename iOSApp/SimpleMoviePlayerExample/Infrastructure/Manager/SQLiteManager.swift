@@ -11,7 +11,9 @@ import GRDB
 // MEMO: ライブラリ「GRDB.swift」を利用する形
 // https://github.com/groue/GRDB.swift
 
-final class SQLiteManager {
+protocol SQLiteHelper {}
+
+final class SQLiteManager: SQLiteHelper {
 
     // MARK: - Singleton Instance
 
@@ -48,8 +50,9 @@ final class SQLiteManager {
         if fileManager.fileExists(atPath: getDatabaseFilePath()) {
             return
         }
-        let result = inDatabase { (db) in
-            // TODO: テーブルの作成処理
+        let result = inDatabase { (database) in
+            // MEMO: テーブルの新規作成処理
+            try MainMovieTable.create(database)
         }
         if !result {
             removeDatabase()
