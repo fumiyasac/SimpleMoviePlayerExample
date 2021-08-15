@@ -123,7 +123,8 @@ final class DependenciesDefinition {
         dependecies.register(
             FavoriteMainMovieRepository.self,
             impl: FavoriteMainMovieRepositoryImpl(
-                sqliteHelper: dependecies.resolve(SQLiteHelper.self)
+                sqliteHelper: dependecies.resolve(SQLiteHelper.self),
+                backgroundScheduler: dependecies.resolve(ImmediateSchedulerType.self, name: background)
             )
         )
 

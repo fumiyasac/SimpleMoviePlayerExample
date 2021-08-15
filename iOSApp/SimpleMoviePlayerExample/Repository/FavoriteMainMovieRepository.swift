@@ -23,13 +23,16 @@ protocol FavoriteMainMovieRepository {
 final class FavoriteMainMovieRepositoryImpl: FavoriteMainMovieRepository {
 
     private let sqliteHelper: SQLiteHelper
+    private let backgroundScheduler: ImmediateSchedulerType
 
     // MARK: - Initializer
 
     init(
-        sqliteHelper: SQLiteHelper
+        sqliteHelper: SQLiteHelper,
+        backgroundScheduler: ImmediateSchedulerType
     ) {
         self.sqliteHelper = sqliteHelper
+        self.backgroundScheduler = backgroundScheduler
     }
 
     // MARK: - FavoriteMainMovieRepository
@@ -37,12 +40,18 @@ final class FavoriteMainMovieRepositoryImpl: FavoriteMainMovieRepository {
     func findAll() -> Single<[MainMovieTable]> {
         var mainMovies: [MainMovieTable] = []
         let result = sqliteHelper.inDatabase { database in
-            let _ = try MainMovieTable.fetchAll(database).map { mainMovies.append($0) }
+            mainMovies = try MainMovieTable.fetchAll(database)
         }
         if result {
             return Single.just(mainMovies)
+                .subscribe(
+                    on: backgroundScheduler
+                )
         } else {
-            return Single.error(MoviePlayerError.SqliteExecutionFailed)
+            return Single.error(MoviePlayerError.sqliteExecutionFailed)
+                .subscribe(
+                    on: backgroundScheduler
+                )
         }
     }
 
@@ -59,10 +68,12 @@ final class FavoriteMainMovieRepositoryImpl: FavoriteMainMovieRepository {
             if result {
                 completable(.completed)
             } else {
-                completable(.error(MoviePlayerError.SqliteExecutionFailed))
+                completable(.error(MoviePlayerError.sqliteExecutionFailed))
             }
             return Disposables.create()
-        }
+        }.subscribe(
+            on: backgroundScheduler
+        )
     }
 
     func delete(mainMovieId: MainMovieId) -> Completable {
@@ -80,9 +91,11 @@ final class FavoriteMainMovieRepositoryImpl: FavoriteMainMovieRepository {
             if result {
                 completable(.completed)
             } else {
-                completable(.error(MoviePlayerError.SqliteExecutionFailed))
+                completable(.error(MoviePlayerError.sqliteExecutionFailed))
             }
             return Disposables.create()
-        }
+        }.subscribe(
+            on: backgroundScheduler
+        )
     }
 }
