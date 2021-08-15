@@ -45,7 +45,7 @@ final class FavoriteMainMovieRepositoryImpl: FavoriteMainMovieRepository {
         if result {
             return Single.just(mainMovies)
         } else {
-            return Single.error(MoviePlayerError.notExistObject)
+            return Single.error(MoviePlayerError.SqliteExecutionFailed)
         }
     }
 
