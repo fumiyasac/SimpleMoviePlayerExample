@@ -8,6 +8,13 @@
 import Foundation
 import GRDB
 
+// SQLiteのスキーマ定義: (main_movies)
+// 参考1: 素のままのSQL発行やマイグレーションに関する処理
+// https://qiita.com/Cyber_Hacnosuke/items/033da2b2e9cfbee7fff0
+// https://medium.com/@gwendal.roue/how-to-build-an-ios-application-with-sqlite-and-grdb-swift-d023a06c29b3
+// 参考2: 素のままのSQL発行やマイグレーションに関する処理
+// https://www.letitride.jp/entry/2019/12/16/103415
+
 final class MainMovieTable: Record {
 
     var id: Int64?
@@ -84,6 +91,7 @@ final class MainMovieTable: Record {
 
     // MARK: - Static Function
 
+    // テーブルを新規作成するための処理
     static func create(_ db: Database) throws {
         try db.create(
             table: databaseTableName,
@@ -99,5 +107,4 @@ final class MainMovieTable: Record {
             }
         )
     }
-
 }
