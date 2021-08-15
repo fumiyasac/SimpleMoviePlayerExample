@@ -23,16 +23,13 @@ protocol FavoriteMainMovieRepository {
 final class FavoriteMainMovieRepositoryImpl: FavoriteMainMovieRepository {
 
     private let sqliteHelper: SQLiteHelper
-    private let backgroundScheduler: ImmediateSchedulerType
 
     // MARK: - Initializer
 
     init(
-        sqliteHelper: SQLiteHelper,
-        backgroundScheduler: ImmediateSchedulerType
+        sqliteHelper: SQLiteHelper
     ) {
         self.sqliteHelper = sqliteHelper
-        self.backgroundScheduler = backgroundScheduler
     }
 
     // MARK: - FavoriteMainMovieRepository

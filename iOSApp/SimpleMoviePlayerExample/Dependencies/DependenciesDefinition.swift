@@ -120,6 +120,12 @@ final class DependenciesDefinition {
                 backgroundScheduler: dependecies.resolve(ImmediateSchedulerType.self, name: background)
             )
         )
+        dependecies.register(
+            FavoriteMainMovieRepository.self,
+            impl: FavoriteMainMovieRepositoryImpl(
+                sqliteHelper: dependecies.resolve(SQLiteHelper.self)
+            )
+        )
 
         // MARK: - UseCase
 
