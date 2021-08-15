@@ -10,6 +10,7 @@
 		49D1B7EF0A40F4BE6139D66A /* Pods_SimpleMoviePlayerExample_SimpleMoviePlayerExampleUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8EB340B7D1322CC9C702AB91 /* Pods_SimpleMoviePlayerExample_SimpleMoviePlayerExampleUITests.framework */; };
 		53E89A3FFAD1A4BBC30E2E41 /* Pods_SimpleMoviePlayerExample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0F6E8B24C46852484C8DFBCD /* Pods_SimpleMoviePlayerExample.framework */; };
 		A98499EE6E510602F60CF7DB /* Pods_SimpleMoviePlayerExampleTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 820A67EF4479DEF9E9CC0642 /* Pods_SimpleMoviePlayerExampleTests.framework */; };
+		DE340E1926C958FE00FE230A /* FavoriteMainMovieRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE340E1826C958FE00FE230A /* FavoriteMainMovieRepository.swift */; };
 		DE5F6E79267FC11F00FCD3A1 /* CustomViewBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE5F6E78267FC11F00FCD3A1 /* CustomViewBase.swift */; };
 		DE5F6E7B267FC19F00FCD3A1 /* NSObjectProtocolExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE5F6E7A267FC19F00FCD3A1 /* NSObjectProtocolExtension.swift */; };
 		DE5F6E7D267FC1AB00FCD3A1 /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE5F6E7C267FC1AB00FCD3A1 /* UIColorExtension.swift */; };
@@ -111,6 +112,7 @@
 		BC9841BE6F00408A52C81066 /* Pods-SimpleMoviePlayerExample-SimpleMoviePlayerExampleUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SimpleMoviePlayerExample-SimpleMoviePlayerExampleUITests.debug.xcconfig"; path = "Target Support Files/Pods-SimpleMoviePlayerExample-SimpleMoviePlayerExampleUITests/Pods-SimpleMoviePlayerExample-SimpleMoviePlayerExampleUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		CF32871968371738901CE35F /* Pods-SimpleMoviePlayerExampleTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SimpleMoviePlayerExampleTests.debug.xcconfig"; path = "Target Support Files/Pods-SimpleMoviePlayerExampleTests/Pods-SimpleMoviePlayerExampleTests.debug.xcconfig"; sourceTree = "<group>"; };
 		D7A777ED43B2100757C4421E /* Pods-SimpleMoviePlayerExample-SimpleMoviePlayerExampleUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SimpleMoviePlayerExample-SimpleMoviePlayerExampleUITests.release.xcconfig"; path = "Target Support Files/Pods-SimpleMoviePlayerExample-SimpleMoviePlayerExampleUITests/Pods-SimpleMoviePlayerExample-SimpleMoviePlayerExampleUITests.release.xcconfig"; sourceTree = "<group>"; };
+		DE340E1826C958FE00FE230A /* FavoriteMainMovieRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteMainMovieRepository.swift; sourceTree = "<group>"; };
 		DE5F6E78267FC11F00FCD3A1 /* CustomViewBase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomViewBase.swift; sourceTree = "<group>"; };
 		DE5F6E7A267FC19F00FCD3A1 /* NSObjectProtocolExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSObjectProtocolExtension.swift; sourceTree = "<group>"; };
 		DE5F6E7C267FC1AB00FCD3A1 /* UIColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
@@ -306,6 +308,7 @@
 				DE8DFD9126C55BDA00CAB778 /* MainBannerRepository.swift */,
 				DE8DFD8826C553FE00CAB778 /* MainMovieRepository.swift */,
 				DE8DFD9326C55C3E00CAB778 /* MainNewsRepository.swift */,
+				DE340E1826C958FE00FE230A /* FavoriteMainMovieRepository.swift */,
 				DE82CF2026A9C6E400033A62 /* Entity */,
 			);
 			path = Repository;
@@ -922,6 +925,7 @@
 				DEAE7EFA268A19EF009ACBD9 /* PlayerView.swift in Sources */,
 				DE8DFDA426C7BE4E00CAB778 /* MoviePlayerError.swift in Sources */,
 				DEA6BCFD26B5779700196CC3 /* FeaturedDetailPlayerViewController.swift in Sources */,
+				DE340E1926C958FE00FE230A /* FavoriteMainMovieRepository.swift in Sources */,
 				DE8DFD8E26C55AFA00CAB778 /* FeaturedMovieRepository.swift in Sources */,
 				DE5F6E83267FC27100FCD3A1 /* UIViewControllerExtension.swift in Sources */,
 				DE8DFDA026C7B8E800CAB778 /* CarouselMainBannerDto.swift in Sources */,

@@ -11,7 +11,9 @@ import GRDB
 // MEMO: ライブラリ「GRDB.swift」を利用する形
 // https://github.com/groue/GRDB.swift
 
-protocol SQLiteHelper {}
+protocol SQLiteHelper {
+    func inDatabase(_ block: (Database) throws -> Void) -> Bool
+}
 
 final class SQLiteManager: SQLiteHelper {
 
@@ -30,7 +32,7 @@ final class SQLiteManager: SQLiteHelper {
         createDatabase()
     }
 
-    // MARK: - Function
+    // MARK: - SQLiteHelper
 
     func inDatabase(_ block: (Database) throws -> Void) -> Bool {
         do {

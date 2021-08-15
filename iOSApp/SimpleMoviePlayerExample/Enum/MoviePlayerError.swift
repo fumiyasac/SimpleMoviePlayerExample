@@ -12,4 +12,5 @@ enum MoviePlayerError: Error {
     case invalidResponse(String?)
     case notExistObject
     case notExistSelf
+    case SqliteExecutionFailed
 }
