@@ -29,4 +29,14 @@ extension DefaultsKeys {
     var lastShownFeaturedMoviePlayTime: DefaultsKey<[String: Float]> {
         .init("lastShownFeaturedMoviePlayTime", defaultValue: [:])
     }
+
+    // MEMO: ユーザーが選択中の画質
+    var movieQuality: DefaultsKey<MovieQuality> {
+        .init("movieQuality", defaultValue: MovieQuality.medium )
+    }
+
+    // MEMO: ユーザーが選択中の再生レート
+    var movieSpeed: DefaultsKey<MovieSpeed> {
+        .init("movieSpeed", defaultValue: MovieSpeed.speed100 )
+    }
 }

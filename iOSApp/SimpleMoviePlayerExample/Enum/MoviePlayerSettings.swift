@@ -6,16 +6,17 @@
 //
 
 import Foundation
+import SwiftyUserDefaults
 
 // MEMO: 画質の定義
-enum MovieQuality: CaseIterable {
+enum MovieQuality: Int, CaseIterable, DefaultsSerializable {
     case low
     case medium
     case high
 }
 
 // MEMO: 再生レートの定義
-enum MovieSpeed: Float, CaseIterable {
+enum MovieSpeed: Float, CaseIterable, DefaultsSerializable {
     case speed050 = 0.5
     case speed075 = 0.75
     case speed100 = 1.0
