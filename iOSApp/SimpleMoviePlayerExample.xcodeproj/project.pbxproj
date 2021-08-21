@@ -83,6 +83,8 @@
 		DEB52A052684CA8B000C33A2 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEB52A042684CA8B000C33A2 /* SettingsViewController.swift */; };
 		DEB52A072684CD12000C33A2 /* DependeciesContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEB52A062684CD12000C33A2 /* DependeciesContainer.swift */; };
 		DEB52A092684CD6A000C33A2 /* DependenciesDefinition.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEB52A082684CD6A000C33A2 /* DependenciesDefinition.swift */; };
+		DEB970EA26D14886004D7B56 /* MoviePlayerSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEB970E926D14886004D7B56 /* MoviePlayerSettings.swift */; };
+		DEB970EC26D14A28004D7B56 /* question.json in Resources */ = {isa = PBXBuildFile; fileRef = DEB970EB26D14A28004D7B56 /* question.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -187,6 +189,8 @@
 		DEB52A042684CA8B000C33A2 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		DEB52A062684CD12000C33A2 /* DependeciesContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DependeciesContainer.swift; sourceTree = "<group>"; };
 		DEB52A082684CD6A000C33A2 /* DependenciesDefinition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DependenciesDefinition.swift; sourceTree = "<group>"; };
+		DEB970E926D14886004D7B56 /* MoviePlayerSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviePlayerSettings.swift; sourceTree = "<group>"; };
+		DEB970EB26D14A28004D7B56 /* question.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = question.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -281,6 +285,7 @@
 		DE5F6E6C267FBF0700FCD3A1 /* Enum */ = {
 			isa = PBXGroup;
 			children = (
+				DEB970E926D14886004D7B56 /* MoviePlayerSettings.swift */,
 				DE8DFDA326C7BE4E00CAB778 /* MoviePlayerError.swift */,
 				DE82CF2B26A9E5D200033A62 /* GlobalTabBarItems.swift */,
 			);
@@ -550,6 +555,7 @@
 				DE5F6E6C267FBF0700FCD3A1 /* Enum */,
 				DE5F6E6B267FBF0100FCD3A1 /* Extension */,
 				DE82CF1926A9B1E700033A62 /* Infrastructure */,
+				DEB970E826D12D2A004D7B56 /* InternalJson */,
 				DE5F6E72267FBFFB00FCD3A1 /* Modules */,
 				DE5F6E70267FBFCB00FCD3A1 /* Presentation */,
 				DE5F6E6E267FBFBA00FCD3A1 /* Repository */,
@@ -629,6 +635,14 @@
 				DEB52A082684CD6A000C33A2 /* DependenciesDefinition.swift */,
 			);
 			path = Dependencies;
+			sourceTree = "<group>";
+		};
+		DEB970E826D12D2A004D7B56 /* InternalJson */ = {
+			isa = PBXGroup;
+			children = (
+				DEB970EB26D14A28004D7B56 /* question.json */,
+			);
+			path = InternalJson;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -761,6 +775,7 @@
 				DE8DFD8226C16F0200CAB778 /* main_movie_stub.json in Resources */,
 				DEA47540263F40AC00090DA5 /* LaunchScreen.storyboard in Resources */,
 				DE8DFD8426C16F0200CAB778 /* featured_movie_stub.json in Resources */,
+				DEB970EC26D14A28004D7B56 /* question.json in Resources */,
 				DE8DFD8526C16F0200CAB778 /* main_news_stub.json in Resources */,
 				DEB529F62684B705000C33A2 /* FavoriteViewController.storyboard in Resources */,
 				DEA6BD0126B577D700196CC3 /* FeaturedDetailPlayerViewController.storyboard in Resources */,
@@ -929,6 +944,7 @@
 				DE8DFD8E26C55AFA00CAB778 /* FeaturedMovieRepository.swift in Sources */,
 				DE5F6E83267FC27100FCD3A1 /* UIViewControllerExtension.swift in Sources */,
 				DE8DFDA026C7B8E800CAB778 /* CarouselMainBannerDto.swift in Sources */,
+				DEB970EA26D14886004D7B56 /* MoviePlayerSettings.swift in Sources */,
 				DE8DFD6E26BD939800CAB778 /* MainNewsId.swift in Sources */,
 				DE8DFD6B26BD921D00CAB778 /* MainBannerEntity.swift in Sources */,
 				DE5F6E7F267FC1E100FCD3A1 /* UICollectionViewExtension.swift in Sources */,

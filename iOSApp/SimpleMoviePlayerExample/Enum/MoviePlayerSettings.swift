@@ -1,0 +1,26 @@
+//
+//  MoviePlayerSettings.swift
+//  SimpleMoviePlayerExample
+//
+//  Created by 酒井文也 on 2021/08/21.
+//
+
+import Foundation
+
+// MEMO: 画質の定義
+enum MovieQuality: CaseIterable {
+    case low
+    case medium
+    case high
+}
+
+// MEMO: 再生レートの定義
+enum MovieSpeed: Float, CaseIterable {
+    case speed050 = 0.5
+    case speed075 = 0.75
+    case speed100 = 1.0
+    case speed125 = 1.25
+    case speed150 = 1.5
+    case speed175 = 1.75
+    case speed200 = 2.0
+}
