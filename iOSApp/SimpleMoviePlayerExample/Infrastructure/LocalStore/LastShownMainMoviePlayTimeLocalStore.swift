@@ -17,6 +17,8 @@ protocol LastShownMainMoviePlayTimeLocalStore {
 
 final class LastShownMainMoviePlayTimeLocalStoreImpl: LastShownMainMoviePlayTimeLocalStore {
 
+    // MARK: - LastShownMainMoviePlayTimeLocalStore
+
     func getPlayTime(mainMovieId: MainMovieId) -> Single<Float> {
         let key = String(mainMovieId.value)
         let dictionary = Defaults[\.lastShownMainMoviePlayTime]
