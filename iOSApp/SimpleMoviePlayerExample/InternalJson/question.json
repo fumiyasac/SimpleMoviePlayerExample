@@ -1,32 +1,32 @@
 [
     {
         "id" : 1,
-        "question" : "",
-        "answer" : ""
+        "question" : "Question:\nアプリに関する質問が入ります？",
+        "answer" : "Answer:\nアプリに関する質問の答えとなる文章が入ります。現段階ではこの部分にダミーコンテンツ用のテキストを表示させていますので、利用する場合には用途に応じた内容をセットして頂きます様によろしくお願い致します。\nサンプルコード:\nhttps://github.com/fumiyasac/SimpleMoviePlayerExample"
     },
     {
         "id" : 2,
-        "question" : "",
-        "answer" : ""
+        "question" : "Question:\nアプリに関する質問が入ります？",
+        "answer" : "Answer:\nアプリに関する質問の答えとなる文章が入ります。現段階ではこの部分にダミーコンテンツ用のテキストを表示させていますので、利用する場合には用途に応じた内容をセットして頂きます様によろしくお願い致します。\nサンプルコード:\nhttps://github.com/fumiyasac/SimpleMoviePlayerExample"
     },
     {
         "id" : 3,
-        "question" : "",
-        "answer" : ""
+        "question" : "Question:\nアプリに関する質問が入ります？",
+        "answer" : "Answer:\nアプリに関する質問の答えとなる文章が入ります。現段階ではこの部分にダミーコンテンツ用のテキストを表示させていますので、利用する場合には用途に応じた内容をセットして頂きます様によろしくお願い致します。\nサンプルコード:\nhttps://github.com/fumiyasac/SimpleMoviePlayerExample"
     },
     {
         "id" : 4,
-        "question" : "",
-        "answer" : ""
+        "question" : "Question:\nアプリに関する質問が入ります？",
+        "answer" : "Answer:\nアプリに関する質問の答えとなる文章が入ります。現段階ではこの部分にダミーコンテンツ用のテキストを表示させていますので、利用する場合には用途に応じた内容をセットして頂きます様によろしくお願い致します。\nサンプルコード:\nhttps://github.com/fumiyasac/SimpleMoviePlayerExample"
     },
     {
         "id" : 5,
-        "question" : "",
-        "answer" : ""
+        "question" : "Question:\nアプリに関する質問が入ります？",
+        "answer" : "Answer:\nアプリに関する質問の答えとなる文章が入ります。現段階ではこの部分にダミーコンテンツ用のテキストを表示させていますので、利用する場合には用途に応じた内容をセットして頂きます様によろしくお願い致します。\nサンプルコード:\nhttps://github.com/fumiyasac/SimpleMoviePlayerExample"
     },
     {
         "id" : 6,
-        "question" : "",
-        "answer" : ""
+        "question" : "Question:\nアプリに関する質問が入ります？",
+        "answer" : "Answer:\nアプリに関する質問の答えとなる文章が入ります。現段階ではこの部分にダミーコンテンツ用のテキストを表示させていますので、利用する場合には用途に応じた内容をセットして頂きます様によろしくお願い致します。\nサンプルコード:\nhttps://github.com/fumiyasac/SimpleMoviePlayerExample"
     }
 ]
