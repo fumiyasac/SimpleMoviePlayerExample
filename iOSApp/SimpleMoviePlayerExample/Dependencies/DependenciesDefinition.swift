@@ -62,6 +62,14 @@ final class DependenciesDefinition {
             LastShownMainMoviePlayTimeLocalStore.self,
             impl: LastShownMainMoviePlayTimeLocalStoreImpl()
         )
+        dependecies.register(
+            MovieQualityLocalStore.self,
+            impl: MovieQualityLocalStoreImpl()
+        )
+        dependecies.register(
+            MovieSpeedLocalStore.self,
+            impl:MovieSpeedLocalStoreImpl()
+        )
 
         // MEMO: (3) SQLite関連処理部分
         dependecies.register(
@@ -124,6 +132,20 @@ final class DependenciesDefinition {
             FavoriteMainMovieRepository.self,
             impl: FavoriteMainMovieRepositoryImpl(
                 sqliteHelper: dependecies.resolve(SQLiteHelper.self),
+                backgroundScheduler: dependecies.resolve(ImmediateSchedulerType.self, name: background)
+            )
+        )
+        dependecies.register(
+            MovieQualityRepository.self,
+            impl: MovieQualityRepositoryImpl(
+                movieQualityLocalStore: dependecies.resolve(MovieQualityLocalStore.self),
+                backgroundScheduler: dependecies.resolve(ImmediateSchedulerType.self, name: background)
+            )
+        )
+        dependecies.register(
+            MovieSpeedRepository.self,
+            impl: MovieSpeedRepositoryImpl(
+                movieSpeedLocalStore: dependecies.resolve(MovieSpeedLocalStore.self),
                 backgroundScheduler: dependecies.resolve(ImmediateSchedulerType.self, name: background)
             )
         )
