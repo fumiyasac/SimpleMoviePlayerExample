@@ -149,6 +149,12 @@ final class DependenciesDefinition {
                 backgroundScheduler: dependecies.resolve(ImmediateSchedulerType.self, name: background)
             )
         )
+        dependecies.register(
+            QuestionRepository.self,
+            impl:QuestionRepositoryImpl(
+                backgroundScheduler: dependecies.resolve(ImmediateSchedulerType.self, name: background)
+            )
+        )
 
         // MARK: - UseCase
 

@@ -91,6 +91,7 @@
 		DEB970F526D15AB9004D7B56 /* MovieQualityLocalStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEB970F426D15AB9004D7B56 /* MovieQualityLocalStore.swift */; };
 		DEB970F726D15BA8004D7B56 /* MovieSpeedRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEB970F626D15BA8004D7B56 /* MovieSpeedRepository.swift */; };
 		DEB970F926D15D2B004D7B56 /* MovieQualityRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEB970F826D15D2B004D7B56 /* MovieQualityRepository.swift */; };
+		DEB970FB26D15FE1004D7B56 /* QuestionRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEB970FA26D15FE1004D7B56 /* QuestionRepository.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -203,6 +204,7 @@
 		DEB970F426D15AB9004D7B56 /* MovieQualityLocalStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieQualityLocalStore.swift; sourceTree = "<group>"; };
 		DEB970F626D15BA8004D7B56 /* MovieSpeedRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieSpeedRepository.swift; sourceTree = "<group>"; };
 		DEB970F826D15D2B004D7B56 /* MovieQualityRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieQualityRepository.swift; sourceTree = "<group>"; };
+		DEB970FA26D15FE1004D7B56 /* QuestionRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionRepository.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -328,6 +330,7 @@
 				DE340E1826C958FE00FE230A /* FavoriteMainMovieRepository.swift */,
 				DEB970F826D15D2B004D7B56 /* MovieQualityRepository.swift */,
 				DEB970F626D15BA8004D7B56 /* MovieSpeedRepository.swift */,
+				DEB970FA26D15FE1004D7B56 /* QuestionRepository.swift */,
 				DE82CF2026A9C6E400033A62 /* Entity */,
 			);
 			path = Repository;
@@ -971,6 +974,7 @@
 				DE5F6E83267FC27100FCD3A1 /* UIViewControllerExtension.swift in Sources */,
 				DEB970F726D15BA8004D7B56 /* MovieSpeedRepository.swift in Sources */,
 				DE8DFDA026C7B8E800CAB778 /* CarouselMainBannerDto.swift in Sources */,
+				DEB970FB26D15FE1004D7B56 /* QuestionRepository.swift in Sources */,
 				DEB970EA26D14886004D7B56 /* MoviePlayerSettings.swift in Sources */,
 				DE8DFD6E26BD939800CAB778 /* MainNewsId.swift in Sources */,
 				DE8DFD6B26BD921D00CAB778 /* MainBannerEntity.swift in Sources */,
