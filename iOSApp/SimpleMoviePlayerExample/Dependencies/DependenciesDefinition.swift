@@ -37,17 +37,18 @@ final class DependenciesDefinition {
         // MARK: - Infra
 
         // MEMO: (1) API関連処理部分
+        #if targetEnvironment(simulator)
+        // MEMO: Simulator検証時にはこちらを利用
         dependecies.register(
             ApiClient.self,
             impl: ApiClientManager.shared
         )
-        // MEMO: Simulator検証時にはこちらを利用
-        /*
+        #else
         dependecies.register(
             ApiClient.self,
             impl: ApiClientMock.shared
         )
-        */
+        #endif
 
         // MEMO: (2) UserDefault関連処理部分
         dependecies.register(
@@ -159,8 +160,8 @@ final class DependenciesDefinition {
         // MARK: - UseCase
 
         dependecies.register(
-            MainUseCase.self,
-            impl: MainUseCaseImpl(
+            GetMainElementsUseCase.self,
+            impl: GetMainElementsUseCaseImpl(
                 initialAppOpenRepository: dependecies.resolve(InitialAppOpenRepository.self),
                 mainNewsRepository: dependecies.resolve(MainNewsRepository.self),
                 featuredMovieRepository: dependecies.resolve(FeaturedMovieRepository.self),
@@ -168,9 +169,15 @@ final class DependenciesDefinition {
             )
         )
         dependecies.register(
-            CarouselMainBannerUseCase.self,
-            impl: CarouselMainBannerUseCaseImpl(
+            GetCarouselMainBannersUseCase.self,
+            impl: GetCarouselMainBannersUseCaseImpl(
                 mainBannerRepository: dependecies.resolve(MainBannerRepository.self)
+            )
+        )
+        dependecies.register(
+            GetQuestionsUseCase.self,
+            impl: GetQuestionsUseCaseImpl(
+                questionRepository: dependecies.resolve(QuestionRepository.self)
             )
         )
 

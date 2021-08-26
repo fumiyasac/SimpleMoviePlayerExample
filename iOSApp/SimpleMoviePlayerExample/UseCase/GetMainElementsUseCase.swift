@@ -1,5 +1,5 @@
 //
-//  MainUseCase.swift
+//  GetMainElementsUseCase.swift
 //  SimpleMoviePlayerExample
 //
 //  Created by 酒井文也 on 2021/08/12.
@@ -9,12 +9,12 @@ import Foundation
 import RxSwift
 
 //sourcery: AutoMockable
-protocol MainUseCase {
+protocol GetMainElementsUseCase {
     // 画面表示に必要なデータを返す
     func execute() -> Single<MainDto>
 }
 
-final class MainUseCaseImpl: MainUseCase {
+final class GetMainElementsUseCaseImpl: GetMainElementsUseCase {
 
     private let initialAppOpenRepository: InitialAppOpenRepository
     private let mainNewsRepository: MainNewsRepository
@@ -35,7 +35,7 @@ final class MainUseCaseImpl: MainUseCase {
         self.mainMovieRepository = mainMovieRepository
     }
 
-    // MARK: - MainUseCase
+    // MARK: - GetMainElementsUseCase
 
     func execute() -> Single<MainDto> {
 

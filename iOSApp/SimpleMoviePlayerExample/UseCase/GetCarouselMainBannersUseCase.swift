@@ -1,5 +1,5 @@
 //
-//  CarouselMainBannerUseCase.swift
+//  GetCarouselMainBannersUseCase.swift
 //  SimpleMoviePlayerExample
 //
 //  Created by 酒井文也 on 2021/08/14.
@@ -9,12 +9,12 @@ import Foundation
 import RxSwift
 
 //sourcery: AutoMockable
-protocol CarouselMainBannerUseCase {
+protocol GetCarouselMainBannersUseCase {
     // 画面表示に必要なデータを返す
     func execute() -> Single<CarouselMainBannerDto>
 }
 
-final class CarouselMainBannerUseCaseImpl: CarouselMainBannerUseCase {
+final class GetCarouselMainBannersUseCaseImpl: GetCarouselMainBannersUseCase {
 
     private let mainBannerRepository: MainBannerRepository
 
@@ -26,7 +26,7 @@ final class CarouselMainBannerUseCaseImpl: CarouselMainBannerUseCase {
         self.mainBannerRepository = mainBannerRepository
     }
 
-    // MARK: - CarouselMainBannerUseCase
+    // MARK: - GetCarouselMainBannersUseCase
 
     func execute() -> Single<CarouselMainBannerDto> {
         return mainBannerRepository.findAll().flatMap { mainBanners in

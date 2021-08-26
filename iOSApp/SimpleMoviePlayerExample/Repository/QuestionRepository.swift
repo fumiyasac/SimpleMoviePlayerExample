@@ -29,7 +29,7 @@ final class QuestionRepositoryImpl: QuestionRepository {
     // MARK: - QuestionRepository
 
     func findAll() -> Single<[QuestionEntity]> {
-        guard let path = getStubFilePath(jsonFileName: "question") else {
+        guard let path = getJsonFilePath(jsonFileName: "question") else {
             fatalError("該当ファイルが存在しませんでした。")
         }
         do {
@@ -47,7 +47,7 @@ final class QuestionRepositoryImpl: QuestionRepository {
     // MARK: - Private Function
 
     // プロジェクト内にBundleされているStub用のJSONのファイルパスを取得する
-    private func getStubFilePath(jsonFileName: String) -> String? {
+    private func getJsonFilePath(jsonFileName: String) -> String? {
         return Bundle.main.path(forResource: jsonFileName, ofType: "json")
     }
 }
