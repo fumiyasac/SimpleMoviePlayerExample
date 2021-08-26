@@ -180,6 +180,31 @@ final class DependenciesDefinition {
                 questionRepository: dependecies.resolve(QuestionRepository.self)
             )
         )
+        dependecies.register(
+            GetMovieSettingsUseCase.self,
+            impl: GetMovieSettingsUseCaseImpl(
+                movieQualityRepository: dependecies.resolve(MovieQualityRepository.self),
+                movieSpeedRepository: dependecies.resolve(MovieSpeedRepository.self)
+            )
+        )
+        dependecies.register(
+            GetFavoriteMainMoviesUseCase.self,
+            impl: GetFavoriteMainMoviesUseCaseImpl(
+                favoriteMainMovieRepository: dependecies.resolve(FavoriteMainMovieRepository.self)
+            )
+        )
+        dependecies.register(
+            DeleteFavoriteMainMovieUseCase.self,
+            impl: DeleteFavoriteMainMovieUseCaseImpl(
+                favoriteMainMovieRepository: dependecies.resolve(FavoriteMainMovieRepository.self)
+            )
+        )
+        dependecies.register(
+            SaveFavoriteMainMovieUseCase.self,
+            impl: SaveFavoriteMainMovieUseCaseImpl(
+                favoriteMainMovieRepository: dependecies.resolve(FavoriteMainMovieRepository.self)
+            )
+        )
 
         // MARK: - Presenter
     }

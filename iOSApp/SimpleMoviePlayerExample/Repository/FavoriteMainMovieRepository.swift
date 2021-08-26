@@ -11,7 +11,7 @@ import RxSwift
 //sourcery: AutoMockable
 protocol FavoriteMainMovieRepository {
     // SQLiteに登録されているお気に入りのMainMovie一覧を取得する
-    func findAll() -> Single<[MainMovieTable]>
+    func findAll() -> Single<[FavoriteMainMovieEntity]>
 
     // SQLiteへお気に入りのMainMovieデータを1件新規追加する
     func save(mainMovieEntity: MainMovieEntity) -> Completable
@@ -37,13 +37,24 @@ final class FavoriteMainMovieRepositoryImpl: FavoriteMainMovieRepository {
 
     // MARK: - FavoriteMainMovieRepository
 
-    func findAll() -> Single<[MainMovieTable]> {
-        var mainMovies: [MainMovieTable] = []
+    func findAll() -> Single<[FavoriteMainMovieEntity]> {
+        var favoriteMainMovieEntities: [FavoriteMainMovieEntity] = []
         let result = sqliteHelper.inDatabase { database in
-            mainMovies = try MainMovieTable.fetchAll(database)
+            favoriteMainMovieEntities = try MainMovieTable.fetchAll(database)
+                .map { mainMovieTable in
+                    FavoriteMainMovieEntity(
+                        mainMovieId: mainMovieTable.mainMovieId,
+                        category: mainMovieTable.category,
+                        authorName: mainMovieTable.authorName,
+                        dateString: mainMovieTable.dateString,
+                        thumbnailUrl: mainMovieTable.thumbnailUrl,
+                        title: mainMovieTable.title,
+                        description: mainMovieTable.description
+                    )
+                }
         }
         if result {
-            return Single.just(mainMovies)
+            return Single.just(favoriteMainMovieEntities)
                 .subscribe(
                     on: backgroundScheduler
                 )
