@@ -135,7 +135,7 @@
         {
             "id": 1,
             "category": "調理動画",
-            "author_name": "me😄",
+            "author_name": "fumiyasac",
             "date_string": "2021.07.31",
             "thumbnail_url": "https://simple-movie-example.s3.ap-northeast-1.amazonaws.com/main_movies/main_sample1_thumb.png",
             "rating": 3.6,
@@ -152,7 +152,7 @@
         {
             "id": 2,
             "category": "料理",
-            "author_name": "me😄",
+            "author_name": "fumiyasac",
             "date_string": "2021.07.31",
             "thumbnail_url": "https://simple-movie-example.s3.ap-northeast-1.amazonaws.com/main_movies/main_sample2_thumb.png",
             "rating": 4.2,
@@ -169,7 +169,7 @@
         {
             "id": 3,
             "category": "包丁さばき",
-            "author_name": "me😄",
+            "author_name": "fumiyasac",
             "date_string": "2021.07.31",
             "thumbnail_url": "https://simple-movie-example.s3.ap-northeast-1.amazonaws.com/main_movies/main_sample3_thumb.png",
             "rating": 3.3,
@@ -186,7 +186,7 @@
         {
             "id": 4,
             "category": "包丁さばき",
-            "author_name": "me😄",
+            "author_name": "fumiyasac",
             "date_string": "2021.07.31",
             "thumbnail_url": "https://simple-movie-example.s3.ap-northeast-1.amazonaws.com/main_movies/main_sample4_thumb.png",
             "rating": 4.3,
@@ -203,7 +203,7 @@
         {
             "id": 5,
             "category": "調理動画",
-            "author_name": "me😄",
+            "author_name": "fumiyasac",
             "date_string": "2021.07.31",
             "thumbnail_url": "https://simple-movie-example.s3.ap-northeast-1.amazonaws.com/main_movies/main_sample5_thumb.png",
             "rating": 4.5,
@@ -220,7 +220,7 @@
         {
             "id": 6,
             "category": "調理動画",
-            "author_name": "me😄",
+            "author_name": "fumiyasac",
             "date_string": "2021.07.31",
             "thumbnail_url": "https://simple-movie-example.s3.ap-northeast-1.amazonaws.com/main_movies/main_sample6_thumb.png",
             "rating": 4.0,
@@ -237,7 +237,7 @@
         {
             "id": 7,
             "category": "包丁さばき",
-            "author_name": "me😄",
+            "author_name": "fumiyasac",
             "date_string": "2021.07.31",
             "thumbnail_url": "https://simple-movie-example.s3.ap-northeast-1.amazonaws.com/main_movies/main_sample7_thumb.png",
             "rating": 3.3,
@@ -254,7 +254,7 @@
         {
             "id": 8,
             "category": "包丁さばき",
-            "author_name": "me😄",
+            "author_name": "fumiyasac",
             "date_string": "2021.07.31",
             "thumbnail_url": "https://simple-movie-example.s3.ap-northeast-1.amazonaws.com/main_movies/main_sample8_thumb.png",
             "rating": 3.2,
@@ -271,7 +271,7 @@
         {
             "id": 9,
             "category": "料理",
-            "author_name": "me😄",
+            "author_name": "fumiyasac",
             "date_string": "2021.07.31",
             "thumbnail_url": "https://simple-movie-example.s3.ap-northeast-1.amazonaws.com/main_movies/main_sample9_thumb.png",
             "rating": 4.4,
@@ -288,7 +288,7 @@
         {
             "id": 10,
             "category": "調理動画",
-            "author_name": "me😄",
+            "author_name": "fumiyasac",
             "date_string": "2021.07.31",
             "thumbnail_url": "https://simple-movie-example.s3.ap-northeast-1.amazonaws.com/main_movies/main_sample10_thumb.png",
             "rating": 3.7,
