@@ -10,7 +10,6 @@ import RxSwift
 
 //sourcery: AutoMockable
 protocol GetQuestionsUseCase {
-    // 画面表示に必要なデータを返す
     func execute() -> Single<QuestionDto>
 }
 

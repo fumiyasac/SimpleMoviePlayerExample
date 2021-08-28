@@ -10,7 +10,6 @@ import RxSwift
 
 //sourcery: AutoMockable
 protocol SaveFavoriteMainMovieUseCase {
-    // 画面表示に必要なデータを返す
     func save(mainMovieEntity: MainMovieEntity) -> Completable
 }
 

@@ -10,7 +10,6 @@ import RxSwift
 
 //sourcery: AutoMockable
 protocol GetMainElementsUseCase {
-    // 画面表示に必要なデータを返す
     func execute() -> Single<MainDto>
 }
 

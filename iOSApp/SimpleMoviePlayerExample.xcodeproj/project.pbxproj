@@ -55,6 +55,12 @@
 		DE8DFDA226C7B8F900CAB778 /* GetCarouselMainBannersUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE8DFDA126C7B8F900CAB778 /* GetCarouselMainBannersUseCase.swift */; };
 		DE8DFDA426C7BE4E00CAB778 /* MoviePlayerError.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE8DFDA326C7BE4E00CAB778 /* MoviePlayerError.swift */; };
 		DE8DFDA826C7E30000CAB778 /* MainMovieTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE8DFDA726C7E30000CAB778 /* MainMovieTable.swift */; };
+		DEA3C08D26D9F1980080226E /* GetLastShownMainMoviePlayTimeUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEA3C08C26D9F1980080226E /* GetLastShownMainMoviePlayTimeUseCase.swift */; };
+		DEA3C08F26D9F1AB0080226E /* GetLastShownFeatureMoviePlayTimeUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEA3C08E26D9F1AB0080226E /* GetLastShownFeatureMoviePlayTimeUseCase.swift */; };
+		DEA3C09126D9F1D60080226E /* SaveLastShownMainMoviePlayTimeUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEA3C09026D9F1D60080226E /* SaveLastShownMainMoviePlayTimeUseCase.swift */; };
+		DEA3C09326D9F1EC0080226E /* SaveLastShownFeatureMoviePlayTimeUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEA3C09226D9F1EC0080226E /* SaveLastShownFeatureMoviePlayTimeUseCase.swift */; };
+		DEA3C09526D9F2330080226E /* GetInitialAppOpenUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEA3C09426D9F2330080226E /* GetInitialAppOpenUseCase.swift */; };
+		DEA3C09726D9F24F0080226E /* ChangeFalseInitialAppOpenUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEA3C09626D9F24F0080226E /* ChangeFalseInitialAppOpenUseCase.swift */; };
 		DEA47534263F40AA00090DA5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEA47533263F40AA00090DA5 /* AppDelegate.swift */; };
 		DEA47536263F40AA00090DA5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEA47535263F40AA00090DA5 /* SceneDelegate.swift */; };
 		DEA47538263F40AA00090DA5 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEA47537263F40AA00090DA5 /* MainViewController.swift */; };
@@ -174,6 +180,12 @@
 		DE8DFDA126C7B8F900CAB778 /* GetCarouselMainBannersUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetCarouselMainBannersUseCase.swift; sourceTree = "<group>"; };
 		DE8DFDA326C7BE4E00CAB778 /* MoviePlayerError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviePlayerError.swift; sourceTree = "<group>"; };
 		DE8DFDA726C7E30000CAB778 /* MainMovieTable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMovieTable.swift; sourceTree = "<group>"; };
+		DEA3C08C26D9F1980080226E /* GetLastShownMainMoviePlayTimeUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetLastShownMainMoviePlayTimeUseCase.swift; sourceTree = "<group>"; };
+		DEA3C08E26D9F1AB0080226E /* GetLastShownFeatureMoviePlayTimeUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetLastShownFeatureMoviePlayTimeUseCase.swift; sourceTree = "<group>"; };
+		DEA3C09026D9F1D60080226E /* SaveLastShownMainMoviePlayTimeUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveLastShownMainMoviePlayTimeUseCase.swift; sourceTree = "<group>"; };
+		DEA3C09226D9F1EC0080226E /* SaveLastShownFeatureMoviePlayTimeUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveLastShownFeatureMoviePlayTimeUseCase.swift; sourceTree = "<group>"; };
+		DEA3C09426D9F2330080226E /* GetInitialAppOpenUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetInitialAppOpenUseCase.swift; sourceTree = "<group>"; };
+		DEA3C09626D9F24F0080226E /* ChangeFalseInitialAppOpenUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeFalseInitialAppOpenUseCase.swift; sourceTree = "<group>"; };
 		DEA47530263F40AA00090DA5 /* SimpleMoviePlayerExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SimpleMoviePlayerExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DEA47533263F40AA00090DA5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DEA47535263F40AA00090DA5 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -544,6 +556,12 @@
 				DEB9710426D7D866004D7B56 /* GetFavoriteMainMoviesUseCase.swift */,
 				DEB9710D26D7DFBD004D7B56 /* DeleteFavoriteMainMovieUseCase.swift */,
 				DEB9710F26D7E0E7004D7B56 /* SaveFavoriteMainMovieUseCase.swift */,
+				DEA3C08E26D9F1AB0080226E /* GetLastShownFeatureMoviePlayTimeUseCase.swift */,
+				DEA3C09226D9F1EC0080226E /* SaveLastShownFeatureMoviePlayTimeUseCase.swift */,
+				DEA3C08C26D9F1980080226E /* GetLastShownMainMoviePlayTimeUseCase.swift */,
+				DEA3C09026D9F1D60080226E /* SaveLastShownMainMoviePlayTimeUseCase.swift */,
+				DEA3C09426D9F2330080226E /* GetInitialAppOpenUseCase.swift */,
+				DEA3C09626D9F24F0080226E /* ChangeFalseInitialAppOpenUseCase.swift */,
 			);
 			path = UseCase;
 			sourceTree = "<group>";
@@ -992,6 +1010,7 @@
 				DE8DFD7726BFB54B00CAB778 /* InitialAppOpenLocalStore.swift in Sources */,
 				DE8DFD7026BD93B100CAB778 /* MainNewsEntity.swift in Sources */,
 				DE5F6E79267FC11F00FCD3A1 /* CustomViewBase.swift in Sources */,
+				DEA3C08D26D9F1980080226E /* GetLastShownMainMoviePlayTimeUseCase.swift in Sources */,
 				DEA47538263F40AA00090DA5 /* MainViewController.swift in Sources */,
 				DEAE7EFA268A19EF009ACBD9 /* PlayerView.swift in Sources */,
 				DE8DFDA426C7BE4E00CAB778 /* MoviePlayerError.swift in Sources */,
@@ -1017,11 +1036,13 @@
 				DEB9710526D7D866004D7B56 /* GetFavoriteMainMoviesUseCase.swift in Sources */,
 				DE5F6E81267FC23500FCD3A1 /* UITableViewExtension.swift in Sources */,
 				DEB970F926D15D2B004D7B56 /* MovieQualityRepository.swift in Sources */,
+				DEA3C09526D9F2330080226E /* GetInitialAppOpenUseCase.swift in Sources */,
 				DEA47534263F40AA00090DA5 /* AppDelegate.swift in Sources */,
 				DEB52A092684CD6A000C33A2 /* DependenciesDefinition.swift in Sources */,
 				DEB529EE2682B84A000C33A2 /* GlobalTabBarController.swift in Sources */,
 				DE8DFD9E26C5642800CAB778 /* GetMainElementsUseCase.swift in Sources */,
 				DEA47536263F40AA00090DA5 /* SceneDelegate.swift in Sources */,
+				DEA3C09326D9F1EC0080226E /* SaveLastShownFeatureMoviePlayTimeUseCase.swift in Sources */,
 				DE8DFD9A26C5605B00CAB778 /* LastShownFeaturedMoviePlayTimeRepository.swift in Sources */,
 				DE8DFD8926C553FE00CAB778 /* MainMovieRepository.swift in Sources */,
 				DE5F6E7B267FC19F00FCD3A1 /* NSObjectProtocolExtension.swift in Sources */,
@@ -1033,6 +1054,7 @@
 				DE8DFDA826C7E30000CAB778 /* MainMovieTable.swift in Sources */,
 				DEB52A052684CA8B000C33A2 /* SettingsViewController.swift in Sources */,
 				DEB970FD26D26F7B004D7B56 /* QuestionDto.swift in Sources */,
+				DEA3C09726D9F24F0080226E /* ChangeFalseInitialAppOpenUseCase.swift in Sources */,
 				DE8DFD8726C16F6200CAB778 /* ApiClientMock.swift in Sources */,
 				DE82CF2C26A9E5D200033A62 /* GlobalTabBarItems.swift in Sources */,
 				DEB970F326D15983004D7B56 /* MovieSpeedLocalStore.swift in Sources */,
@@ -1043,6 +1065,7 @@
 				DEB970F126D158BF004D7B56 /* QuestionEntity.swift in Sources */,
 				DEB970FF26D7C8FE004D7B56 /* GetQuestionsUseCase.swift in Sources */,
 				DEB52A072684CD12000C33A2 /* DependeciesContainer.swift in Sources */,
+				DEA3C09126D9F1D60080226E /* SaveLastShownMainMoviePlayTimeUseCase.swift in Sources */,
 				DE82CF3526ABF38400033A62 /* MovieDetailViewController.swift in Sources */,
 				DE82CF2A26A9CCAA00033A62 /* SQLiteManager.swift in Sources */,
 				DE8DFD5D26BD850400CAB778 /* MoviesEntity.swift in Sources */,
@@ -1052,6 +1075,7 @@
 				DEA6BD0E26B8FB4B00196CC3 /* ProfileViewController.swift in Sources */,
 				DE8DFD6626BD912800CAB778 /* FeaturedMovieEntity.swift in Sources */,
 				DE8DFD7B26BFC09600CAB778 /* LastShownMainMoviePlayTimeLocalStore.swift in Sources */,
+				DEA3C08F26D9F1AB0080226E /* GetLastShownFeatureMoviePlayTimeUseCase.swift in Sources */,
 				DE82CF2826A9CC4000033A62 /* UserDefaultManager.swift in Sources */,
 				DE5F6E7D267FC1AB00FCD3A1 /* UIColorExtension.swift in Sources */,
 			);
