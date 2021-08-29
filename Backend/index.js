@@ -16,6 +16,9 @@ const rewrite_rules = jsonServer.rewriter({
     "/api/v1/simple_movie/main_movies" : "/get_main_movies",
     "/api/v1/simple_movie/main_movies/:id" : "/get_main_movies/:id",
     "/api/v1/simple_movie/featured_movies" : "/get_featured_movies",
+    "/api/v1/simple_movie/profile/me" : "/get_profile_me",
+    "/api/v1/simple_movie/profile/activities" : "/get_profile_activities_me",
+    "/api/v1/simple_movie/profile/comments" : "/get_profile_comments_me"
 });
 
 // リクエストのルールを設定する
