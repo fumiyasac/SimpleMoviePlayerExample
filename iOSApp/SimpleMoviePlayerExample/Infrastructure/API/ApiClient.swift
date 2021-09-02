@@ -20,6 +20,9 @@ protocol ApiClient {
 
     // 詳細画面で利用するAPIレスポンス
     func getMainMovie(movieId: Int) -> Single<MainMovieEntity>
+
+    // プロフィール画面で利用するAPIレスポンス
+    func getProfile() -> Single<ProfileEntity>
 }
 
 // MARK: - ApiClient
@@ -68,6 +71,15 @@ extension ApiClientManager: ApiClient {
             endpointUrl: endPointUrl,
             httpMethod: HTTPMethod.GET,
             responseFormat: MainMovieEntity.self
+        )
+    }
+
+    func getProfile() -> Single<ProfileEntity> {
+        let endPointUrl = EndPoint.profile.getBaseUrl()
+        return executeAPIRequest(
+            endpointUrl: endPointUrl,
+            httpMethod: HTTPMethod.GET,
+            responseFormat: ProfileEntity.self
         )
     }
 }

@@ -78,6 +78,8 @@
 		DEA6BD0E26B8FB4B00196CC3 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEA6BD0D26B8FB4B00196CC3 /* ProfileViewController.swift */; };
 		DEA6BD1126B99B0900196CC3 /* FloatingPanel in Frameworks */ = {isa = PBXBuildFile; productRef = DEA6BD1026B99B0900196CC3 /* FloatingPanel */; };
 		DEAE7EFA268A19EF009ACBD9 /* PlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEAE7EF9268A19EE009ACBD9 /* PlayerView.swift */; };
+		DEB159FD26E119F5003FC5C1 /* ProfileId.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEB159FC26E119F5003FC5C1 /* ProfileId.swift */; };
+		DEB159FF26E11A22003FC5C1 /* ProfileEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEB159FE26E11A22003FC5C1 /* ProfileEntity.swift */; };
 		DEB529DF267FC4E4000C33A2 /* GRDB in Frameworks */ = {isa = PBXBuildFile; productRef = DEB529DE267FC4E4000C33A2 /* GRDB */; };
 		DEB529E2267FC527000C33A2 /* UICircularProgressRing in Frameworks */ = {isa = PBXBuildFile; productRef = DEB529E1267FC527000C33A2 /* UICircularProgressRing */; };
 		DEB529EA267FCE08000C33A2 /* Mock.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEB529E9267FCE08000C33A2 /* Mock.generated.swift */; };
@@ -208,6 +210,8 @@
 		DEA6BD0A26B8FAFB00196CC3 /* ProfileViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ProfileViewController.storyboard; sourceTree = "<group>"; };
 		DEA6BD0D26B8FB4B00196CC3 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		DEAE7EF9268A19EE009ACBD9 /* PlayerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerView.swift; sourceTree = "<group>"; };
+		DEB159FC26E119F5003FC5C1 /* ProfileId.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileId.swift; sourceTree = "<group>"; };
+		DEB159FE26E11A22003FC5C1 /* ProfileEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileEntity.swift; sourceTree = "<group>"; };
 		DEB529E9267FCE08000C33A2 /* Mock.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Mock.generated.swift; sourceTree = "<group>"; };
 		DEB529ED2682B84A000C33A2 /* GlobalTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalTabBarController.swift; sourceTree = "<group>"; };
 		DEB529F52684B705000C33A2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/FavoriteViewController.storyboard; sourceTree = "<group>"; };
@@ -417,6 +421,9 @@
 				DE8DFD6726BD91D200CAB778 /* MainBanner */,
 				DEA6BD0826B80F8E00196CC3 /* MainMovie */,
 				DE8DFD6C26BD936E00CAB778 /* MainNews */,
+				DEB159F926E119B6003FC5C1 /* Profile */,
+				DEB159FA26E119BD003FC5C1 /* ProfileActivity */,
+				DEB159FB26E119CA003FC5C1 /* ProfileComment */,
 				DEB970ED26D1587E004D7B56 /* Question */,
 			);
 			path = Entity;
@@ -691,6 +698,29 @@
 				DEA6BD0D26B8FB4B00196CC3 /* ProfileViewController.swift */,
 			);
 			path = Profile;
+			sourceTree = "<group>";
+		};
+		DEB159F926E119B6003FC5C1 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				DEB159FC26E119F5003FC5C1 /* ProfileId.swift */,
+				DEB159FE26E11A22003FC5C1 /* ProfileEntity.swift */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
+		DEB159FA26E119BD003FC5C1 /* ProfileActivity */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ProfileActivity;
+			sourceTree = "<group>";
+		};
+		DEB159FB26E119CA003FC5C1 /* ProfileComment */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ProfileComment;
 			sourceTree = "<group>";
 		};
 		DEB529EF2684B0ED000C33A2 /* Dependencies */ = {
@@ -1016,7 +1046,9 @@
 				DE8DFDA426C7BE4E00CAB778 /* MoviePlayerError.swift in Sources */,
 				DEA6BCFD26B5779700196CC3 /* FeaturedDetailPlayerViewController.swift in Sources */,
 				DE340E1926C958FE00FE230A /* FavoriteMainMovieRepository.swift in Sources */,
+				DEB159FF26E11A22003FC5C1 /* ProfileEntity.swift in Sources */,
 				DE8DFD8E26C55AFA00CAB778 /* FeaturedMovieRepository.swift in Sources */,
+				DEB159FD26E119F5003FC5C1 /* ProfileId.swift in Sources */,
 				DEB9710726D7D927004D7B56 /* FavoriteMainMoviesDto.swift in Sources */,
 				DE5F6E83267FC27100FCD3A1 /* UIViewControllerExtension.swift in Sources */,
 				DEB970F726D15BA8004D7B56 /* MovieSpeedRepository.swift in Sources */,
