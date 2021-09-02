@@ -23,6 +23,7 @@ protocol ApiClient {
 
     // プロフィール画面で利用するAPIレスポンス
     func getProfile() -> Single<ProfileEntity>
+    func getProfileActivities() -> Single<[ProfileActivityEntity]>
 }
 
 // MARK: - ApiClient
@@ -80,6 +81,15 @@ extension ApiClientManager: ApiClient {
             endpointUrl: endPointUrl,
             httpMethod: HTTPMethod.GET,
             responseFormat: ProfileEntity.self
+        )
+    }
+
+    func getProfileActivities() -> Single<[ProfileActivityEntity]> {
+        let endPointUrl = EndPoint.profileActivity.getBaseUrl()
+        return executeAPIRequest(
+            endpointUrl: endPointUrl,
+            httpMethod: HTTPMethod.GET,
+            responseFormat: [ProfileActivityEntity].self
         )
     }
 }

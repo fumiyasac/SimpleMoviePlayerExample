@@ -56,6 +56,7 @@ final class ApiClientManager {
         case mainMovies = "main_movies"
         case featuredMovies = "featured_movies"
         case profile = "profile/me"
+        case profileActivity = "profile/activities"
 
         func getBaseUrl() -> String {
             return [host, version, path, self.rawValue].joined(separator: "/")
