@@ -24,6 +24,7 @@ protocol ApiClient {
     // プロフィール画面で利用するAPIレスポンス
     func getProfile() -> Single<ProfileEntity>
     func getProfileActivities() -> Single<[ProfileActivityEntity]>
+    func getProfileComments() -> Single<[ProfileCommentEntity]>
 }
 
 // MARK: - ApiClient
@@ -90,6 +91,15 @@ extension ApiClientManager: ApiClient {
             endpointUrl: endPointUrl,
             httpMethod: HTTPMethod.GET,
             responseFormat: [ProfileActivityEntity].self
+        )
+    }
+
+    func getProfileComments() -> Single<[ProfileCommentEntity]> {
+        let endPointUrl = EndPoint.profileComments.getBaseUrl()
+        return executeAPIRequest(
+            endpointUrl: endPointUrl,
+            httpMethod: HTTPMethod.GET,
+            responseFormat: [ProfileCommentEntity].self
         )
     }
 }

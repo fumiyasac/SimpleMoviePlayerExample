@@ -82,6 +82,8 @@
 		DEB159FF26E11A22003FC5C1 /* ProfileEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEB159FE26E11A22003FC5C1 /* ProfileEntity.swift */; };
 		DEB15A0126E11CE8003FC5C1 /* ProfileActivityId.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEB15A0026E11CE8003FC5C1 /* ProfileActivityId.swift */; };
 		DEB15A0326E11CF4003FC5C1 /* ProfileActivityEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEB15A0226E11CF4003FC5C1 /* ProfileActivityEntity.swift */; };
+		DEB15A0526E11E2E003FC5C1 /* ProfileCommentId.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEB15A0426E11E2E003FC5C1 /* ProfileCommentId.swift */; };
+		DEB15A0726E11E39003FC5C1 /* ProfileCommentEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEB15A0626E11E39003FC5C1 /* ProfileCommentEntity.swift */; };
 		DEB529DF267FC4E4000C33A2 /* GRDB in Frameworks */ = {isa = PBXBuildFile; productRef = DEB529DE267FC4E4000C33A2 /* GRDB */; };
 		DEB529E2267FC527000C33A2 /* UICircularProgressRing in Frameworks */ = {isa = PBXBuildFile; productRef = DEB529E1267FC527000C33A2 /* UICircularProgressRing */; };
 		DEB529EA267FCE08000C33A2 /* Mock.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEB529E9267FCE08000C33A2 /* Mock.generated.swift */; };
@@ -216,6 +218,8 @@
 		DEB159FE26E11A22003FC5C1 /* ProfileEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileEntity.swift; sourceTree = "<group>"; };
 		DEB15A0026E11CE8003FC5C1 /* ProfileActivityId.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileActivityId.swift; sourceTree = "<group>"; };
 		DEB15A0226E11CF4003FC5C1 /* ProfileActivityEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileActivityEntity.swift; sourceTree = "<group>"; };
+		DEB15A0426E11E2E003FC5C1 /* ProfileCommentId.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileCommentId.swift; sourceTree = "<group>"; };
+		DEB15A0626E11E39003FC5C1 /* ProfileCommentEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileCommentEntity.swift; sourceTree = "<group>"; };
 		DEB529E9267FCE08000C33A2 /* Mock.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Mock.generated.swift; sourceTree = "<group>"; };
 		DEB529ED2682B84A000C33A2 /* GlobalTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalTabBarController.swift; sourceTree = "<group>"; };
 		DEB529F52684B705000C33A2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/FavoriteViewController.storyboard; sourceTree = "<group>"; };
@@ -725,6 +729,8 @@
 		DEB159FB26E119CA003FC5C1 /* ProfileComment */ = {
 			isa = PBXGroup;
 			children = (
+				DEB15A0426E11E2E003FC5C1 /* ProfileCommentId.swift */,
+				DEB15A0626E11E39003FC5C1 /* ProfileCommentEntity.swift */,
 			);
 			path = ProfileComment;
 			sourceTree = "<group>";
@@ -1054,6 +1060,7 @@
 				DEA6BCFD26B5779700196CC3 /* FeaturedDetailPlayerViewController.swift in Sources */,
 				DE340E1926C958FE00FE230A /* FavoriteMainMovieRepository.swift in Sources */,
 				DEB159FF26E11A22003FC5C1 /* ProfileEntity.swift in Sources */,
+				DEB15A0526E11E2E003FC5C1 /* ProfileCommentId.swift in Sources */,
 				DE8DFD8E26C55AFA00CAB778 /* FeaturedMovieRepository.swift in Sources */,
 				DEB159FD26E119F5003FC5C1 /* ProfileId.swift in Sources */,
 				DEB9710726D7D927004D7B56 /* FavoriteMainMoviesDto.swift in Sources */,
@@ -1067,6 +1074,7 @@
 				DE8DFD6B26BD921D00CAB778 /* MainBannerEntity.swift in Sources */,
 				DE5F6E7F267FC1E100FCD3A1 /* UICollectionViewExtension.swift in Sources */,
 				DEA6BD0526B7CC4700196CC3 /* CGExtension.swift in Sources */,
+				DEB15A0726E11E39003FC5C1 /* ProfileCommentEntity.swift in Sources */,
 				DE8DFD7426BE7C1900CAB778 /* ApiClient.swift in Sources */,
 				DEA6BD0326B6FBE800196CC3 /* NotificationNameExtension.swift in Sources */,
 				DE8DFD6926BD91E600CAB778 /* MainBannerId.swift in Sources */,
