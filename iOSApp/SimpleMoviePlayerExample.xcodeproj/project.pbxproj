@@ -113,6 +113,9 @@
 		DEB9710C26D7DBF4004D7B56 /* FavoriteMainMovieEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEB9710B26D7DBF4004D7B56 /* FavoriteMainMovieEntity.swift */; };
 		DEB9710E26D7DFBD004D7B56 /* DeleteFavoriteMainMovieUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEB9710D26D7DFBD004D7B56 /* DeleteFavoriteMainMovieUseCase.swift */; };
 		DEB9711026D7E0E7004D7B56 /* SaveFavoriteMainMovieUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEB9710F26D7E0E7004D7B56 /* SaveFavoriteMainMovieUseCase.swift */; };
+		DECA7FF226E19558005B05E2 /* ProfileRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = DECA7FF126E19558005B05E2 /* ProfileRepository.swift */; };
+		DECACEF626E30B36007459C1 /* GetProfileUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = DECACEF526E30B36007459C1 /* GetProfileUseCase.swift */; };
+		DECACEF826E30B5C007459C1 /* ProfileDto.swift in Sources */ = {isa = PBXBuildFile; fileRef = DECACEF726E30B5C007459C1 /* ProfileDto.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -247,6 +250,9 @@
 		DEB9710B26D7DBF4004D7B56 /* FavoriteMainMovieEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteMainMovieEntity.swift; sourceTree = "<group>"; };
 		DEB9710D26D7DFBD004D7B56 /* DeleteFavoriteMainMovieUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteFavoriteMainMovieUseCase.swift; sourceTree = "<group>"; };
 		DEB9710F26D7E0E7004D7B56 /* SaveFavoriteMainMovieUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveFavoriteMainMovieUseCase.swift; sourceTree = "<group>"; };
+		DECA7FF126E19558005B05E2 /* ProfileRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileRepository.swift; sourceTree = "<group>"; };
+		DECACEF526E30B36007459C1 /* GetProfileUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetProfileUseCase.swift; sourceTree = "<group>"; };
+		DECACEF726E30B5C007459C1 /* ProfileDto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileDto.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -372,6 +378,7 @@
 				DE340E1826C958FE00FE230A /* FavoriteMainMovieRepository.swift */,
 				DEB970F826D15D2B004D7B56 /* MovieQualityRepository.swift */,
 				DEB970F626D15BA8004D7B56 /* MovieSpeedRepository.swift */,
+				DECA7FF126E19558005B05E2 /* ProfileRepository.swift */,
 				DEB970FA26D15FE1004D7B56 /* QuestionRepository.swift */,
 				DE82CF2026A9C6E400033A62 /* Entity */,
 			);
@@ -577,6 +584,7 @@
 				DEA3C09026D9F1D60080226E /* SaveLastShownMainMoviePlayTimeUseCase.swift */,
 				DEA3C09426D9F2330080226E /* GetInitialAppOpenUseCase.swift */,
 				DEA3C09626D9F24F0080226E /* ChangeFalseInitialAppOpenUseCase.swift */,
+				DECACEF526E30B36007459C1 /* GetProfileUseCase.swift */,
 			);
 			path = UseCase;
 			sourceTree = "<group>";
@@ -589,6 +597,7 @@
 				DEB970FC26D26F7B004D7B56 /* QuestionDto.swift */,
 				DEB9710026D7D010004D7B56 /* MovieSettingsDto.swift */,
 				DEB9710626D7D927004D7B56 /* FavoriteMainMoviesDto.swift */,
+				DECACEF726E30B5C007459C1 /* ProfileDto.swift */,
 			);
 			path = DataTransferObject;
 			sourceTree = "<group>";
@@ -1081,6 +1090,7 @@
 				DE8DFD5F26BD858900CAB778 /* MainMovieId.swift in Sources */,
 				DE8DFD7D26BFC0AD00CAB778 /* LastShownFeaturedMoviePlayTimeLocalStore.swift in Sources */,
 				DEB9710526D7D866004D7B56 /* GetFavoriteMainMoviesUseCase.swift in Sources */,
+				DECA7FF226E19558005B05E2 /* ProfileRepository.swift in Sources */,
 				DE5F6E81267FC23500FCD3A1 /* UITableViewExtension.swift in Sources */,
 				DEB970F926D15D2B004D7B56 /* MovieQualityRepository.swift in Sources */,
 				DEA3C09526D9F2330080226E /* GetInitialAppOpenUseCase.swift in Sources */,
@@ -1099,6 +1109,7 @@
 				DE82CF1B26A9B26C00033A62 /* ApiClientManager.swift in Sources */,
 				DE8DFD9C26C5641500CAB778 /* MainDto.swift in Sources */,
 				DEB9710126D7D010004D7B56 /* MovieSettingsDto.swift in Sources */,
+				DECACEF626E30B36007459C1 /* GetProfileUseCase.swift in Sources */,
 				DE8DFDA826C7E30000CAB778 /* MainMovieTable.swift in Sources */,
 				DEB52A052684CA8B000C33A2 /* SettingsViewController.swift in Sources */,
 				DEB970FD26D26F7B004D7B56 /* QuestionDto.swift in Sources */,
@@ -1113,6 +1124,7 @@
 				DEB970F126D158BF004D7B56 /* QuestionEntity.swift in Sources */,
 				DEB970FF26D7C8FE004D7B56 /* GetQuestionsUseCase.swift in Sources */,
 				DEB52A072684CD12000C33A2 /* DependeciesContainer.swift in Sources */,
+				DECACEF826E30B5C007459C1 /* ProfileDto.swift in Sources */,
 				DEA3C09126D9F1D60080226E /* SaveLastShownMainMoviePlayTimeUseCase.swift in Sources */,
 				DE82CF3526ABF38400033A62 /* MovieDetailViewController.swift in Sources */,
 				DE82CF2A26A9CCAA00033A62 /* SQLiteManager.swift in Sources */,

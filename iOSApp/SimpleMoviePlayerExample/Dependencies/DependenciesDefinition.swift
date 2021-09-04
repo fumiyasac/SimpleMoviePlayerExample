@@ -156,6 +156,13 @@ final class DependenciesDefinition {
                 backgroundScheduler: dependecies.resolve(ImmediateSchedulerType.self, name: background)
             )
         )
+        dependecies.register(
+            ProfileRepository.self,
+            impl:ProfileRepositoryImpl(
+                apiClient: dependecies.resolve(ApiClient.self),
+                backgroundScheduler: dependecies.resolve(ImmediateSchedulerType.self, name: background)
+            )
+        )
 
         // MARK: - UseCase
 
@@ -203,6 +210,12 @@ final class DependenciesDefinition {
             SaveFavoriteMainMovieUseCase.self,
             impl: SaveFavoriteMainMovieUseCaseImpl(
                 favoriteMainMovieRepository: dependecies.resolve(FavoriteMainMovieRepository.self)
+            )
+        )
+        dependecies.register(
+            GetProfileUseCase.self,
+            impl: GetProfileUseCaseImpl(
+                profileRepository: dependecies.resolve(ProfileRepository.self)
             )
         )
 
