@@ -23,6 +23,9 @@ class ApiClientMock {
         case news = "main_news_stub"
         case mainMovies = "main_movie_stub"
         case featuredMovies = "featured_movie_stub"
+        case profile = "profile/me"
+        case profileActivity = "profile/activities"
+        case profileComments = "profile/comments"
     }
 }
 
@@ -98,6 +101,45 @@ extension ApiClientMock: ApiClient {
                 fatalError("引数のmovieIdに該当するEntityが存在しませんでした。")
             }
             return Single.just(mainMovieEntity)
+        } catch {
+            fatalError("JSONからのマッピングに失敗しました。")
+        }
+    }
+
+    func getProfile() -> Single<ProfileEntity> {
+        guard let path = getStubFilePath(jsonFileName: ApiClientMock.FileName.profile.rawValue) else {
+            fatalError("該当ファイルが存在しませんでした。")
+        }
+        do {
+            let data = try Data(contentsOf: URL(fileURLWithPath: path))
+            let profileEntity = try JSONDecoder().decode(ProfileEntity.self, from: data)
+            return Single.just(profileEntity)
+        } catch {
+            fatalError("JSONからのマッピングに失敗しました。")
+        }
+    }
+    
+    func getProfileActivities() -> Single<[ProfileActivityEntity]> {
+        guard let path = getStubFilePath(jsonFileName: ApiClientMock.FileName.profileActivity.rawValue) else {
+            fatalError("該当ファイルが存在しませんでした。")
+        }
+        do {
+            let data = try Data(contentsOf: URL(fileURLWithPath: path))
+            let profileActivityEntities = try JSONDecoder().decode([ProfileActivityEntity].self, from: data)
+            return Single.just(profileActivityEntities)
+        } catch {
+            fatalError("JSONからのマッピングに失敗しました。")
+        }
+    }
+    
+    func getProfileComments() -> Single<[ProfileCommentEntity]> {
+        guard let path = getStubFilePath(jsonFileName: ApiClientMock.FileName.profileComments.rawValue) else {
+            fatalError("該当ファイルが存在しませんでした。")
+        }
+        do {
+            let data = try Data(contentsOf: URL(fileURLWithPath: path))
+            let profileCommentEntities = try JSONDecoder().decode([ProfileCommentEntity].self, from: data)
+            return Single.just(profileCommentEntities)
         } catch {
             fatalError("JSONからのマッピングに失敗しました。")
         }

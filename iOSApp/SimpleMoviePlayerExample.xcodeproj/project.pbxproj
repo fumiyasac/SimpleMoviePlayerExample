@@ -116,6 +116,9 @@
 		DECA7FF226E19558005B05E2 /* ProfileRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = DECA7FF126E19558005B05E2 /* ProfileRepository.swift */; };
 		DECACEF626E30B36007459C1 /* GetProfileUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = DECACEF526E30B36007459C1 /* GetProfileUseCase.swift */; };
 		DECACEF826E30B5C007459C1 /* ProfileDto.swift in Sources */ = {isa = PBXBuildFile; fileRef = DECACEF726E30B5C007459C1 /* ProfileDto.swift */; };
+		DECACEFC26E428F0007459C1 /* profile_me_stub.json in Resources */ = {isa = PBXBuildFile; fileRef = DECACEF926E428F0007459C1 /* profile_me_stub.json */; };
+		DECACEFD26E428F0007459C1 /* profile_comments_me_stub.json in Resources */ = {isa = PBXBuildFile; fileRef = DECACEFA26E428F0007459C1 /* profile_comments_me_stub.json */; };
+		DECACEFE26E428F0007459C1 /* profile_activities_me_stub.json in Resources */ = {isa = PBXBuildFile; fileRef = DECACEFB26E428F0007459C1 /* profile_activities_me_stub.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -253,6 +256,9 @@
 		DECA7FF126E19558005B05E2 /* ProfileRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileRepository.swift; sourceTree = "<group>"; };
 		DECACEF526E30B36007459C1 /* GetProfileUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetProfileUseCase.swift; sourceTree = "<group>"; };
 		DECACEF726E30B5C007459C1 /* ProfileDto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileDto.swift; sourceTree = "<group>"; };
+		DECACEF926E428F0007459C1 /* profile_me_stub.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = profile_me_stub.json; sourceTree = "<group>"; };
+		DECACEFA26E428F0007459C1 /* profile_comments_me_stub.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = profile_comments_me_stub.json; sourceTree = "<group>"; };
+		DECACEFB26E428F0007459C1 /* profile_activities_me_stub.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = profile_activities_me_stub.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -559,6 +565,9 @@
 		DE8DFD7926BFB66E00CAB778 /* Stub */ = {
 			isa = PBXGroup;
 			children = (
+				DECACEFB26E428F0007459C1 /* profile_activities_me_stub.json */,
+				DECACEFA26E428F0007459C1 /* profile_comments_me_stub.json */,
+				DECACEF926E428F0007459C1 /* profile_me_stub.json */,
 				DE8DFD8026C16F0200CAB778 /* featured_movie_stub.json */,
 				DE8DFD7F26C16F0200CAB778 /* main_banner_stub.json */,
 				DE8DFD7E26C16F0200CAB778 /* main_movie_stub.json */,
@@ -895,14 +904,17 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DECACEFC26E428F0007459C1 /* profile_me_stub.json in Resources */,
 				DE8DFD8326C16F0200CAB778 /* main_banner_stub.json in Resources */,
 				DEB52A032684CA68000C33A2 /* SettingsViewController.storyboard in Resources */,
+				DECACEFE26E428F0007459C1 /* profile_activities_me_stub.json in Resources */,
 				DE8DFD8226C16F0200CAB778 /* main_movie_stub.json in Resources */,
 				DEA47540263F40AC00090DA5 /* LaunchScreen.storyboard in Resources */,
 				DE8DFD8426C16F0200CAB778 /* featured_movie_stub.json in Resources */,
 				DEB970EC26D14A28004D7B56 /* question.json in Resources */,
 				DE8DFD8526C16F0200CAB778 /* main_news_stub.json in Resources */,
 				DEB529F62684B705000C33A2 /* FavoriteViewController.storyboard in Resources */,
+				DECACEFD26E428F0007459C1 /* profile_comments_me_stub.json in Resources */,
 				DEA6BD0126B577D700196CC3 /* FeaturedDetailPlayerViewController.storyboard in Resources */,
 				DEA4753D263F40AC00090DA5 /* Assets.xcassets in Resources */,
 				DEA6BD0B26B8FAFB00196CC3 /* ProfileViewController.storyboard in Resources */,
