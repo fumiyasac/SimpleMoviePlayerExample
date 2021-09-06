@@ -119,6 +119,8 @@
 		DECACEFC26E428F0007459C1 /* profile_me_stub.json in Resources */ = {isa = PBXBuildFile; fileRef = DECACEF926E428F0007459C1 /* profile_me_stub.json */; };
 		DECACEFD26E428F0007459C1 /* profile_comments_me_stub.json in Resources */ = {isa = PBXBuildFile; fileRef = DECACEFA26E428F0007459C1 /* profile_comments_me_stub.json */; };
 		DECACEFE26E428F0007459C1 /* profile_activities_me_stub.json in Resources */ = {isa = PBXBuildFile; fileRef = DECACEFB26E428F0007459C1 /* profile_activities_me_stub.json */; };
+		DECACF0026E58F63007459C1 /* DeleteLastShownMainMoviePlayTimeUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = DECACEFF26E58F63007459C1 /* DeleteLastShownMainMoviePlayTimeUseCase.swift */; };
+		DECACF0226E592C2007459C1 /* DeleteLastShownFeatureMoviePlayTimeUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = DECACF0126E592C2007459C1 /* DeleteLastShownFeatureMoviePlayTimeUseCase.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -259,6 +261,8 @@
 		DECACEF926E428F0007459C1 /* profile_me_stub.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = profile_me_stub.json; sourceTree = "<group>"; };
 		DECACEFA26E428F0007459C1 /* profile_comments_me_stub.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = profile_comments_me_stub.json; sourceTree = "<group>"; };
 		DECACEFB26E428F0007459C1 /* profile_activities_me_stub.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = profile_activities_me_stub.json; sourceTree = "<group>"; };
+		DECACEFF26E58F63007459C1 /* DeleteLastShownMainMoviePlayTimeUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteLastShownMainMoviePlayTimeUseCase.swift; sourceTree = "<group>"; };
+		DECACF0126E592C2007459C1 /* DeleteLastShownFeatureMoviePlayTimeUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteLastShownFeatureMoviePlayTimeUseCase.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -589,8 +593,10 @@
 				DEB9710F26D7E0E7004D7B56 /* SaveFavoriteMainMovieUseCase.swift */,
 				DEA3C08E26D9F1AB0080226E /* GetLastShownFeatureMoviePlayTimeUseCase.swift */,
 				DEA3C09226D9F1EC0080226E /* SaveLastShownFeatureMoviePlayTimeUseCase.swift */,
+				DECACF0126E592C2007459C1 /* DeleteLastShownFeatureMoviePlayTimeUseCase.swift */,
 				DEA3C08C26D9F1980080226E /* GetLastShownMainMoviePlayTimeUseCase.swift */,
 				DEA3C09026D9F1D60080226E /* SaveLastShownMainMoviePlayTimeUseCase.swift */,
+				DECACEFF26E58F63007459C1 /* DeleteLastShownMainMoviePlayTimeUseCase.swift */,
 				DEA3C09426D9F2330080226E /* GetInitialAppOpenUseCase.swift */,
 				DEA3C09626D9F24F0080226E /* ChangeFalseInitialAppOpenUseCase.swift */,
 				DECACEF526E30B36007459C1 /* GetProfileUseCase.swift */,
@@ -1110,6 +1116,7 @@
 				DEB52A092684CD6A000C33A2 /* DependenciesDefinition.swift in Sources */,
 				DEB529EE2682B84A000C33A2 /* GlobalTabBarController.swift in Sources */,
 				DE8DFD9E26C5642800CAB778 /* GetMainElementsUseCase.swift in Sources */,
+				DECACF0026E58F63007459C1 /* DeleteLastShownMainMoviePlayTimeUseCase.swift in Sources */,
 				DEA47536263F40AA00090DA5 /* SceneDelegate.swift in Sources */,
 				DEA3C09326D9F1EC0080226E /* SaveLastShownFeatureMoviePlayTimeUseCase.swift in Sources */,
 				DE8DFD9A26C5605B00CAB778 /* LastShownFeaturedMoviePlayTimeRepository.swift in Sources */,
@@ -1147,6 +1154,7 @@
 				DEA6BD0E26B8FB4B00196CC3 /* ProfileViewController.swift in Sources */,
 				DE8DFD6626BD912800CAB778 /* FeaturedMovieEntity.swift in Sources */,
 				DE8DFD7B26BFC09600CAB778 /* LastShownMainMoviePlayTimeLocalStore.swift in Sources */,
+				DECACF0226E592C2007459C1 /* DeleteLastShownFeatureMoviePlayTimeUseCase.swift in Sources */,
 				DEA3C08F26D9F1AB0080226E /* GetLastShownFeatureMoviePlayTimeUseCase.swift in Sources */,
 				DE82CF2826A9CC4000033A62 /* UserDefaultManager.swift in Sources */,
 				DE5F6E7D267FC1AB00FCD3A1 /* UIColorExtension.swift in Sources */,

@@ -213,6 +213,42 @@ final class DependenciesDefinition {
             )
         )
         dependecies.register(
+            GetLastShownFeatureMoviePlayTimeUseCase.self,
+            impl: GetLastShownFeatureMoviePlayTimeUseCaseImpl(
+                lastShownFeaturedMoviePlayTimeRepository: dependecies.resolve(LastShownFeaturedMoviePlayTimeRepository.self)
+            )
+        )
+        dependecies.register(
+            SaveLastShownFeatureMoviePlayTimeUseCase.self,
+            impl: SaveLastShownFeatureMoviePlayTimeUseCaseImpl(
+                lastShownFeaturedMoviePlayTimeRepository: dependecies.resolve(LastShownFeaturedMoviePlayTimeRepository.self)
+            )
+        )
+        dependecies.register(
+            DeleteLastShownFeatureMoviePlayTimeUseCase.self,
+            impl: DeleteLastShownFeatureMoviePlayTimeUseCaseImpl(
+                lastShownFeaturedMoviePlayTimeRepository: dependecies.resolve(LastShownFeaturedMoviePlayTimeRepository.self)
+            )
+        )
+        dependecies.register(
+            GetLastShownMainMoviePlayTimeUseCase.self,
+            impl: GetLastShownMainMoviePlayTimeUseCaseImpl(
+                lastShownMainMoviePlayTimeRepository: dependecies.resolve(LastShownMainMoviePlayTimeRepository.self)
+            )
+        )
+        dependecies.register(
+            SaveLastShownMainMoviePlayTimeUseCase.self,
+            impl: SaveLastShownMainMoviePlayTimeUseCaseImpl(
+                lastShownMainMoviePlayTimeRepository: dependecies.resolve(LastShownMainMoviePlayTimeRepository.self)
+            )
+        )
+        dependecies.register(
+            DeleteLastShownMainMoviePlayTimeUseCase.self,
+            impl: DeleteLastShownMainMoviePlayTimeUseCaseImpl(
+                lastShownMainMoviePlayTimeRepository: dependecies.resolve(LastShownMainMoviePlayTimeRepository.self)
+            )
+        )
+        dependecies.register(
             GetProfileUseCase.self,
             impl: GetProfileUseCaseImpl(
                 profileRepository: dependecies.resolve(ProfileRepository.self)

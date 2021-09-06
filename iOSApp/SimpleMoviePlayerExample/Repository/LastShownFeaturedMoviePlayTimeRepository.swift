@@ -14,6 +14,8 @@ protocol LastShownFeaturedMoviePlayTimeRepository {
     func getPlayTime(featuredMovieId: FeaturedMovieId) -> Single<Float>
     // featuredMovieIdに紐づく保存されている再生時間を更新する
     func savePlayTime(featuredMovieId: FeaturedMovieId, playTime: Float) -> Completable
+    // featuredMovieIdに紐づく保存されている再生時間を削除する
+    func deletePlayTime(featuredMovieId: FeaturedMovieId) -> Completable
 }
 
 final class LastShownFeaturedMoviePlayTimeRepositoryImpl: LastShownFeaturedMoviePlayTimeRepository {
@@ -48,6 +50,16 @@ final class LastShownFeaturedMoviePlayTimeRepositoryImpl: LastShownFeaturedMovie
             .savePlayTime(
                 featuredMovieId: featuredMovieId,
                 playTime: playTime
+            )
+            .subscribe(
+                on: backgroundScheduler
+            )
+    }
+
+    func deletePlayTime(featuredMovieId: FeaturedMovieId) -> Completable {
+        return lastShownFeaturedMoviePlayTimeLocalStore
+            .deletePlayTime(
+                featuredMovieId: featuredMovieId
             )
             .subscribe(
                 on: backgroundScheduler

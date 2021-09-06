@@ -13,6 +13,7 @@ import SwiftyUserDefaults
 protocol LastShownFeaturedMoviePlayTimeLocalStore {
     func getPlayTime(featuredMovieId: FeaturedMovieId) -> Single<Float>
     func savePlayTime(featuredMovieId: FeaturedMovieId, playTime: Float) -> Completable
+    func deletePlayTime(featuredMovieId: FeaturedMovieId) -> Completable
 }
 
 final class LastShownFeaturedMoviePlayTimeLocalStoreImpl: LastShownFeaturedMoviePlayTimeLocalStore {
@@ -33,6 +34,17 @@ final class LastShownFeaturedMoviePlayTimeLocalStoreImpl: LastShownFeaturedMovie
         let key = String(featuredMovieId.value)
         var dictionary = Defaults[\.lastShownFeaturedMoviePlayTime]
         dictionary[key] = playTime
+        return Completable.create { completable in
+            Defaults[\.lastShownFeaturedMoviePlayTime] = dictionary
+            completable(.completed)
+            return Disposables.create()
+        }
+    }
+
+    func deletePlayTime(featuredMovieId: FeaturedMovieId) -> Completable {
+        let key = String(featuredMovieId.value)
+        var dictionary = Defaults[\.lastShownFeaturedMoviePlayTime]
+        dictionary.removeValue(forKey: key)
         return Completable.create { completable in
             Defaults[\.lastShownFeaturedMoviePlayTime] = dictionary
             completable(.completed)
