@@ -84,6 +84,14 @@
 		DEB15A0326E11CF4003FC5C1 /* ProfileActivityEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEB15A0226E11CF4003FC5C1 /* ProfileActivityEntity.swift */; };
 		DEB15A0526E11E2E003FC5C1 /* ProfileCommentId.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEB15A0426E11E2E003FC5C1 /* ProfileCommentId.swift */; };
 		DEB15A0726E11E39003FC5C1 /* ProfileCommentEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEB15A0626E11E39003FC5C1 /* ProfileCommentEntity.swift */; };
+		DEB2313026EE4C0E009A839B /* MainMovieViewObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEB2312F26EE4C0E009A839B /* MainMovieViewObject.swift */; };
+		DEB2313226EE4C22009A839B /* NewsViewObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEB2313126EE4C22009A839B /* NewsViewObject.swift */; };
+		DEB2313426EE4C35009A839B /* FeatureMovieViewObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEB2313326EE4C35009A839B /* FeatureMovieViewObject.swift */; };
+		DEB2313626EE4C60009A839B /* MainBannerViewObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEB2313526EE4C60009A839B /* MainBannerViewObject.swift */; };
+		DEB2313A26EE4D5C009A839B /* FavoriteViewObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEB2313926EE4D5C009A839B /* FavoriteViewObject.swift */; };
+		DEB2313D26EE4D8D009A839B /* MovieQualityViewObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEB2313C26EE4D8D009A839B /* MovieQualityViewObject.swift */; };
+		DEB2313F26EE4D9A009A839B /* MovieSpeedViewObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEB2313E26EE4D9A009A839B /* MovieSpeedViewObject.swift */; };
+		DEB2314226EE4DC7009A839B /* ProfileViewObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEB2314126EE4DC7009A839B /* ProfileViewObject.swift */; };
 		DEB529DF267FC4E4000C33A2 /* GRDB in Frameworks */ = {isa = PBXBuildFile; productRef = DEB529DE267FC4E4000C33A2 /* GRDB */; };
 		DEB529E2267FC527000C33A2 /* UICircularProgressRing in Frameworks */ = {isa = PBXBuildFile; productRef = DEB529E1267FC527000C33A2 /* UICircularProgressRing */; };
 		DEB529EA267FCE08000C33A2 /* Mock.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEB529E9267FCE08000C33A2 /* Mock.generated.swift */; };
@@ -228,6 +236,14 @@
 		DEB15A0226E11CF4003FC5C1 /* ProfileActivityEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileActivityEntity.swift; sourceTree = "<group>"; };
 		DEB15A0426E11E2E003FC5C1 /* ProfileCommentId.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileCommentId.swift; sourceTree = "<group>"; };
 		DEB15A0626E11E39003FC5C1 /* ProfileCommentEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileCommentEntity.swift; sourceTree = "<group>"; };
+		DEB2312F26EE4C0E009A839B /* MainMovieViewObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMovieViewObject.swift; sourceTree = "<group>"; };
+		DEB2313126EE4C22009A839B /* NewsViewObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsViewObject.swift; sourceTree = "<group>"; };
+		DEB2313326EE4C35009A839B /* FeatureMovieViewObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeatureMovieViewObject.swift; sourceTree = "<group>"; };
+		DEB2313526EE4C60009A839B /* MainBannerViewObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainBannerViewObject.swift; sourceTree = "<group>"; };
+		DEB2313926EE4D5C009A839B /* FavoriteViewObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteViewObject.swift; sourceTree = "<group>"; };
+		DEB2313C26EE4D8D009A839B /* MovieQualityViewObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieQualityViewObject.swift; sourceTree = "<group>"; };
+		DEB2313E26EE4D9A009A839B /* MovieSpeedViewObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieSpeedViewObject.swift; sourceTree = "<group>"; };
+		DEB2314126EE4DC7009A839B /* ProfileViewObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewObject.swift; sourceTree = "<group>"; };
 		DEB529E9267FCE08000C33A2 /* Mock.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Mock.generated.swift; sourceTree = "<group>"; };
 		DEB529ED2682B84A000C33A2 /* GlobalTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalTabBarController.swift; sourceTree = "<group>"; };
 		DEB529F52684B705000C33A2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/FavoriteViewController.storyboard; sourceTree = "<group>"; };
@@ -421,6 +437,10 @@
 		DE5F6E84267FC30200FCD3A1 /* ViewObject */ = {
 			isa = PBXGroup;
 			children = (
+				DEB2313726EE4C66009A839B /* Main */,
+				DEB2313826EE4D3D009A839B /* Favorite */,
+				DEB2313B26EE4D61009A839B /* Settings */,
+				DEB2314026EE4DA0009A839B /* Profile */,
 			);
 			path = ViewObject;
 			sourceTree = "<group>";
@@ -759,6 +779,42 @@
 			path = ProfileComment;
 			sourceTree = "<group>";
 		};
+		DEB2313726EE4C66009A839B /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				DEB2312F26EE4C0E009A839B /* MainMovieViewObject.swift */,
+				DEB2313126EE4C22009A839B /* NewsViewObject.swift */,
+				DEB2313326EE4C35009A839B /* FeatureMovieViewObject.swift */,
+				DEB2313526EE4C60009A839B /* MainBannerViewObject.swift */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		DEB2313826EE4D3D009A839B /* Favorite */ = {
+			isa = PBXGroup;
+			children = (
+				DEB2313926EE4D5C009A839B /* FavoriteViewObject.swift */,
+			);
+			path = Favorite;
+			sourceTree = "<group>";
+		};
+		DEB2313B26EE4D61009A839B /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				DEB2313C26EE4D8D009A839B /* MovieQualityViewObject.swift */,
+				DEB2313E26EE4D9A009A839B /* MovieSpeedViewObject.swift */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
+		DEB2314026EE4DA0009A839B /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				DEB2314126EE4DC7009A839B /* ProfileViewObject.swift */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
 		DEB529EF2684B0ED000C33A2 /* Dependencies */ = {
 			isa = PBXGroup;
 			children = (
@@ -1083,6 +1139,7 @@
 				DEA3C08D26D9F1980080226E /* GetLastShownMainMoviePlayTimeUseCase.swift in Sources */,
 				DEA47538263F40AA00090DA5 /* MainViewController.swift in Sources */,
 				DEAE7EFA268A19EF009ACBD9 /* PlayerView.swift in Sources */,
+				DEB2313D26EE4D8D009A839B /* MovieQualityViewObject.swift in Sources */,
 				DE8DFDA426C7BE4E00CAB778 /* MoviePlayerError.swift in Sources */,
 				DEA6BCFD26B5779700196CC3 /* FeaturedDetailPlayerViewController.swift in Sources */,
 				DE340E1926C958FE00FE230A /* FavoriteMainMovieRepository.swift in Sources */,
@@ -1092,7 +1149,9 @@
 				DEB159FD26E119F5003FC5C1 /* ProfileId.swift in Sources */,
 				DEB9710726D7D927004D7B56 /* FavoriteMainMoviesDto.swift in Sources */,
 				DE5F6E83267FC27100FCD3A1 /* UIViewControllerExtension.swift in Sources */,
+				DEB2313426EE4C35009A839B /* FeatureMovieViewObject.swift in Sources */,
 				DEB970F726D15BA8004D7B56 /* MovieSpeedRepository.swift in Sources */,
+				DEB2313026EE4C0E009A839B /* MainMovieViewObject.swift in Sources */,
 				DE8DFDA026C7B8E800CAB778 /* CarouselMainBannerDto.swift in Sources */,
 				DEB9710C26D7DBF4004D7B56 /* FavoriteMainMovieEntity.swift in Sources */,
 				DEB970FB26D15FE1004D7B56 /* QuestionRepository.swift in Sources */,
@@ -1102,6 +1161,7 @@
 				DE5F6E7F267FC1E100FCD3A1 /* UICollectionViewExtension.swift in Sources */,
 				DEA6BD0526B7CC4700196CC3 /* CGExtension.swift in Sources */,
 				DEB15A0726E11E39003FC5C1 /* ProfileCommentEntity.swift in Sources */,
+				DEB2313626EE4C60009A839B /* MainBannerViewObject.swift in Sources */,
 				DE8DFD7426BE7C1900CAB778 /* ApiClient.swift in Sources */,
 				DEA6BD0326B6FBE800196CC3 /* NotificationNameExtension.swift in Sources */,
 				DE8DFD6926BD91E600CAB778 /* MainBannerId.swift in Sources */,
@@ -1119,12 +1179,14 @@
 				DECACF0026E58F63007459C1 /* DeleteLastShownMainMoviePlayTimeUseCase.swift in Sources */,
 				DEA47536263F40AA00090DA5 /* SceneDelegate.swift in Sources */,
 				DEA3C09326D9F1EC0080226E /* SaveLastShownFeatureMoviePlayTimeUseCase.swift in Sources */,
+				DEB2313226EE4C22009A839B /* NewsViewObject.swift in Sources */,
 				DE8DFD9A26C5605B00CAB778 /* LastShownFeaturedMoviePlayTimeRepository.swift in Sources */,
 				DE8DFD8926C553FE00CAB778 /* MainMovieRepository.swift in Sources */,
 				DE5F6E7B267FC19F00FCD3A1 /* NSObjectProtocolExtension.swift in Sources */,
 				DEB15A0126E11CE8003FC5C1 /* ProfileActivityId.swift in Sources */,
 				DEB970EF26D15899004D7B56 /* QuestionId.swift in Sources */,
 				DEB9711026D7E0E7004D7B56 /* SaveFavoriteMainMovieUseCase.swift in Sources */,
+				DEB2314226EE4DC7009A839B /* ProfileViewObject.swift in Sources */,
 				DE82CF1B26A9B26C00033A62 /* ApiClientManager.swift in Sources */,
 				DE8DFD9C26C5641500CAB778 /* MainDto.swift in Sources */,
 				DEB9710126D7D010004D7B56 /* MovieSettingsDto.swift in Sources */,
@@ -1136,11 +1198,13 @@
 				DE8DFD8726C16F6200CAB778 /* ApiClientMock.swift in Sources */,
 				DE82CF2C26A9E5D200033A62 /* GlobalTabBarItems.swift in Sources */,
 				DEB970F326D15983004D7B56 /* MovieSpeedLocalStore.swift in Sources */,
+				DEB2313A26EE4D5C009A839B /* FavoriteViewObject.swift in Sources */,
 				DE8DFD9226C55BDA00CAB778 /* MainBannerRepository.swift in Sources */,
 				DEB970F526D15AB9004D7B56 /* MovieQualityLocalStore.swift in Sources */,
 				DE8DFDA226C7B8F900CAB778 /* GetCarouselMainBannersUseCase.swift in Sources */,
 				DEB9710E26D7DFBD004D7B56 /* DeleteFavoriteMainMovieUseCase.swift in Sources */,
 				DEB970F126D158BF004D7B56 /* QuestionEntity.swift in Sources */,
+				DEB2313F26EE4D9A009A839B /* MovieSpeedViewObject.swift in Sources */,
 				DEB970FF26D7C8FE004D7B56 /* GetQuestionsUseCase.swift in Sources */,
 				DEB52A072684CD12000C33A2 /* DependeciesContainer.swift in Sources */,
 				DECACEF826E30B5C007459C1 /* ProfileDto.swift in Sources */,
