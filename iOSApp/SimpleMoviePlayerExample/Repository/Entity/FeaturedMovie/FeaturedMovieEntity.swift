@@ -11,7 +11,7 @@ struct FeaturedMovieEntity: Hashable, Decodable {
 
     let id: FeaturedMovieId
     let authorName: String
-    let dateString: String
+    let pubilshedDate: String
     let thumbnailUrl: String
     let movies: MoviesEntity
     let title: String
@@ -23,7 +23,7 @@ struct FeaturedMovieEntity: Hashable, Decodable {
         case id
         case authorName = "author_name"
         case thumbnailUrl = "thumbnail_url"
-        case dateString = "date_string"
+        case pubilshedDate = "pubilshed_date"
         case movies
         case title
         case description
@@ -35,7 +35,7 @@ struct FeaturedMovieEntity: Hashable, Decodable {
         let container = try decoder.container(keyedBy: Keys.self)
         self.id = try container.decode(FeaturedMovieId.self, forKey: .id)
         self.authorName = try container.decode(String.self, forKey: .authorName)
-        self.dateString = try container.decode(String.self, forKey: .dateString)
+        self.pubilshedDate = try container.decode(String.self, forKey: .pubilshedDate)
         self.thumbnailUrl = try container.decode(String.self, forKey: .thumbnailUrl)
         self.movies = try container.decode(MoviesEntity.self, forKey: .movies)
         self.title = try container.decode(String.self, forKey: .title)
@@ -51,7 +51,7 @@ struct FeaturedMovieEntity: Hashable, Decodable {
     static func == (lhs: FeaturedMovieEntity, rhs: FeaturedMovieEntity) -> Bool {
         return lhs.id == rhs.id
             && lhs.authorName == rhs.authorName
-            && lhs.dateString == rhs.dateString
+            && lhs.pubilshedDate == rhs.pubilshedDate
             && lhs.thumbnailUrl == rhs.thumbnailUrl
             && lhs.movies == rhs.movies
             && lhs.title == rhs.title

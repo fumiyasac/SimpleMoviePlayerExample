@@ -12,7 +12,7 @@ struct MainMovieEntity: Hashable, Decodable {
     let id: MainMovieId
     let category: String
     let authorName: String
-    let dateString: String
+    let pubilshedDate: String
     let thumbnailUrl: String
     let rating: Float
     let totalViews: Int
@@ -28,7 +28,7 @@ struct MainMovieEntity: Hashable, Decodable {
         case category
         case authorName = "author_name"
         case thumbnailUrl = "thumbnail_url"
-        case dateString = "date_string"
+        case pubilshedDate = "pubilshed_date"
         case rating
         case totalViews = "total_views"
         case movies
@@ -44,7 +44,7 @@ struct MainMovieEntity: Hashable, Decodable {
         self.id = try container.decode(MainMovieId.self, forKey: .id)
         self.category = try container.decode(String.self, forKey: .category)
         self.authorName = try container.decode(String.self, forKey: .authorName)
-        self.dateString = try container.decode(String.self, forKey: .dateString)
+        self.pubilshedDate = try container.decode(String.self, forKey: .pubilshedDate)
         self.thumbnailUrl = try container.decode(String.self, forKey: .thumbnailUrl)
         self.rating = try container.decode(Float.self, forKey: .rating)
         self.totalViews = try container.decode(Int.self, forKey: .totalViews)
@@ -64,7 +64,7 @@ struct MainMovieEntity: Hashable, Decodable {
         return lhs.id == rhs.id
             && lhs.category == rhs.category
             && lhs.authorName == rhs.authorName
-            && lhs.dateString == rhs.dateString
+            && lhs.pubilshedDate == rhs.pubilshedDate
             && lhs.thumbnailUrl == rhs.thumbnailUrl
             && lhs.rating == rhs.rating
             && lhs.totalViews == rhs.totalViews

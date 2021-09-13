@@ -21,7 +21,7 @@ final class MainMovieTable: Record {
     var mainMovieId: Int
     var category: String
     var authorName: String
-    var dateString: String
+    var pubilshedDate: String
     var thumbnailUrl: String
     var title: String
     var description: String
@@ -33,7 +33,7 @@ final class MainMovieTable: Record {
         static let mainMovieId = Column("main_movie_id")
         static let category = Column("category")
         static let authorName = Column("author_name")
-        static let dateString = Column("date_string")
+        static let pubilshedDate = Column("pubilshed_date")
         static let thumbnailUrl = Column("thumbnail_url")
         static let title = Column("title")
         static let description = Column("description")
@@ -51,7 +51,7 @@ final class MainMovieTable: Record {
         self.mainMovieId = mainMovieEntity.id.value
         self.category = mainMovieEntity.category
         self.authorName = mainMovieEntity.authorName
-        self.dateString = mainMovieEntity.dateString
+        self.pubilshedDate = mainMovieEntity.pubilshedDate
         self.thumbnailUrl = mainMovieEntity.thumbnailUrl
         self.title = mainMovieEntity.title
         self.description = mainMovieEntity.description
@@ -62,7 +62,7 @@ final class MainMovieTable: Record {
         mainMovieId: MainMovieId,
         category: String,
         authorName: String,
-        dateString: String,
+        pubilshedDate: String,
         thumbnailUrl: String,
         title: String,
         description: String
@@ -70,7 +70,7 @@ final class MainMovieTable: Record {
         self.mainMovieId = mainMovieId.value
         self.category = category
         self.authorName = authorName
-        self.dateString = dateString
+        self.pubilshedDate = pubilshedDate
         self.thumbnailUrl = thumbnailUrl
         self.title = title
         self.description = description
@@ -82,7 +82,7 @@ final class MainMovieTable: Record {
         self.mainMovieId = row["main_movie_id"]
         self.category = row["category"]
         self.authorName = row["author_name"]
-        self.dateString = row["date_string"]
+        self.pubilshedDate = row["pubilshed_date"]
         self.thumbnailUrl = row["thumbnail_url"]
         self.title = row["title"]
         self.description = row["description"]
@@ -100,7 +100,7 @@ final class MainMovieTable: Record {
                 t.column("main_movie_id", .integer).notNull()
                 t.column("category", .text).notNull()
                 t.column("author_name", .text).notNull()
-                t.column("date_string", .text).notNull()
+                t.column("pubilshed_date", .text).notNull()
                 t.column("thumbnail_url", .text).notNull()
                 t.column("title", .text).notNull()
                 t.column("description", .text).notNull()

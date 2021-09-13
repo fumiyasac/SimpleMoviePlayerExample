@@ -11,10 +11,10 @@ struct ProfileEntity: Hashable, Decodable {
 
     let id: ProfileId
     let avatarUrl: String
-    let registeredDateString: String
+    let registeredDate: String
     let name: String
     let nickname: String
-    let birthDateString: String
+    let birthDate: String
     let homepageUrl: String
     let follows: String
     let company: String
@@ -27,10 +27,10 @@ struct ProfileEntity: Hashable, Decodable {
     private enum Keys: String, CodingKey {
         case id
         case avatarUrl = "avatar_url"
-        case registeredDateString = "registered_date_string"
+        case registeredDate = "registered_date"
         case name
         case nickname
-        case birthDateString = "birth_date_string"
+        case birthDate = "birth_date"
         case homepageUrl = "homepage_url"
         case follows
         case company
@@ -45,10 +45,10 @@ struct ProfileEntity: Hashable, Decodable {
         let container = try decoder.container(keyedBy: Keys.self)
         self.id = try container.decode(ProfileId.self, forKey: .id)
         self.avatarUrl = try container.decode(String.self, forKey: .avatarUrl)
-        self.registeredDateString = try container.decode(String.self, forKey: .registeredDateString)
+        self.registeredDate = try container.decode(String.self, forKey: .registeredDate)
         self.name = try container.decode(String.self, forKey: .name)
         self.nickname = try container.decode(String.self, forKey: .nickname)
-        self.birthDateString = try container.decode(String.self, forKey: .birthDateString)
+        self.birthDate = try container.decode(String.self, forKey: .birthDate)
         self.homepageUrl = try container.decode(String.self, forKey: .homepageUrl)
         self.follows = try container.decode(String.self, forKey: .follows)
         self.company = try container.decode(String.self, forKey: .company)
@@ -66,10 +66,10 @@ struct ProfileEntity: Hashable, Decodable {
     static func == (lhs: ProfileEntity, rhs: ProfileEntity) -> Bool {
         return lhs.id == rhs.id
             && lhs.avatarUrl == rhs.avatarUrl
-            && lhs.registeredDateString == rhs.registeredDateString
+            && lhs.registeredDate == rhs.registeredDate
             && lhs.name == rhs.name
             && lhs.nickname == rhs.nickname
-            && lhs.birthDateString == rhs.birthDateString
+            && lhs.birthDate == rhs.birthDate
             && lhs.homepageUrl == rhs.homepageUrl
             && lhs.follows == rhs.follows
             && lhs.company == rhs.company

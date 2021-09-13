@@ -12,7 +12,7 @@ struct FavoriteMainMovieEntity: Equatable {
     let mainMovieId: MainMovieId
     var category: String
     var authorName: String
-    var dateString: String
+    var pubilshedDate: String
     var thumbnailUrl: String
     var title: String
     var description: String
@@ -23,7 +23,7 @@ struct FavoriteMainMovieEntity: Equatable {
         mainMovieId: Int,
         category: String,
         authorName: String,
-        dateString: String,
+        pubilshedDate: String,
         thumbnailUrl: String,
         title: String,
         description: String
@@ -31,7 +31,7 @@ struct FavoriteMainMovieEntity: Equatable {
         self.mainMovieId = MainMovieId(value: mainMovieId)
         self.category = category
         self.authorName = authorName
-        self.dateString = dateString
+        self.pubilshedDate = pubilshedDate
         self.thumbnailUrl = thumbnailUrl
         self.title = title
         self.description = description
@@ -43,7 +43,7 @@ struct FavoriteMainMovieEntity: Equatable {
         return lhs.mainMovieId == rhs.mainMovieId
             && lhs.category == rhs.category
             && lhs.authorName == rhs.authorName
-            && lhs.dateString == rhs.dateString
+            && lhs.pubilshedDate == rhs.pubilshedDate
             && lhs.thumbnailUrl == rhs.thumbnailUrl
             && lhs.title == rhs.title
             && lhs.description == rhs.description

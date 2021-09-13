@@ -46,7 +46,7 @@ final class FavoriteMainMovieRepositoryImpl: FavoriteMainMovieRepository {
                         mainMovieId: mainMovieTable.mainMovieId,
                         category: mainMovieTable.category,
                         authorName: mainMovieTable.authorName,
-                        dateString: mainMovieTable.dateString,
+                        pubilshedDate: mainMovieTable.pubilshedDate,
                         thumbnailUrl: mainMovieTable.thumbnailUrl,
                         title: mainMovieTable.title,
                         description: mainMovieTable.description
