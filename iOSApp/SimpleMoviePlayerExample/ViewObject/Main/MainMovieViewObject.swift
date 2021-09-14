@@ -7,7 +7,7 @@
 
 import Foundation
 
-final class MainMovieViewObject: MainDiffableDataSourceCompatible {
+final class MainMovieViewObject: Hashable {
 
     let id: MainMovieId
     let category: String

@@ -7,7 +7,7 @@
 
 import Foundation
 
-final class FeatureMovieViewObject: MainDiffableDataSourceCompatible {
+final class FeatureMovieViewObject: Hashable {
 
     let id: FeaturedMovieId
     let authorName: String

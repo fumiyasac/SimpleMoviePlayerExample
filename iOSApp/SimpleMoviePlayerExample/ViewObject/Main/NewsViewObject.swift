@@ -7,7 +7,7 @@
 
 import Foundation
 
-final class NewsViewObject: MainDiffableDataSourceCompatible {
+final class NewsViewObject: Hashable {
 
     let id: MainNewsId
     let newsGenre: String

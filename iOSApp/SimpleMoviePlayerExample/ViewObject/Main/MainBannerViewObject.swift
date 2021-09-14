@@ -7,7 +7,7 @@
 
 import Foundation
 
-final class MainBannerViewObject: MainDiffableDataSourceCompatible {
+final class MainBannerViewObject: Hashable {
 
     let id: MainBannerId
     let title: String
