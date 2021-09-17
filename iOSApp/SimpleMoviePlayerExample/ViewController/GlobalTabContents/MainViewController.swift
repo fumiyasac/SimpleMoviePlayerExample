@@ -11,7 +11,7 @@ final class MainViewController: UIViewController {
 
     // MARK: - @IBOutlet
 
-    @IBOutlet weak var collectionView: UICollectionView!
+    @IBOutlet private weak var collectionView: UICollectionView!
 
     // MARK: - Override
 
