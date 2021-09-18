@@ -9,9 +9,24 @@ import UIKit
 
 final class MainViewController: UIViewController {
 
+    // MARK: - typealias
+
+    typealias Presenter = Void
+
     // MARK: - @IBOutlet
 
     @IBOutlet private weak var collectionView: UICollectionView!
+
+    // MARK: - Initializer
+
+    init?(coder: NSCoder, presenter: Presenter) {
+        // TODO: PresenterのDI処理を実施する
+        super.init(coder: coder)
+    }
+
+    required init?(coder: NSCoder) {
+        fatalError()
+    }
 
     // MARK: - Override
 

@@ -11,6 +11,8 @@ import UIKit
 // UIViewControllerの拡張
 extension UIViewController {
 
+    // MARK: - Public Function
+
     // この画面のナビゲーションバーを設定するメソッド
     public func setupNavigationBarTitle(_ title: String) {
 
@@ -42,5 +44,16 @@ extension UIViewController {
         // 戻るボタンの文言を消す
         let backButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
         self.navigationItem.backBarButtonItem = backButtonItem
+    }
+
+    // 回転の許可状態を考慮したUINavigationControllerを適用する
+    public func applyNavigationController(allowRotate: Bool = false) -> UINavigationController {
+
+        // MEMO: 端末の回転を許可する場合はUINavigationControllerを、そうでない場合はPortraitNavigationControllerを適用する
+        if allowRotate {
+            return UINavigationController(rootViewController: self)
+        } else {
+            return PortraitNavigationController(rootViewController: self)
+        }
     }
 }

@@ -11,6 +11,7 @@
 		53E89A3FFAD1A4BBC30E2E41 /* Pods_SimpleMoviePlayerExample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0F6E8B24C46852484C8DFBCD /* Pods_SimpleMoviePlayerExample.framework */; };
 		A98499EE6E510602F60CF7DB /* Pods_SimpleMoviePlayerExampleTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 820A67EF4479DEF9E9CC0642 /* Pods_SimpleMoviePlayerExampleTests.framework */; };
 		DE340E1926C958FE00FE230A /* FavoriteMainMovieRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE340E1826C958FE00FE230A /* FavoriteMainMovieRepository.swift */; };
+		DE3FBBED26F6331A00D5CA9C /* PortraitNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE3FBBEC26F6331900D5CA9C /* PortraitNavigationController.swift */; };
 		DE5F6E79267FC11F00FCD3A1 /* CustomViewBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE5F6E78267FC11F00FCD3A1 /* CustomViewBase.swift */; };
 		DE5F6E7B267FC19F00FCD3A1 /* NSObjectProtocolExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE5F6E7A267FC19F00FCD3A1 /* NSObjectProtocolExtension.swift */; };
 		DE5F6E7D267FC1AB00FCD3A1 /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE5F6E7C267FC1AB00FCD3A1 /* UIColorExtension.swift */; };
@@ -162,6 +163,7 @@
 		CF32871968371738901CE35F /* Pods-SimpleMoviePlayerExampleTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SimpleMoviePlayerExampleTests.debug.xcconfig"; path = "Target Support Files/Pods-SimpleMoviePlayerExampleTests/Pods-SimpleMoviePlayerExampleTests.debug.xcconfig"; sourceTree = "<group>"; };
 		D7A777ED43B2100757C4421E /* Pods-SimpleMoviePlayerExample-SimpleMoviePlayerExampleUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SimpleMoviePlayerExample-SimpleMoviePlayerExampleUITests.release.xcconfig"; path = "Target Support Files/Pods-SimpleMoviePlayerExample-SimpleMoviePlayerExampleUITests/Pods-SimpleMoviePlayerExample-SimpleMoviePlayerExampleUITests.release.xcconfig"; sourceTree = "<group>"; };
 		DE340E1826C958FE00FE230A /* FavoriteMainMovieRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteMainMovieRepository.swift; sourceTree = "<group>"; };
+		DE3FBBEC26F6331900D5CA9C /* PortraitNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PortraitNavigationController.swift; sourceTree = "<group>"; };
 		DE5F6E78267FC11F00FCD3A1 /* CustomViewBase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomViewBase.swift; sourceTree = "<group>"; };
 		DE5F6E7A267FC19F00FCD3A1 /* NSObjectProtocolExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSObjectProtocolExtension.swift; sourceTree = "<group>"; };
 		DE5F6E7C267FC1AB00FCD3A1 /* UIColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
@@ -358,6 +360,7 @@
 			children = (
 				DE5F6E78267FC11F00FCD3A1 /* CustomViewBase.swift */,
 				DEAE7EF9268A19EE009ACBD9 /* PlayerView.swift */,
+				DE3FBBEC26F6331900D5CA9C /* PortraitNavigationController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1209,6 +1212,7 @@
 				DEA6BD0326B6FBE800196CC3 /* NotificationNameExtension.swift in Sources */,
 				DE8DFD6926BD91E600CAB778 /* MainBannerId.swift in Sources */,
 				DE8DFD5F26BD858900CAB778 /* MainMovieId.swift in Sources */,
+				DE3FBBED26F6331A00D5CA9C /* PortraitNavigationController.swift in Sources */,
 				DE8DFD7D26BFC0AD00CAB778 /* LastShownFeaturedMoviePlayTimeLocalStore.swift in Sources */,
 				DEB9710526D7D866004D7B56 /* GetFavoriteMainMoviesUseCase.swift in Sources */,
 				DECA7FF226E19558005B05E2 /* ProfileRepository.swift in Sources */,

@@ -19,6 +19,27 @@ final class GlobalTabBarController: UITabBarController {
 
     // MARK: - Override
 
+    // 画面の回転処理に関するハンドリング
+    // supportedInterfaceOrientationsはTabBarControllerやNavigationControllerを利用する際はルートの設定が反映される。
+    // → よってGlobalTabBarControllerでは、選択されたタブのルートなる部分での回転に関する設定を取得してその値を適用する。
+    // https://qiita.com/orimomo/items/6ab57c6706a8dbc181a1
+
+    override var shouldAutorotate: Bool {
+        if let vc = selectedViewController {
+            return vc.shouldAutorotate
+        } else {
+            return true
+        }
+    }
+
+    override var supportedInterfaceOrientations: UIInterfaceOrientationMask {
+        if let vc = selectedViewController {
+            return vc.supportedInterfaceOrientations
+        } else {
+            return .allButUpsideDown
+        }
+    }
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -33,28 +54,24 @@ final class GlobalTabBarController: UITabBarController {
         // MEMO: UITabBarControllerDelegateの宣言
         self.delegate = self
 
-        // MEMO: 各画面の土台となるUINavigationControllerをセットする
-        let mainNavigationController = UINavigationController()
-        let favoriteNavigationController = UINavigationController()
-        let settingsNavigationController = UINavigationController()
+        // MEMO: Storyboardを利用したDI処理を実施する
+        // https://qiita.com/shtnkgm/items/cad6f52c489612628fd4
+        let mainViewController = UIStoryboard(name: "MainViewController", bundle: nil).instantiateInitialViewController { coder in
+            MainViewController(coder: coder, presenter: ())
+        }!.applyNavigationController()
+        let favoriteViewController = UIStoryboard(name: "FavoriteViewController", bundle: nil).instantiateInitialViewController { coder in
+            FavoriteViewController(coder: coder, presenter: ())
+        }!.applyNavigationController()
+        let settingsViewController = UIStoryboard(name: "SettingsViewController", bundle: nil).instantiateInitialViewController() { coder in
+            SettingsViewController(coder: coder, presenter: ())
+        }!.applyNavigationController()
 
+        // MEMO: 各画面の土台となるUINavigationControllerをセットする
         self.viewControllers = [
-            mainNavigationController,
-            favoriteNavigationController,
-            settingsNavigationController
+            mainViewController,
+            favoriteViewController,
+            settingsViewController
         ]
-        mainNavigationController.pushViewController(
-            UIStoryboard(name: "MainViewController", bundle: nil).instantiateInitialViewController()!,
-            animated: false
-        )
-        favoriteNavigationController.pushViewController(
-            UIStoryboard(name: "FavoriteViewController", bundle: nil).instantiateInitialViewController()!,
-            animated: false
-        )
-        settingsNavigationController.pushViewController(
-            UIStoryboard(name: "SettingsViewController", bundle: nil).instantiateInitialViewController()!,
-            animated: false
-        )
 
         // MEMO: タブの選択時・非選択時の色とアイコンのサイズを決める
         // UITabBarItem用のAttributeを決める
