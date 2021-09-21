@@ -17,16 +17,23 @@ extension UIViewController {
     public func setupNavigationBarTitle(_ title: String) {
 
         // NavigationControllerのデザイン調整を行う
-        var attributes: [NSAttributedString.Key : Any] = [:]
-        attributes[NSAttributedString.Key.font] = UIFont(name: "HelveticaNeue-Bold", size: 14.0)
-        attributes[NSAttributedString.Key.foregroundColor] = UIColor.white
+        if #available(iOS 15, *) {
+            // Do Nothing.
+        } else {
 
-        // NavigationBarをタイトル配色を決定する
-        guard let nav = self.navigationController else {
-            return
+            guard let nav = self.navigationController else {
+                return
+            }
+
+            // MEMO: UINavigationBar内部におけるタイトル文字の装飾設定
+            var attributes: [NSAttributedString.Key : Any] = [:]
+            attributes[NSAttributedString.Key.font] = UIFont(name: "HelveticaNeue-Bold", size: 14.0)
+            attributes[NSAttributedString.Key.foregroundColor] = UIColor.white
+            nav.navigationBar.titleTextAttributes = attributes
+
+            // MEMO: UINavigationBar背景色の装飾設定
+            nav.navigationBar.barTintColor = UIColor(code: "#cda966")
         }
-        nav.navigationBar.barTintColor = UIColor(code: "#cda966")
-        nav.navigationBar.titleTextAttributes = attributes
 
         // タイトルを入れる
         self.navigationItem.title = title
