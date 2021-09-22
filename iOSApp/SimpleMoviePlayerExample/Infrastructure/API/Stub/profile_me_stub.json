@@ -1,10 +1,10 @@
 {
     "id": 1,
     "avatar_url": "https://github.com/fumiyasac.png",
-    "registered_date_string": "2021.07.21",
+    "registered_date": "2021.07.21",
     "name": "Fumiya Sakai",
     "nickname": "fumiyasac",
-    "birth_date_string": "1984.09.21",
+    "birth_date": "1984.09.21",
     "homepage_url": "https://just1factory.net/",
     "follows": 1391,
     "company": "Freelance Engineer",

@@ -2,7 +2,7 @@
     {
         "id": 1,
         "author_name": "petit_cake🍰",
-        "date_string": "2021.07.30",
+        "pubilshed_date": "2021.07.30",
         "thumbnail_url": "https://simple-movie-example.s3.ap-northeast-1.amazonaws.com/featured_movies/featured_sample1_thumb.png",
         "movies": {
             "low": "https://simple-movie-example.s3.ap-northeast-1.amazonaws.com/featured_movies/featured_sample1_l.mp4",
@@ -15,7 +15,7 @@
     {
         "id": 2,
         "author_name": "Beer好き🍺",
-        "date_string": "2021.07.30",
+        "pubilshed_date": "2021.07.30",
         "thumbnail_url": "https://simple-movie-example.s3.ap-northeast-1.amazonaws.com/featured_movies/featured_sample2_thumb.png",
         "movies": {
             "low": "https://simple-movie-example.s3.ap-northeast-1.amazonaws.com/featured_movies/featured_sample2_l.mp4",
@@ -28,7 +28,7 @@
     {
         "id": 3,
         "author_name": "三角おにぎり🍙",
-        "date_string": "2021.07.30",
+        "pubilshed_date": "2021.07.30",
         "thumbnail_url": "https://simple-movie-example.s3.ap-northeast-1.amazonaws.com/featured_movies/featured_sample3_thumb.png",
         "movies": {
             "low": "https://simple-movie-example.s3.ap-northeast-1.amazonaws.com/featured_movies/featured_sample3_l.mp4",
@@ -41,7 +41,7 @@
     {
         "id": 4,
         "author_name": "mini_strawberry🍓",
-        "date_string": "2021.07.30",
+        "pubilshed_date": "2021.07.30",
         "thumbnail_url": "https://simple-movie-example.s3.ap-northeast-1.amazonaws.com/featured_movies/featured_sample4_thumb.png",
         "movies": {
             "low": "https://simple-movie-example.s3.ap-northeast-1.amazonaws.com/featured_movies/featured_sample4_l.mp4",
