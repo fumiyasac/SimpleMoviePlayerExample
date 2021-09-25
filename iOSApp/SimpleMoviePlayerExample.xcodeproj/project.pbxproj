@@ -135,6 +135,8 @@
 		DECACEFE26E428F0007459C1 /* profile_activities_me_stub.json in Resources */ = {isa = PBXBuildFile; fileRef = DECACEFB26E428F0007459C1 /* profile_activities_me_stub.json */; };
 		DECACF0026E58F63007459C1 /* DeleteLastShownMainMoviePlayTimeUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = DECACEFF26E58F63007459C1 /* DeleteLastShownMainMoviePlayTimeUseCase.swift */; };
 		DECACF0226E592C2007459C1 /* DeleteLastShownFeatureMoviePlayTimeUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = DECACF0126E592C2007459C1 /* DeleteLastShownFeatureMoviePlayTimeUseCase.swift */; };
+		DECB814226FF4ECC008AE187 /* MainContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = DECB814126FF4ECC008AE187 /* MainContract.swift */; };
+		DECB814426FF4ED9008AE187 /* MainPresenterImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = DECB814326FF4ED9008AE187 /* MainPresenterImpl.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -291,6 +293,8 @@
 		DECACEFB26E428F0007459C1 /* profile_activities_me_stub.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = profile_activities_me_stub.json; sourceTree = "<group>"; };
 		DECACEFF26E58F63007459C1 /* DeleteLastShownMainMoviePlayTimeUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteLastShownMainMoviePlayTimeUseCase.swift; sourceTree = "<group>"; };
 		DECACF0126E592C2007459C1 /* DeleteLastShownFeatureMoviePlayTimeUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteLastShownFeatureMoviePlayTimeUseCase.swift; sourceTree = "<group>"; };
+		DECB814126FF4ECC008AE187 /* MainContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainContract.swift; sourceTree = "<group>"; };
+		DECB814326FF4ED9008AE187 /* MainPresenterImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPresenterImpl.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -427,6 +431,7 @@
 		DE5F6E6F267FBFC400FCD3A1 /* Contract */ = {
 			isa = PBXGroup;
 			children = (
+				DECB814126FF4ECC008AE187 /* MainContract.swift */,
 			);
 			path = Contract;
 			sourceTree = "<group>";
@@ -492,6 +497,7 @@
 		DE82CF2226A9C7F700033A62 /* Presenter */ = {
 			isa = PBXGroup;
 			children = (
+				DECB814326FF4ED9008AE187 /* MainPresenterImpl.swift */,
 			);
 			path = Presenter;
 			sourceTree = "<group>";
@@ -1187,8 +1193,10 @@
 				DE8DFD7726BFB54B00CAB778 /* InitialAppOpenLocalStore.swift in Sources */,
 				DE8DFD7026BD93B100CAB778 /* MainNewsEntity.swift in Sources */,
 				DE5F6E79267FC11F00FCD3A1 /* CustomViewBase.swift in Sources */,
+				DECB814426FF4ED9008AE187 /* MainPresenterImpl.swift in Sources */,
 				DEA3C08D26D9F1980080226E /* GetLastShownMainMoviePlayTimeUseCase.swift in Sources */,
 				DEA47538263F40AA00090DA5 /* MainViewController.swift in Sources */,
+				DECB814226FF4ECC008AE187 /* MainContract.swift in Sources */,
 				DEAE7EFA268A19EF009ACBD9 /* PlayerView.swift in Sources */,
 				DEB2313D26EE4D8D009A839B /* MovieQualityViewObject.swift in Sources */,
 				DE8DFDA426C7BE4E00CAB778 /* MoviePlayerError.swift in Sources */,

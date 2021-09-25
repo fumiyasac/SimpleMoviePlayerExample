@@ -13,6 +13,8 @@ final class MainViewController: UIViewController {
 
     typealias Presenter = Void
 
+    // MARK: - Propety
+
     // MARK: - @IBOutlet
 
     @IBOutlet private weak var collectionView: UICollectionView!
@@ -34,5 +36,13 @@ final class MainViewController: UIViewController {
         super.viewDidLoad()
 
         setupNavigationBarTitle(GlobalTabBarItems.main.getTabBarTitle())
+    }
+}
+
+// MARK: - MainView
+
+extension MainViewController: MainView {
+
+    func setupCollectionView() {
     }
 }
