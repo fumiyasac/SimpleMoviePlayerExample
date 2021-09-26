@@ -12,4 +12,6 @@ final class MainPresenterImpl: MainPresenter {
     func viewWillAppearTrigger() {}
     
     func refreshTrigger() {}
+
+    func addOrRemoveFavorite(mainMovieEntity: MainMovieEntity) {}
 }
