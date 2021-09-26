@@ -9,9 +9,9 @@ import UIKit
 
 final class FavoriteViewController: UIViewController {
 
-    // MARK: - typealias
-
-    typealias Presenter = Void
+    // MARK: - Propety
+    
+    private let presenter: FavoritePresenter
 
     // MARK: - @IBOutlet
 
@@ -19,8 +19,8 @@ final class FavoriteViewController: UIViewController {
 
     // MARK: - Initializer
 
-    init?(coder: NSCoder, presenter: Presenter) {
-        // TODO: PresenterのDI処理を実施する
+    init?(coder: NSCoder, presenter: FavoritePresenter) {
+        self.presenter = presenter
         super.init(coder: coder)
     }
 
@@ -35,4 +35,11 @@ final class FavoriteViewController: UIViewController {
 
         setupNavigationBarTitle(GlobalTabBarItems.favorite.getTabBarTitle())
     }
+}
+
+// MARK: - FavoriteView
+
+extension FavoriteViewController: FavoriteView {
+
+    func setupCollectionView() {}
 }

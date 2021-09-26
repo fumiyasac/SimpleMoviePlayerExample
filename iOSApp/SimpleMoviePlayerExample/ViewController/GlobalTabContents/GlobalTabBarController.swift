@@ -56,14 +56,26 @@ final class GlobalTabBarController: UITabBarController {
 
         // MEMO: Storyboardを利用したDI処理を実施する
         // https://qiita.com/shtnkgm/items/cad6f52c489612628fd4
+        // (1) MainViewController
         let mainViewController = UIStoryboard(name: "MainViewController", bundle: nil).instantiateInitialViewController { coder in
-            MainViewController(coder: coder, presenter: ())
+            MainViewController(
+                coder: coder,
+                presenter: PresenterFactory.createMainPresneter()
+            )
         }!.applyNavigationController()
+        // (2) FavoriteViewController
         let favoriteViewController = UIStoryboard(name: "FavoriteViewController", bundle: nil).instantiateInitialViewController { coder in
-            FavoriteViewController(coder: coder, presenter: ())
+            FavoriteViewController(
+                coder: coder,
+                presenter: PresenterFactory.createFavoritePresenter()
+            )
         }!.applyNavigationController()
+        // (3) SettingsViewController
         let settingsViewController = UIStoryboard(name: "SettingsViewController", bundle: nil).instantiateInitialViewController() { coder in
-            SettingsViewController(coder: coder, presenter: ())
+            SettingsViewController(
+                coder: coder,
+                presenter: PresenterFactory.createSettingsPresenter()
+            )
         }!.applyNavigationController()
 
         // MEMO: 各画面の土台となるUINavigationControllerをセットする

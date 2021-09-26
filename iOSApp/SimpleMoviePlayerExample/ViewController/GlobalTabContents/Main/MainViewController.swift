@@ -9,11 +9,9 @@ import UIKit
 
 final class MainViewController: UIViewController {
 
-    // MARK: - typealias
-
-    typealias Presenter = Void
-
     // MARK: - Propety
+    
+    private let presenter: MainPresenter
 
     // MARK: - @IBOutlet
 
@@ -21,8 +19,8 @@ final class MainViewController: UIViewController {
 
     // MARK: - Initializer
 
-    init?(coder: NSCoder, presenter: Presenter) {
-        // TODO: PresenterのDI処理を実施する
+    init?(coder: NSCoder, presenter: MainPresenter) {
+        self.presenter = presenter
         super.init(coder: coder)
     }
 

@@ -9,9 +9,9 @@ import UIKit
 
 final class SettingsViewController: UIViewController {
 
-    // MARK: - typealias
+    // MARK: - Propety
 
-    typealias Presenter = Void
+    private let presenter: SettingsPresenter
 
     // MARK: - @IBOutlet
 
@@ -19,8 +19,8 @@ final class SettingsViewController: UIViewController {
 
     // MARK: - Initializer
 
-    init?(coder: NSCoder, presenter: Presenter) {
-        // TODO: PresenterのDI処理を実施する
+    init?(coder: NSCoder, presenter: SettingsPresenter) {
+        self.presenter = presenter
         super.init(coder: coder)
     }
 
@@ -36,3 +36,11 @@ final class SettingsViewController: UIViewController {
         setupNavigationBarTitle(GlobalTabBarItems.settings.getTabBarTitle())
     }
 }
+
+// MARK: - SettingsView
+
+extension SettingsViewController: SettingsView {
+
+    func setupCollectionView() {}
+}
+

@@ -8,6 +8,7 @@
 import Foundation
 import RxSwift
 
+// MEMO: Infra/Repository/UseCaseについてはDIコンテナに登録する
 final class DependenciesDefinition {
 
     // MARK: - Function
@@ -195,6 +196,18 @@ final class DependenciesDefinition {
             )
         )
         dependecies.register(
+            SaveMovieQualityUseCase.self,
+            impl: SaveMovieQualityUseCaseImpl(
+                movieQualityRepository: dependecies.resolve(MovieQualityRepository.self)
+            )
+        )
+        dependecies.register(
+            SaveMovieSpeedUseCase.self,
+            impl: SaveMovieSpeedUseCaseImpl(
+                movieSpeedRepository: dependecies.resolve(MovieSpeedRepository.self)
+            )
+        )
+        dependecies.register(
             GetFavoriteMainMoviesUseCase.self,
             impl: GetFavoriteMainMoviesUseCaseImpl(
                 favoriteMainMovieRepository: dependecies.resolve(FavoriteMainMovieRepository.self)
@@ -249,12 +262,67 @@ final class DependenciesDefinition {
             )
         )
         dependecies.register(
+            GetInitialAppOpenUseCase.self,
+            impl: GetInitialAppOpenUseCaseImpl(
+                initialAppOpenRepository: dependecies.resolve(InitialAppOpenRepository.self)
+            )
+        )
+        dependecies.register(
+            ChangeFalseInitialAppOpenUseCase.self,
+            impl: ChangeFalseInitialAppOpenUseCaseImpl(
+                initialAppOpenRepository: dependecies.resolve(InitialAppOpenRepository.self)
+            )
+        )
+        dependecies.register(
             GetProfileUseCase.self,
             impl: GetProfileUseCaseImpl(
                 profileRepository: dependecies.resolve(ProfileRepository.self)
             )
         )
+    }
+}
 
-        // MARK: - Presenter
+// MEMO: PresenterについてはDIコンテナに登録せずにStoryboard初期化時にFactoryメソッドを利用して適用する
+final class PresenterFactory {
+
+    // MEMO: インスタンスを保持するための場所（UseCaseを呼び出すために利用する）
+    private static let dependecies = DependeciesContainer.shared
+
+    // MARK: - Static Function
+
+    static func createMainPresneter() -> MainPresenter {
+        return MainPresenterImpl(
+            getMainElementsUseCase: dependecies.resolve(GetMainElementsUseCase.self),
+            getFavoriteMainMoviesUseCase: dependecies.resolve(GetFavoriteMainMoviesUseCase.self),
+            saveFavoriteMainMovieUseCase: dependecies.resolve(SaveFavoriteMainMovieUseCase.self),
+            getInitialAppOpenUseCase: dependecies.resolve(GetInitialAppOpenUseCase.self),
+            changeFalseInitialAppOpenUseCase: dependecies.resolve(ChangeFalseInitialAppOpenUseCase.self),
+            mainScheduler: dependecies.resolve(ImmediateSchedulerType.self)
+        )
+    }
+
+    static func createMainBannerContainerPresenter() -> MainBannerContainerPresenter {
+        return MainBannerContainerPresenterImpl(
+            getCarouselMainBannersUseCase: dependecies.resolve(GetCarouselMainBannersUseCase.self),
+            mainScheduler: dependecies.resolve(ImmediateSchedulerType.self)
+        )
+    }
+
+    static func createFavoritePresenter() -> FavoritePresenter {
+        return FavoritePresenterImpl(
+            getFavoriteMainMoviesUseCase: dependecies.resolve(GetFavoriteMainMoviesUseCase.self),
+            deleteFavoriteMainMovieUseCase: dependecies.resolve(DeleteFavoriteMainMovieUseCase.self),
+            mainScheduler: dependecies.resolve(ImmediateSchedulerType.self)
+        )
+    }
+
+    static func createSettingsPresenter() -> SettingsPresenter {
+        return SettingsPresenterImpl(
+            getMovieSettingsUseCase: dependecies.resolve(GetMovieSettingsUseCase.self),
+            saveMovieQualityUseCase: dependecies.resolve(SaveMovieQualityUseCase.self),
+            saveMovieSpeedUseCase: dependecies.resolve(SaveMovieSpeedUseCase.self),
+            getQuestionsUseCase: dependecies.resolve(GetQuestionsUseCase.self),
+            mainScheduler: dependecies.resolve(ImmediateSchedulerType.self)
+        )
     }
 }
