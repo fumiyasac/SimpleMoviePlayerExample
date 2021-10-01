@@ -41,21 +41,21 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // https://shtnkgm.com/blog/2021-08-18-ios15.html
 
         if #available(iOS 15, *) {
-            let appearance = UINavigationBarAppearance()
+            let navigationBarAppearance = UINavigationBarAppearance()
             let navigationBar = UINavigationBar()
-            appearance.configureWithOpaqueBackground()
+            navigationBarAppearance.configureWithOpaqueBackground()
 
             // MEMO: UINavigationBar内部におけるタイトル文字の装飾設定
-            appearance.titleTextAttributes = [
+            navigationBarAppearance.titleTextAttributes = [
                 NSAttributedString.Key.font : UIFont(name: "HelveticaNeue-Bold", size: 14.0)!,
                 NSAttributedString.Key.foregroundColor : UIColor.white
             ]
 
             // MEMO: UINavigationBar背景色の装飾設定
-            appearance.backgroundColor = UIColor(code: "#cda966")
+            navigationBarAppearance.backgroundColor = UIColor(code: "#cda966")
 
-            navigationBar.standardAppearance = appearance
-            UINavigationBar.appearance().scrollEdgeAppearance = appearance
+            navigationBar.standardAppearance = navigationBarAppearance
+            UINavigationBar.appearance().scrollEdgeAppearance = navigationBarAppearance
         }
     }
 
