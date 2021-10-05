@@ -8,4 +8,9 @@
 import Foundation
 
 // sourcery: AutoMockable
-protocol ItemsScreenCoodinator: ScreenCoordinator {}
+protocol MainScreenCoodinator: ScreenCoordinator {
+    // メイン一覧画面からメイン動画詳細画面を表示する
+    func coordinateToMainMovieDetailPlayer(mainMovieId: MainMovieId)
+    // メイン一覧画面から特集動画詳細画面を表示する
+    func coordinateToFeaturedDetailPlayer()
+}
