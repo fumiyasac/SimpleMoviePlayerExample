@@ -10,6 +10,8 @@
 		49D1B7EF0A40F4BE6139D66A /* Pods_SimpleMoviePlayerExample_SimpleMoviePlayerExampleUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8EB340B7D1322CC9C702AB91 /* Pods_SimpleMoviePlayerExample_SimpleMoviePlayerExampleUITests.framework */; };
 		53E89A3FFAD1A4BBC30E2E41 /* Pods_SimpleMoviePlayerExample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0F6E8B24C46852484C8DFBCD /* Pods_SimpleMoviePlayerExample.framework */; };
 		A98499EE6E510602F60CF7DB /* Pods_SimpleMoviePlayerExampleTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 820A67EF4479DEF9E9CC0642 /* Pods_SimpleMoviePlayerExampleTests.framework */; };
+		DE24CC1C270C9A6000246E69 /* ScreenCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE24CC1B270C9A6000246E69 /* ScreenCoordinator.swift */; };
+		DE24CC1E270C9B2700246E69 /* MainScreenCoodinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE24CC1D270C9B2700246E69 /* MainScreenCoodinator.swift */; };
 		DE340E1926C958FE00FE230A /* FavoriteMainMovieRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE340E1826C958FE00FE230A /* FavoriteMainMovieRepository.swift */; };
 		DE3FBBED26F6331A00D5CA9C /* PortraitNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE3FBBEC26F6331900D5CA9C /* PortraitNavigationController.swift */; };
 		DE5F6E79267FC11F00FCD3A1 /* CustomViewBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE5F6E78267FC11F00FCD3A1 /* CustomViewBase.swift */; };
@@ -174,6 +176,8 @@
 		BC9841BE6F00408A52C81066 /* Pods-SimpleMoviePlayerExample-SimpleMoviePlayerExampleUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SimpleMoviePlayerExample-SimpleMoviePlayerExampleUITests.debug.xcconfig"; path = "Target Support Files/Pods-SimpleMoviePlayerExample-SimpleMoviePlayerExampleUITests/Pods-SimpleMoviePlayerExample-SimpleMoviePlayerExampleUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		CF32871968371738901CE35F /* Pods-SimpleMoviePlayerExampleTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SimpleMoviePlayerExampleTests.debug.xcconfig"; path = "Target Support Files/Pods-SimpleMoviePlayerExampleTests/Pods-SimpleMoviePlayerExampleTests.debug.xcconfig"; sourceTree = "<group>"; };
 		D7A777ED43B2100757C4421E /* Pods-SimpleMoviePlayerExample-SimpleMoviePlayerExampleUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SimpleMoviePlayerExample-SimpleMoviePlayerExampleUITests.release.xcconfig"; path = "Target Support Files/Pods-SimpleMoviePlayerExample-SimpleMoviePlayerExampleUITests/Pods-SimpleMoviePlayerExample-SimpleMoviePlayerExampleUITests.release.xcconfig"; sourceTree = "<group>"; };
+		DE24CC1B270C9A6000246E69 /* ScreenCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenCoordinator.swift; sourceTree = "<group>"; };
+		DE24CC1D270C9B2700246E69 /* MainScreenCoodinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenCoodinator.swift; sourceTree = "<group>"; };
 		DE340E1826C958FE00FE230A /* FavoriteMainMovieRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteMainMovieRepository.swift; sourceTree = "<group>"; };
 		DE3FBBEC26F6331900D5CA9C /* PortraitNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PortraitNavigationController.swift; sourceTree = "<group>"; };
 		DE5F6E78267FC11F00FCD3A1 /* CustomViewBase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomViewBase.swift; sourceTree = "<group>"; };
@@ -693,6 +697,15 @@
 			path = SQLiteTable;
 			sourceTree = "<group>";
 		};
+		DE9F05BB270C158E0035BEFB /* Coodinator */ = {
+			isa = PBXGroup;
+			children = (
+				DE24CC1B270C9A6000246E69 /* ScreenCoordinator.swift */,
+				DE24CC1D270C9B2700246E69 /* MainScreenCoodinator.swift */,
+			);
+			path = Coodinator;
+			sourceTree = "<group>";
+		};
 		DEA47527263F40AA00090DA5 = {
 			isa = PBXGroup;
 			children = (
@@ -723,6 +736,7 @@
 				DEA47535263F40AA00090DA5 /* SceneDelegate.swift */,
 				DEA4753C263F40AC00090DA5 /* Assets.xcassets */,
 				DEA4753E263F40AC00090DA5 /* LaunchScreen.storyboard */,
+				DE9F05BB270C158E0035BEFB /* Coodinator */,
 				DEB529EF2684B0ED000C33A2 /* Dependencies */,
 				DE5F6E6C267FBF0700FCD3A1 /* Enum */,
 				DE5F6E6B267FBF0100FCD3A1 /* Extension */,
@@ -1238,6 +1252,7 @@
 				DE8DFD9626C55EBB00CAB778 /* InitialAppOpenRepository.swift in Sources */,
 				DE8DFD6126BD859B00CAB778 /* MainMovieEntity.swift in Sources */,
 				DE8DFD6426BD911E00CAB778 /* FeaturedMovieId.swift in Sources */,
+				DE24CC1E270C9B2700246E69 /* MainScreenCoodinator.swift in Sources */,
 				DE8DFD7726BFB54B00CAB778 /* InitialAppOpenLocalStore.swift in Sources */,
 				DE8DFD7026BD93B100CAB778 /* MainNewsEntity.swift in Sources */,
 				DE5F6E79267FC11F00FCD3A1 /* CustomViewBase.swift in Sources */,
@@ -1328,6 +1343,7 @@
 				DECB814A2700D5AD008AE187 /* FavoriteContract.swift in Sources */,
 				DEA3C09126D9F1D60080226E /* SaveLastShownMainMoviePlayTimeUseCase.swift in Sources */,
 				DE82CF3526ABF38400033A62 /* MovieDetailViewController.swift in Sources */,
+				DE24CC1C270C9A6000246E69 /* ScreenCoordinator.swift in Sources */,
 				DE82CF2A26A9CCAA00033A62 /* SQLiteManager.swift in Sources */,
 				DE8DFD5D26BD850400CAB778 /* MoviesEntity.swift in Sources */,
 				DEB9710326D7D439004D7B56 /* GetMovieSettingsUseCase.swift in Sources */,
