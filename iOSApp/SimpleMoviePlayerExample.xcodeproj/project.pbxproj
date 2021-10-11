@@ -10,6 +10,9 @@
 		49D1B7EF0A40F4BE6139D66A /* Pods_SimpleMoviePlayerExample_SimpleMoviePlayerExampleUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8EB340B7D1322CC9C702AB91 /* Pods_SimpleMoviePlayerExample_SimpleMoviePlayerExampleUITests.framework */; };
 		53E89A3FFAD1A4BBC30E2E41 /* Pods_SimpleMoviePlayerExample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0F6E8B24C46852484C8DFBCD /* Pods_SimpleMoviePlayerExample.framework */; };
 		A98499EE6E510602F60CF7DB /* Pods_SimpleMoviePlayerExampleTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 820A67EF4479DEF9E9CC0642 /* Pods_SimpleMoviePlayerExampleTests.framework */; };
+		DE0BFBA527148B6100FC0F32 /* Quick in Frameworks */ = {isa = PBXBuildFile; productRef = DE0BFBA427148B6100FC0F32 /* Quick */; };
+		DE0BFBA727148B6900FC0F32 /* Nimble in Frameworks */ = {isa = PBXBuildFile; productRef = DE0BFBA627148B6900FC0F32 /* Nimble */; };
+		DE0BFBA927148B7000FC0F32 /* SwiftyMocky in Frameworks */ = {isa = PBXBuildFile; productRef = DE0BFBA827148B7000FC0F32 /* SwiftyMocky */; };
 		DE24CC1C270C9A6000246E69 /* ScreenCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE24CC1B270C9A6000246E69 /* ScreenCoordinator.swift */; };
 		DE24CC1E270C9B2700246E69 /* MainScreenCoodinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE24CC1D270C9B2700246E69 /* MainScreenCoodinator.swift */; };
 		DE24CC202711DCDD00246E69 /* FavoriteCoodinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE24CC1F2711DCDD00246E69 /* FavoriteCoodinator.swift */; };
@@ -340,6 +343,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DE0BFBA927148B7000FC0F32 /* SwiftyMocky in Frameworks */,
+				DE0BFBA727148B6900FC0F32 /* Nimble in Frameworks */,
+				DE0BFBA527148B6100FC0F32 /* Quick in Frameworks */,
 				A98499EE6E510602F60CF7DB /* Pods_SimpleMoviePlayerExampleTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1020,6 +1026,11 @@
 				DEA47548263F40AC00090DA5 /* PBXTargetDependency */,
 			);
 			name = SimpleMoviePlayerExampleTests;
+			packageProductDependencies = (
+				DE0BFBA427148B6100FC0F32 /* Quick */,
+				DE0BFBA627148B6900FC0F32 /* Nimble */,
+				DE0BFBA827148B7000FC0F32 /* SwiftyMocky */,
+			);
 			productName = SimpleMoviePlayerExampleTests;
 			productReference = DEA47546263F40AC00090DA5 /* SimpleMoviePlayerExampleTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
@@ -1819,6 +1830,21 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		DE0BFBA427148B6100FC0F32 /* Quick */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DEB529E6267FC8C6000C33A2 /* XCRemoteSwiftPackageReference "Quick" */;
+			productName = Quick;
+		};
+		DE0BFBA627148B6900FC0F32 /* Nimble */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DEB529E7267FC8E5000C33A2 /* XCRemoteSwiftPackageReference "Nimble" */;
+			productName = Nimble;
+		};
+		DE0BFBA827148B7000FC0F32 /* SwiftyMocky */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DEBB956C271487C5008748E7 /* XCRemoteSwiftPackageReference "SwiftyMocky" */;
+			productName = SwiftyMocky;
+		};
 		DE82CF1D26A9C65900033A62 /* SwiftyUserDefaults */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = DE82CF1C26A9C65900033A62 /* XCRemoteSwiftPackageReference "SwiftyUserDefaults" */;

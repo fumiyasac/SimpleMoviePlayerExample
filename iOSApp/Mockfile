@@ -11,3 +11,5 @@ SimpleMoviePlayerExampleTests:
   - SimpleMoviePlayerExample
   import:
   - Foundation
+  - UIKit
+  - RxSwift

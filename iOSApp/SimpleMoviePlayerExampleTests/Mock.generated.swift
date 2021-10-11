@@ -8,6 +8,8 @@
 import SwiftyMocky
 import XCTest
 import Foundation
+import UIKit
+import RxSwift
 @testable import SimpleMoviePlayerExample
 
 
