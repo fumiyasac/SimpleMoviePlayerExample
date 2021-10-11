@@ -130,6 +130,8 @@
 		DEB9710C26D7DBF4004D7B56 /* FavoriteMainMovieEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEB9710B26D7DBF4004D7B56 /* FavoriteMainMovieEntity.swift */; };
 		DEB9710E26D7DFBD004D7B56 /* DeleteFavoriteMainMovieUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEB9710D26D7DFBD004D7B56 /* DeleteFavoriteMainMovieUseCase.swift */; };
 		DEB9711026D7E0E7004D7B56 /* SaveFavoriteMainMovieUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEB9710F26D7E0E7004D7B56 /* SaveFavoriteMainMovieUseCase.swift */; };
+		DEBB956B2714848B008748E7 /* InitialAppOpenLocalStoreSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEBB956A2714848B008748E7 /* InitialAppOpenLocalStoreSpec.swift */; };
+		DEBB956E271487C5008748E7 /* SwiftyMocky in Frameworks */ = {isa = PBXBuildFile; productRef = DEBB956D271487C5008748E7 /* SwiftyMocky */; };
 		DECA7FF226E19558005B05E2 /* ProfileRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = DECA7FF126E19558005B05E2 /* ProfileRepository.swift */; };
 		DECACEF626E30B36007459C1 /* GetProfileUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = DECACEF526E30B36007459C1 /* GetProfileUseCase.swift */; };
 		DECACEF826E30B5C007459C1 /* ProfileDto.swift in Sources */ = {isa = PBXBuildFile; fileRef = DECACEF726E30B5C007459C1 /* ProfileDto.swift */; };
@@ -299,6 +301,7 @@
 		DEB9710B26D7DBF4004D7B56 /* FavoriteMainMovieEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteMainMovieEntity.swift; sourceTree = "<group>"; };
 		DEB9710D26D7DFBD004D7B56 /* DeleteFavoriteMainMovieUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteFavoriteMainMovieUseCase.swift; sourceTree = "<group>"; };
 		DEB9710F26D7E0E7004D7B56 /* SaveFavoriteMainMovieUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveFavoriteMainMovieUseCase.swift; sourceTree = "<group>"; };
+		DEBB956A2714848B008748E7 /* InitialAppOpenLocalStoreSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialAppOpenLocalStoreSpec.swift; sourceTree = "<group>"; };
 		DECA7FF126E19558005B05E2 /* ProfileRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileRepository.swift; sourceTree = "<group>"; };
 		DECACEF526E30B36007459C1 /* GetProfileUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetProfileUseCase.swift; sourceTree = "<group>"; };
 		DECACEF726E30B5C007459C1 /* ProfileDto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileDto.swift; sourceTree = "<group>"; };
@@ -328,6 +331,7 @@
 				DEB529DF267FC4E4000C33A2 /* GRDB in Frameworks */,
 				53E89A3FFAD1A4BBC30E2E41 /* Pods_SimpleMoviePlayerExample.framework in Frameworks */,
 				DE9F05BA2709FAD10035BEFB /* UICircularProgressRing in Frameworks */,
+				DEBB956E271487C5008748E7 /* SwiftyMocky in Frameworks */,
 				DE82CF1E26A9C65900033A62 /* SwiftyUserDefaults in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -760,6 +764,7 @@
 		DEA47549263F40AC00090DA5 /* SimpleMoviePlayerExampleTests */ = {
 			isa = PBXGroup;
 			children = (
+				DEBB956927148436008748E7 /* Infrastructure */,
 				DEB529E9267FCE08000C33A2 /* Mock.generated.swift */,
 				DEA4754A263F40AC00090DA5 /* SimpleMoviePlayerExampleTests.swift */,
 				DEA4754C263F40AC00090DA5 /* Info.plist */,
@@ -937,6 +942,14 @@
 			path = Question;
 			sourceTree = "<group>";
 		};
+		DEBB956927148436008748E7 /* Infrastructure */ = {
+			isa = PBXGroup;
+			children = (
+				DEBB956A2714848B008748E7 /* InitialAppOpenLocalStoreSpec.swift */,
+			);
+			path = Infrastructure;
+			sourceTree = "<group>";
+		};
 		DECB814D2700D5F5008AE187 /* Main */ = {
 			isa = PBXGroup;
 			children = (
@@ -985,6 +998,7 @@
 				DE82CF1D26A9C65900033A62 /* SwiftyUserDefaults */,
 				DEA6BD1026B99B0900196CC3 /* FloatingPanel */,
 				DE9F05B92709FAD10035BEFB /* UICircularProgressRing */,
+				DEBB956D271487C5008748E7 /* SwiftyMocky */,
 			);
 			productName = SimpleMoviePlayerExample;
 			productReference = DEA47530263F40AA00090DA5 /* SimpleMoviePlayerExample.app */;
@@ -1063,13 +1077,13 @@
 			mainGroup = DEA47527263F40AA00090DA5;
 			packageReferences = (
 				DEB529DD267FC4E4000C33A2 /* XCRemoteSwiftPackageReference "GRDB.swift" */,
-				DEB529E4267FC5BB000C33A2 /* XCRemoteSwiftPackageReference "SwiftyMocky" */,
 				DEB529E5267FC87D000C33A2 /* XCRemoteSwiftPackageReference "SDWebImage" */,
 				DEB529E6267FC8C6000C33A2 /* XCRemoteSwiftPackageReference "Quick" */,
 				DEB529E7267FC8E5000C33A2 /* XCRemoteSwiftPackageReference "Nimble" */,
 				DE82CF1C26A9C65900033A62 /* XCRemoteSwiftPackageReference "SwiftyUserDefaults" */,
 				DEA6BD0F26B99B0900196CC3 /* XCRemoteSwiftPackageReference "FloatingPanel" */,
 				DE9F05B82709FAD10035BEFB /* XCRemoteSwiftPackageReference "UICircularProgressRing" */,
+				DEBB956C271487C5008748E7 /* XCRemoteSwiftPackageReference "SwiftyMocky" */,
 			);
 			productRefGroup = DEA47531263F40AA00090DA5 /* Products */;
 			projectDirPath = "";
@@ -1371,6 +1385,7 @@
 			files = (
 				DEB529EA267FCE08000C33A2 /* Mock.generated.swift in Sources */,
 				DEA4754B263F40AC00090DA5 /* SimpleMoviePlayerExampleTests.swift in Sources */,
+				DEBB956B2714848B008748E7 /* InitialAppOpenLocalStoreSpec.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1769,14 +1784,6 @@
 				minimumVersion = 5.0.0;
 			};
 		};
-		DEB529E4267FC5BB000C33A2 /* XCRemoteSwiftPackageReference "SwiftyMocky" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/MakeAWishFoundation/SwiftyMocky.git";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 4.0.0;
-			};
-		};
 		DEB529E5267FC87D000C33A2 /* XCRemoteSwiftPackageReference "SDWebImage" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/SDWebImage/SDWebImage.git";
@@ -1801,6 +1808,14 @@
 				minimumVersion = 9.0.0;
 			};
 		};
+		DEBB956C271487C5008748E7 /* XCRemoteSwiftPackageReference "SwiftyMocky" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/MakeAWishFoundation/SwiftyMocky.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.0.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -1823,6 +1838,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = DEB529DD267FC4E4000C33A2 /* XCRemoteSwiftPackageReference "GRDB.swift" */;
 			productName = GRDB;
+		};
+		DEBB956D271487C5008748E7 /* SwiftyMocky */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DEBB956C271487C5008748E7 /* XCRemoteSwiftPackageReference "SwiftyMocky" */;
+			productName = SwiftyMocky;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
