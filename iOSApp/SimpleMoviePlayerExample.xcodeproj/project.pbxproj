@@ -134,7 +134,6 @@
 		DEB9710E26D7DFBD004D7B56 /* DeleteFavoriteMainMovieUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEB9710D26D7DFBD004D7B56 /* DeleteFavoriteMainMovieUseCase.swift */; };
 		DEB9711026D7E0E7004D7B56 /* SaveFavoriteMainMovieUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEB9710F26D7E0E7004D7B56 /* SaveFavoriteMainMovieUseCase.swift */; };
 		DEBB956B2714848B008748E7 /* InitialAppOpenLocalStoreSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEBB956A2714848B008748E7 /* InitialAppOpenLocalStoreSpec.swift */; };
-		DEBB956E271487C5008748E7 /* SwiftyMocky in Frameworks */ = {isa = PBXBuildFile; productRef = DEBB956D271487C5008748E7 /* SwiftyMocky */; };
 		DECA7FF226E19558005B05E2 /* ProfileRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = DECA7FF126E19558005B05E2 /* ProfileRepository.swift */; };
 		DECACEF626E30B36007459C1 /* GetProfileUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = DECACEF526E30B36007459C1 /* GetProfileUseCase.swift */; };
 		DECACEF826E30B5C007459C1 /* ProfileDto.swift in Sources */ = {isa = PBXBuildFile; fileRef = DECACEF726E30B5C007459C1 /* ProfileDto.swift */; };
@@ -334,7 +333,6 @@
 				DEB529DF267FC4E4000C33A2 /* GRDB in Frameworks */,
 				53E89A3FFAD1A4BBC30E2E41 /* Pods_SimpleMoviePlayerExample.framework in Frameworks */,
 				DE9F05BA2709FAD10035BEFB /* UICircularProgressRing in Frameworks */,
-				DEBB956E271487C5008748E7 /* SwiftyMocky in Frameworks */,
 				DE82CF1E26A9C65900033A62 /* SwiftyUserDefaults in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1004,7 +1002,6 @@
 				DE82CF1D26A9C65900033A62 /* SwiftyUserDefaults */,
 				DEA6BD1026B99B0900196CC3 /* FloatingPanel */,
 				DE9F05B92709FAD10035BEFB /* UICircularProgressRing */,
-				DEBB956D271487C5008748E7 /* SwiftyMocky */,
 			);
 			productName = SimpleMoviePlayerExample;
 			productReference = DEA47530263F40AA00090DA5 /* SimpleMoviePlayerExample.app */;
@@ -1864,11 +1861,6 @@
 			isa = XCSwiftPackageProductDependency;
 			package = DEB529DD267FC4E4000C33A2 /* XCRemoteSwiftPackageReference "GRDB.swift" */;
 			productName = GRDB;
-		};
-		DEBB956D271487C5008748E7 /* SwiftyMocky */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = DEBB956C271487C5008748E7 /* XCRemoteSwiftPackageReference "SwiftyMocky" */;
-			productName = SwiftyMocky;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
