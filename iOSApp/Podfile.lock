@@ -5,16 +5,16 @@ PODS:
   - EasyTipView (2.1.0)
   - FontAwesome.swift (1.9.1)
   - GrowingTextView (0.7.2)
-  - RxBlocking (6.1.0):
-    - RxSwift (= 6.1.0)
-  - RxCocoa (6.1.0):
-    - RxRelay (= 6.1.0)
-    - RxSwift (= 6.1.0)
-  - RxRelay (6.1.0):
-    - RxSwift (= 6.1.0)
-  - RxSwift (6.1.0)
-  - RxTest (6.1.0):
-    - RxSwift (= 6.1.0)
+  - RxBlocking (6.2.0):
+    - RxSwift (= 6.2.0)
+  - RxCocoa (6.2.0):
+    - RxRelay (= 6.2.0)
+    - RxSwift (= 6.2.0)
+  - RxRelay (6.2.0):
+    - RxSwift (= 6.2.0)
+  - RxSwift (6.2.0)
+  - RxTest (6.2.0):
+    - RxSwift (= 6.2.0)
 
 DEPENDENCIES:
   - ActiveLabel
@@ -23,10 +23,10 @@ DEPENDENCIES:
   - EasyTipView (~> 2.1)
   - FontAwesome.swift
   - GrowingTextView (= 0.7.2)
-  - RxBlocking
-  - RxCocoa
-  - RxSwift
-  - RxTest
+  - RxBlocking (= 6.2.0)
+  - RxCocoa (= 6.2.0)
+  - RxSwift (= 6.2.0)
+  - RxTest (= 6.2.0)
 
 SPEC REPOS:
   trunk:
@@ -49,12 +49,12 @@ SPEC CHECKSUMS:
   EasyTipView: a92b6edc377b81c5ac18e9fd35d5ee78e9409488
   FontAwesome.swift: 6b52cb7be66eacd28cbfaa0ca7ffd0de4a186a1d
   GrowingTextView: 876bf42005b5e4a4fd740597db12caaf41f0fe6c
-  RxBlocking: 602095fba0bce7b16b56ccec89edf780c248b7d9
-  RxCocoa: 5c51f02d562cbd94629f6c26cf0c80fe4ab8d343
-  RxRelay: 483e1a19fad961b41f0b0c0bee506f46c1ae14fe
-  RxSwift: a834e5c538e89eca0cae86f403f4fbf0336786ce
-  RxTest: 9d26616eaff4a7e75f4ecae9b2c24840f2e8218d
+  RxBlocking: 0b29f7d2079109a8de49c411381bed7c33ef1eeb
+  RxCocoa: 4baf94bb35f2c0ab31bc0cb9f1900155f646ba42
+  RxRelay: e72dbfd157807478401ef1982e1c61c945c94b2f
+  RxSwift: d356ab7bee873611322f134c5f9ef379fa183d8f
+  RxTest: 0c692fa672b694373ba86d2b00033595297a2831
 
-PODFILE CHECKSUM: 2b59d3252377a26f689358967902ca7dab53fba0
+PODFILE CHECKSUM: 2d19847d48ea2fb1133091569c32b79c2f49a9d0
 
 COCOAPODS: 1.10.1
