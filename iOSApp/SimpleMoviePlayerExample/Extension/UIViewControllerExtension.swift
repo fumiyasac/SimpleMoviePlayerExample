@@ -14,7 +14,7 @@ extension UIViewController {
     // MARK: - Public Function
 
     // この画面のナビゲーションバーを設定するメソッド
-    public func setupNavigationBarTitle(_ title: String) {
+    func setupNavigationBarTitle(_ title: String) {
 
         // NavigationControllerのデザイン調整を行う
         if #available(iOS 15, *) {
@@ -40,7 +40,7 @@ extension UIViewController {
     }
 
     // 戻るボタンの「戻る」テキストを削除した状態にするメソッド
-    public func removeBackButtonText() {
+    func removeBackButtonText() {
 
         // NavigationBarをタイトル配色を決定する
         guard let nav = self.navigationController else {
@@ -54,7 +54,7 @@ extension UIViewController {
     }
 
     // 回転の許可状態を考慮したUINavigationControllerを適用する
-    public func applyNavigationController(allowRotate: Bool = false) -> UINavigationController {
+    func applyNavigationController(allowRotate: Bool = false) -> UINavigationController {
 
         // MEMO: 端末の回転を許可する場合はUINavigationControllerを、そうでない場合はPortraitNavigationControllerを適用する
         if allowRotate {
