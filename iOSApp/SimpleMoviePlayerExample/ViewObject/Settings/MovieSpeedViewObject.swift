@@ -17,7 +17,7 @@ final class MovieSpeedViewObject: Hashable {
 
     init(movieSpeed: MovieSpeed) {
         self.movieSpeed = movieSpeed
-        title = "動画解像度"
+        title = "動画速度"
         value = "\(movieSpeed.rawValue)"
     }
 
