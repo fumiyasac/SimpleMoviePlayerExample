@@ -24,7 +24,7 @@ final class SQLiteManager: SQLiteHelper {
     // MARK: - Properies
 
     private let fileManager = FileManager.default
-    private let databaseFileName = "application.db"
+    private let databaseFileName = "database.sqlite"
 
     // MARK: - Initializer
 
@@ -73,6 +73,7 @@ final class SQLiteManager: SQLiteHelper {
     // DB格納先ファイルパス取得処理
     private func getDatabaseFilePath() -> String {
         let documentPath = fileManager.urls(for: .documentDirectory, in: .userDomainMask)[0].absoluteString
-        return documentPath + databaseFileName
+        // MEMO: "file://"の部分が不要だったので処理のタイミングでパス文字列取得時に削除しています
+        return documentPath.replacingOccurrences(of: "file://", with: "") + databaseFileName
     }
 }
