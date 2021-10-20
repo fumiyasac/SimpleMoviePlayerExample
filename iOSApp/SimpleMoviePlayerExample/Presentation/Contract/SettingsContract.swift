@@ -9,9 +9,9 @@ import Foundation
 
 // sourcery: AutoMockable
 protocol SettingsView: AnyObject {
-    func setupCollectionView()
+    func setupContents()
 }
 
 protocol SettingsPresenter: AnyObject {
-    func viewWillAppearTrigger()
+    func viewDidLoadTrigger()
 }

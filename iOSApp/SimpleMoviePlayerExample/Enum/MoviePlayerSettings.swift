@@ -13,6 +13,19 @@ enum MovieQuality: Int, CaseIterable, DefaultsSerializable {
     case low
     case medium
     case high
+
+    // MARK: - Function
+
+    func getQualityText() -> String {
+        switch self {
+        case .low:
+            return "低(540)"
+        case .medium:
+            return "中(720)"
+        case .high:
+            return "高(1080)"
+        }
+    }
 }
 
 // MEMO: 再生レートの定義
