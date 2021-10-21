@@ -101,7 +101,7 @@ final class GlobalTabBarController: UITabBarController {
             self.viewControllers?[index].tabBarItem.tag = index
 
             // 該当ViewControllerのタイトルの設定
-            self.viewControllers?[index].title = tabBarItem.getTabBarTitle()
+            self.viewControllers?[index].title = tabBarItem.title
 
             // NavigationControllerのデザイン調整を行う
             // MEMO: iOS15以降ではこちらの方法では適用されない点に注意
@@ -113,13 +113,13 @@ final class GlobalTabBarController: UITabBarController {
             }
             self.viewControllers?[index].tabBarItem.titlePositionAdjustment = UIOffset(horizontal: 0.0, vertical: -1.5)
             self.viewControllers?[index].tabBarItem.image = UIImage.fontAwesomeIcon(
-                name: tabBarItem.getTabBarIconName(),
+                name: tabBarItem.icon,
                 style: .solid,
                 textColor: normalColor,
                 size: itemSize
             ).withRenderingMode(.alwaysOriginal)
             self.viewControllers?[index].tabBarItem.selectedImage = UIImage.fontAwesomeIcon(
-                name: tabBarItem.getTabBarIconName(),
+                name: tabBarItem.icon,
                 style: .solid, textColor: selectedColor,
                 size: itemSize
             ).withRenderingMode(.alwaysOriginal)

@@ -34,5 +34,5 @@ final class SettingsPresenterImpl: SettingsPresenter {
 
     // MARK: - Function
 
-    func viewWillAppearTrigger() {}
+    func viewDidLoadTrigger() {}
 }

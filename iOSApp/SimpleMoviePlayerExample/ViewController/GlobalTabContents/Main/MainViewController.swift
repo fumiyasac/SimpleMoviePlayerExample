@@ -33,7 +33,7 @@ final class MainViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        setupNavigationBarTitle(GlobalTabBarItems.main.getTabBarTitle())
+        setupNavigationBarTitle(GlobalTabBarItems.main.title)
     }
 }
 

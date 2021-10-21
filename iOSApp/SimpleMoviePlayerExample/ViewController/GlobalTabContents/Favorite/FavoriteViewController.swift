@@ -33,7 +33,7 @@ final class FavoriteViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        setupNavigationBarTitle(GlobalTabBarItems.favorite.getTabBarTitle())
+        setupNavigationBarTitle(GlobalTabBarItems.favorite.title)
     }
 }
 

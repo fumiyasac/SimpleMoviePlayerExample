@@ -18,7 +18,7 @@ enum GlobalTabBarItems: CaseIterable {
     case settings
 
     // 配置するタイトルを取得する
-    func getTabBarTitle() -> String {
+    var title: String {
         switch self {
         case .main:
             return "メイン"
@@ -30,7 +30,7 @@ enum GlobalTabBarItems: CaseIterable {
     }
 
     // TabBarに使うFontAwesomeアイコン名を取得する
-    func getTabBarIconName() -> FontAwesome {
+    var icon: FontAwesome {
         switch self {
         case .main:
             return .home

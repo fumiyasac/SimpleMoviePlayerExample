@@ -16,7 +16,7 @@ enum MovieQuality: Int, CaseIterable, DefaultsSerializable {
 
     // MARK: - Function
 
-    func getQualityText() -> String {
+    var text: String {
         switch self {
         case .low:
             return "低(540)"

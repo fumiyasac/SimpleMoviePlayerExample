@@ -55,7 +55,7 @@ final class SettingsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        setupNavigationBarTitle(GlobalTabBarItems.settings.getTabBarTitle())
+        setupNavigationBarTitle(GlobalTabBarItems.settings.title)
         setupCollectionView()
         applyInitialSnapshot()
     }
@@ -109,7 +109,10 @@ final class SettingsViewController: UIViewController {
 
     private func createCollectionViewLayout(layoutEnvironment: NSCollectionLayoutEnvironment) -> NSCollectionLayoutSection {
         var configuration = UICollectionLayoutListConfiguration(appearance: .plain)
-        configuration.headerMode = .supplementary
+
+        // TODO: 独自のHeaderクラスを準備する
+//        configuration.headerMode = .supplementary
+        configuration.headerMode = .none
         return NSCollectionLayoutSection.list(using: configuration, layoutEnvironment: layoutEnvironment)
     }
 
@@ -124,7 +127,7 @@ final class SettingsViewController: UIViewController {
             }
             var contentConfiguration = weakSelf.createMovieSettingsConfiguration()
             contentConfiguration.text = viewObject.title
-            contentConfiguration.secondaryText = viewObject.movieQuality.getQualityText()
+            contentConfiguration.secondaryText = viewObject.movieQuality.text
             cell.contentConfiguration = contentConfiguration
         }
         let cell = collectionView.dequeueConfiguredReusableCell(using: cellRegistration, for: indexPath, item: viewObject)
