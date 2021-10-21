@@ -8,8 +8,8 @@
 import UIKit
 
 enum SettingsSection: Int, CaseIterable {
-    case MovieSettings
-    case Questions
+    case movieSettings
+    case questions
 }
 
 final class SettingsViewController: UIViewController {
