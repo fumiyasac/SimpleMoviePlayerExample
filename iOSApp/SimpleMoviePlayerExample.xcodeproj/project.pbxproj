@@ -16,6 +16,7 @@
 		DE0BFBE0271F131400FC0F32 /* MovieQualityLocalStoreSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE0BFBDF271F131300FC0F32 /* MovieQualityLocalStoreSpec.swift */; };
 		DE0BFBE2271F160000FC0F32 /* MovieSpeedLocalStoreSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE0BFBE1271F160000FC0F32 /* MovieSpeedLocalStoreSpec.swift */; };
 		DE136BE227204537007F6808 /* UINavigationControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE136BE127204537007F6808 /* UINavigationControllerExtension.swift */; };
+		DE136BE52722742A007F6808 /* SkeletonView in Frameworks */ = {isa = PBXBuildFile; productRef = DE136BE42722742A007F6808 /* SkeletonView */; };
 		DE24CC1C270C9A6000246E69 /* ScreenCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE24CC1B270C9A6000246E69 /* ScreenCoordinator.swift */; };
 		DE24CC1E270C9B2700246E69 /* MainScreenCoodinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE24CC1D270C9B2700246E69 /* MainScreenCoodinator.swift */; };
 		DE24CC202711DCDD00246E69 /* FavoriteCoodinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE24CC1F2711DCDD00246E69 /* FavoriteCoodinator.swift */; };
@@ -339,6 +340,7 @@
 				DEB529DF267FC4E4000C33A2 /* GRDB in Frameworks */,
 				53E89A3FFAD1A4BBC30E2E41 /* Pods_SimpleMoviePlayerExample.framework in Frameworks */,
 				DE9F05BA2709FAD10035BEFB /* UICircularProgressRing in Frameworks */,
+				DE136BE52722742A007F6808 /* SkeletonView in Frameworks */,
 				DE82CF1E26A9C65900033A62 /* SwiftyUserDefaults in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1011,6 +1013,7 @@
 				DE82CF1D26A9C65900033A62 /* SwiftyUserDefaults */,
 				DEA6BD1026B99B0900196CC3 /* FloatingPanel */,
 				DE9F05B92709FAD10035BEFB /* UICircularProgressRing */,
+				DE136BE42722742A007F6808 /* SkeletonView */,
 			);
 			productName = SimpleMoviePlayerExample;
 			productReference = DEA47530263F40AA00090DA5 /* SimpleMoviePlayerExample.app */;
@@ -1101,6 +1104,7 @@
 				DEA6BD0F26B99B0900196CC3 /* XCRemoteSwiftPackageReference "FloatingPanel" */,
 				DE9F05B82709FAD10035BEFB /* XCRemoteSwiftPackageReference "UICircularProgressRing" */,
 				DEBB956C271487C5008748E7 /* XCRemoteSwiftPackageReference "SwiftyMocky" */,
+				DE136BE32722742A007F6808 /* XCRemoteSwiftPackageReference "SkeletonView" */,
 			);
 			productRefGroup = DEA47531263F40AA00090DA5 /* Products */;
 			projectDirPath = "";
@@ -1772,6 +1776,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		DE136BE32722742A007F6808 /* XCRemoteSwiftPackageReference "SkeletonView" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Juanpe/SkeletonView";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
 		DE82CF1C26A9C65900033A62 /* XCRemoteSwiftPackageReference "SwiftyUserDefaults" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/sunshinejr/SwiftyUserDefaults";
@@ -1853,6 +1865,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = DEBB956C271487C5008748E7 /* XCRemoteSwiftPackageReference "SwiftyMocky" */;
 			productName = SwiftyMocky;
+		};
+		DE136BE42722742A007F6808 /* SkeletonView */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DE136BE32722742A007F6808 /* XCRemoteSwiftPackageReference "SkeletonView" */;
+			productName = SkeletonView;
 		};
 		DE82CF1D26A9C65900033A62 /* SwiftyUserDefaults */ = {
 			isa = XCSwiftPackageProductDependency;

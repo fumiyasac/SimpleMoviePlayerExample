@@ -65,6 +65,15 @@
         }
       },
       {
+        "package": "SkeletonView",
+        "repositoryURL": "https://github.com/Juanpe/SkeletonView",
+        "state": {
+          "branch": null,
+          "revision": "ff1a7e299b20786774c1951e2cce2276ac4b8463",
+          "version": "1.25.2"
+        }
+      },
+      {
         "package": "swiftymocky",
         "repositoryURL": "https://github.com/MakeAWishFoundation/SwiftyMocky.git",
         "state": {
