@@ -70,6 +70,12 @@ final class SettingsViewController: UIViewController {
         // MEMO: UICollectionViewCompositionalLayoutを利用してレイアウトを組み立てる
         collectionView.collectionViewLayout = compositionalLayout
 
+        // MEMO: このレイアウトで利用するセル要素・Headerの登録
+        // SettingsSection: 0
+        collectionView.registerCustomReusableHeaderView(MovieSettingsHeaderView.self)
+        // SettingsSection: 1
+        collectionView.registerCustomReusableHeaderView(QuestionListHeaderView.self)
+
         // MEMO: DataSourceはUICollectionViewDiffableDataSourceを利用してUICollectionViewCellを継承したクラスを組み立てる
         dataSource = UICollectionViewDiffableDataSource<SettingsSection, AnyHashable>(collectionView: collectionView) { [weak self] (collectionView: UICollectionView, indexPath: IndexPath, viewObject: AnyHashable) -> UICollectionViewCell? in
 
@@ -81,15 +87,15 @@ final class SettingsViewController: UIViewController {
 
             switch viewObject {
 
-            // MainSection: 0 (MovieQualityViewObject)
+            // SettingsSection: 0 (MovieQualityViewObject)
             case let viewObject as MovieQualityViewObject:
                 return weakSelf.createMovieQualityCell(viewObject: viewObject, indexPath: indexPath)
 
-            // MainSection: 0 (MovieSpeedViewObject)
+            // SettingsSection: 0 (MovieSpeedViewObject)
             case let viewObject as MovieSpeedViewObject:
                 return weakSelf.createMovieSpeedCell(viewObject: viewObject, indexPath: indexPath)
 
-            // MainSection: 1 (QuestionViewObject)
+            // SettingsSection: 1 (QuestionViewObject)
             case let viewObject as QuestionViewObject:
 
                 // TODO: UICollectionViewListCellを継承して自前のClassを準備する
@@ -105,17 +111,37 @@ final class SettingsViewController: UIViewController {
                 return nil
             }
         }
+
+        // MEMO: Headerの表記についてもUICollectionViewDiffableDataSourceを利用して組み立てる
+        dataSource.supplementaryViewProvider = { (collectionView: UICollectionView, kind: String, indexPath: IndexPath) -> UICollectionReusableView? in
+
+            switch indexPath.section {
+
+            // SettingsSection: 0
+            case SettingsSection.movieSettings.rawValue:
+                if kind == UICollectionView.elementKindSectionHeader {
+                    return collectionView.dequeueReusableCustomHeaderView(with: MovieSettingsHeaderView.self, indexPath: indexPath)
+                }
+
+            // SettingsSection: 1
+            case SettingsSection.questions.rawValue:
+                if kind == UICollectionView.elementKindSectionHeader {
+                    return collectionView.dequeueReusableCustomHeaderView(with: QuestionListHeaderView.self, indexPath: indexPath)
+                }
+            default:
+                break
+            }
+            return nil
+        }
     }
 
     private func createCollectionViewLayout(layoutEnvironment: NSCollectionLayoutEnvironment) -> NSCollectionLayoutSection {
         var configuration = UICollectionLayoutListConfiguration(appearance: .plain)
-
-        // TODO: 独自のHeaderクラスを準備する
-//        configuration.headerMode = .supplementary
-        configuration.headerMode = .none
+        configuration.headerMode = .supplementary
         return NSCollectionLayoutSection.list(using: configuration, layoutEnvironment: layoutEnvironment)
     }
 
+    // 現在選択中の動画解像度を表示するセル
     private func createMovieQualityCell(
         viewObject: MovieQualityViewObject,
         indexPath: IndexPath
@@ -134,6 +160,7 @@ final class SettingsViewController: UIViewController {
         return cell
     }
 
+    // 現在選択中の動画速度を表示するセル
     private func createMovieSpeedCell(
         viewObject: MovieSpeedViewObject,
         indexPath: IndexPath
