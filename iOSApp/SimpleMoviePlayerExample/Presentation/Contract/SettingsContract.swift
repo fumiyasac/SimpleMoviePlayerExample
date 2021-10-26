@@ -9,9 +9,16 @@ import Foundation
 
 // sourcery: AutoMockable
 protocol SettingsView: AnyObject {
-    func setupContents()
+    func applyDataSource(
+        movieSettingsDto: MovieSettingsDto,
+        questionDto: QuestionDto
+    )
 }
 
 protocol SettingsPresenter: AnyObject {
-    func viewDidLoadTrigger()
+    func setup(
+         view: SettingsView,
+         coodinator: SettingsCoodinator
+     )
+    func viewDidAppearTrigger()
 }

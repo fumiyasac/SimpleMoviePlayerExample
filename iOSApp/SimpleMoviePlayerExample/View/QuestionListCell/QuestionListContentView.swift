@@ -10,11 +10,13 @@ import UIKit
 // MEMO:
 
 final class QuestionListContentView: UIView, UIContentView {
-    
+
+    // MARK: Property
+
     private var currentConfiguration: QuestionListCellConfiguration!
 
     // MARK: Computed Property
-    
+
     var configuration: UIContentConfiguration {
         get {
             currentConfiguration
@@ -51,7 +53,7 @@ final class QuestionListContentView: UIView, UIContentView {
 
 private extension QuestionListContentView {
 
-    // MARK: - Private Functions
+    // MARK: - Private Function
 
     private func initializeContentView() {
 

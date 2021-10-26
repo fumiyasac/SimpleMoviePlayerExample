@@ -40,9 +40,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // iOS15以降ではUINavigationBarの配色指定方法が変化する点に注意する
         // https://shtnkgm.com/blog/2021-08-18-ios15.html
 
-        if #available(iOS 15, *) {
+        if #available(iOS 15.0, *) {
             let navigationBarAppearance = UINavigationBarAppearance()
-            let navigationBar = UINavigationBar()
             navigationBarAppearance.configureWithOpaqueBackground()
 
             // MEMO: UINavigationBar内部におけるタイトル文字の装飾設定
@@ -54,7 +53,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             // MEMO: UINavigationBar背景色の装飾設定
             navigationBarAppearance.backgroundColor = UIColor(code: "#cda966")
 
-            navigationBar.standardAppearance = navigationBarAppearance
+            UINavigationBar.appearance().standardAppearance = navigationBarAppearance
             UINavigationBar.appearance().scrollEdgeAppearance = navigationBarAppearance
         }
     }

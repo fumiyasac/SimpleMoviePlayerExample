@@ -22,6 +22,7 @@
 		DE24CC202711DCDD00246E69 /* FavoriteCoodinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE24CC1F2711DCDD00246E69 /* FavoriteCoodinator.swift */; };
 		DE340E1926C958FE00FE230A /* FavoriteMainMovieRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE340E1826C958FE00FE230A /* FavoriteMainMovieRepository.swift */; };
 		DE3FBBED26F6331A00D5CA9C /* PortraitNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE3FBBEC26F6331900D5CA9C /* PortraitNavigationController.swift */; };
+		DE5361012728531F00FAC549 /* SettingsCoodinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE5361002728531F00FAC549 /* SettingsCoodinator.swift */; };
 		DE5F6E79267FC11F00FCD3A1 /* CustomViewBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE5F6E78267FC11F00FCD3A1 /* CustomViewBase.swift */; };
 		DE5F6E7B267FC19F00FCD3A1 /* NSObjectProtocolExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE5F6E7A267FC19F00FCD3A1 /* NSObjectProtocolExtension.swift */; };
 		DE5F6E7D267FC1AB00FCD3A1 /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE5F6E7C267FC1AB00FCD3A1 /* UIColorExtension.swift */; };
@@ -201,6 +202,7 @@
 		DE24CC1F2711DCDD00246E69 /* FavoriteCoodinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteCoodinator.swift; sourceTree = "<group>"; };
 		DE340E1826C958FE00FE230A /* FavoriteMainMovieRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteMainMovieRepository.swift; sourceTree = "<group>"; };
 		DE3FBBEC26F6331900D5CA9C /* PortraitNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PortraitNavigationController.swift; sourceTree = "<group>"; };
+		DE5361002728531F00FAC549 /* SettingsCoodinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsCoodinator.swift; sourceTree = "<group>"; };
 		DE5F6E78267FC11F00FCD3A1 /* CustomViewBase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomViewBase.swift; sourceTree = "<group>"; };
 		DE5F6E7A267FC19F00FCD3A1 /* NSObjectProtocolExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSObjectProtocolExtension.swift; sourceTree = "<group>"; };
 		DE5F6E7C267FC1AB00FCD3A1 /* UIColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
@@ -741,6 +743,7 @@
 				DE24CC1B270C9A6000246E69 /* ScreenCoordinator.swift */,
 				DE24CC1D270C9B2700246E69 /* MainScreenCoodinator.swift */,
 				DE24CC1F2711DCDD00246E69 /* FavoriteCoodinator.swift */,
+				DE5361002728531F00FAC549 /* SettingsCoodinator.swift */,
 			);
 			path = Coodinator;
 			sourceTree = "<group>";
@@ -1389,6 +1392,7 @@
 				DE8C103F26FBF6F60047AD0D /* GetFeaturedMoviesUseCase.swift in Sources */,
 				DEB970F926D15D2B004D7B56 /* MovieQualityRepository.swift in Sources */,
 				DECB81532700F5AF008AE187 /* SettingsPresenterImpl.swift in Sources */,
+				DE5361012728531F00FAC549 /* SettingsCoodinator.swift in Sources */,
 				DECB81462700C527008AE187 /* MainBannerContainerContract.swift in Sources */,
 				DEA3C09526D9F2330080226E /* GetInitialAppOpenUseCase.swift in Sources */,
 				DEA47534263F40AA00090DA5 /* AppDelegate.swift in Sources */,

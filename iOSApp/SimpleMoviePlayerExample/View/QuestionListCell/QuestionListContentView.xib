@@ -37,7 +37,6 @@
                             <nil key="highlightedColor"/>
                         </label>
                     </subviews>
-                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     <constraints>
                         <constraint firstAttribute="trailing" secondItem="vLP-Ub-dR5" secondAttribute="trailing" constant="12" id="B2h-k0-cDj"/>
                         <constraint firstItem="vLP-Ub-dR5" firstAttribute="leading" secondItem="fMi-yW-Ayh" secondAttribute="leading" constant="12" id="Csb-rv-tFW"/>

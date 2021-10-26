@@ -319,9 +319,9 @@ final class PresenterFactory {
     static func createSettingsPresenter() -> SettingsPresenter {
         return SettingsPresenterImpl(
             getMovieSettingsUseCase: dependecies.resolve(GetMovieSettingsUseCase.self),
+            getQuestionsUseCase: dependecies.resolve(GetQuestionsUseCase.self),
             saveMovieQualityUseCase: dependecies.resolve(SaveMovieQualityUseCase.self),
             saveMovieSpeedUseCase: dependecies.resolve(SaveMovieSpeedUseCase.self),
-            getQuestionsUseCase: dependecies.resolve(GetQuestionsUseCase.self),
             mainScheduler: dependecies.resolve(ImmediateSchedulerType.self)
         )
     }
