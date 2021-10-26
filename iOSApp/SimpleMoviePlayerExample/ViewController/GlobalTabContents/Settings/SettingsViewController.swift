@@ -97,15 +97,7 @@ final class SettingsViewController: UIViewController {
 
             // SettingsSection: 1 (QuestionViewObject)
             case let viewObject as QuestionViewObject:
-
-                // TODO: UICollectionViewListCellを継承して自前のClassを準備する
-                let cellRegistration = UICollectionView.CellRegistration<UICollectionViewListCell, QuestionViewObject> { cell, _, viewObject in
-                    var contentConfiguration = cell.defaultContentConfiguration()
-                    contentConfiguration.text = viewObject.question
-                    cell.contentConfiguration = contentConfiguration
-                }
-                let cell = collectionView.dequeueConfiguredReusableCell(using: cellRegistration, for: indexPath, item: viewObject)
-                return cell
+                return weakSelf.createQuestionListCell(viewObject: viewObject, indexPath: indexPath)
 
             default:
                 return nil
@@ -174,6 +166,23 @@ final class SettingsViewController: UIViewController {
             contentConfiguration.text = viewObject.title
             contentConfiguration.secondaryText = "x\(viewObject.movieSpeed)"
             cell.contentConfiguration = contentConfiguration
+        }
+        let cell = collectionView.dequeueConfiguredReusableCell(using: cellRegistration, for: indexPath, item: viewObject)
+        return cell
+    }
+
+    // よくあるQ&Aを表示するセル
+    private func createQuestionListCell(
+        viewObject: QuestionViewObject,
+        indexPath: IndexPath
+    ) -> UICollectionViewListCell {
+        let cellRegistration = UICollectionView.CellRegistration<QuestionListCell, QuestionViewObject> { [weak self] (cell, _, viewObject) in
+            guard let _ = self else {
+                assertionFailure()
+                return
+            }
+            cell.question = viewObject.question
+            cell.answer = viewObject.answer
         }
         let cell = collectionView.dequeueConfiguredReusableCell(using: cellRegistration, for: indexPath, item: viewObject)
         return cell
