@@ -7,7 +7,7 @@
 
 import UIKit
 
-// MEMO:
+// MEMO: View要素に高さ制約を付与しているがこちらのPriorityを999にしています。
 
 final class QuestionListContentView: UIView, UIContentView {
 

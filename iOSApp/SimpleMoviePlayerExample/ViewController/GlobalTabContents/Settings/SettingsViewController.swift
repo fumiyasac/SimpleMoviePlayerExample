@@ -169,51 +169,6 @@ final class SettingsViewController: UIViewController {
         return NSCollectionLayoutSection.list(using: configuration, layoutEnvironment: layoutEnvironment)
     }
 
-//    // 現在選択中の動画解像度を表示するセル
-//    private func createMovieQualityCell(
-//        viewObject: MovieQualityViewObject,
-//        indexPath: IndexPath
-//    ) -> UICollectionViewListCell {
-//        let cellRegistration = UICollectionView.CellRegistration<UICollectionViewListCell, MovieQualityViewObject> { [weak self] (cell, _, viewObject) in
-//            guard let weakSelf = self else {
-//                assertionFailure()
-//                return
-//            }
-//            var contentConfiguration = weakSelf.createMovieSettingsConfiguration()
-//            contentConfiguration.text = viewObject.title
-//            contentConfiguration.secondaryText = viewObject.movieQuality.text
-//            cell.contentConfiguration = contentConfiguration
-//        }
-//        let cell = collectionView.dequeueConfiguredReusableCell(using: cellRegistration, for: indexPath, item: viewObject)
-//        return cell
-//    }
-//
-//    // 現在選択中の動画速度を表示するセル
-//    private func createMovieSpeedCell(
-//        viewObject: MovieSpeedViewObject,
-//        indexPath: IndexPath
-//    ) -> UICollectionViewListCell {
-//        let cell = collectionView.dequeueConfiguredReusableCell(using: cellRegistration, for: indexPath, item: viewObject)
-//        return cell
-//    }
-//
-//    // よくあるQ&Aを表示するセル
-//    private func createQuestionListCell(
-//        viewObject: QuestionViewObject,
-//        indexPath: IndexPath
-//    ) -> UICollectionViewListCell {
-//        let cellRegistration = UICollectionView.CellRegistration<QuestionListCell, QuestionViewObject> { [weak self] (cell, _, viewObject) in
-//            guard let _ = self else {
-//                assertionFailure()
-//                return
-//            }
-//            cell.question = viewObject.question
-//            cell.answer = viewObject.answer
-//        }
-//        let cell = collectionView.dequeueConfiguredReusableCell(using: cellRegistration, for: indexPath, item: viewObject)
-//        return cell
-//    }
-
     // デフォルトのUICollectionViewListCellの設定をそのまま利用する場合のデザインを適用する
     private func createMovieSettingsConfiguration() -> UIListContentConfiguration {
         var content: UIListContentConfiguration = .valueCell()
@@ -242,10 +197,12 @@ extension SettingsViewController: SettingsView {
         movieSettingsDto: MovieSettingsDto,
         questionDto: QuestionDto
     ) {
-        // MEMO: 初期化状態にする
-        applyEmptySnapshot()
-
         // MEMO: セクションの並び順番をこの中で決定する
+        let beforeMovieSettingsViewObjects = snapshot.itemIdentifiers(inSection: .movieSettings)
+        snapshot.deleteItems(beforeMovieSettingsViewObjects)
+        let beforeQuestionsViewObjects = snapshot.itemIdentifiers(inSection: .questions)
+        snapshot.deleteItems(beforeQuestionsViewObjects)
+        
         let movieSettingsViewObjects: [AnyHashable] = [
             MovieQualityViewObject(movieQuality: movieSettingsDto.movieQuality),
             MovieSpeedViewObject(movieSpeed: movieSettingsDto.movieSpeed)
