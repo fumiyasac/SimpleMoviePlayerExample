@@ -7,4 +7,4 @@
 
 import UIKit
 
-final class QuestionListHeaderView: UICollectionReusableView {}
+final class QuestionListHeaderView: CustomViewBase {}

@@ -7,4 +7,4 @@
 
 import UIKit
 
-final class MovieSettingsHeaderView: UICollectionReusableView {}
+final class MovieSettingsHeaderView: CustomViewBase {}

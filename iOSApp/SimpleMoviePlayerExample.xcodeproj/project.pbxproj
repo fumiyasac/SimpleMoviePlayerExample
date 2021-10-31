@@ -96,6 +96,10 @@
 		DEA99D3D26F0C8C700BEC08E /* MainBannerContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEA99D3C26F0C8C700BEC08E /* MainBannerContainerViewController.swift */; };
 		DEA99D4126F0C92300BEC08E /* MainBannerContainerViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DEA99D4026F0C92300BEC08E /* MainBannerContainerViewController.storyboard */; };
 		DEAE7EFA268A19EF009ACBD9 /* PlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEAE7EF9268A19EE009ACBD9 /* PlayerView.swift */; };
+		DEB04BD7272ED79700D5D642 /* QuestionListContentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEB04BD5272ED79700D5D642 /* QuestionListContentCell.swift */; };
+		DEB04BD8272ED79700D5D642 /* QuestionListContentCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DEB04BD6272ED79700D5D642 /* QuestionListContentCell.xib */; };
+		DEB04BDC272ED9BA00D5D642 /* MovieSettingsContentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEB04BDA272ED9BA00D5D642 /* MovieSettingsContentCell.swift */; };
+		DEB04BDD272ED9BA00D5D642 /* MovieSettingsContentCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DEB04BDB272ED9BA00D5D642 /* MovieSettingsContentCell.xib */; };
 		DEB159FD26E119F5003FC5C1 /* ProfileId.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEB159FC26E119F5003FC5C1 /* ProfileId.swift */; };
 		DEB159FF26E11A22003FC5C1 /* ProfileEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEB159FE26E11A22003FC5C1 /* ProfileEntity.swift */; };
 		DEB15A0126E11CE8003FC5C1 /* ProfileActivityId.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEB15A0026E11CE8003FC5C1 /* ProfileActivityId.swift */; };
@@ -279,6 +283,10 @@
 		DEA99D3C26F0C8C700BEC08E /* MainBannerContainerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainBannerContainerViewController.swift; sourceTree = "<group>"; };
 		DEA99D4026F0C92300BEC08E /* MainBannerContainerViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MainBannerContainerViewController.storyboard; sourceTree = "<group>"; };
 		DEAE7EF9268A19EE009ACBD9 /* PlayerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerView.swift; sourceTree = "<group>"; };
+		DEB04BD5272ED79700D5D642 /* QuestionListContentCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionListContentCell.swift; sourceTree = "<group>"; };
+		DEB04BD6272ED79700D5D642 /* QuestionListContentCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = QuestionListContentCell.xib; sourceTree = "<group>"; };
+		DEB04BDA272ED9BA00D5D642 /* MovieSettingsContentCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieSettingsContentCell.swift; sourceTree = "<group>"; };
+		DEB04BDB272ED9BA00D5D642 /* MovieSettingsContentCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MovieSettingsContentCell.xib; sourceTree = "<group>"; };
 		DEB159FC26E119F5003FC5C1 /* ProfileId.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileId.swift; sourceTree = "<group>"; };
 		DEB159FE26E11A22003FC5C1 /* ProfileEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileEntity.swift; sourceTree = "<group>"; };
 		DEB15A0026E11CE8003FC5C1 /* ProfileActivityId.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileActivityId.swift; sourceTree = "<group>"; };
@@ -426,7 +434,9 @@
 				DEAE7EF9268A19EE009ACBD9 /* PlayerView.swift */,
 				DE3FBBEC26F6331900D5CA9C /* PortraitNavigationController.swift */,
 				DEE09716272838CD007A942C /* MovieSettingsHeaderView */,
+				DEB04BD9272ED97C00D5D642 /* MovieSettingsContentCell */,
 				DEE09717272838E9007A942C /* QuestionListHeaderView */,
+				DEB04BD4272ED77600D5D642 /* QuestionListContentCell */,
 				DEE0971527283877007A942C /* QuestionListCell */,
 			);
 			path = View;
@@ -888,6 +898,24 @@
 			path = Container;
 			sourceTree = "<group>";
 		};
+		DEB04BD4272ED77600D5D642 /* QuestionListContentCell */ = {
+			isa = PBXGroup;
+			children = (
+				DEB04BD5272ED79700D5D642 /* QuestionListContentCell.swift */,
+				DEB04BD6272ED79700D5D642 /* QuestionListContentCell.xib */,
+			);
+			path = QuestionListContentCell;
+			sourceTree = "<group>";
+		};
+		DEB04BD9272ED97C00D5D642 /* MovieSettingsContentCell */ = {
+			isa = PBXGroup;
+			children = (
+				DEB04BDA272ED9BA00D5D642 /* MovieSettingsContentCell.swift */,
+				DEB04BDB272ED9BA00D5D642 /* MovieSettingsContentCell.xib */,
+			);
+			path = MovieSettingsContentCell;
+			sourceTree = "<group>";
+		};
 		DEB159F926E119B6003FC5C1 /* Profile */ = {
 			isa = PBXGroup;
 			children = (
@@ -1174,6 +1202,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				DECACEFC26E428F0007459C1 /* profile_me_stub.json in Resources */,
+				DEB04BDD272ED9BA00D5D642 /* MovieSettingsContentCell.xib in Resources */,
+				DEB04BD8272ED79700D5D642 /* QuestionListContentCell.xib in Resources */,
 				DE8DFD8326C16F0200CAB778 /* main_banner_stub.json in Resources */,
 				DEE0971B27283B08007A942C /* MovieSettingsHeaderView.xib in Resources */,
 				DEE0971F27283D9C007A942C /* QuestionListHeaderView.xib in Resources */,
@@ -1420,6 +1450,7 @@
 				DEB52A052684CA8B000C33A2 /* SettingsViewController.swift in Sources */,
 				DEB970FD26D26F7B004D7B56 /* QuestionDto.swift in Sources */,
 				DEA3C09726D9F24F0080226E /* ChangeFalseInitialAppOpenUseCase.swift in Sources */,
+				DEB04BD7272ED79700D5D642 /* QuestionListContentCell.swift in Sources */,
 				DE8DFD8726C16F6200CAB778 /* ApiClientMock.swift in Sources */,
 				DE82CF2C26A9E5D200033A62 /* GlobalTabBarItems.swift in Sources */,
 				DEB970F326D15983004D7B56 /* MovieSpeedLocalStore.swift in Sources */,
@@ -1430,6 +1461,7 @@
 				DE8DFDA226C7B8F900CAB778 /* GetCarouselMainBannersUseCase.swift in Sources */,
 				DEE09723272841CF007A942C /* QuestionListCellConfiguration.swift in Sources */,
 				DEB9710E26D7DFBD004D7B56 /* DeleteFavoriteMainMovieUseCase.swift in Sources */,
+				DEB04BDC272ED9BA00D5D642 /* MovieSettingsContentCell.swift in Sources */,
 				DEB970F126D158BF004D7B56 /* QuestionEntity.swift in Sources */,
 				DEB2313F26EE4D9A009A839B /* MovieSpeedViewObject.swift in Sources */,
 				DEB970FF26D7C8FE004D7B56 /* GetQuestionsUseCase.swift in Sources */,
