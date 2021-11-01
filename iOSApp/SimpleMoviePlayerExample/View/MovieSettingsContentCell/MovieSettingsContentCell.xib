@@ -18,18 +18,30 @@
                 <rect key="frame" x="0.0" y="0.0" width="320" height="56"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="動画解像度" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IEh-SK-lrn">
-                        <rect key="frame" x="16" y="18.5" width="70" height="19.5"/>
-                        <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="14"/>
-                        <nil key="textColor"/>
-                        <nil key="highlightedColor"/>
-                    </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="高(1080)" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hSU-j7-hmy">
-                        <rect key="frame" x="258.5" y="20" width="45.5" height="16.5"/>
-                        <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="12"/>
-                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <nil key="highlightedColor"/>
-                    </label>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PQ4-CP-iqJ">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="56"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="動画解像度" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IEh-SK-lrn">
+                                <rect key="frame" x="16" y="18.5" width="70" height="19.5"/>
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="14"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="高(1080)" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hSU-j7-hmy">
+                                <rect key="frame" x="258.5" y="20" width="45.5" height="16.5"/>
+                                <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="12"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="IEh-SK-lrn" firstAttribute="centerY" secondItem="PQ4-CP-iqJ" secondAttribute="centerY" id="56P-pR-O74"/>
+                            <constraint firstAttribute="trailing" secondItem="hSU-j7-hmy" secondAttribute="trailing" constant="16" id="AOk-Jt-LbS"/>
+                            <constraint firstItem="IEh-SK-lrn" firstAttribute="leading" secondItem="PQ4-CP-iqJ" secondAttribute="leading" constant="16" id="Aj9-zD-J2A"/>
+                            <constraint firstAttribute="height" constant="56" id="S8w-nV-D0q"/>
+                            <constraint firstItem="hSU-j7-hmy" firstAttribute="centerY" secondItem="PQ4-CP-iqJ" secondAttribute="centerY" id="Zen-k3-uTv"/>
+                        </constraints>
+                    </view>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5ls-0e-TwT">
                         <rect key="frame" x="16" y="55.5" width="304" height="0.5"/>
                         <color key="backgroundColor" systemColor="opaqueSeparatorColor"/>
@@ -40,16 +52,15 @@
                 </subviews>
                 <constraints>
                     <constraint firstAttribute="trailing" secondItem="5ls-0e-TwT" secondAttribute="trailing" id="IuI-79-Z6G"/>
-                    <constraint firstItem="hSU-j7-hmy" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="JO5-Aa-f8I"/>
                     <constraint firstAttribute="bottom" secondItem="5ls-0e-TwT" secondAttribute="bottom" id="OnF-1J-rvM"/>
-                    <constraint firstAttribute="trailing" secondItem="hSU-j7-hmy" secondAttribute="trailing" constant="16" id="RZo-yb-hpQ"/>
-                    <constraint firstItem="IEh-SK-lrn" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="RdF-pQ-0MJ"/>
-                    <constraint firstItem="IEh-SK-lrn" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="Zfx-Vz-uac"/>
+                    <constraint firstAttribute="trailing" secondItem="PQ4-CP-iqJ" secondAttribute="trailing" id="ccd-gc-BV5"/>
+                    <constraint firstItem="PQ4-CP-iqJ" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="d8N-64-ek6"/>
+                    <constraint firstAttribute="bottom" secondItem="PQ4-CP-iqJ" secondAttribute="bottom" id="dEw-hC-6xp"/>
+                    <constraint firstItem="PQ4-CP-iqJ" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="gvH-2z-9X1"/>
                     <constraint firstItem="5ls-0e-TwT" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="ldo-fh-7f2"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
-            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <connections>
                 <outlet property="borderViewHeightConstraint" destination="4Qi-5b-0KN" id="Vcy-y8-gI2"/>
                 <outlet property="currentValueLabel" destination="hSU-j7-hmy" id="MwT-nc-ryb"/>
@@ -61,9 +72,6 @@
     <resources>
         <systemColor name="opaqueSeparatorColor">
             <color red="0.77647058823529413" green="0.77647058823529413" blue="0.78431372549019607" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
     </resources>
 </document>

@@ -9,10 +9,13 @@ import Foundation
 
 // sourcery: AutoMockable
 protocol SettingsView: AnyObject {
-    func applyDataSource(
-        movieSettingsDto: MovieSettingsDto,
-        questionDto: QuestionDto
+    func applyAllViewObjectsToDataSource(
+        movieQualityViewObject: MovieQualityViewObject,
+        movieSpeedViewObject: MovieSpeedViewObject,
+        questionViewObjects: [QuestionViewObject]
     )
+    func applyNewMovieQualityViewObjectToDataSource(movieQualityViewObject: MovieQualityViewObject)
+    func applyNewMovieSpeedViewObjectToDataSource(movieSpeedViewObject: MovieSpeedViewObject)
 }
 
 protocol SettingsPresenter: AnyObject {
@@ -21,4 +24,6 @@ protocol SettingsPresenter: AnyObject {
          coodinator: SettingsCoodinator
      )
     func viewDidLoadTrigger()
+    func didSelectNewMovieQualityTrigger(movieQuality: MovieQuality)
+    func didSelectNewMovieSpeedTrigger(movieSpeed: MovieSpeed)
 }

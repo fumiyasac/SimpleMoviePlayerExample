@@ -61,12 +61,53 @@ final class SettingsPresenterImpl: SettingsPresenter {
                     guard let weakSelf = self else {
                         return
                     }
-                    weakSelf.view?.applyDataSource(
-                        movieSettingsDto: movieSettingsDto,
-                        questionDto: questionDto
+                    weakSelf.view?.applyAllViewObjectsToDataSource(
+                        movieQualityViewObject: MovieQualityViewObject(movieQuality: movieSettingsDto.movieQuality),
+                        movieSpeedViewObject: MovieSpeedViewObject(movieSpeed: movieSettingsDto.movieSpeed),
+                        questionViewObjects: questionDto.questions.map { questionEntity in
+                            QuestionViewObject(questionEntity: questionEntity)
+                        }
                     )
                 },
-                onFailure: { [weak self] error in
+                onFailure: { error in
+                    print(error)
+                }
+            ).disposed(by: disposeBag)
+    }
+
+    func didSelectNewMovieQualityTrigger(movieQuality: MovieQuality) {
+        saveMovieQualityUseCase
+            .execute(
+                movieQuality: movieQuality
+            ).subscribe(
+                onCompleted: { [weak self] in
+                    guard let weakSelf = self else {
+                        return
+                    }
+                    weakSelf.view?.applyNewMovieQualityViewObjectToDataSource(
+                        movieQualityViewObject: MovieQualityViewObject(movieQuality: movieQuality)
+                    )
+                },
+                onError: { error in
+                    print(error)
+                }
+            ).disposed(by: disposeBag)
+    }
+
+    func didSelectNewMovieSpeedTrigger(movieSpeed: MovieSpeed) {
+        saveMovieSpeedUseCase
+            .execute(
+                movieSpeed: movieSpeed
+            ).subscribe(
+                onCompleted: { [weak self] in
+                    guard let weakSelf = self else {
+                        return
+                    }
+                    weakSelf.view?.applyNewMovieSpeedViewObjectToDataSource(
+                        movieSpeedViewObject: MovieSpeedViewObject(movieSpeed: movieSpeed)
+                    )
+                },
+                onError: { error in
                     print(error)
                 }
             ).disposed(by: disposeBag)

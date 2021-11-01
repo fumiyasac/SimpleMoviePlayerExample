@@ -30,7 +30,7 @@ final class QuestionListContentCell: UITableViewCell {
         questionLabel.text = questionViewObject.question
 
         let answerKeys = (
-            lineSpacing: CGFloat(4),
+            lineSpacing: CGFloat(4.0),
             font: UIFont(name: "Avenir-Book", size: 12.0)!,
             foregroundColor: UIColor.darkGray
         )

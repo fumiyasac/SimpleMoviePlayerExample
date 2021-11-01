@@ -8,7 +8,8 @@
 import UIKit
 
 enum SettingsSection: Int, CaseIterable {
-    case movieSettings
+    case movieQuality
+    case movieSpeed
     case questions
 }
 
@@ -44,7 +45,7 @@ final class SettingsViewController: UIViewController {
 
         setupNavigationBarTitle(GlobalTabBarItems.settings.title)
         setupTableView()
-        applyEmptySnapshot()
+        applyInitialDataToDataSource()
 
         presenter.setup(
             view: self,
@@ -61,6 +62,7 @@ final class SettingsViewController: UIViewController {
         // ※1: UITableViewのStyleは「Grouped」に設定
         // ※2: UITableViewのSeparatorは「None」に設定
         tableView.delegate = self
+        tableView.estimatedRowHeight = UITableView.automaticDimension
         tableView.registerCustomCell(MovieSettingsContentCell.self)
         tableView.registerCustomCell(QuestionListContentCell.self)
 
@@ -95,7 +97,7 @@ final class SettingsViewController: UIViewController {
     }
 
     // 初期化時のSnapshotを適用する
-    private func applyEmptySnapshot() {
+    private func applyInitialDataToDataSource() {
         snapshot = NSDiffableDataSourceSnapshot<SettingsSection, AnyHashable>()
         snapshot.appendSections(SettingsSection.allCases)
         for section in SettingsSection.allCases {
@@ -108,25 +110,36 @@ final class SettingsViewController: UIViewController {
 // MARK: - SettingsView
 
 extension SettingsViewController: SettingsView {
-    func applyDataSource(
-        movieSettingsDto: MovieSettingsDto,
-        questionDto: QuestionDto
+
+    func applyAllViewObjectsToDataSource(
+        movieQualityViewObject: MovieQualityViewObject,
+        movieSpeedViewObject: MovieSpeedViewObject,
+        questionViewObjects: [QuestionViewObject]
     ) {
-        // MEMO: セクションの並び順番をこの中で決定する
-        let beforeMovieSettingsViewObjects = snapshot.itemIdentifiers(inSection: .movieSettings)
-        snapshot.deleteItems(beforeMovieSettingsViewObjects)
+        let beforeMovieQualityViewObjects = snapshot.itemIdentifiers(inSection: .movieQuality)
+        snapshot.deleteItems(beforeMovieQualityViewObjects)
+        let beforeMovieSpeedViewObjects = snapshot.itemIdentifiers(inSection: .movieSpeed)
+        snapshot.deleteItems(beforeMovieSpeedViewObjects)
         let beforeQuestionsViewObjects = snapshot.itemIdentifiers(inSection: .questions)
         snapshot.deleteItems(beforeQuestionsViewObjects)
 
-        let movieSettingsViewObjects: [AnyHashable] = [
-            MovieQualityViewObject(movieQuality: movieSettingsDto.movieQuality),
-            MovieSpeedViewObject(movieSpeed: movieSettingsDto.movieSpeed)
-        ]
-        snapshot.appendItems(movieSettingsViewObjects, toSection: .movieSettings)
-        let questionsViewObjects = questionDto.questions.map { question in
-            QuestionViewObject(questionEntity: question)
-        }
-        snapshot.appendItems(questionsViewObjects, toSection: .questions)
+        snapshot.appendItems([movieQualityViewObject], toSection: .movieQuality)
+        snapshot.appendItems([movieSpeedViewObject], toSection: .movieSpeed)
+        snapshot.appendItems(questionViewObjects, toSection: .questions)
+        dataSource.apply(snapshot, animatingDifferences: false)
+    }
+
+    func applyNewMovieQualityViewObjectToDataSource(movieQualityViewObject: MovieQualityViewObject) {
+        let beforeMovieQualityViewObject = snapshot.itemIdentifiers(inSection: .movieQuality)
+        snapshot.deleteItems(beforeMovieQualityViewObject)
+        snapshot.appendItems([movieQualityViewObject], toSection: .movieQuality)
+        dataSource.apply(snapshot, animatingDifferences: false)
+    }
+
+    func applyNewMovieSpeedViewObjectToDataSource(movieSpeedViewObject: MovieSpeedViewObject) {
+        let beforeMovieSpeedViewObject = snapshot.itemIdentifiers(inSection: .movieSpeed)
+        snapshot.deleteItems(beforeMovieSpeedViewObject)
+        snapshot.appendItems([movieSpeedViewObject], toSection: .movieSpeed)
         dataSource.apply(snapshot, animatingDifferences: false)
     }
 }
@@ -139,13 +152,13 @@ extension SettingsViewController: SettingsCoodinator {}
 
 extension SettingsViewController: UITableViewDelegate {
 
-    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+    func tableView(
+        _ tableView: UITableView,
+        viewForHeaderInSection section: Int
+    ) -> UIView? {
 
         // MEMO: 該当のセクションに応じたHeaderを定義する
         switch section {
-        case SettingsSection.movieSettings.rawValue:
-            let headerView = MovieSettingsHeaderView(frame: CGRect(x: 0, y: 0, width: tableView.frame.width, height: 48.0))
-            return headerView
         case SettingsSection.questions.rawValue:
             let headerView = QuestionListHeaderView(frame: CGRect(x: 0, y: 0, width: tableView.frame.width, height: 48.0))
             return headerView
@@ -154,19 +167,36 @@ extension SettingsViewController: UITableViewDelegate {
         }
     }
 
-    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        return 48.0
+    func tableView(
+        _ tableView: UITableView,
+        heightForHeaderInSection section: Int
+    ) -> CGFloat {
+        switch section {
+        case SettingsSection.questions.rawValue:
+            return 48.0
+        default:
+            return .leastNonzeroMagnitude
+        }
     }
 
-    func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
+    func tableView(
+        _ tableView: UITableView,
+        viewForFooterInSection section: Int
+    ) -> UIView? {
         return nil
     }
 
-    func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
+    func tableView(
+        _ tableView: UITableView,
+        heightForFooterInSection section: Int
+    ) -> CGFloat {
         return .leastNonzeroMagnitude
     }
 
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    func tableView(
+        _ tableView: UITableView,
+        didSelectRowAt indexPath: IndexPath
+    ) {
 
         // MEMO: 該当のセクションとIndexPathからNSDiffableDataSourceSnapshot内の該当する値を取得する
         guard let targetSection = SettingsSection(rawValue: indexPath.section) else {
@@ -177,16 +207,88 @@ extension SettingsViewController: UITableViewDelegate {
 
         switch viewObject {
         case let viewObject as MovieQualityViewObject:
+            // MEMO: 動画解像度セルタップ時
             dump(viewObject)
-            // TODO: UIMenuでの値切り替え処理
             return
         case let viewObject as MovieSpeedViewObject:
-            // TODO: UIMenuでの値切り替え処理
+            // MEMO: 動画再生速度セルタップ時
             dump(viewObject)
             return
         default:
             break
         }
+    }
+
+    func tableView(
+        _ tableView: UITableView,
+        contextMenuConfigurationForRowAt indexPath: IndexPath,
+        point: CGPoint
+    ) -> UIContextMenuConfiguration? {
+
+        // MEMO: 該当のセクションとIndexPathからNSDiffableDataSourceSnapshot内の該当する値を取得する
+        guard let targetSection = SettingsSection(rawValue: indexPath.section) else {
+            return nil
+        }
+        let targetSnapshot = snapshot.itemIdentifiers(inSection: targetSection)
+        let viewObject = targetSnapshot[indexPath.row]
+
+        // MEMO: 該当のセクションとIndexPathからNSDiffableDataSourceSnapshot内の該当する値を取得する
+        switch viewObject {
+        case _ as MovieQualityViewObject:
+            return UIContextMenuConfiguration(
+                identifier: nil,
+                previewProvider: nil,
+                actionProvider: { [weak self] suggestedActions in
+                    guard let weakSelf = self else {
+                        return nil
+                    }
+                    return weakSelf.showMovieQualityMenu()
+                }
+            )
+        case _ as MovieSpeedViewObject:
+            return UIContextMenuConfiguration(
+                identifier: nil,
+                previewProvider: nil,
+                actionProvider: { [weak self] suggestedActions in
+                    guard let weakSelf = self else {
+                        return nil
+                    }
+                    return weakSelf.showMovieSpeedMenu()
+                }
+            )
+        default:
+            return nil
+        }
+    }
+
+    // MARK: - Private Function
+
+    private func showMovieQualityMenu() -> UIMenu {
+        var movieQualityActionChildren: [UIAction] = []
+        for movieQuality in MovieQuality.allCases {
+            let action = UIAction(title: movieQuality.text) { [weak self] action in
+                guard let weakSelf = self else {
+                    return
+                }
+                weakSelf.presenter.didSelectNewMovieQualityTrigger(movieQuality: movieQuality)
+            }
+            movieQualityActionChildren.append(action)
+        }
+        return UIMenu(title: "動画解像度の変更", children: movieQualityActionChildren)
+    }
+    
+    private func showMovieSpeedMenu() -> UIMenu {
+        var movieSpeedActionChildren: [UIAction] = []
+        for movieSpeed in MovieSpeed.allCases {
+            let action = UIAction(title: "\(movieSpeed.rawValue)倍速") { [weak self] action in
+                guard let weakSelf = self else {
+                    return
+                }
+                weakSelf.presenter.didSelectNewMovieSpeedTrigger(movieSpeed: movieSpeed)
+            }
+            movieSpeedActionChildren.append(action)
+        }
+        return UIMenu(title: "動画再生速度の変更", children: movieSpeedActionChildren)
     }
 }
 

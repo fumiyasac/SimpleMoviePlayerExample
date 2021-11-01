@@ -18,7 +18,7 @@ final class MovieQualityViewObject: Hashable {
     init(movieQuality: MovieQuality) {
         self.movieQuality = movieQuality
         title = "動画解像度"
-        value = "\(movieQuality.rawValue)"
+        value = movieQuality.text
     }
 
     // MARK: - Hashable
