@@ -117,7 +117,7 @@ extension SettingsViewController: SettingsView {
         snapshot.deleteItems(beforeMovieSettingsViewObjects)
         let beforeQuestionsViewObjects = snapshot.itemIdentifiers(inSection: .questions)
         snapshot.deleteItems(beforeQuestionsViewObjects)
-        
+
         let movieSettingsViewObjects: [AnyHashable] = [
             MovieQualityViewObject(movieQuality: movieSettingsDto.movieQuality),
             MovieSpeedViewObject(movieSpeed: movieSettingsDto.movieSpeed)
@@ -196,4 +196,15 @@ extension SettingsViewController: UIScrollViewDelegate {
 
     // MEMO: UITableViewDelegateを適用すれば従来通りUIScorllViewDelegateは利用可能
     func scrollViewDidScroll(_ scrollView: UIScrollView) {}
+}
+
+// MARK: - GlobalTabBarInitialViewControllerScrollable
+
+extension SettingsViewController: GlobalTabBarInitialViewControllerScrollable {
+
+    func initialViewControllerScrollToTop() {
+        if snapshot.numberOfSections > 0 {
+            tableView.scrollToRow(at: IndexPath(item: 0, section: 0), at: .top, animated: true)
+        }
+    }
 }

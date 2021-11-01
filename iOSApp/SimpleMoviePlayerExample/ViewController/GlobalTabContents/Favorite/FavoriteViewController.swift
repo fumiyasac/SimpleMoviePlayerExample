@@ -43,3 +43,10 @@ extension FavoriteViewController: FavoriteView {
 
     func setupCollectionView() {}
 }
+
+// MARK: - GlobalTabBarInitialViewControllerScrollable
+
+extension FavoriteViewController: GlobalTabBarInitialViewControllerScrollable {
+
+    func initialViewControllerScrollToTop() {}
+}

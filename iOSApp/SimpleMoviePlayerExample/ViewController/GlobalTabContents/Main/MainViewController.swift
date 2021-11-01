@@ -44,3 +44,10 @@ extension MainViewController: MainView {
     func setupCollectionView() {
     }
 }
+
+// MARK: - GlobalTabBarInitialViewControllerScrollable
+
+extension MainViewController: GlobalTabBarInitialViewControllerScrollable {
+
+    func initialViewControllerScrollToTop() {}
+}

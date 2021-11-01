@@ -8,6 +8,10 @@
 import UIKit
 import FontAwesome_swift
 
+protocol GlobalTabBarInitialViewControllerScrollable: AnyObject {
+    func initialViewControllerScrollToTop()
+}
+
 final class GlobalTabBarController: UITabBarController {
 
     // MARK: - Properties
@@ -129,4 +133,32 @@ final class GlobalTabBarController: UITabBarController {
 
 // MARK: - UITabBarControllerDelegate
 
-extension GlobalTabBarController: UITabBarControllerDelegate {}
+extension GlobalTabBarController: UITabBarControllerDelegate {
+
+    func tabBarController(_ tabBarController: UITabBarController, shouldSelect viewController: UIViewController) -> Bool {
+        guard let viewControllers = viewControllers else { return false }
+        if viewController == viewControllers[selectedIndex], let navigationController = viewController as? UINavigationController {
+            return handleScrollToTopOrDismissToInitialViewController(navigationController)
+        }
+        return true
+    }
+
+    private func handleScrollToTopOrDismissToInitialViewController(_ navigationController: UINavigationController) -> Bool {
+        guard let viewController = navigationController.viewControllers.last else {
+            return true
+        }
+        // MEMO: 一番最初に表示する画面でタブ押下した場合にはScrollToTopを実行し、そうでない場合にはRootへ戻る画面遷移を実行する
+        var shouldDismissToInitialViewController: Bool = false
+        switch viewController {
+        case let mainViewController as MainViewController:
+            mainViewController.initialViewControllerScrollToTop()
+        case let favoriteViewController as FavoriteViewController:
+            favoriteViewController.initialViewControllerScrollToTop()
+        case let settingsViewController as SettingsViewController:
+            settingsViewController.initialViewControllerScrollToTop()
+        default:
+            shouldDismissToInitialViewController = true
+        }
+        return shouldDismissToInitialViewController
+    }
+}
