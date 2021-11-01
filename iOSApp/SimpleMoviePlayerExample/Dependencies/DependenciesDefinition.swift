@@ -73,12 +73,6 @@ final class DependenciesDefinition {
             impl:MovieSpeedLocalStoreImpl()
         )
 
-        // MEMO: (3) SQLite関連処理部分
-        dependecies.register(
-            SQLiteHelper.self,
-            impl: SQLiteManager.shared
-        )
-
         // MARK: - Repository
 
         dependecies.register(
@@ -131,13 +125,6 @@ final class DependenciesDefinition {
             )
         )
         dependecies.register(
-            FavoriteMainMovieRepository.self,
-            impl: FavoriteMainMovieRepositoryImpl(
-                sqliteHelper: dependecies.resolve(SQLiteHelper.self),
-                backgroundScheduler: dependecies.resolve(ImmediateSchedulerType.self, name: background)
-            )
-        )
-        dependecies.register(
             MovieQualityRepository.self,
             impl: MovieQualityRepositoryImpl(
                 movieQualityLocalStore: dependecies.resolve(MovieQualityLocalStore.self),
@@ -168,18 +155,13 @@ final class DependenciesDefinition {
         // MARK: - UseCase
 
         dependecies.register(
-            GetMainElementsUseCase.self,
-            impl: GetMainElementsUseCaseImpl(
+            GetMainUseCase.self,
+            impl: GetMainUseCaseImpl(
                 initialAppOpenRepository: dependecies.resolve(InitialAppOpenRepository.self),
+                mainBannerRepository: dependecies.resolve(MainBannerRepository.self),
                 mainNewsRepository: dependecies.resolve(MainNewsRepository.self),
                 featuredMovieRepository: dependecies.resolve(FeaturedMovieRepository.self),
                 mainMovieRepository: dependecies.resolve(MainMovieRepository.self)
-            )
-        )
-        dependecies.register(
-            GetCarouselMainBannersUseCase.self,
-            impl: GetCarouselMainBannersUseCaseImpl(
-                mainBannerRepository: dependecies.resolve(MainBannerRepository.self)
             )
         )
         dependecies.register(
@@ -205,24 +187,6 @@ final class DependenciesDefinition {
             SaveMovieSpeedUseCase.self,
             impl: SaveMovieSpeedUseCaseImpl(
                 movieSpeedRepository: dependecies.resolve(MovieSpeedRepository.self)
-            )
-        )
-        dependecies.register(
-            GetFavoriteMainMoviesUseCase.self,
-            impl: GetFavoriteMainMoviesUseCaseImpl(
-                favoriteMainMovieRepository: dependecies.resolve(FavoriteMainMovieRepository.self)
-            )
-        )
-        dependecies.register(
-            DeleteFavoriteMainMovieUseCase.self,
-            impl: DeleteFavoriteMainMovieUseCaseImpl(
-                favoriteMainMovieRepository: dependecies.resolve(FavoriteMainMovieRepository.self)
-            )
-        )
-        dependecies.register(
-            SaveFavoriteMainMovieUseCase.self,
-            impl: SaveFavoriteMainMovieUseCaseImpl(
-                favoriteMainMovieRepository: dependecies.resolve(FavoriteMainMovieRepository.self)
             )
         )
         dependecies.register(
@@ -292,26 +256,9 @@ final class PresenterFactory {
 
     static func createMainPresneter() -> MainPresenter {
         return MainPresenterImpl(
-            getMainElementsUseCase: dependecies.resolve(GetMainElementsUseCase.self),
-            getFavoriteMainMoviesUseCase: dependecies.resolve(GetFavoriteMainMoviesUseCase.self),
-            saveFavoriteMainMovieUseCase: dependecies.resolve(SaveFavoriteMainMovieUseCase.self),
+            getMainUseCase: dependecies.resolve(GetMainUseCase.self),
             getInitialAppOpenUseCase: dependecies.resolve(GetInitialAppOpenUseCase.self),
             changeFalseInitialAppOpenUseCase: dependecies.resolve(ChangeFalseInitialAppOpenUseCase.self),
-            mainScheduler: dependecies.resolve(ImmediateSchedulerType.self)
-        )
-    }
-
-    static func createMainBannerContainerPresenter() -> MainBannerContainerPresenter {
-        return MainBannerContainerPresenterImpl(
-            getCarouselMainBannersUseCase: dependecies.resolve(GetCarouselMainBannersUseCase.self),
-            mainScheduler: dependecies.resolve(ImmediateSchedulerType.self)
-        )
-    }
-
-    static func createFavoritePresenter() -> FavoritePresenter {
-        return FavoritePresenterImpl(
-            getFavoriteMainMoviesUseCase: dependecies.resolve(GetFavoriteMainMoviesUseCase.self),
-            deleteFavoriteMainMovieUseCase: dependecies.resolve(DeleteFavoriteMainMovieUseCase.self),
             mainScheduler: dependecies.resolve(ImmediateSchedulerType.self)
         )
     }

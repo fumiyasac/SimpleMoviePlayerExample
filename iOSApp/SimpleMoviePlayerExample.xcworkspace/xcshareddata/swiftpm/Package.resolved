@@ -29,15 +29,6 @@
         }
       },
       {
-        "package": "GRDB",
-        "repositoryURL": "https://github.com/groue/GRDB.swift.git",
-        "state": {
-          "branch": null,
-          "revision": "af13c91744ad8607c94ffbca3b0f98fa00692417",
-          "version": "5.8.0"
-        }
-      },
-      {
         "package": "Nimble",
         "repositoryURL": "https://github.com/Quick/Nimble.git",
         "state": {
@@ -89,15 +80,6 @@
           "branch": null,
           "revision": "f66bcd04088582c8fbb5cb8554d577e303bae396",
           "version": "5.3.0"
-        }
-      },
-      {
-        "package": "UICircularProgressRing",
-        "repositoryURL": "https://github.com/luispadron/UICircularProgressRing.git",
-        "state": {
-          "branch": "master",
-          "revision": "e41b35ffbff734f39d6b4b2ca488a17f487e73a3",
-          "version": null
         }
       }
     ]

@@ -15,7 +15,6 @@ PODS:
   - RxSwift (6.2.0)
   - RxTest (6.2.0):
     - RxSwift (= 6.2.0)
-  - SwipeCellKit (2.7.1)
 
 DEPENDENCIES:
   - ActiveLabel
@@ -28,7 +27,6 @@ DEPENDENCIES:
   - RxCocoa (= 6.2.0)
   - RxSwift (= 6.2.0)
   - RxTest (= 6.2.0)
-  - SwipeCellKit
 
 SPEC REPOS:
   trunk:
@@ -43,7 +41,6 @@ SPEC REPOS:
     - RxRelay
     - RxSwift
     - RxTest
-    - SwipeCellKit
 
 SPEC CHECKSUMS:
   ActiveLabel: 5e3f4de79a1952d4604b845a0610d4776e4b82b3
@@ -57,8 +54,7 @@ SPEC CHECKSUMS:
   RxRelay: e72dbfd157807478401ef1982e1c61c945c94b2f
   RxSwift: d356ab7bee873611322f134c5f9ef379fa183d8f
   RxTest: 0c692fa672b694373ba86d2b00033595297a2831
-  SwipeCellKit: 3972254a826da74609926daf59b08d6c72e619ea
 
-PODFILE CHECKSUM: 161b9e32ed5e8eb6414ae72f92f12c30ec373dee
+PODFILE CHECKSUM: f9249b8343fe48911302c14ccef28ad8c0a0222d
 
 COCOAPODS: 1.10.1

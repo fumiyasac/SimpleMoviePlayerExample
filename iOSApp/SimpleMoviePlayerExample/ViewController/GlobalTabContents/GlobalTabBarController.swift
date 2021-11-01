@@ -67,14 +67,7 @@ final class GlobalTabBarController: UITabBarController {
                 presenter: PresenterFactory.createMainPresneter()
             )
         }!.applyNavigationController()
-        // (2) FavoriteViewController
-        let favoriteViewController = UIStoryboard(name: "FavoriteViewController", bundle: nil).instantiateInitialViewController { coder in
-            FavoriteViewController(
-                coder: coder,
-                presenter: PresenterFactory.createFavoritePresenter()
-            )
-        }!.applyNavigationController()
-        // (3) SettingsViewController
+        // (2) SettingsViewController
         let settingsViewController = UIStoryboard(name: "SettingsViewController", bundle: nil).instantiateInitialViewController() { coder in
             SettingsViewController(
                 coder: coder,
@@ -85,7 +78,6 @@ final class GlobalTabBarController: UITabBarController {
         // MEMO: 各画面の土台となるUINavigationControllerをセットする
         self.viewControllers = [
             mainViewController,
-            favoriteViewController,
             settingsViewController
         ]
 
@@ -152,8 +144,6 @@ extension GlobalTabBarController: UITabBarControllerDelegate {
         switch viewController {
         case let mainViewController as MainViewController:
             mainViewController.initialViewControllerScrollToTop()
-        case let favoriteViewController as FavoriteViewController:
-            favoriteViewController.initialViewControllerScrollToTop()
         case let settingsViewController as SettingsViewController:
             settingsViewController.initialViewControllerScrollToTop()
         default:
