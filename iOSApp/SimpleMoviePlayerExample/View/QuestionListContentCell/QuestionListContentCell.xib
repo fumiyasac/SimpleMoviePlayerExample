@@ -23,13 +23,13 @@
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Question" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sPo-sA-RMa">
                                 <rect key="frame" x="16" y="16" width="288" height="19.5"/>
-                                <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="14"/>
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="14"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Answerのテキストが入ります。" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="amP-MV-c6N">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Answerのテキストが入ります。" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="amP-MV-c6N" customClass="ActiveLabel" customModule="ActiveLabel">
                                 <rect key="frame" x="16" y="47.5" width="288" height="16.5"/>
-                                <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="12"/>
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="12"/>
                                 <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -45,7 +45,7 @@
                         </constraints>
                     </view>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jNJ-A6-vVD">
-                        <rect key="frame" x="0.0" y="79.5" width="320" height="0.5"/>
+                        <rect key="frame" x="16" y="79.5" width="304" height="0.5"/>
                         <color key="backgroundColor" systemColor="opaqueSeparatorColor"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="0.5" id="AV1-hZ-hHr"/>
@@ -55,7 +55,7 @@
                 <constraints>
                     <constraint firstAttribute="trailing" secondItem="r8S-Io-27p" secondAttribute="trailing" id="Bt4-mE-AQT"/>
                     <constraint firstAttribute="trailing" secondItem="jNJ-A6-vVD" secondAttribute="trailing" id="OQJ-pu-U4x"/>
-                    <constraint firstItem="jNJ-A6-vVD" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="dEP-Yr-40t"/>
+                    <constraint firstItem="jNJ-A6-vVD" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="dEP-Yr-40t"/>
                     <constraint firstAttribute="bottom" secondItem="jNJ-A6-vVD" secondAttribute="bottom" id="p7f-lk-PgU"/>
                     <constraint firstItem="r8S-Io-27p" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="quQ-Yn-Mt7"/>
                     <constraint firstAttribute="bottom" secondItem="r8S-Io-27p" secondAttribute="bottom" id="v3x-uv-qvU"/>
@@ -64,7 +64,7 @@
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
-                <outlet property="answerLabel" destination="amP-MV-c6N" id="Uhi-hb-vx2"/>
+                <outlet property="answerLabel" destination="amP-MV-c6N" id="CIb-YK-qMe"/>
                 <outlet property="borderViewHeightConstraint" destination="AV1-hZ-hHr" id="Qrr-3w-dAe"/>
                 <outlet property="questionLabel" destination="sPo-sA-RMa" id="IoA-qb-1Qm"/>
             </connections>

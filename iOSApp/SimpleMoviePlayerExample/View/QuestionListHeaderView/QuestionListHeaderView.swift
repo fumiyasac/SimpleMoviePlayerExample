@@ -7,4 +7,15 @@
 
 import UIKit
 
-final class QuestionListHeaderView: CustomViewBase {}
+final class QuestionListHeaderView: CustomViewBase {
+
+    // MARK: - Initializer
+
+    required init(frame: CGRect) {
+        super.init(frame: frame)
+    }
+
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+    }
+}

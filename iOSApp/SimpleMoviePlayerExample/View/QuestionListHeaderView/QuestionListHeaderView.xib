@@ -9,46 +9,47 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="QuestionListHeaderView" customModule="SimpleMoviePlayerExample" customModuleProvider="target"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <collectionReusableView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="U6b-Vx-4bR" customClass="QuestionListHeaderView" customModule="SimpleMoviePlayerExample" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="320" height="36"/>
-            <autoresizingMask key="autoresizingMask"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="48"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CoU-Da-LTD">
-                    <rect key="frame" x="0.0" y="0.0" width="320" height="36"/>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UuP-5R-5hK">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="48"/>
                     <subviews>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="※よくある質問集" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x3S-s7-3Bm">
-                            <rect key="frame" x="65" y="10.5" width="83.5" height="15.5"/>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="※よくある質問集" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V38-z2-iWg">
+                            <rect key="frame" x="75" y="16.5" width="83.5" height="15.5"/>
                             <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="11"/>
                             <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <nil key="highlightedColor"/>
                         </label>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Q &amp; A" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vsb-dI-9t3">
-                            <rect key="frame" x="12" y="8.5" width="41" height="19.5"/>
-                            <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="14"/>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Q &amp; A" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="99t-3T-G8p">
+                            <rect key="frame" x="16" y="13" width="47" height="22"/>
+                            <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="16"/>
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
                         </label>
                     </subviews>
-                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     <constraints>
-                        <constraint firstItem="Vsb-dI-9t3" firstAttribute="leading" secondItem="CoU-Da-LTD" secondAttribute="leading" constant="12" id="2W4-rl-KCQ"/>
-                        <constraint firstItem="x3S-s7-3Bm" firstAttribute="leading" secondItem="Vsb-dI-9t3" secondAttribute="trailing" constant="12" id="ENX-yu-c8r"/>
-                        <constraint firstItem="x3S-s7-3Bm" firstAttribute="centerY" secondItem="CoU-Da-LTD" secondAttribute="centerY" id="J2j-76-HHh"/>
-                        <constraint firstItem="Vsb-dI-9t3" firstAttribute="centerY" secondItem="CoU-Da-LTD" secondAttribute="centerY" id="Sfy-sU-BK5"/>
+                        <constraint firstItem="V38-z2-iWg" firstAttribute="centerY" secondItem="UuP-5R-5hK" secondAttribute="centerY" id="Dgd-P3-hHG"/>
+                        <constraint firstItem="99t-3T-G8p" firstAttribute="centerY" secondItem="UuP-5R-5hK" secondAttribute="centerY" id="Pct-pI-XvX"/>
+                        <constraint firstItem="V38-z2-iWg" firstAttribute="leading" secondItem="99t-3T-G8p" secondAttribute="trailing" constant="12" id="UR8-qs-JY5"/>
+                        <constraint firstItem="99t-3T-G8p" firstAttribute="leading" secondItem="UuP-5R-5hK" secondAttribute="leading" constant="16" id="boF-gq-RfS"/>
                     </constraints>
                 </view>
             </subviews>
-            <viewLayoutGuide key="safeArea" id="VXr-Tz-HHm"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
-                <constraint firstItem="VXr-Tz-HHm" firstAttribute="trailing" secondItem="CoU-Da-LTD" secondAttribute="trailing" id="RuJ-1f-sck"/>
-                <constraint firstItem="CoU-Da-LTD" firstAttribute="leading" secondItem="U6b-Vx-4bR" secondAttribute="leading" id="VUj-r1-CU4"/>
-                <constraint firstAttribute="bottom" secondItem="CoU-Da-LTD" secondAttribute="bottom" id="gBU-vs-2zm"/>
-                <constraint firstItem="CoU-Da-LTD" firstAttribute="top" secondItem="U6b-Vx-4bR" secondAttribute="top" id="hEN-T0-sHW"/>
+                <constraint firstAttribute="bottom" secondItem="UuP-5R-5hK" secondAttribute="bottom" id="296-yh-sST"/>
+                <constraint firstAttribute="trailing" secondItem="UuP-5R-5hK" secondAttribute="trailing" id="7d9-zR-8lN"/>
+                <constraint firstItem="UuP-5R-5hK" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="fWK-af-Qsj"/>
+                <constraint firstItem="UuP-5R-5hK" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="uNd-QT-jdF"/>
             </constraints>
-            <point key="canvasLocation" x="132" y="92"/>
-        </collectionReusableView>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="43" y="36"/>
+        </view>
     </objects>
     <resources>
         <systemColor name="systemBackgroundColor">

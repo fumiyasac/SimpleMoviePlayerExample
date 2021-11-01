@@ -6,13 +6,14 @@
 //
 
 import UIKit
+import ActiveLabel
 
 final class QuestionListContentCell: UITableViewCell {
 
     // MARK: - @IBOutlet
 
     @IBOutlet private weak var questionLabel: UILabel!
-    @IBOutlet private weak var answerLabel: UILabel!
+    @IBOutlet private weak var answerLabel: ActiveLabel!
     @IBOutlet private weak var borderViewHeightConstraint: NSLayoutConstraint!
 
     // MARK: - Initializer
@@ -27,6 +28,16 @@ final class QuestionListContentCell: UITableViewCell {
 
     func setCell(questionViewObject: QuestionViewObject) {
         questionLabel.text = questionViewObject.question
-        answerLabel.text = questionViewObject.answer
+
+        let answerKeys = (
+            lineSpacing: CGFloat(4),
+            font: UIFont(name: "Avenir-Book", size: 12.0)!,
+            foregroundColor: UIColor.darkGray
+        )
+        let answerAttributes = UILabelDecorator.getLabelAttributesBy(keys: answerKeys)
+        answerLabel.attributedText = NSAttributedString(
+            string: questionViewObject.answer,
+            attributes: answerAttributes
+        )
     }
 }

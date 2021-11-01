@@ -7,4 +7,15 @@
 
 import UIKit
 
-final class MovieSettingsHeaderView: CustomViewBase {}
+final class MovieSettingsHeaderView: CustomViewBase {
+
+    // MARK: - Initializer
+
+    required init(frame: CGRect) {
+        super.init(frame: frame)
+    }
+
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+    }
+}

@@ -49,7 +49,7 @@ final class SettingsPresenterImpl: SettingsPresenter {
         self.coodinator = coodinator
     }
 
-    func viewDidAppearTrigger() {
+    func viewDidLoadTrigger() {
         Single
             .zip(
                 getMovieSettingsUseCase.execute(),

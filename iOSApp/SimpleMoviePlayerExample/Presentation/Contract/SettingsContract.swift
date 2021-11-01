@@ -20,5 +20,5 @@ protocol SettingsPresenter: AnyObject {
          view: SettingsView,
          coodinator: SettingsCoodinator
      )
-    func viewDidAppearTrigger()
+    func viewDidLoadTrigger()
 }

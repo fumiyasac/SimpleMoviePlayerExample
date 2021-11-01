@@ -18,26 +18,13 @@ final class SettingsViewController: UIViewController {
 
     private let presenter: SettingsPresenter
 
+    // MEMO: UITableViewDiffableDataSource & NSDiffableDataSourceSnapshotの設定
     private var snapshot: NSDiffableDataSourceSnapshot<SettingsSection, AnyHashable>!
+    private var dataSource: UITableViewDiffableDataSource<SettingsSection, AnyHashable>! = nil
 
-    private var dataSource: UICollectionViewDiffableDataSource<SettingsSection, AnyHashable>! = nil
-
-    private lazy var compositionalLayout: UICollectionViewCompositionalLayout = {
-        let layout = UICollectionViewCompositionalLayout { [weak self] (sectionIndex: Int, layoutEnvironment: NSCollectionLayoutEnvironment) -> NSCollectionLayoutSection? in
-
-            // MEMO: UICollectionViewのレイアウトを適用する
-            guard let weakSelf = self else {
-                assertionFailure()
-                return nil
-            }
-            return weakSelf.createCollectionViewLayout(layoutEnvironment: layoutEnvironment)
-        }
-        return layout
-    }()
-    
     // MARK: - @IBOutlet
 
-    @IBOutlet private weak var collectionView: UICollectionView!
+    @IBOutlet private weak var tableView: UITableView!
 
     // MARK: - Initializer
 
@@ -56,127 +43,55 @@ final class SettingsViewController: UIViewController {
         super.viewDidLoad()
 
         setupNavigationBarTitle(GlobalTabBarItems.settings.title)
-        setupCollectionView()
+        setupTableView()
         applyEmptySnapshot()
 
         presenter.setup(
             view: self,
             coodinator: self
         )
-    }
-
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-
-        presenter.viewDidAppearTrigger()
+        presenter.viewDidLoadTrigger()
     }
 
     // MARK: - Private Function
     
-    private func setupCollectionView() {
+    private func setupTableView() {
 
-        // MEMO: UICollectionViewDelegateの適用
-        collectionView.delegate = self
-        
-        // MEMO: UICollectionViewCompositionalLayoutを利用してレイアウトを組み立てる
-        collectionView.collectionViewLayout = compositionalLayout
+        // MEMO: UITableViewに関する初期設定
+        // ※1: UITableViewのStyleは「Grouped」に設定
+        // ※2: UITableViewのSeparatorは「None」に設定
+        tableView.delegate = self
+        tableView.registerCustomCell(MovieSettingsContentCell.self)
+        tableView.registerCustomCell(QuestionListContentCell.self)
 
-        // MEMO: このレイアウトで利用するセル要素・Headerの登録
-        // SettingsSection: 0
-        collectionView.registerCustomReusableHeaderView(MovieSettingsHeaderView.self)
-        // SettingsSection: 1
-        collectionView.registerCustomReusableHeaderView(QuestionListHeaderView.self)
-
-        // MEMO: このレイアウトで利用するセル要素のCellRegistration値
-        let movieQualityCellRegistration = UICollectionView.CellRegistration<UICollectionViewListCell, MovieQualityViewObject> { [weak self] (cell, _, viewObject) in
-            guard let weakSelf = self else {
-                assertionFailure()
-                return
-            }
-            var contentConfiguration = weakSelf.createMovieSettingsConfiguration()
-            contentConfiguration.text = viewObject.title
-            contentConfiguration.secondaryText = viewObject.movieQuality.text
-            cell.contentConfiguration = contentConfiguration
-            cell.backgroundConfiguration = UIBackgroundConfiguration.listPlainCell()
-        }
-        let movieSpeedCellRegistration = UICollectionView.CellRegistration<UICollectionViewListCell, MovieSpeedViewObject> { [weak self] (cell, _, viewObject) in
-            guard let weakSelf = self else {
-                assertionFailure()
-                return
-            }
-            var contentConfiguration = weakSelf.createMovieSettingsConfiguration()
-            contentConfiguration.text = viewObject.title
-            contentConfiguration.secondaryText = "x\(viewObject.movieSpeed.rawValue)"
-            cell.contentConfiguration = contentConfiguration
-            cell.backgroundConfiguration = UIBackgroundConfiguration.listPlainCell()
-        }
-        let questionCellRegistration = UICollectionView.CellRegistration<QuestionListCell, QuestionViewObject> { (cell, _, viewObject) in
-            cell.question = viewObject.question
-            cell.answer = viewObject.answer
-            cell.backgroundConfiguration = UIBackgroundConfiguration.listPlainCell()
-        }
-
-        // MEMO: DataSourceはUICollectionViewDiffableDataSourceを利用してUICollectionViewCellを継承したクラスを組み立てる
-        dataSource = UICollectionViewDiffableDataSource<SettingsSection, AnyHashable>(collectionView: collectionView) { (collectionView: UICollectionView, indexPath: IndexPath, viewObject: AnyHashable) -> UICollectionViewCell? in
+        // MEMO: DataSourceはUITableViewDiffableDataSourceを利用してUITableViewCellを継承したクラスを組み立てる
+        dataSource = UITableViewDiffableDataSource<SettingsSection, AnyHashable>(tableView: tableView) { (tableView: UITableView, indexPath: IndexPath, viewObject: AnyHashable) -> UITableViewCell? in
 
             // MEMO: UICollectionViewListCellを適用する
             switch viewObject {
 
             // SettingsSection: 0 (MovieQualityViewObject)
             case let viewObject as MovieQualityViewObject:
-                return collectionView.dequeueConfiguredReusableCell(using: movieQualityCellRegistration, for: indexPath, item: viewObject)
+                let cell = tableView.dequeueReusableCustomCell(with: MovieSettingsContentCell.self)
+                cell.setCell(movieQualityViewObject: viewObject)
+                return cell
 
             // SettingsSection: 0 (MovieSpeedViewObject)
             case let viewObject as MovieSpeedViewObject:
-                return collectionView.dequeueConfiguredReusableCell(using: movieSpeedCellRegistration, for: indexPath, item: viewObject)
+                let cell = tableView.dequeueReusableCustomCell(with: MovieSettingsContentCell.self)
+                cell.setCell(movieSpeedViewObject: viewObject)
+                return cell
 
             // SettingsSection: 1 (QuestionViewObject)
             case let viewObject as QuestionViewObject:
-                return collectionView.dequeueConfiguredReusableCell(using: questionCellRegistration, for: indexPath, item: viewObject)
+                let cell = tableView.dequeueReusableCustomCell(with: QuestionListContentCell.self)
+                cell.setCell(questionViewObject: viewObject)
+                return cell
 
             default:
                 return nil
             }
         }
-
-        // MEMO: Headerの表記についてもUICollectionViewDiffableDataSourceを利用して組み立てる
-        dataSource.supplementaryViewProvider = { (collectionView: UICollectionView, kind: String, indexPath: IndexPath) -> UICollectionReusableView? in
-
-            switch indexPath.section {
-
-            // SettingsSection: 0
-            case SettingsSection.movieSettings.rawValue:
-                if kind == UICollectionView.elementKindSectionHeader {
-                    return collectionView.dequeueReusableCustomHeaderView(with: MovieSettingsHeaderView.self, indexPath: indexPath)
-                }
-
-            // SettingsSection: 1
-            case SettingsSection.questions.rawValue:
-                if kind == UICollectionView.elementKindSectionHeader {
-                    return collectionView.dequeueReusableCustomHeaderView(with: QuestionListHeaderView.self, indexPath: indexPath)
-                }
-
-            default:
-                break
-            }
-            return nil
-        }
-    }
-
-    private func createCollectionViewLayout(layoutEnvironment: NSCollectionLayoutEnvironment) -> NSCollectionLayoutSection {
-        var configuration = UICollectionLayoutListConfiguration(appearance: .plain)
-        configuration.headerMode = .supplementary
-        return NSCollectionLayoutSection.list(using: configuration, layoutEnvironment: layoutEnvironment)
-    }
-
-    // デフォルトのUICollectionViewListCellの設定をそのまま利用する場合のデザインを適用する
-    private func createMovieSettingsConfiguration() -> UIListContentConfiguration {
-        var content: UIListContentConfiguration = .valueCell()
-        content.textProperties.font = UIFont(name: "HelveticaNeue-Medium", size: 14.0)!
-        content.textProperties.color = .black
-        content.secondaryTextProperties.font = UIFont(name: "HelveticaNeue-Medium", size: 14.0)!
-        content.secondaryTextProperties.color = .gray
-        return content
     }
 
     // 初期化時のSnapshotを適用する
@@ -220,18 +135,57 @@ extension SettingsViewController: SettingsView {
 
 extension SettingsViewController: SettingsCoodinator {}
 
-// MARK: - UICollectionViewDelegate
+// MARK: - UITableViewDelegate
 
-extension SettingsViewController: UICollectionViewDelegate {
+extension SettingsViewController: UITableViewDelegate {
 
-    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+
+        // MEMO: 該当のセクションに応じたHeaderを定義する
+        switch section {
+        case SettingsSection.movieSettings.rawValue:
+            let headerView = MovieSettingsHeaderView(frame: CGRect(x: 0, y: 0, width: tableView.frame.width, height: 48.0))
+            return headerView
+        case SettingsSection.questions.rawValue:
+            let headerView = QuestionListHeaderView(frame: CGRect(x: 0, y: 0, width: tableView.frame.width, height: 48.0))
+            return headerView
+        default:
+            return nil
+        }
+    }
+
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return 48.0
+    }
+
+    func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
+        return nil
+    }
+
+    func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
+        return .leastNonzeroMagnitude
+    }
+
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
 
         // MEMO: 該当のセクションとIndexPathからNSDiffableDataSourceSnapshot内の該当する値を取得する
-        if let targetSection = SettingsSection(rawValue: indexPath.section) {
-            let targetSnapshot = snapshot.itemIdentifiers(inSection: targetSection)
-            print("Section: ", targetSection)
-            print("IndexPath.row: ", indexPath.row)
-            print("Model: ", targetSnapshot[indexPath.row])
+        guard let targetSection = SettingsSection(rawValue: indexPath.section) else {
+            return
+        }
+        let targetSnapshot = snapshot.itemIdentifiers(inSection: targetSection)
+        let viewObject = targetSnapshot[indexPath.row]
+
+        switch viewObject {
+        case let viewObject as MovieQualityViewObject:
+            dump(viewObject)
+            // TODO: UIMenuでの値切り替え処理
+            return
+        case let viewObject as MovieSpeedViewObject:
+            // TODO: UIMenuでの値切り替え処理
+            dump(viewObject)
+            return
+        default:
+            break
         }
     }
 }
@@ -240,6 +194,6 @@ extension SettingsViewController: UICollectionViewDelegate {
 
 extension SettingsViewController: UIScrollViewDelegate {
 
-    // MEMO: UICollectionViewDelegateを適用すれば従来通りUIScorllViewDelegateは利用可能
+    // MEMO: UITableViewDelegateを適用すれば従来通りUIScorllViewDelegateは利用可能
     func scrollViewDidScroll(_ scrollView: UIScrollView) {}
 }
