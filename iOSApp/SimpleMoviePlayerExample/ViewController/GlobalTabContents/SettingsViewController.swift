@@ -116,6 +116,8 @@ extension SettingsViewController: SettingsView {
         movieSpeedViewObject: MovieSpeedViewObject,
         questionViewObjects: [QuestionViewObject]
     ) {
+
+        // MEMO: 当該セクションのデータ配列を削除した後にPresenterから受け取ったViewObjectを追加する
         let beforeMovieQualityViewObjects = snapshot.itemIdentifiers(inSection: .movieQuality)
         snapshot.deleteItems(beforeMovieQualityViewObjects)
         let beforeMovieSpeedViewObjects = snapshot.itemIdentifiers(inSection: .movieSpeed)
@@ -130,6 +132,8 @@ extension SettingsViewController: SettingsView {
     }
 
     func applyNewMovieQualityViewObjectToDataSource(movieQualityViewObject: MovieQualityViewObject) {
+
+        // MEMO: 当該セクションのデータ配列を削除した後にPresenterから受け取ったViewObjectを追加する
         let beforeMovieQualityViewObject = snapshot.itemIdentifiers(inSection: .movieQuality)
         snapshot.deleteItems(beforeMovieQualityViewObject)
         snapshot.appendItems([movieQualityViewObject], toSection: .movieQuality)
@@ -137,6 +141,8 @@ extension SettingsViewController: SettingsView {
     }
 
     func applyNewMovieSpeedViewObjectToDataSource(movieSpeedViewObject: MovieSpeedViewObject) {
+
+        // MEMO: 当該セクションのデータ配列を削除した後にPresenterから受け取ったViewObjectを追加する
         let beforeMovieSpeedViewObject = snapshot.itemIdentifiers(inSection: .movieSpeed)
         snapshot.deleteItems(beforeMovieSpeedViewObject)
         snapshot.appendItems([movieSpeedViewObject], toSection: .movieSpeed)
@@ -225,40 +231,31 @@ extension SettingsViewController: UITableViewDelegate {
         point: CGPoint
     ) -> UIContextMenuConfiguration? {
 
-        // MEMO: 該当のセクションとIndexPathからNSDiffableDataSourceSnapshot内の該当する値を取得する
+        // MEMO: 長押しを検知時に該当のセクションとIndexPathからNSDiffableDataSourceSnapshot内の該当する値を取得する
         guard let targetSection = SettingsSection(rawValue: indexPath.section) else {
             return nil
         }
         let targetSnapshot = snapshot.itemIdentifiers(inSection: targetSection)
         let viewObject = targetSnapshot[indexPath.row]
 
-        // MEMO: 該当のセクションとIndexPathからNSDiffableDataSourceSnapshot内の該当する値を取得する
-        switch viewObject {
-        case _ as MovieQualityViewObject:
-            return UIContextMenuConfiguration(
-                identifier: nil,
-                previewProvider: nil,
-                actionProvider: { [weak self] suggestedActions in
-                    guard let weakSelf = self else {
-                        return nil
-                    }
+        // MEMO: viewObjectの型に応じて表示するメニューを出し分ける
+        return UIContextMenuConfiguration(
+            identifier: nil,
+            previewProvider: nil,
+            actionProvider: { [weak self] suggestedActions in
+                guard let weakSelf = self else {
+                    return nil
+                }
+                switch viewObject {
+                case _ as MovieQualityViewObject:
                     return weakSelf.showMovieQualityMenu()
-                }
-            )
-        case _ as MovieSpeedViewObject:
-            return UIContextMenuConfiguration(
-                identifier: nil,
-                previewProvider: nil,
-                actionProvider: { [weak self] suggestedActions in
-                    guard let weakSelf = self else {
-                        return nil
-                    }
+                case _ as MovieSpeedViewObject:
                     return weakSelf.showMovieSpeedMenu()
+                default:
+                    return nil
                 }
-            )
-        default:
-            return nil
-        }
+            }
+        )
     }
 
     // MARK: - Private Function
@@ -276,7 +273,7 @@ extension SettingsViewController: UITableViewDelegate {
         }
         return UIMenu(title: "動画解像度の変更", children: movieQualityActionChildren)
     }
-    
+
     private func showMovieSpeedMenu() -> UIMenu {
         var movieSpeedActionChildren: [UIAction] = []
         for movieSpeed in MovieSpeed.allCases {
