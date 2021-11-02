@@ -79,6 +79,8 @@ final class SettingsPresenterImpl: SettingsPresenter {
         saveMovieQualityUseCase
             .execute(
                 movieQuality: movieQuality
+            ).observe(
+                on: mainScheduler
             ).subscribe(
                 onCompleted: { [weak self] in
                     guard let weakSelf = self else {
@@ -98,6 +100,8 @@ final class SettingsPresenterImpl: SettingsPresenter {
         saveMovieSpeedUseCase
             .execute(
                 movieSpeed: movieSpeed
+            ).observe(
+                on: mainScheduler
             ).subscribe(
                 onCompleted: { [weak self] in
                     guard let weakSelf = self else {
