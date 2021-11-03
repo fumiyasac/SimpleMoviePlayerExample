@@ -10,6 +10,7 @@
 		49D1B7EF0A40F4BE6139D66A /* Pods_SimpleMoviePlayerExample_SimpleMoviePlayerExampleUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8EB340B7D1322CC9C702AB91 /* Pods_SimpleMoviePlayerExample_SimpleMoviePlayerExampleUITests.framework */; };
 		53E89A3FFAD1A4BBC30E2E41 /* Pods_SimpleMoviePlayerExample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0F6E8B24C46852484C8DFBCD /* Pods_SimpleMoviePlayerExample.framework */; };
 		A98499EE6E510602F60CF7DB /* Pods_SimpleMoviePlayerExampleTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 820A67EF4479DEF9E9CC0642 /* Pods_SimpleMoviePlayerExampleTests.framework */; };
+		DE09FC5527329BEF00B4BEB3 /* UniqueDataSourceBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE09FC5427329BEF00B4BEB3 /* UniqueDataSourceBuilder.swift */; };
 		DE0BFBA527148B6100FC0F32 /* Quick in Frameworks */ = {isa = PBXBuildFile; productRef = DE0BFBA427148B6100FC0F32 /* Quick */; };
 		DE0BFBA727148B6900FC0F32 /* Nimble in Frameworks */ = {isa = PBXBuildFile; productRef = DE0BFBA627148B6900FC0F32 /* Nimble */; };
 		DE0BFBA927148B7000FC0F32 /* SwiftyMocky in Frameworks */ = {isa = PBXBuildFile; productRef = DE0BFBA827148B7000FC0F32 /* SwiftyMocky */; };
@@ -187,6 +188,7 @@
 		BC9841BE6F00408A52C81066 /* Pods-SimpleMoviePlayerExample-SimpleMoviePlayerExampleUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SimpleMoviePlayerExample-SimpleMoviePlayerExampleUITests.debug.xcconfig"; path = "Target Support Files/Pods-SimpleMoviePlayerExample-SimpleMoviePlayerExampleUITests/Pods-SimpleMoviePlayerExample-SimpleMoviePlayerExampleUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		CF32871968371738901CE35F /* Pods-SimpleMoviePlayerExampleTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SimpleMoviePlayerExampleTests.debug.xcconfig"; path = "Target Support Files/Pods-SimpleMoviePlayerExampleTests/Pods-SimpleMoviePlayerExampleTests.debug.xcconfig"; sourceTree = "<group>"; };
 		D7A777ED43B2100757C4421E /* Pods-SimpleMoviePlayerExample-SimpleMoviePlayerExampleUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SimpleMoviePlayerExample-SimpleMoviePlayerExampleUITests.release.xcconfig"; path = "Target Support Files/Pods-SimpleMoviePlayerExample-SimpleMoviePlayerExampleUITests/Pods-SimpleMoviePlayerExample-SimpleMoviePlayerExampleUITests.release.xcconfig"; sourceTree = "<group>"; };
+		DE09FC5427329BEF00B4BEB3 /* UniqueDataSourceBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UniqueDataSourceBuilder.swift; sourceTree = "<group>"; };
 		DE0BFBDF271F131300FC0F32 /* MovieQualityLocalStoreSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieQualityLocalStoreSpec.swift; sourceTree = "<group>"; };
 		DE0BFBE1271F160000FC0F32 /* MovieSpeedLocalStoreSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieSpeedLocalStoreSpec.swift; sourceTree = "<group>"; };
 		DE1275B127304CE1008B3178 /* QuestionListHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = QuestionListHeaderView.xib; sourceTree = "<group>"; };
@@ -503,6 +505,7 @@
 			isa = PBXGroup;
 			children = (
 				DE1275B327305076008B3178 /* UILabelDecorator.swift */,
+				DE09FC5427329BEF00B4BEB3 /* UniqueDataSourceBuilder.swift */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -1222,6 +1225,7 @@
 				DEA47534263F40AA00090DA5 /* AppDelegate.swift in Sources */,
 				DEB52A092684CD6A000C33A2 /* DependenciesDefinition.swift in Sources */,
 				DEB529EE2682B84A000C33A2 /* GlobalTabBarController.swift in Sources */,
+				DE09FC5527329BEF00B4BEB3 /* UniqueDataSourceBuilder.swift in Sources */,
 				DE8DFD9E26C5642800CAB778 /* GetMainUseCase.swift in Sources */,
 				DECACF0026E58F63007459C1 /* DeleteLastShownMainMoviePlayTimeUseCase.swift in Sources */,
 				DEA47536263F40AA00090DA5 /* SceneDelegate.swift in Sources */,
