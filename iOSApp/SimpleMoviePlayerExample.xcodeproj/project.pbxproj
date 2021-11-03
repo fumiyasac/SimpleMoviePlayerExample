@@ -397,10 +397,13 @@
 		DE5F6E69267FBEEA00FCD3A1 /* Storyboard */ = {
 			isa = PBXGroup;
 			children = (
-				DEA6BCFF26B577BC00196CC3 /* FeaturedDetailPlayer */,
-				DE82CF3026ABF1AE00033A62 /* GlobalTabContents */,
-				DE82CF3126ABF1C800033A62 /* MovieDetailPlayer */,
-				DEA6BD0926B8FAB300196CC3 /* Profile */,
+				DEB529F72684B72B000C33A2 /* GlobalTabBarController.storyboard */,
+				DEA47539263F40AA00090DA5 /* MainViewController.storyboard */,
+				DEB529F42684B705000C33A2 /* FavoriteViewController.storyboard */,
+				DEB52A012684CA68000C33A2 /* SettingsViewController.storyboard */,
+				DE82CF2D26ABF1A000033A62 /* MovieDetailViewController.storyboard */,
+				DEA6BD0026B577D700196CC3 /* FeaturedDetailPlayerViewController.storyboard */,
+				DEA6BD0A26B8FAFB00196CC3 /* ProfileViewController.storyboard */,
 			);
 			path = Storyboard;
 			sourceTree = "<group>";
@@ -446,10 +449,13 @@
 		DE5F6E6D267FBF2D00FCD3A1 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
-				DEA6BCFE26B5779E00196CC3 /* FeaturedDetailPlayer */,
-				DE82CF3326ABF1E900033A62 /* GlobalTabContents */,
-				DE82CF3226ABF1DF00033A62 /* MovieDetailPlayer */,
-				DEA6BD0C26B8FB3600196CC3 /* Profile */,
+				DEB529ED2682B84A000C33A2 /* GlobalTabBarController.swift */,
+				DEA47537263F40AA00090DA5 /* MainViewController.swift */,
+				DEB529FA2684BA71000C33A2 /* FavoriteViewController.swift */,
+				DEB52A042684CA8B000C33A2 /* SettingsViewController.swift */,
+				DEA6BCFC26B5779700196CC3 /* FeaturedDetailPlayerViewController.swift */,
+				DE82CF3426ABF38400033A62 /* MovieDetailViewController.swift */,
+				DEA6BD0D26B8FB4B00196CC3 /* ProfileViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -504,12 +510,15 @@
 		DE5F6E84267FC30200FCD3A1 /* ViewObject */ = {
 			isa = PBXGroup;
 			children = (
-				DEA99D3326EF899000BEC08E /* MainMovieDetail */,
-				DEB2313726EE4C66009A839B /* Main */,
-				DEB2313826EE4D3D009A839B /* Favorite */,
-				DEB2313B26EE4D61009A839B /* Settings */,
-				DEA99D3726F0C79B00BEC08E /* Question */,
-				DEB2314026EE4DA0009A839B /* Profile */,
+				DEB2313526EE4C60009A839B /* MainBannerViewObject.swift */,
+				DEB2313126EE4C22009A839B /* NewsViewObject.swift */,
+				DEB2312F26EE4C0E009A839B /* MainMovieViewObject.swift */,
+				DEB2313326EE4C35009A839B /* FeatureMovieViewObject.swift */,
+				DEB2313926EE4D5C009A839B /* FavoriteViewObject.swift */,
+				DEB2313C26EE4D8D009A839B /* MovieQualityViewObject.swift */,
+				DEB2313E26EE4D9A009A839B /* MovieSpeedViewObject.swift */,
+				DEA99D3826F0C7BF00BEC08E /* QuestionViewObject.swift */,
+				DEB2314126EE4DC7009A839B /* ProfileViewObject.swift */,
 			);
 			path = ViewObject;
 			sourceTree = "<group>";
@@ -551,44 +560,6 @@
 				DECB81522700F5AF008AE187 /* SettingsPresenterImpl.swift */,
 			);
 			path = Presenter;
-			sourceTree = "<group>";
-		};
-		DE82CF3026ABF1AE00033A62 /* GlobalTabContents */ = {
-			isa = PBXGroup;
-			children = (
-				DEB529F42684B705000C33A2 /* FavoriteViewController.storyboard */,
-				DEB529F72684B72B000C33A2 /* GlobalTabBarController.storyboard */,
-				DEA47539263F40AA00090DA5 /* MainViewController.storyboard */,
-				DEB52A012684CA68000C33A2 /* SettingsViewController.storyboard */,
-			);
-			path = GlobalTabContents;
-			sourceTree = "<group>";
-		};
-		DE82CF3126ABF1C800033A62 /* MovieDetailPlayer */ = {
-			isa = PBXGroup;
-			children = (
-				DE82CF2D26ABF1A000033A62 /* MovieDetailViewController.storyboard */,
-			);
-			path = MovieDetailPlayer;
-			sourceTree = "<group>";
-		};
-		DE82CF3226ABF1DF00033A62 /* MovieDetailPlayer */ = {
-			isa = PBXGroup;
-			children = (
-				DE82CF3426ABF38400033A62 /* MovieDetailViewController.swift */,
-			);
-			path = MovieDetailPlayer;
-			sourceTree = "<group>";
-		};
-		DE82CF3326ABF1E900033A62 /* GlobalTabContents */ = {
-			isa = PBXGroup;
-			children = (
-				DECB814D2700D5F5008AE187 /* Main */,
-				DECB814E2700D613008AE187 /* Favorite */,
-				DECB814F2700D62F008AE187 /* Settings */,
-				DEB529ED2682B84A000C33A2 /* GlobalTabBarController.swift */,
-			);
-			path = GlobalTabContents;
 			sourceTree = "<group>";
 		};
 		DE8DFD6226BD90E300CAB778 /* FeaturedMovie */ = {
@@ -798,22 +769,6 @@
 			path = SimpleMoviePlayerExampleUITests;
 			sourceTree = "<group>";
 		};
-		DEA6BCFE26B5779E00196CC3 /* FeaturedDetailPlayer */ = {
-			isa = PBXGroup;
-			children = (
-				DEA6BCFC26B5779700196CC3 /* FeaturedDetailPlayerViewController.swift */,
-			);
-			path = FeaturedDetailPlayer;
-			sourceTree = "<group>";
-		};
-		DEA6BCFF26B577BC00196CC3 /* FeaturedDetailPlayer */ = {
-			isa = PBXGroup;
-			children = (
-				DEA6BD0026B577D700196CC3 /* FeaturedDetailPlayerViewController.storyboard */,
-			);
-			path = FeaturedDetailPlayer;
-			sourceTree = "<group>";
-		};
 		DEA6BD0826B80F8E00196CC3 /* MainMovie */ = {
 			isa = PBXGroup;
 			children = (
@@ -821,37 +776,6 @@
 				DE8DFD6026BD859B00CAB778 /* MainMovieEntity.swift */,
 			);
 			path = MainMovie;
-			sourceTree = "<group>";
-		};
-		DEA6BD0926B8FAB300196CC3 /* Profile */ = {
-			isa = PBXGroup;
-			children = (
-				DEA6BD0A26B8FAFB00196CC3 /* ProfileViewController.storyboard */,
-			);
-			path = Profile;
-			sourceTree = "<group>";
-		};
-		DEA6BD0C26B8FB3600196CC3 /* Profile */ = {
-			isa = PBXGroup;
-			children = (
-				DEA6BD0D26B8FB4B00196CC3 /* ProfileViewController.swift */,
-			);
-			path = Profile;
-			sourceTree = "<group>";
-		};
-		DEA99D3326EF899000BEC08E /* MainMovieDetail */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = MainMovieDetail;
-			sourceTree = "<group>";
-		};
-		DEA99D3726F0C79B00BEC08E /* Question */ = {
-			isa = PBXGroup;
-			children = (
-				DEA99D3826F0C7BF00BEC08E /* QuestionViewObject.swift */,
-			);
-			path = Question;
 			sourceTree = "<group>";
 		};
 		DEB04BD4272ED77600D5D642 /* QuestionListContentCell */ = {
@@ -899,42 +823,6 @@
 			path = ProfileComment;
 			sourceTree = "<group>";
 		};
-		DEB2313726EE4C66009A839B /* Main */ = {
-			isa = PBXGroup;
-			children = (
-				DEB2312F26EE4C0E009A839B /* MainMovieViewObject.swift */,
-				DEB2313126EE4C22009A839B /* NewsViewObject.swift */,
-				DEB2313326EE4C35009A839B /* FeatureMovieViewObject.swift */,
-				DEB2313526EE4C60009A839B /* MainBannerViewObject.swift */,
-			);
-			path = Main;
-			sourceTree = "<group>";
-		};
-		DEB2313826EE4D3D009A839B /* Favorite */ = {
-			isa = PBXGroup;
-			children = (
-				DEB2313926EE4D5C009A839B /* FavoriteViewObject.swift */,
-			);
-			path = Favorite;
-			sourceTree = "<group>";
-		};
-		DEB2313B26EE4D61009A839B /* Settings */ = {
-			isa = PBXGroup;
-			children = (
-				DEB2313C26EE4D8D009A839B /* MovieQualityViewObject.swift */,
-				DEB2313E26EE4D9A009A839B /* MovieSpeedViewObject.swift */,
-			);
-			path = Settings;
-			sourceTree = "<group>";
-		};
-		DEB2314026EE4DA0009A839B /* Profile */ = {
-			isa = PBXGroup;
-			children = (
-				DEB2314126EE4DC7009A839B /* ProfileViewObject.swift */,
-			);
-			path = Profile;
-			sourceTree = "<group>";
-		};
 		DEB529EF2684B0ED000C33A2 /* Dependencies */ = {
 			isa = PBXGroup;
 			children = (
@@ -969,30 +857,6 @@
 				DE0BFBE1271F160000FC0F32 /* MovieSpeedLocalStoreSpec.swift */,
 			);
 			path = Infrastructure;
-			sourceTree = "<group>";
-		};
-		DECB814D2700D5F5008AE187 /* Main */ = {
-			isa = PBXGroup;
-			children = (
-				DEA47537263F40AA00090DA5 /* MainViewController.swift */,
-			);
-			path = Main;
-			sourceTree = "<group>";
-		};
-		DECB814E2700D613008AE187 /* Favorite */ = {
-			isa = PBXGroup;
-			children = (
-				DEB529FA2684BA71000C33A2 /* FavoriteViewController.swift */,
-			);
-			path = Favorite;
-			sourceTree = "<group>";
-		};
-		DECB814F2700D62F008AE187 /* Settings */ = {
-			isa = PBXGroup;
-			children = (
-				DEB52A042684CA8B000C33A2 /* SettingsViewController.swift */,
-			);
-			path = Settings;
 			sourceTree = "<group>";
 		};
 		DEE09717272838E9007A942C /* QuestionListHeaderView */ = {

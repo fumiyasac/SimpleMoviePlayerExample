@@ -9,14 +9,12 @@ import Foundation
 
 final class MovieQualityViewObject: Hashable {
 
-    let movieQuality: MovieQuality
     let title: String
     let value: String
 
     // MARK: - Initializer
 
     init(movieQuality: MovieQuality) {
-        self.movieQuality = movieQuality
         title = "動画解像度"
         value = movieQuality.text
     }
@@ -24,12 +22,11 @@ final class MovieQualityViewObject: Hashable {
     // MARK: - Hashable
 
     func hash(into hasher: inout Hasher) {
-        hasher.combine(movieQuality.rawValue)
+        hasher.combine(value)
     }
 
     static func == (lhs: MovieQualityViewObject, rhs: MovieQualityViewObject) -> Bool {
-        return lhs.movieQuality == rhs.movieQuality
-            && lhs.title == rhs.title
+        return lhs.title == rhs.title
             && lhs.value == rhs.value
     }
 }

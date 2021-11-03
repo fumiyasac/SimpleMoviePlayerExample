@@ -9,14 +9,12 @@ import Foundation
 
 final class MovieSpeedViewObject: Hashable {
 
-    let movieSpeed: MovieSpeed
     let title: String
     let value: String
 
     // MARK: - Initializer
 
     init(movieSpeed: MovieSpeed) {
-        self.movieSpeed = movieSpeed
         title = "動画再生速度"
         value = "\(movieSpeed.rawValue)倍速"
     }
@@ -24,12 +22,11 @@ final class MovieSpeedViewObject: Hashable {
     // MARK: - Hashable
 
     func hash(into hasher: inout Hasher) {
-        hasher.combine(movieSpeed.rawValue)
+        hasher.combine(value)
     }
 
     static func == (lhs: MovieSpeedViewObject, rhs: MovieSpeedViewObject) -> Bool {
-        return lhs.movieSpeed == rhs.movieSpeed
-            && lhs.title == rhs.title
+        return lhs.title == rhs.title
             && lhs.value == rhs.value
     }
 }
