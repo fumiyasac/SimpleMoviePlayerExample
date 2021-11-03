@@ -168,18 +168,13 @@ final class DependenciesDefinition {
         // MARK: - UseCase
 
         dependecies.register(
-            GetMainElementsUseCase.self,
-            impl: GetMainElementsUseCaseImpl(
+            GetMainUseCase.self,
+            impl: GetMainUseCaseImpl(
                 initialAppOpenRepository: dependecies.resolve(InitialAppOpenRepository.self),
+                mainBannerRepository: dependecies.resolve(MainBannerRepository.self),
                 mainNewsRepository: dependecies.resolve(MainNewsRepository.self),
                 featuredMovieRepository: dependecies.resolve(FeaturedMovieRepository.self),
                 mainMovieRepository: dependecies.resolve(MainMovieRepository.self)
-            )
-        )
-        dependecies.register(
-            GetCarouselMainBannersUseCase.self,
-            impl: GetCarouselMainBannersUseCaseImpl(
-                mainBannerRepository: dependecies.resolve(MainBannerRepository.self)
             )
         )
         dependecies.register(
@@ -292,18 +287,11 @@ final class PresenterFactory {
 
     static func createMainPresneter() -> MainPresenter {
         return MainPresenterImpl(
-            getMainElementsUseCase: dependecies.resolve(GetMainElementsUseCase.self),
+            getMainUseCase: dependecies.resolve(GetMainUseCase.self),
             getFavoriteMainMoviesUseCase: dependecies.resolve(GetFavoriteMainMoviesUseCase.self),
             saveFavoriteMainMovieUseCase: dependecies.resolve(SaveFavoriteMainMovieUseCase.self),
             getInitialAppOpenUseCase: dependecies.resolve(GetInitialAppOpenUseCase.self),
             changeFalseInitialAppOpenUseCase: dependecies.resolve(ChangeFalseInitialAppOpenUseCase.self),
-            mainScheduler: dependecies.resolve(ImmediateSchedulerType.self)
-        )
-    }
-
-    static func createMainBannerContainerPresenter() -> MainBannerContainerPresenter {
-        return MainBannerContainerPresenterImpl(
-            getCarouselMainBannersUseCase: dependecies.resolve(GetCarouselMainBannersUseCase.self),
             mainScheduler: dependecies.resolve(ImmediateSchedulerType.self)
         )
     }

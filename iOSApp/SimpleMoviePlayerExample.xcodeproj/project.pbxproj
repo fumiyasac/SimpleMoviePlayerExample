@@ -66,9 +66,7 @@
 		DE8DFD9826C5602F00CAB778 /* LastShownMainMoviePlayTimeRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE8DFD9726C5602F00CAB778 /* LastShownMainMoviePlayTimeRepository.swift */; };
 		DE8DFD9A26C5605B00CAB778 /* LastShownFeaturedMoviePlayTimeRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE8DFD9926C5605B00CAB778 /* LastShownFeaturedMoviePlayTimeRepository.swift */; };
 		DE8DFD9C26C5641500CAB778 /* MainDto.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE8DFD9B26C5641500CAB778 /* MainDto.swift */; };
-		DE8DFD9E26C5642800CAB778 /* GetMainElementsUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE8DFD9D26C5642800CAB778 /* GetMainElementsUseCase.swift */; };
-		DE8DFDA026C7B8E800CAB778 /* CarouselMainBannerDto.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE8DFD9F26C7B8E800CAB778 /* CarouselMainBannerDto.swift */; };
-		DE8DFDA226C7B8F900CAB778 /* GetCarouselMainBannersUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE8DFDA126C7B8F900CAB778 /* GetCarouselMainBannersUseCase.swift */; };
+		DE8DFD9E26C5642800CAB778 /* GetMainUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE8DFD9D26C5642800CAB778 /* GetMainUseCase.swift */; };
 		DE8DFDA426C7BE4E00CAB778 /* MoviePlayerError.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE8DFDA326C7BE4E00CAB778 /* MoviePlayerError.swift */; };
 		DE8DFDA826C7E30000CAB778 /* MainMovieTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE8DFDA726C7E30000CAB778 /* MainMovieTable.swift */; };
 		DE9F05BA2709FAD10035BEFB /* UICircularProgressRing in Frameworks */ = {isa = PBXBuildFile; productRef = DE9F05B92709FAD10035BEFB /* UICircularProgressRing */; };
@@ -95,8 +93,6 @@
 		DEA6BD0E26B8FB4B00196CC3 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEA6BD0D26B8FB4B00196CC3 /* ProfileViewController.swift */; };
 		DEA6BD1126B99B0900196CC3 /* FloatingPanel in Frameworks */ = {isa = PBXBuildFile; productRef = DEA6BD1026B99B0900196CC3 /* FloatingPanel */; };
 		DEA99D3926F0C7BF00BEC08E /* QuestionViewObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEA99D3826F0C7BF00BEC08E /* QuestionViewObject.swift */; };
-		DEA99D3D26F0C8C700BEC08E /* MainBannerContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEA99D3C26F0C8C700BEC08E /* MainBannerContainerViewController.swift */; };
-		DEA99D4126F0C92300BEC08E /* MainBannerContainerViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DEA99D4026F0C92300BEC08E /* MainBannerContainerViewController.storyboard */; };
 		DEAE7EFA268A19EF009ACBD9 /* PlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEAE7EF9268A19EE009ACBD9 /* PlayerView.swift */; };
 		DEB04BD7272ED79700D5D642 /* QuestionListContentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEB04BD5272ED79700D5D642 /* QuestionListContentCell.swift */; };
 		DEB04BD8272ED79700D5D642 /* QuestionListContentCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DEB04BD6272ED79700D5D642 /* QuestionListContentCell.xib */; };
@@ -155,8 +151,6 @@
 		DECACF0226E592C2007459C1 /* DeleteLastShownFeatureMoviePlayTimeUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = DECACF0126E592C2007459C1 /* DeleteLastShownFeatureMoviePlayTimeUseCase.swift */; };
 		DECB814226FF4ECC008AE187 /* MainContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = DECB814126FF4ECC008AE187 /* MainContract.swift */; };
 		DECB814426FF4ED9008AE187 /* MainPresenterImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = DECB814326FF4ED9008AE187 /* MainPresenterImpl.swift */; };
-		DECB81462700C527008AE187 /* MainBannerContainerContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = DECB81452700C527008AE187 /* MainBannerContainerContract.swift */; };
-		DECB81482700C539008AE187 /* MainBannerContainerPresenterImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = DECB81472700C539008AE187 /* MainBannerContainerPresenterImpl.swift */; };
 		DECB814A2700D5AD008AE187 /* FavoriteContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = DECB81492700D5AD008AE187 /* FavoriteContract.swift */; };
 		DECB814C2700D5C2008AE187 /* FavoritePresenterImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = DECB814B2700D5C2008AE187 /* FavoritePresenterImpl.swift */; };
 		DECB81512700F5A3008AE187 /* SettingsContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = DECB81502700F5A3008AE187 /* SettingsContract.swift */; };
@@ -244,9 +238,7 @@
 		DE8DFD9726C5602F00CAB778 /* LastShownMainMoviePlayTimeRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LastShownMainMoviePlayTimeRepository.swift; sourceTree = "<group>"; };
 		DE8DFD9926C5605B00CAB778 /* LastShownFeaturedMoviePlayTimeRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LastShownFeaturedMoviePlayTimeRepository.swift; sourceTree = "<group>"; };
 		DE8DFD9B26C5641500CAB778 /* MainDto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainDto.swift; sourceTree = "<group>"; };
-		DE8DFD9D26C5642800CAB778 /* GetMainElementsUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetMainElementsUseCase.swift; sourceTree = "<group>"; };
-		DE8DFD9F26C7B8E800CAB778 /* CarouselMainBannerDto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarouselMainBannerDto.swift; sourceTree = "<group>"; };
-		DE8DFDA126C7B8F900CAB778 /* GetCarouselMainBannersUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetCarouselMainBannersUseCase.swift; sourceTree = "<group>"; };
+		DE8DFD9D26C5642800CAB778 /* GetMainUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetMainUseCase.swift; sourceTree = "<group>"; };
 		DE8DFDA326C7BE4E00CAB778 /* MoviePlayerError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviePlayerError.swift; sourceTree = "<group>"; };
 		DE8DFDA726C7E30000CAB778 /* MainMovieTable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMovieTable.swift; sourceTree = "<group>"; };
 		DEA3C08C26D9F1980080226E /* GetLastShownMainMoviePlayTimeUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetLastShownMainMoviePlayTimeUseCase.swift; sourceTree = "<group>"; };
@@ -277,8 +269,6 @@
 		DEA6BD0A26B8FAFB00196CC3 /* ProfileViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ProfileViewController.storyboard; sourceTree = "<group>"; };
 		DEA6BD0D26B8FB4B00196CC3 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		DEA99D3826F0C7BF00BEC08E /* QuestionViewObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionViewObject.swift; sourceTree = "<group>"; };
-		DEA99D3C26F0C8C700BEC08E /* MainBannerContainerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainBannerContainerViewController.swift; sourceTree = "<group>"; };
-		DEA99D4026F0C92300BEC08E /* MainBannerContainerViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MainBannerContainerViewController.storyboard; sourceTree = "<group>"; };
 		DEAE7EF9268A19EE009ACBD9 /* PlayerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerView.swift; sourceTree = "<group>"; };
 		DEB04BD5272ED79700D5D642 /* QuestionListContentCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionListContentCell.swift; sourceTree = "<group>"; };
 		DEB04BD6272ED79700D5D642 /* QuestionListContentCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = QuestionListContentCell.xib; sourceTree = "<group>"; };
@@ -336,8 +326,6 @@
 		DECACF0126E592C2007459C1 /* DeleteLastShownFeatureMoviePlayTimeUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteLastShownFeatureMoviePlayTimeUseCase.swift; sourceTree = "<group>"; };
 		DECB814126FF4ECC008AE187 /* MainContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainContract.swift; sourceTree = "<group>"; };
 		DECB814326FF4ED9008AE187 /* MainPresenterImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPresenterImpl.swift; sourceTree = "<group>"; };
-		DECB81452700C527008AE187 /* MainBannerContainerContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainBannerContainerContract.swift; sourceTree = "<group>"; };
-		DECB81472700C539008AE187 /* MainBannerContainerPresenterImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainBannerContainerPresenterImpl.swift; sourceTree = "<group>"; };
 		DECB81492700D5AD008AE187 /* FavoriteContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteContract.swift; sourceTree = "<group>"; };
 		DECB814B2700D5C2008AE187 /* FavoritePresenterImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritePresenterImpl.swift; sourceTree = "<group>"; };
 		DECB81502700F5A3008AE187 /* SettingsContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsContract.swift; sourceTree = "<group>"; };
@@ -490,7 +478,6 @@
 			isa = PBXGroup;
 			children = (
 				DECB814126FF4ECC008AE187 /* MainContract.swift */,
-				DECB81452700C527008AE187 /* MainBannerContainerContract.swift */,
 				DECB81492700D5AD008AE187 /* FavoriteContract.swift */,
 				DECB81502700F5A3008AE187 /* SettingsContract.swift */,
 			);
@@ -560,7 +547,6 @@
 			isa = PBXGroup;
 			children = (
 				DECB814326FF4ED9008AE187 /* MainPresenterImpl.swift */,
-				DECB81472700C539008AE187 /* MainBannerContainerPresenterImpl.swift */,
 				DECB814B2700D5C2008AE187 /* FavoritePresenterImpl.swift */,
 				DECB81522700F5AF008AE187 /* SettingsPresenterImpl.swift */,
 			);
@@ -570,7 +556,6 @@
 		DE82CF3026ABF1AE00033A62 /* GlobalTabContents */ = {
 			isa = PBXGroup;
 			children = (
-				DEA99D3F26F0C91400BEC08E /* Container */,
 				DEB529F42684B705000C33A2 /* FavoriteViewController.storyboard */,
 				DEB529F72684B72B000C33A2 /* GlobalTabBarController.storyboard */,
 				DEA47539263F40AA00090DA5 /* MainViewController.storyboard */,
@@ -691,10 +676,9 @@
 			isa = PBXGroup;
 			children = (
 				DE8DFD9026C55B4000CAB778 /* DataTransferObject */,
-				DE8DFD9D26C5642800CAB778 /* GetMainElementsUseCase.swift */,
+				DE8DFD9D26C5642800CAB778 /* GetMainUseCase.swift */,
 				DE8C103C26FBF6D20047AD0D /* GetMainMovieUseCase.swift */,
 				DE8C103E26FBF6F60047AD0D /* GetFeaturedMoviesUseCase.swift */,
-				DE8DFDA126C7B8F900CAB778 /* GetCarouselMainBannersUseCase.swift */,
 				DEB970FE26D7C8FE004D7B56 /* GetQuestionsUseCase.swift */,
 				DEB9710226D7D439004D7B56 /* GetMovieSettingsUseCase.swift */,
 				DECB815427010A19008AE187 /* SaveMovieQualityUseCase.swift */,
@@ -719,7 +703,6 @@
 			isa = PBXGroup;
 			children = (
 				DE8DFD9B26C5641500CAB778 /* MainDto.swift */,
-				DE8DFD9F26C7B8E800CAB778 /* CarouselMainBannerDto.swift */,
 				DEB970FC26D26F7B004D7B56 /* QuestionDto.swift */,
 				DEB9710026D7D010004D7B56 /* MovieSettingsDto.swift */,
 				DEB9710626D7D927004D7B56 /* FavoriteMainMoviesDto.swift */,
@@ -871,22 +854,6 @@
 			path = Question;
 			sourceTree = "<group>";
 		};
-		DEA99D3E26F0C90500BEC08E /* MainBannerContainer */ = {
-			isa = PBXGroup;
-			children = (
-				DEA99D3C26F0C8C700BEC08E /* MainBannerContainerViewController.swift */,
-			);
-			path = MainBannerContainer;
-			sourceTree = "<group>";
-		};
-		DEA99D3F26F0C91400BEC08E /* Container */ = {
-			isa = PBXGroup;
-			children = (
-				DEA99D4026F0C92300BEC08E /* MainBannerContainerViewController.storyboard */,
-			);
-			path = Container;
-			sourceTree = "<group>";
-		};
 		DEB04BD4272ED77600D5D642 /* QuestionListContentCell */ = {
 			isa = PBXGroup;
 			children = (
@@ -1007,7 +974,6 @@
 		DECB814D2700D5F5008AE187 /* Main */ = {
 			isa = PBXGroup;
 			children = (
-				DEA99D3E26F0C90500BEC08E /* MainBannerContainer */,
 				DEA47537263F40AA00090DA5 /* MainViewController.swift */,
 			);
 			path = Main;
@@ -1174,7 +1140,6 @@
 				DEB04BDD272ED9BA00D5D642 /* MovieSettingsContentCell.xib in Resources */,
 				DEB04BD8272ED79700D5D642 /* QuestionListContentCell.xib in Resources */,
 				DE8DFD8326C16F0200CAB778 /* main_banner_stub.json in Resources */,
-				DEA99D4126F0C92300BEC08E /* MainBannerContainerViewController.storyboard in Resources */,
 				DEB52A032684CA68000C33A2 /* SettingsViewController.storyboard in Resources */,
 				DECACEFE26E428F0007459C1 /* profile_activities_me_stub.json in Resources */,
 				DE1275B227304CE1008B3178 /* QuestionListHeaderView.xib in Resources */,
@@ -1366,7 +1331,6 @@
 				DEB2313426EE4C35009A839B /* FeatureMovieViewObject.swift in Sources */,
 				DEB970F726D15BA8004D7B56 /* MovieSpeedRepository.swift in Sources */,
 				DEB2313026EE4C0E009A839B /* MainMovieViewObject.swift in Sources */,
-				DE8DFDA026C7B8E800CAB778 /* CarouselMainBannerDto.swift in Sources */,
 				DEB9710C26D7DBF4004D7B56 /* FavoriteMainMovieEntity.swift in Sources */,
 				DEB970FB26D15FE1004D7B56 /* QuestionRepository.swift in Sources */,
 				DEB970EA26D14886004D7B56 /* MoviePlayerSettings.swift in Sources */,
@@ -1390,12 +1354,11 @@
 				DEB970F926D15D2B004D7B56 /* MovieQualityRepository.swift in Sources */,
 				DECB81532700F5AF008AE187 /* SettingsPresenterImpl.swift in Sources */,
 				DE5361012728531F00FAC549 /* SettingsCoodinator.swift in Sources */,
-				DECB81462700C527008AE187 /* MainBannerContainerContract.swift in Sources */,
 				DEA3C09526D9F2330080226E /* GetInitialAppOpenUseCase.swift in Sources */,
 				DEA47534263F40AA00090DA5 /* AppDelegate.swift in Sources */,
 				DEB52A092684CD6A000C33A2 /* DependenciesDefinition.swift in Sources */,
 				DEB529EE2682B84A000C33A2 /* GlobalTabBarController.swift in Sources */,
-				DE8DFD9E26C5642800CAB778 /* GetMainElementsUseCase.swift in Sources */,
+				DE8DFD9E26C5642800CAB778 /* GetMainUseCase.swift in Sources */,
 				DECACF0026E58F63007459C1 /* DeleteLastShownMainMoviePlayTimeUseCase.swift in Sources */,
 				DEA47536263F40AA00090DA5 /* SceneDelegate.swift in Sources */,
 				DEA3C09326D9F1EC0080226E /* SaveLastShownFeatureMoviePlayTimeUseCase.swift in Sources */,
@@ -1425,7 +1388,6 @@
 				DE8DFD9226C55BDA00CAB778 /* MainBannerRepository.swift in Sources */,
 				DECB815727010A2C008AE187 /* SaveMovieSpeedUseCase.swift in Sources */,
 				DEB970F526D15AB9004D7B56 /* MovieQualityLocalStore.swift in Sources */,
-				DE8DFDA226C7B8F900CAB778 /* GetCarouselMainBannersUseCase.swift in Sources */,
 				DEB9710E26D7DFBD004D7B56 /* DeleteFavoriteMainMovieUseCase.swift in Sources */,
 				DEB04BDC272ED9BA00D5D642 /* MovieSettingsContentCell.swift in Sources */,
 				DEB970F126D158BF004D7B56 /* QuestionEntity.swift in Sources */,
@@ -1433,7 +1395,6 @@
 				DEB970FF26D7C8FE004D7B56 /* GetQuestionsUseCase.swift in Sources */,
 				DEB52A072684CD12000C33A2 /* DependeciesContainer.swift in Sources */,
 				DECACEF826E30B5C007459C1 /* ProfileDto.swift in Sources */,
-				DEA99D3D26F0C8C700BEC08E /* MainBannerContainerViewController.swift in Sources */,
 				DECB814A2700D5AD008AE187 /* FavoriteContract.swift in Sources */,
 				DE24CC202711DCDD00246E69 /* FavoriteCoodinator.swift in Sources */,
 				DEA3C09126D9F1D60080226E /* SaveLastShownMainMoviePlayTimeUseCase.swift in Sources */,
@@ -1447,7 +1408,6 @@
 				DE8C103D26FBF6D20047AD0D /* GetMainMovieUseCase.swift in Sources */,
 				DEE0971E27283D9C007A942C /* QuestionListHeaderView.swift in Sources */,
 				DEA6BD0E26B8FB4B00196CC3 /* ProfileViewController.swift in Sources */,
-				DECB81482700C539008AE187 /* MainBannerContainerPresenterImpl.swift in Sources */,
 				DE8DFD6626BD912800CAB778 /* FeaturedMovieEntity.swift in Sources */,
 				DE8DFD7B26BFC09600CAB778 /* LastShownMainMoviePlayTimeLocalStore.swift in Sources */,
 				DECACF0226E592C2007459C1 /* DeleteLastShownFeatureMoviePlayTimeUseCase.swift in Sources */,

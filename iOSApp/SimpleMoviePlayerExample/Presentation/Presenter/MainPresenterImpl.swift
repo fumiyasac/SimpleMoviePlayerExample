@@ -10,7 +10,7 @@ import RxSwift
 
 final class MainPresenterImpl: MainPresenter {
 
-    private let getMainElementsUseCase: GetMainElementsUseCase
+    private let getMainUseCase: GetMainUseCase
     private let getFavoriteMainMoviesUseCase: GetFavoriteMainMoviesUseCase
     private let saveFavoriteMainMovieUseCase: SaveFavoriteMainMovieUseCase
     private let getInitialAppOpenUseCase: GetInitialAppOpenUseCase
@@ -20,14 +20,14 @@ final class MainPresenterImpl: MainPresenter {
     // MARK: - Initializer
 
     init(
-        getMainElementsUseCase: GetMainElementsUseCase,
+        getMainUseCase: GetMainUseCase,
         getFavoriteMainMoviesUseCase: GetFavoriteMainMoviesUseCase,
         saveFavoriteMainMovieUseCase: SaveFavoriteMainMovieUseCase,
         getInitialAppOpenUseCase: GetInitialAppOpenUseCase,
         changeFalseInitialAppOpenUseCase: ChangeFalseInitialAppOpenUseCase,
         mainScheduler: ImmediateSchedulerType
     ) {
-        self.getMainElementsUseCase = getMainElementsUseCase
+        self.getMainUseCase = getMainUseCase
         self.getFavoriteMainMoviesUseCase = getFavoriteMainMoviesUseCase
         self.saveFavoriteMainMovieUseCase = saveFavoriteMainMovieUseCase
         self.getInitialAppOpenUseCase = getInitialAppOpenUseCase
