@@ -118,35 +118,56 @@ extension SettingsViewController: SettingsView {
     ) {
 
         // MEMO: 当該セクションのデータ配列を削除した後にPresenterから受け取ったViewObjectを追加する
-        let beforeMovieQualityViewObjects = snapshot.itemIdentifiers(inSection: .movieQuality)
-        snapshot.deleteItems(beforeMovieQualityViewObjects)
-        let beforeMovieSpeedViewObjects = snapshot.itemIdentifiers(inSection: .movieSpeed)
-        snapshot.deleteItems(beforeMovieSpeedViewObjects)
-        let beforeQuestionsViewObjects = snapshot.itemIdentifiers(inSection: .questions)
-        snapshot.deleteItems(beforeQuestionsViewObjects)
+        // ※ 変更前と変更後のViewObjectの値が同じ物であればsnapshotの操作を実行しない
+        // → Snapshotを操作するとScroll位置がずれてしまうのでやむなくこの形としている
+        // → movieQualityViewObject / MovieSpeedViewObject の更新操作時も同様
 
-        snapshot.appendItems([movieQualityViewObject], toSection: .movieQuality)
-        snapshot.appendItems([movieSpeedViewObject], toSection: .movieSpeed)
-        snapshot.appendItems(questionViewObjects, toSection: .questions)
-        dataSource.apply(snapshot, animatingDifferences: false)
+        let beforeMovieQualityViewObjects = snapshot.itemIdentifiers(inSection: .movieQuality)
+        let isEqualMovieQualityViewObject = (beforeMovieQualityViewObjects == [movieQualityViewObject])
+        if !isEqualMovieQualityViewObject {
+            snapshot.deleteItems(beforeMovieQualityViewObjects)
+            snapshot.appendItems([movieQualityViewObject], toSection: .movieQuality)
+        }
+        
+        let beforeMovieSpeedViewObjects = snapshot.itemIdentifiers(inSection: .movieSpeed)
+        let isEqualMovieSpeedViewObject = (beforeMovieSpeedViewObjects == [movieSpeedViewObject])
+        if !isEqualMovieSpeedViewObject {
+            snapshot.deleteItems(beforeMovieSpeedViewObjects)
+            snapshot.appendItems([movieSpeedViewObject], toSection: .movieSpeed)
+        }
+        
+        let beforeQuestionsViewObjects = snapshot.itemIdentifiers(inSection: .questions)
+        let isEqualQuestionsViewObjects = (beforeQuestionsViewObjects as! [QuestionViewObject] == questionViewObjects)
+        if !isEqualQuestionsViewObjects {
+            snapshot.deleteItems(beforeQuestionsViewObjects)
+            snapshot.appendItems(questionViewObjects, toSection: .questions)
+        }
+
+        if !isEqualMovieQualityViewObject || !isEqualMovieSpeedViewObject || !isEqualQuestionsViewObjects {
+            dataSource.apply(snapshot, animatingDifferences: false)
+        }
     }
 
     func applyNewMovieQualityViewObjectToDataSource(movieQualityViewObject: MovieQualityViewObject) {
 
-        // MEMO: 当該セクションのデータ配列を削除した後にPresenterから受け取ったViewObjectを追加する
-        let beforeMovieQualityViewObject = snapshot.itemIdentifiers(inSection: .movieQuality)
-        snapshot.deleteItems(beforeMovieQualityViewObject)
-        snapshot.appendItems([movieQualityViewObject], toSection: .movieQuality)
-        dataSource.apply(snapshot, animatingDifferences: false)
+        let beforeMovieQualityViewObjects = snapshot.itemIdentifiers(inSection: .movieQuality)
+        let isEqualMovieQualityViewObject = (beforeMovieQualityViewObjects == [movieQualityViewObject])
+        if !isEqualMovieQualityViewObject {
+            snapshot.deleteItems(beforeMovieQualityViewObjects)
+            snapshot.appendItems([movieQualityViewObject], toSection: .movieQuality)
+            dataSource.apply(snapshot, animatingDifferences: false)
+        }
     }
 
     func applyNewMovieSpeedViewObjectToDataSource(movieSpeedViewObject: MovieSpeedViewObject) {
 
-        // MEMO: 当該セクションのデータ配列を削除した後にPresenterから受け取ったViewObjectを追加する
-        let beforeMovieSpeedViewObject = snapshot.itemIdentifiers(inSection: .movieSpeed)
-        snapshot.deleteItems(beforeMovieSpeedViewObject)
-        snapshot.appendItems([movieSpeedViewObject], toSection: .movieSpeed)
-        dataSource.apply(snapshot, animatingDifferences: false)
+        let beforeMovieSpeedViewObjects = snapshot.itemIdentifiers(inSection: .movieSpeed)
+        let isEqualMovieSpeedViewObject = (beforeMovieSpeedViewObjects == [movieSpeedViewObject])
+        if !isEqualMovieSpeedViewObject {
+            snapshot.deleteItems(beforeMovieSpeedViewObjects)
+            snapshot.appendItems([movieSpeedViewObject], toSection: .movieSpeed)
+            dataSource.apply(snapshot, animatingDifferences: false)
+        }
     }
 }
 
