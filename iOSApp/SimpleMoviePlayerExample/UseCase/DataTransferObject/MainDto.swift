@@ -11,7 +11,6 @@ final class MainDto: Equatable {
 
     let shouldShowToolTip: Bool
     let mainNews: [MainNewsEntity]
-    let mainBanners: [MainBannerEntity]
     let featuredMovies: [FeaturedMovieEntity]
     let mainMovies: [MainMovieEntity]
 
@@ -19,13 +18,11 @@ final class MainDto: Equatable {
 
     init(
         shouldShowToolTip: Bool,
-        mainBanners: [MainBannerEntity],
         mainNews: [MainNewsEntity],
         featuredMovies: [FeaturedMovieEntity],
         mainMovies: [MainMovieEntity]
     ) {
         self.shouldShowToolTip = shouldShowToolTip
-        self.mainBanners = mainBanners
         self.mainNews = mainNews
         self.featuredMovies = featuredMovies
         self.mainMovies = mainMovies
@@ -38,7 +35,6 @@ final class MainDto: Equatable {
         rhs: MainDto
     ) -> Bool {
         return lhs.shouldShowToolTip == rhs.shouldShowToolTip &&
-            lhs.mainBanners == rhs.mainBanners &&
             lhs.mainNews == rhs.mainNews &&
             lhs.featuredMovies == rhs.featuredMovies &&
             lhs.mainMovies == rhs.mainMovies

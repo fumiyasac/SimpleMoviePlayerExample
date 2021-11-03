@@ -9,14 +9,13 @@ import Foundation
 import RxSwift
 
 //sourcery: AutoMockable
-protocol GetMainUseCase {
+protocol GetMainElementsUseCase {
     func execute() -> Single<MainDto>
 }
 
-final class GetMainUseCaseImpl: GetMainUseCase {
+final class GetMainElementsUseCaseImpl: GetMainElementsUseCase {
 
     private let initialAppOpenRepository: InitialAppOpenRepository
-    private let mainBannerRepository: MainBannerRepository
     private let mainNewsRepository: MainNewsRepository
     private let featuredMovieRepository: FeaturedMovieRepository
     private let mainMovieRepository: MainMovieRepository
@@ -25,13 +24,11 @@ final class GetMainUseCaseImpl: GetMainUseCase {
 
     init(
         initialAppOpenRepository: InitialAppOpenRepository,
-        mainBannerRepository: MainBannerRepository,
         mainNewsRepository: MainNewsRepository,
         featuredMovieRepository: FeaturedMovieRepository,
         mainMovieRepository: MainMovieRepository
     ) {
         self.initialAppOpenRepository = initialAppOpenRepository
-        self.mainBannerRepository = mainBannerRepository
         self.mainNewsRepository = mainNewsRepository
         self.featuredMovieRepository = featuredMovieRepository
         self.mainMovieRepository = mainMovieRepository
@@ -48,16 +45,14 @@ final class GetMainUseCaseImpl: GetMainUseCase {
             }
             // MEMO: Single.zipを利用して他処理の実行を待ってから返したい型へ変換を試みる
             return Single.zip(
-                weakSelf.mainBannerRepository.findAll(),
                 weakSelf.mainNewsRepository.findAll(),
                 weakSelf.featuredMovieRepository.findAll(),
                 weakSelf.mainMovieRepository.findAll()
             ).map { apiResponses -> MainDto in
                 // MEMO: APIレスポンス取得結果とUserDefaultの処理結果を組み合わせてMainDtoを作成する
-                let (mainBanners, mainNews, featuredMovies, mainMovies) = apiResponses
+                let (mainNews, featuredMovies, mainMovies) = apiResponses
                 return MainDto(
                     shouldShowToolTip: shouldShowToolTip,
-                    mainBanners: mainBanners,
                     mainNews: mainNews,
                     featuredMovies: featuredMovies,
                     mainMovies: mainMovies

@@ -14,6 +14,7 @@ import FontAwesome_swift
 
 enum GlobalTabBarItems: CaseIterable {
     case main
+    case favorite
     case settings
 
     // 配置するタイトルを取得する
@@ -21,6 +22,8 @@ enum GlobalTabBarItems: CaseIterable {
         switch self {
         case .main:
             return "メイン"
+        case .favorite:
+            return "お気に入り"
         case .settings:
             return "設定"
         }
@@ -31,6 +34,8 @@ enum GlobalTabBarItems: CaseIterable {
         switch self {
         case .main:
             return .home
+        case .favorite:
+            return .heart
         case .settings:
             return .cog
         }
