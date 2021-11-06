@@ -155,7 +155,9 @@ extension SettingsViewController: SettingsView {
         if !isEqualMovieQualityViewObject {
             snapshot.deleteItems(beforeMovieQualityViewObjects)
             snapshot.appendItems([movieQualityViewObject], toSection: .movieQuality)
-            dataSource.apply(snapshot, animatingDifferences: false)
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.4, execute: {
+                self.dataSource.apply(self.snapshot, animatingDifferences: true)
+            })
         }
     }
 
@@ -166,7 +168,9 @@ extension SettingsViewController: SettingsView {
         if !isEqualMovieSpeedViewObject {
             snapshot.deleteItems(beforeMovieSpeedViewObjects)
             snapshot.appendItems([movieSpeedViewObject], toSection: .movieSpeed)
-            dataSource.apply(snapshot, animatingDifferences: false)
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.4, execute: {
+                self.dataSource.apply(self.snapshot, animatingDifferences: true)
+            })
         }
     }
 }
