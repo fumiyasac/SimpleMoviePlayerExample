@@ -20,7 +20,7 @@ final class SettingsViewController: UIViewController {
     private let presenter: SettingsPresenter
 
     // MEMO: UITableViewDiffableDataSource & NSDiffableDataSourceSnapshotの設定
-    private var snapshot: NSDiffableDataSourceSnapshot<SettingsSection, AnyHashable>!
+    //private var snapshot: NSDiffableDataSourceSnapshot<SettingsSection, AnyHashable>!
     private var dataSource: UITableViewDiffableDataSource<SettingsSection, AnyHashable>! = nil
 
     // MARK: - @IBOutlet
@@ -98,12 +98,14 @@ final class SettingsViewController: UIViewController {
 
     // 初期化時のSnapshotを適用する
     private func applyInitialDataToDataSource() {
-        snapshot = NSDiffableDataSourceSnapshot<SettingsSection, AnyHashable>()
-        snapshot.appendSections(SettingsSection.allCases)
-        for section in SettingsSection.allCases {
-            snapshot.appendItems([], toSection: section)
-        }
-        dataSource.apply(snapshot, animatingDifferences: false)
+        var newSnapshot = NSDiffableDataSourceSnapshot<SettingsSection, AnyHashable>()
+        newSnapshot.appendSections([.movieQuality])
+        newSnapshot.appendItems([], toSection: .movieQuality)
+        newSnapshot.appendSections([.movieSpeed])
+        newSnapshot.appendItems([], toSection: .movieSpeed)
+        newSnapshot.appendSections([.questions])
+        newSnapshot.appendItems([], toSection: .questions)
+        dataSource.apply(newSnapshot, animatingDifferences: false)
     }
 }
 
@@ -117,59 +119,56 @@ extension SettingsViewController: SettingsView {
         questionViewObjects: [QuestionViewObject]
     ) {
 
-        // MEMO: 当該セクションのデータ配列を削除した後にPresenterから受け取ったViewObjectを追加する
-        // ※ 変更前と変更後のViewObjectの値が同じ物であればsnapshotの操作を実行しない
-        // → Snapshotを操作するとScroll位置がずれてしまうのでやむなくこの形としている
-        // → movieQualityViewObject / MovieSpeedViewObject の更新操作時も同様
-
-        let beforeMovieQualityViewObjects = snapshot.itemIdentifiers(inSection: .movieQuality)
-        let isEqualMovieQualityViewObject = (beforeMovieQualityViewObjects == [movieQualityViewObject])
-        if !isEqualMovieQualityViewObject {
-            snapshot.deleteItems(beforeMovieQualityViewObjects)
-            snapshot.appendItems([movieQualityViewObject], toSection: .movieQuality)
-        }
-        
-        let beforeMovieSpeedViewObjects = snapshot.itemIdentifiers(inSection: .movieSpeed)
-        let isEqualMovieSpeedViewObject = (beforeMovieSpeedViewObjects == [movieSpeedViewObject])
-        if !isEqualMovieSpeedViewObject {
-            snapshot.deleteItems(beforeMovieSpeedViewObjects)
-            snapshot.appendItems([movieSpeedViewObject], toSection: .movieSpeed)
-        }
-        
-        let beforeQuestionsViewObjects = snapshot.itemIdentifiers(inSection: .questions)
-        let isEqualQuestionsViewObjects = (beforeQuestionsViewObjects as! [QuestionViewObject] == questionViewObjects)
-        if !isEqualQuestionsViewObjects {
-            snapshot.deleteItems(beforeQuestionsViewObjects)
-            snapshot.appendItems(questionViewObjects, toSection: .questions)
-        }
-
-        if !isEqualMovieQualityViewObject || !isEqualMovieSpeedViewObject || !isEqualQuestionsViewObjects {
-            dataSource.apply(snapshot, animatingDifferences: false)
-        }
+        var newSnapshot = NSDiffableDataSourceSnapshot<SettingsSection, AnyHashable>()
+        newSnapshot.appendSections([.movieQuality])
+        newSnapshot.appendItems([movieQualityViewObject], toSection: .movieQuality)
+        newSnapshot.appendSections([.movieSpeed])
+        newSnapshot.appendItems([movieSpeedViewObject], toSection: .movieSpeed)
+        newSnapshot.appendSections([.questions])
+        newSnapshot.appendItems(questionViewObjects, toSection: .questions)
+        dataSource.apply(newSnapshot, animatingDifferences: false)
     }
 
     func applyNewMovieQualityViewObjectToDataSource(movieQualityViewObject: MovieQualityViewObject) {
 
-        let beforeMovieQualityViewObjects = snapshot.itemIdentifiers(inSection: .movieQuality)
+        let currentSnapshot = dataSource.snapshot()
+        let beforeMovieQualityViewObjects = currentSnapshot.itemIdentifiers(inSection: .movieQuality)
+        let beforeMovieSpeedViewObjects = currentSnapshot.itemIdentifiers(inSection: .movieSpeed)
+        let beforeQuestionViewObjects = currentSnapshot.itemIdentifiers(inSection: .questions)
+
         let isEqualMovieQualityViewObject = (beforeMovieQualityViewObjects == [movieQualityViewObject])
         if !isEqualMovieQualityViewObject {
-            snapshot.deleteItems(beforeMovieQualityViewObjects)
-            snapshot.appendItems([movieQualityViewObject], toSection: .movieQuality)
+
+            var newSnapshot = NSDiffableDataSourceSnapshot<SettingsSection, AnyHashable>()
+            newSnapshot.appendSections(SettingsSection.allCases)
+            newSnapshot.appendItems([movieQualityViewObject], toSection: .movieQuality)
+            newSnapshot.appendItems(beforeMovieSpeedViewObjects, toSection: .movieSpeed)
+            newSnapshot.appendItems(beforeQuestionViewObjects, toSection: .questions)
+
             DispatchQueue.main.asyncAfter(deadline: .now() + 0.4, execute: {
-                self.dataSource.apply(self.snapshot, animatingDifferences: true)
+                self.dataSource.apply(newSnapshot, animatingDifferences: true)
             })
         }
     }
 
     func applyNewMovieSpeedViewObjectToDataSource(movieSpeedViewObject: MovieSpeedViewObject) {
 
-        let beforeMovieSpeedViewObjects = snapshot.itemIdentifiers(inSection: .movieSpeed)
+        let currentSnapshot = dataSource.snapshot()
+        let beforeMovieQualityViewObjects = currentSnapshot.itemIdentifiers(inSection: .movieQuality)
+        let beforeMovieSpeedViewObjects = currentSnapshot.itemIdentifiers(inSection: .movieSpeed)
+        let beforeQuestionViewObjects = currentSnapshot.itemIdentifiers(inSection: .questions)
+
         let isEqualMovieSpeedViewObject = (beforeMovieSpeedViewObjects == [movieSpeedViewObject])
         if !isEqualMovieSpeedViewObject {
-            snapshot.deleteItems(beforeMovieSpeedViewObjects)
-            snapshot.appendItems([movieSpeedViewObject], toSection: .movieSpeed)
+
+            var newSnapshot = NSDiffableDataSourceSnapshot<SettingsSection, AnyHashable>()
+            newSnapshot.appendSections(SettingsSection.allCases)
+            newSnapshot.appendItems(beforeMovieQualityViewObjects, toSection: .movieQuality)
+            newSnapshot.appendItems([movieSpeedViewObject], toSection: .movieSpeed)
+            newSnapshot.appendItems(beforeQuestionViewObjects, toSection: .questions)
+
             DispatchQueue.main.asyncAfter(deadline: .now() + 0.4, execute: {
-                self.dataSource.apply(self.snapshot, animatingDifferences: true)
+                self.dataSource.apply(newSnapshot, animatingDifferences: true)
             })
         }
     }
@@ -233,8 +232,9 @@ extension SettingsViewController: UITableViewDelegate {
         guard let targetSection = SettingsSection(rawValue: indexPath.section) else {
             return
         }
-        let targetSnapshot = snapshot.itemIdentifiers(inSection: targetSection)
-        let viewObject = targetSnapshot[indexPath.row]
+        let currentSnapshot = dataSource.snapshot()
+        let currentSnapshotInSection = currentSnapshot.itemIdentifiers(inSection: targetSection)
+        let viewObject = currentSnapshotInSection[indexPath.row]
 
         switch viewObject {
         case let viewObject as MovieQualityViewObject:
@@ -260,8 +260,9 @@ extension SettingsViewController: UITableViewDelegate {
         guard let targetSection = SettingsSection(rawValue: indexPath.section) else {
             return nil
         }
-        let targetSnapshot = snapshot.itemIdentifiers(inSection: targetSection)
-        let viewObject = targetSnapshot[indexPath.row]
+        let currentSnapshot = dataSource.snapshot()
+        let currentSnapshotInSection = currentSnapshot.itemIdentifiers(inSection: targetSection)
+        let viewObject = currentSnapshotInSection[indexPath.row]
 
         // MEMO: viewObjectの型に応じて表示するメニューを出し分ける
         return UIContextMenuConfiguration(
@@ -327,7 +328,8 @@ extension SettingsViewController: UIScrollViewDelegate {
 extension SettingsViewController: GlobalTabBarInitialViewControllerScrollable {
 
     func initialViewControllerScrollToTop() {
-        if snapshot.numberOfSections > 0 {
+        let currentSnapshot = dataSource.snapshot()
+        if currentSnapshot.numberOfSections > 0 {
             tableView.scrollToRow(at: IndexPath(item: 0, section: 0), at: .top, animated: true)
         }
     }
