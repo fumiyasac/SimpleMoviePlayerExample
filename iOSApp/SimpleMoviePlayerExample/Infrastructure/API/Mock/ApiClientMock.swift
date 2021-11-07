@@ -23,9 +23,9 @@ class ApiClientMock {
         case news = "main_news_stub"
         case mainMovies = "main_movie_stub"
         case featuredMovies = "featured_movie_stub"
-        case profile = "profile/me"
-        case profileActivity = "profile/activities"
-        case profileComments = "profile/comments"
+        case profile = "profile_me_stub"
+        case profileActivity = "profile_activities_me_stub"
+        case profileComments = "profile_comments_me_stub"
     }
 }
 
