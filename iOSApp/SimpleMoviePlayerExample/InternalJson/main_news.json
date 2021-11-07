@@ -1,0 +1,98 @@
+[
+    {
+        "id": 12,
+        "news_genre": "お知らせ",
+        "pubilshed_date": "2021.08.01",
+        "thumbnail_url": "https://simple-movie-example.s3.ap-northeast-1.amazonaws.com/news_thumbnails/news_sample12.jpg",
+        "title": "2021年のお盆休み期間について",
+        "description": "2021年8月12日から2021年8月16日の5日間はコンテンツの更新をお休み致します。お手数をおかけしますがよろしくお願い致します。"
+    },
+    {
+        "id": 11,
+        "news_genre": "お知らせ",
+        "pubilshed_date": "2021.08.01",
+        "thumbnail_url": "https://simple-movie-example.s3.ap-northeast-1.amazonaws.com/news_thumbnails/news_sample11.jpg",
+        "title": "2021年8月の新着情報",
+        "description": "お得な情報や新規掲載店舗のご紹介、割引クーポン情報や特集記事をご紹介しています。"
+    },
+    {
+        "id": 10,
+        "news_genre": "お知らせ",
+        "pubilshed_date": "2021.07.21",
+        "thumbnail_url": "https://simple-movie-example.s3.ap-northeast-1.amazonaws.com/news_thumbnails/news_sample10.jpg",
+        "title": "第1回夏の食卓動画コンテスト",
+        "description": "これから夏休みも始まるシーズンを記念して開催します。応募期間は7月30日〜8月31までになります。"
+    },
+    {
+        "id": 9,
+        "news_genre": "お知らせ",
+        "pubilshed_date": "2021.07.01",
+        "thumbnail_url": "https://simple-movie-example.s3.ap-northeast-1.amazonaws.com/news_thumbnails/news_sample9.jpg",
+        "title": "2021年7月の新着情報",
+        "description": "お得な情報や新規掲載店舗のご紹介、割引クーポン情報や特集記事をご紹介しています。"
+    },
+    {
+        "id": 8,
+        "news_genre": "お知らせ",
+        "pubilshed_date": "2021.06.01",
+        "thumbnail_url": "https://simple-movie-example.s3.ap-northeast-1.amazonaws.com/news_thumbnails/news_sample8.jpg",
+        "title": "2021年6月の新着情報",
+        "description": "お得な情報や新規掲載店舗のご紹介、割引クーポン情報や特集記事をご紹介しています。"
+    },
+    {
+        "id": 7,
+        "news_genre": "お知らせ",
+        "pubilshed_date": "2021.05.01",
+        "thumbnail_url": "https://simple-movie-example.s3.ap-northeast-1.amazonaws.com/news_thumbnails/news_sample7.jpg",
+        "title": "2021年のゴールデンウィーク期間について",
+        "description": "2021年5月3日から2021年5月6日の4日間はコンテンツの更新をお休み致します。お手数をおかけしますがよろしくお願い致します。"
+    },
+    {
+        "id": 6,
+        "news_genre": "お知らせ",
+        "pubilshed_date": "2021.05.01",
+        "thumbnail_url": "https://simple-movie-example.s3.ap-northeast-1.amazonaws.com/news_thumbnails/news_sample6.jpg",
+        "title": "2021年5月の新着情報",
+        "description": "お得な情報や新規掲載店舗のご紹介、割引クーポン情報や特集記事をご紹介しています。"
+    },
+    {
+        "id": 5,
+        "news_genre": "お知らせ",
+        "pubilshed_date": "2021.04.01",
+        "thumbnail_url": "https://simple-movie-example.s3.ap-northeast-1.amazonaws.com/news_thumbnails/news_sample5.jpg",
+        "title": "2021年4月の新着情報",
+        "description": "お得な情報や新規掲載店舗のご紹介、割引クーポン情報や特集記事をご紹介しています。"
+    },
+    {
+        "id": 4,
+        "news_genre": "お知らせ",
+        "pubilshed_date": "2021.03.15",
+        "thumbnail_url": "https://simple-movie-example.s3.ap-northeast-1.amazonaws.com/news_thumbnails/news_sample4.jpg",
+        "title": "新生活応援！簡単料理動画コンテスト",
+        "description": "新生活で役立つ美味しいレシピを募集しています。応募期間は3月20日〜4月30までになります。"
+    },
+    {
+        "id": 3,
+        "news_genre": "お知らせ",
+        "pubilshed_date": "2021.03.01",
+        "thumbnail_url": "https://simple-movie-example.s3.ap-northeast-1.amazonaws.com/news_thumbnails/news_sample3.jpg",
+        "title": "2021年3月の新着情報",
+        "description": "お得な情報や新規掲載店舗のご紹介、割引クーポン情報や特集記事をご紹介しています。"
+    },
+    {
+        "id": 2,
+        "news_genre": "お知らせ",
+        "pubilshed_date": "2021.02.01",
+        "thumbnail_url": "https://simple-movie-example.s3.ap-northeast-1.amazonaws.com/news_thumbnails/news_sample2.jpg",
+        "title": "2021年2月の新着情報",
+        "description": "お得な情報や新規掲載店舗のご紹介、割引クーポン情報や特集記事をご紹介しています。"
+    },
+    {
+        "id": 1,
+        "news_genre": "お知らせ",
+        "pubilshed_date": "2021.01.01",
+        "thumbnail_url": "https://simple-movie-example.s3.ap-northeast-1.amazonaws.com/news_thumbnails/news_sample1.jpg",
+        "title": "2021年1月の新着情報",
+        "description": "お得な情報や新規掲載店舗のご紹介、割引クーポン情報や特集記事をご紹介しています。"
+    }
+]

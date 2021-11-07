@@ -1,0 +1,54 @@
+[
+    {
+        "id": 1,
+        "author_name": "petit_cake🍰",
+        "pubilshed_date": "2021.07.30",
+        "thumbnail_url": "https://simple-movie-example.s3.ap-northeast-1.amazonaws.com/featured_movies/featured_sample1_thumb.png",
+        "movies": {
+            "low": "https://simple-movie-example.s3.ap-northeast-1.amazonaws.com/featured_movies/featured_sample1_l.mp4",
+            "medium": "https://simple-movie-example.s3.ap-northeast-1.amazonaws.com/featured_movies/featured_sample1_m.mp4",
+            "high": "https://simple-movie-example.s3.ap-northeast-1.amazonaws.com/featured_movies/featured_sample1_h.mp4"
+        },
+        "title": "エスニック風シーフード焼きそば",
+        "description": "えび・いかを惜しみなく使ったナムプラーとパクチーがポイントの焼きそばです。"
+    },
+    {
+        "id": 2,
+        "author_name": "Beer好き🍺",
+        "pubilshed_date": "2021.07.30",
+        "thumbnail_url": "https://simple-movie-example.s3.ap-northeast-1.amazonaws.com/featured_movies/featured_sample2_thumb.png",
+        "movies": {
+            "low": "https://simple-movie-example.s3.ap-northeast-1.amazonaws.com/featured_movies/featured_sample2_l.mp4",
+            "medium": "https://simple-movie-example.s3.ap-northeast-1.amazonaws.com/featured_movies/featured_sample2_m.mp4",
+            "high": "https://simple-movie-example.s3.ap-northeast-1.amazonaws.com/featured_movies/featured_sample2_h.mp4"
+        },
+        "title": "魚のハーブ焼き",
+        "description": "新鮮な魚を贅沢に使ってハーブと一緒に焼いたシンプルな一品です。"
+    },
+    {
+        "id": 3,
+        "author_name": "三角おにぎり🍙",
+        "pubilshed_date": "2021.07.30",
+        "thumbnail_url": "https://simple-movie-example.s3.ap-northeast-1.amazonaws.com/featured_movies/featured_sample3_thumb.png",
+        "movies": {
+            "low": "https://simple-movie-example.s3.ap-northeast-1.amazonaws.com/featured_movies/featured_sample3_l.mp4",
+            "medium": "https://simple-movie-example.s3.ap-northeast-1.amazonaws.com/featured_movies/featured_sample3_m.mp4",
+            "high": "https://simple-movie-example.s3.ap-northeast-1.amazonaws.com/featured_movies/featured_sample3_h.mp4"
+        },
+        "title": "鶏肉のスタミナ炒め",
+        "description": "鶏肉とミックスした香辛料が食欲を湧かせてくれます。"
+    },
+    {
+        "id": 4,
+        "author_name": "mini_strawberry🍓",
+        "pubilshed_date": "2021.07.30",
+        "thumbnail_url": "https://simple-movie-example.s3.ap-northeast-1.amazonaws.com/featured_movies/featured_sample4_thumb.png",
+        "movies": {
+            "low": "https://simple-movie-example.s3.ap-northeast-1.amazonaws.com/featured_movies/featured_sample4_l.mp4",
+            "medium": "https://simple-movie-example.s3.ap-northeast-1.amazonaws.com/featured_movies/featured_sample4_m.mp4",
+            "high": "https://simple-movie-example.s3.ap-northeast-1.amazonaws.com/featured_movies/featured_sample4_h.mp4"
+        },
+        "title": "野菜とお豆腐のカレー",
+        "description": "暑い夏にもピッタリな食べやすさのあるカレーです。"
+    }
+]
