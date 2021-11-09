@@ -9,11 +9,20 @@ import Foundation
 
 // sourcery: AutoMockable
 protocol MainView: AnyObject {
-    func setupCollectionView()
+    func showToolTipIfNeeded(
+        shouldShowToolTip: Bool
+    )
+    func applyAllViewObjectsToDataSource(
+        mainBannerViewObjects: [MainBannerViewObject],
+        mainNewsViewObject: [MainNewsViewObject],
+        mainMovieViewObjects: [MainMovieViewObject],
+        featuredMovieViewObjects: [FeaturedMovieViewObject]
+    )
 }
 
 protocol MainPresenter: AnyObject {
-    func viewWillAppearTrigger()
+    func viewDidLoadTrigger()
     func refreshTrigger()
-    func addOrRemoveFavorite(mainMovieEntity: MainMovieEntity)
+    func didTapMainMovieCell(mainMovieViewObject: MainMovieViewObject)
+    func didTapFeaturedMovieCell(featuredMovieViewObject: FeaturedMovieViewObject)
 }

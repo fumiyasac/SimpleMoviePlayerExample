@@ -37,9 +37,19 @@ final class MainPresenterImpl: MainPresenter {
 
     // MARK: - Function
 
-    func viewWillAppearTrigger() {}
-    
-    func refreshTrigger() {}
+    func viewDidLoadTrigger() {
+        //
+    }
 
-    func addOrRemoveFavorite(mainMovieEntity: MainMovieEntity) {}
+    func refreshTrigger() {
+        //
+    }
+
+    func didTapMainMovieCell(mainMovieViewObject: MainMovieViewObject) {
+        //
+    }
+
+    func didTapFeaturedMovieCell(featuredMovieViewObject: FeaturedMovieViewObject) {
+        //
+    }
 }

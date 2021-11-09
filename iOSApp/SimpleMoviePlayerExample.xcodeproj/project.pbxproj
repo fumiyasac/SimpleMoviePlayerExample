@@ -120,8 +120,8 @@
 		DEB15A0526E11E2E003FC5C1 /* ProfileCommentId.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEB15A0426E11E2E003FC5C1 /* ProfileCommentId.swift */; };
 		DEB15A0726E11E39003FC5C1 /* ProfileCommentEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEB15A0626E11E39003FC5C1 /* ProfileCommentEntity.swift */; };
 		DEB2313026EE4C0E009A839B /* MainMovieViewObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEB2312F26EE4C0E009A839B /* MainMovieViewObject.swift */; };
-		DEB2313226EE4C22009A839B /* NewsViewObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEB2313126EE4C22009A839B /* NewsViewObject.swift */; };
-		DEB2313426EE4C35009A839B /* FeatureMovieViewObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEB2313326EE4C35009A839B /* FeatureMovieViewObject.swift */; };
+		DEB2313226EE4C22009A839B /* MainNewsViewObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEB2313126EE4C22009A839B /* MainNewsViewObject.swift */; };
+		DEB2313426EE4C35009A839B /* FeaturedMovieViewObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEB2313326EE4C35009A839B /* FeaturedMovieViewObject.swift */; };
 		DEB2313626EE4C60009A839B /* MainBannerViewObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEB2313526EE4C60009A839B /* MainBannerViewObject.swift */; };
 		DEB2313A26EE4D5C009A839B /* FavoriteViewObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEB2313926EE4D5C009A839B /* FavoriteViewObject.swift */; };
 		DEB2313D26EE4D8D009A839B /* MovieQualityViewObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEB2313C26EE4D8D009A839B /* MovieQualityViewObject.swift */; };
@@ -311,8 +311,8 @@
 		DEB15A0426E11E2E003FC5C1 /* ProfileCommentId.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileCommentId.swift; sourceTree = "<group>"; };
 		DEB15A0626E11E39003FC5C1 /* ProfileCommentEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileCommentEntity.swift; sourceTree = "<group>"; };
 		DEB2312F26EE4C0E009A839B /* MainMovieViewObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMovieViewObject.swift; sourceTree = "<group>"; };
-		DEB2313126EE4C22009A839B /* NewsViewObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsViewObject.swift; sourceTree = "<group>"; };
-		DEB2313326EE4C35009A839B /* FeatureMovieViewObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeatureMovieViewObject.swift; sourceTree = "<group>"; };
+		DEB2313126EE4C22009A839B /* MainNewsViewObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainNewsViewObject.swift; sourceTree = "<group>"; };
+		DEB2313326EE4C35009A839B /* FeaturedMovieViewObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeaturedMovieViewObject.swift; sourceTree = "<group>"; };
 		DEB2313526EE4C60009A839B /* MainBannerViewObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainBannerViewObject.swift; sourceTree = "<group>"; };
 		DEB2313926EE4D5C009A839B /* FavoriteViewObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteViewObject.swift; sourceTree = "<group>"; };
 		DEB2313C26EE4D8D009A839B /* MovieQualityViewObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieQualityViewObject.swift; sourceTree = "<group>"; };
@@ -612,9 +612,9 @@
 			isa = PBXGroup;
 			children = (
 				DEB2313526EE4C60009A839B /* MainBannerViewObject.swift */,
-				DEB2313126EE4C22009A839B /* NewsViewObject.swift */,
+				DEB2313126EE4C22009A839B /* MainNewsViewObject.swift */,
 				DEB2312F26EE4C0E009A839B /* MainMovieViewObject.swift */,
-				DEB2313326EE4C35009A839B /* FeatureMovieViewObject.swift */,
+				DEB2313326EE4C35009A839B /* FeaturedMovieViewObject.swift */,
 				DEB2313926EE4D5C009A839B /* FavoriteViewObject.swift */,
 				DEB2313C26EE4D8D009A839B /* MovieQualityViewObject.swift */,
 				DEB2313E26EE4D9A009A839B /* MovieSpeedViewObject.swift */,
@@ -1300,7 +1300,7 @@
 				DEB9710726D7D927004D7B56 /* FavoriteMainMoviesDto.swift in Sources */,
 				DE5F6E83267FC27100FCD3A1 /* UIViewControllerExtension.swift in Sources */,
 				DEA99D3926F0C7BF00BEC08E /* QuestionViewObject.swift in Sources */,
-				DEB2313426EE4C35009A839B /* FeatureMovieViewObject.swift in Sources */,
+				DEB2313426EE4C35009A839B /* FeaturedMovieViewObject.swift in Sources */,
 				DEB970F726D15BA8004D7B56 /* MovieSpeedRepository.swift in Sources */,
 				DEB2313026EE4C0E009A839B /* MainMovieViewObject.swift in Sources */,
 				DEB9710C26D7DBF4004D7B56 /* FavoriteMainMovieEntity.swift in Sources */,
@@ -1338,7 +1338,7 @@
 				DECACF0026E58F63007459C1 /* DeleteLastShownMainMoviePlayTimeUseCase.swift in Sources */,
 				DEA47536263F40AA00090DA5 /* SceneDelegate.swift in Sources */,
 				DEA3C09326D9F1EC0080226E /* SaveLastShownFeatureMoviePlayTimeUseCase.swift in Sources */,
-				DEB2313226EE4C22009A839B /* NewsViewObject.swift in Sources */,
+				DEB2313226EE4C22009A839B /* MainNewsViewObject.swift in Sources */,
 				DE8DFD9A26C5605B00CAB778 /* LastShownFeaturedMoviePlayTimeRepository.swift in Sources */,
 				DE8DFD8926C553FE00CAB778 /* MainMovieRepository.swift in Sources */,
 				DE5F6E7B267FC19F00FCD3A1 /* NSObjectProtocolExtension.swift in Sources */,

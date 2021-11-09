@@ -1,5 +1,5 @@
 //
-//  NewsViewObject.swift
+//  MainNewsViewObject.swift
 //  SimpleMoviePlayerExample
 //
 //  Created by 酒井文也 on 2021/09/12.
@@ -7,7 +7,7 @@
 
 import Foundation
 
-final class NewsViewObject: Hashable {
+final class MainNewsViewObject: Hashable {
 
     let id: MainNewsId
     let newsGenre: String
@@ -31,7 +31,7 @@ final class NewsViewObject: Hashable {
         hasher.combine(id.value)
     }
 
-    static func == (lhs: NewsViewObject, rhs: NewsViewObject) -> Bool {
+    static func == (lhs: MainNewsViewObject, rhs: MainNewsViewObject) -> Bool {
         return lhs.id == rhs.id
             && lhs.newsGenre == rhs.newsGenre
             && lhs.pubilshedDate == rhs.pubilshedDate

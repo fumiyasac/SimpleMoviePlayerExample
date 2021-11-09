@@ -40,6 +40,19 @@ final class MainViewController: UIViewController {
 // MARK: - MainView
 
 extension MainViewController: MainView {
+    func showToolTipIfNeeded(shouldShowToolTip: Bool) {
+        //
+    }
+
+    func applyAllViewObjectsToDataSource(
+        mainBannerViewObjects: [MainBannerViewObject],
+        mainNewsViewObject: [MainNewsViewObject],
+        mainMovieViewObjects: [MainMovieViewObject],
+        featuredMovieViewObjects: [FeaturedMovieViewObject]
+    ) {
+        //
+    }
+    
 
     func setupCollectionView() {
     }

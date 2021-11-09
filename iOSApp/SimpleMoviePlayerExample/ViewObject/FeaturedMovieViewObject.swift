@@ -1,5 +1,5 @@
 //
-//  FeatureMovieViewObject.swift
+//  FeaturedMovieViewObject.swift
 //  SimpleMoviePlayerExample
 //
 //  Created by 酒井文也 on 2021/09/12.
@@ -7,7 +7,7 @@
 
 import Foundation
 
-final class FeatureMovieViewObject: Hashable {
+final class FeaturedMovieViewObject: Hashable {
 
     let id: FeaturedMovieId
     let authorName: String
@@ -33,7 +33,7 @@ final class FeatureMovieViewObject: Hashable {
         hasher.combine(id.value)
     }
 
-    static func == (lhs: FeatureMovieViewObject, rhs: FeatureMovieViewObject) -> Bool {
+    static func == (lhs: FeaturedMovieViewObject, rhs: FeaturedMovieViewObject) -> Bool {
         return lhs.id == rhs.id
             && lhs.authorName == rhs.authorName
             && lhs.pubilshedDate == rhs.pubilshedDate
