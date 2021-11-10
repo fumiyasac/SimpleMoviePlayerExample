@@ -21,6 +21,10 @@ protocol MainView: AnyObject {
 }
 
 protocol MainPresenter: AnyObject {
+    func setup(
+         view: MainView,
+         coodinator: MainCoodinator
+     )
     func viewDidLoadTrigger()
     func refreshTrigger()
     func didTapMainMovieCell(mainMovieViewObject: MainMovieViewObject)

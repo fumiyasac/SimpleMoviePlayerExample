@@ -35,7 +35,7 @@
 		DE136BE227204537007F6808 /* UINavigationControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE136BE127204537007F6808 /* UINavigationControllerExtension.swift */; };
 		DE136BE52722742A007F6808 /* SkeletonView in Frameworks */ = {isa = PBXBuildFile; productRef = DE136BE42722742A007F6808 /* SkeletonView */; };
 		DE24CC1C270C9A6000246E69 /* ScreenCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE24CC1B270C9A6000246E69 /* ScreenCoordinator.swift */; };
-		DE24CC1E270C9B2700246E69 /* MainScreenCoodinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE24CC1D270C9B2700246E69 /* MainScreenCoodinator.swift */; };
+		DE24CC1E270C9B2700246E69 /* MainCoodinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE24CC1D270C9B2700246E69 /* MainCoodinator.swift */; };
 		DE24CC202711DCDD00246E69 /* FavoriteCoodinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE24CC1F2711DCDD00246E69 /* FavoriteCoodinator.swift */; };
 		DE340E1926C958FE00FE230A /* FavoriteMainMovieRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE340E1826C958FE00FE230A /* FavoriteMainMovieRepository.swift */; };
 		DE3FBBED26F6331A00D5CA9C /* PortraitNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE3FBBEC26F6331900D5CA9C /* PortraitNavigationController.swift */; };
@@ -223,7 +223,7 @@
 		DE1275B327305076008B3178 /* UILabelDecorator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UILabelDecorator.swift; sourceTree = "<group>"; };
 		DE136BE127204537007F6808 /* UINavigationControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UINavigationControllerExtension.swift; sourceTree = "<group>"; };
 		DE24CC1B270C9A6000246E69 /* ScreenCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenCoordinator.swift; sourceTree = "<group>"; };
-		DE24CC1D270C9B2700246E69 /* MainScreenCoodinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenCoodinator.swift; sourceTree = "<group>"; };
+		DE24CC1D270C9B2700246E69 /* MainCoodinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoodinator.swift; sourceTree = "<group>"; };
 		DE24CC1F2711DCDD00246E69 /* FavoriteCoodinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteCoodinator.swift; sourceTree = "<group>"; };
 		DE340E1826C958FE00FE230A /* FavoriteMainMovieRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteMainMovieRepository.swift; sourceTree = "<group>"; };
 		DE3FBBEC26F6331900D5CA9C /* PortraitNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PortraitNavigationController.swift; sourceTree = "<group>"; };
@@ -795,7 +795,7 @@
 			isa = PBXGroup;
 			children = (
 				DE24CC1B270C9A6000246E69 /* ScreenCoordinator.swift */,
-				DE24CC1D270C9B2700246E69 /* MainScreenCoodinator.swift */,
+				DE24CC1D270C9B2700246E69 /* MainCoodinator.swift */,
 				DE24CC1F2711DCDD00246E69 /* FavoriteCoodinator.swift */,
 				DE5361002728531F00FAC549 /* SettingsCoodinator.swift */,
 			);
@@ -1278,7 +1278,7 @@
 				DE8DFD9626C55EBB00CAB778 /* InitialAppOpenRepository.swift in Sources */,
 				DE8DFD6126BD859B00CAB778 /* MainMovieEntity.swift in Sources */,
 				DE8DFD6426BD911E00CAB778 /* FeaturedMovieId.swift in Sources */,
-				DE24CC1E270C9B2700246E69 /* MainScreenCoodinator.swift in Sources */,
+				DE24CC1E270C9B2700246E69 /* MainCoodinator.swift in Sources */,
 				DE8DFD7726BFB54B00CAB778 /* InitialAppOpenLocalStore.swift in Sources */,
 				DE8DFD7026BD93B100CAB778 /* MainNewsEntity.swift in Sources */,
 				DE5F6E79267FC11F00FCD3A1 /* CustomViewBase.swift in Sources */,

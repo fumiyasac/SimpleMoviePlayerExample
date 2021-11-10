@@ -34,12 +34,19 @@ final class MainViewController: UIViewController {
         super.viewDidLoad()
 
         setupNavigationBarTitle(GlobalTabBarItems.main.title)
+
+        presenter.setup(
+            view: self,
+            coodinator: self
+        )
+        presenter.viewDidLoadTrigger()
     }
 }
 
 // MARK: - MainView
 
 extension MainViewController: MainView {
+
     func showToolTipIfNeeded(shouldShowToolTip: Bool) {
         //
     }
@@ -52,9 +59,18 @@ extension MainViewController: MainView {
     ) {
         //
     }
-    
+}
 
-    func setupCollectionView() {
+// MARK: - MainCoodinator
+
+extension MainViewController: MainCoodinator {
+
+    func coordinateToMainMovieDetailPlayer(mainMovieId: MainMovieId) {
+        //
+    }
+
+    func coordinateToFeaturedDetailPlayer() {
+        //
     }
 }
 

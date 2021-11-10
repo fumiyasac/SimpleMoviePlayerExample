@@ -10,6 +10,11 @@ import RxSwift
 
 final class MainPresenterImpl: MainPresenter {
 
+    // MARK: - Property
+
+    private weak var view: MainView?
+    private weak var coodinator: MainCoodinator?
+
     private let getMainUseCase: GetMainUseCase
     private let getFavoriteMainMoviesUseCase: GetFavoriteMainMoviesUseCase
     private let saveFavoriteMainMovieUseCase: SaveFavoriteMainMovieUseCase
@@ -36,6 +41,14 @@ final class MainPresenterImpl: MainPresenter {
     }
 
     // MARK: - Function
+
+    func setup(
+        view: MainView,
+        coodinator: MainCoodinator
+    ) {
+        self.view = view
+        self.coodinator = coodinator
+    }
 
     func viewDidLoadTrigger() {
         //
