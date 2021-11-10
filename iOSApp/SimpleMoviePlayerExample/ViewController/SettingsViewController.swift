@@ -20,7 +20,6 @@ final class SettingsViewController: UIViewController {
     private let presenter: SettingsPresenter
 
     // MEMO: UITableViewDiffableDataSource & NSDiffableDataSourceSnapshotの設定
-    //private var snapshot: NSDiffableDataSourceSnapshot<SettingsSection, AnyHashable>!
     private var dataSource: UITableViewDiffableDataSource<SettingsSection, AnyHashable>! = nil
 
     // MARK: - @IBOutlet
@@ -63,6 +62,9 @@ final class SettingsViewController: UIViewController {
         // ※2: UITableViewのSeparatorは「None」に設定
         tableView.delegate = self
         tableView.estimatedRowHeight = UITableView.automaticDimension
+        if #available(iOS 15.0, *) {
+          tableView.sectionHeaderTopPadding = 0.0
+        }
         tableView.registerCustomCell(MovieSettingsContentCell.self)
         tableView.registerCustomCell(QuestionListContentCell.self)
 
@@ -184,47 +186,6 @@ extension SettingsViewController: UITableViewDelegate {
 
     func tableView(
         _ tableView: UITableView,
-        viewForHeaderInSection section: Int
-    ) -> UIView? {
-
-        // MEMO: 該当のセクションに応じたHeaderを定義する
-        switch section {
-        case SettingsSection.questions.rawValue:
-            let headerView = QuestionListHeaderView(frame: CGRect(x: 0, y: 0, width: tableView.frame.width, height: 48.0))
-            return headerView
-        default:
-            return nil
-        }
-    }
-
-    func tableView(
-        _ tableView: UITableView,
-        heightForHeaderInSection section: Int
-    ) -> CGFloat {
-        switch section {
-        case SettingsSection.questions.rawValue:
-            return 48.0
-        default:
-            return .leastNonzeroMagnitude
-        }
-    }
-
-    func tableView(
-        _ tableView: UITableView,
-        viewForFooterInSection section: Int
-    ) -> UIView? {
-        return nil
-    }
-
-    func tableView(
-        _ tableView: UITableView,
-        heightForFooterInSection section: Int
-    ) -> CGFloat {
-        return .leastNonzeroMagnitude
-    }
-
-    func tableView(
-        _ tableView: UITableView,
         didSelectRowAt indexPath: IndexPath
     ) {
 
@@ -265,23 +226,32 @@ extension SettingsViewController: UITableViewDelegate {
         let viewObject = currentSnapshotInSection[indexPath.row]
 
         // MEMO: viewObjectの型に応じて表示するメニューを出し分ける
-        return UIContextMenuConfiguration(
-            identifier: nil,
-            previewProvider: nil,
-            actionProvider: { [weak self] suggestedActions in
-                guard let weakSelf = self else {
-                    return nil
-                }
-                switch viewObject {
-                case _ as MovieQualityViewObject:
+        switch viewObject {
+        case _ as MovieQualityViewObject:
+            return UIContextMenuConfiguration(
+                identifier: nil,
+                previewProvider: nil,
+                actionProvider: { [weak self] suggestedActions in
+                    guard let weakSelf = self else {
+                        return nil
+                    }
                     return weakSelf.showMovieQualityMenu()
-                case _ as MovieSpeedViewObject:
-                    return weakSelf.showMovieSpeedMenu()
-                default:
-                    return nil
                 }
-            }
-        )
+            )
+        case _ as MovieSpeedViewObject:
+            return UIContextMenuConfiguration(
+                identifier: nil,
+                previewProvider: nil,
+                actionProvider: { [weak self] suggestedActions in
+                    guard let weakSelf = self else {
+                        return nil
+                    }
+                    return weakSelf.showMovieSpeedMenu()
+                }
+            )
+       default:
+            return nil
+        }
     }
 
     // MARK: - Private Function
