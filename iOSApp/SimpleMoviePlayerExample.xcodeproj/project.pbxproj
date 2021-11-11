@@ -10,7 +10,6 @@
 		49D1B7EF0A40F4BE6139D66A /* Pods_SimpleMoviePlayerExample_SimpleMoviePlayerExampleUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8EB340B7D1322CC9C702AB91 /* Pods_SimpleMoviePlayerExample_SimpleMoviePlayerExampleUITests.framework */; };
 		53E89A3FFAD1A4BBC30E2E41 /* Pods_SimpleMoviePlayerExample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0F6E8B24C46852484C8DFBCD /* Pods_SimpleMoviePlayerExample.framework */; };
 		A98499EE6E510602F60CF7DB /* Pods_SimpleMoviePlayerExampleTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 820A67EF4479DEF9E9CC0642 /* Pods_SimpleMoviePlayerExampleTests.framework */; };
-		DE09FC5527329BEF00B4BEB3 /* UniqueDataSourceBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE09FC5427329BEF00B4BEB3 /* UniqueDataSourceBuilder.swift */; };
 		DE09FC63273424D100B4BEB3 /* MainCommonHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE09FC61273424D100B4BEB3 /* MainCommonHeaderView.swift */; };
 		DE09FC64273424D100B4BEB3 /* MainCommonHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = DE09FC62273424D100B4BEB3 /* MainCommonHeaderView.xib */; };
 		DE09FC67273425F300B4BEB3 /* MainBannerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE09FC65273425F300B4BEB3 /* MainBannerCell.swift */; };
@@ -200,7 +199,6 @@
 		BC9841BE6F00408A52C81066 /* Pods-SimpleMoviePlayerExample-SimpleMoviePlayerExampleUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SimpleMoviePlayerExample-SimpleMoviePlayerExampleUITests.debug.xcconfig"; path = "Target Support Files/Pods-SimpleMoviePlayerExample-SimpleMoviePlayerExampleUITests/Pods-SimpleMoviePlayerExample-SimpleMoviePlayerExampleUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		CF32871968371738901CE35F /* Pods-SimpleMoviePlayerExampleTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SimpleMoviePlayerExampleTests.debug.xcconfig"; path = "Target Support Files/Pods-SimpleMoviePlayerExampleTests/Pods-SimpleMoviePlayerExampleTests.debug.xcconfig"; sourceTree = "<group>"; };
 		D7A777ED43B2100757C4421E /* Pods-SimpleMoviePlayerExample-SimpleMoviePlayerExampleUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SimpleMoviePlayerExample-SimpleMoviePlayerExampleUITests.release.xcconfig"; path = "Target Support Files/Pods-SimpleMoviePlayerExample-SimpleMoviePlayerExampleUITests/Pods-SimpleMoviePlayerExample-SimpleMoviePlayerExampleUITests.release.xcconfig"; sourceTree = "<group>"; };
-		DE09FC5427329BEF00B4BEB3 /* UniqueDataSourceBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UniqueDataSourceBuilder.swift; sourceTree = "<group>"; };
 		DE09FC61273424D100B4BEB3 /* MainCommonHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCommonHeaderView.swift; sourceTree = "<group>"; };
 		DE09FC62273424D100B4BEB3 /* MainCommonHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainCommonHeaderView.xib; sourceTree = "<group>"; };
 		DE09FC65273425F300B4BEB3 /* MainBannerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainBannerCell.swift; sourceTree = "<group>"; };
@@ -598,7 +596,6 @@
 			isa = PBXGroup;
 			children = (
 				DE1275B327305076008B3178 /* UILabelDecorator.swift */,
-				DE09FC5427329BEF00B4BEB3 /* UniqueDataSourceBuilder.swift */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -1317,7 +1314,6 @@
 				DEA47534263F40AA00090DA5 /* AppDelegate.swift in Sources */,
 				DEB52A092684CD6A000C33A2 /* DependenciesDefinition.swift in Sources */,
 				DEB529EE2682B84A000C33A2 /* GlobalTabBarController.swift in Sources */,
-				DE09FC5527329BEF00B4BEB3 /* UniqueDataSourceBuilder.swift in Sources */,
 				DE09FC732734262D00B4BEB3 /* FeatureMovieCell.swift in Sources */,
 				DE8DFD9E26C5642800CAB778 /* GetMainUseCase.swift in Sources */,
 				DECACF0026E58F63007459C1 /* DeleteLastShownMainMoviePlayTimeUseCase.swift in Sources */,
