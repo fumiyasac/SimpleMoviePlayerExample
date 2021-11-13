@@ -9,7 +9,7 @@ import UIKit
 
 final class MainViewController: UIViewController {
 
-    // MARK: - Propety
+    // MARK: - Property
     
     private let presenter: MainPresenter
 

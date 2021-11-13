@@ -9,7 +9,7 @@ import UIKit
 
 final class FavoriteViewController: UIViewController {
 
-    // MARK: - Propety
+    // MARK: - Property
     
     private let presenter: FavoritePresenter
 

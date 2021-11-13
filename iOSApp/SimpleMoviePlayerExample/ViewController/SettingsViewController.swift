@@ -15,7 +15,7 @@ enum SettingsSection: Int, CaseIterable {
 
 final class SettingsViewController: UIViewController {
 
-    // MARK: - Propety
+    // MARK: - Property
 
     private let presenter: SettingsPresenter
 
