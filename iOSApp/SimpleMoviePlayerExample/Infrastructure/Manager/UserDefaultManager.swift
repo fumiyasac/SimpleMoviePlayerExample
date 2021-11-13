@@ -15,11 +15,6 @@ extension DefaultsKeys {
 
     // MARK: - Property
 
-    // MEMO: 初めてアプリを開いたか
-    var initialAppOpen: DefaultsKey<Bool> {
-        .init("initialAppOpen", defaultValue: false)
-    }
-
     // MEMO: MainMovie再生位置
     var lastShownMainMoviePlayTime: DefaultsKey<[String: Float]> {
         .init("lastShownMainMoviePlayTime", defaultValue: [:])

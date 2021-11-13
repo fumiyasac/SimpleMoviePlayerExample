@@ -53,10 +53,6 @@ final class DependenciesDefinition {
 
         // MEMO: (2) UserDefault関連処理部分
         dependecies.register(
-            InitialAppOpenLocalStore.self,
-            impl: InitialAppOpenLocalStoreImpl()
-        )
-        dependecies.register(
             LastShownFeaturedMoviePlayTimeLocalStore.self,
             impl: LastShownFeaturedMoviePlayTimeLocalStoreImpl()
         )
@@ -81,13 +77,6 @@ final class DependenciesDefinition {
 
         // MARK: - Repository
 
-        dependecies.register(
-            InitialAppOpenRepository.self,
-            impl: InitialAppOpenRepositoryImpl(
-                initialAppOpenLocalStore: dependecies.resolve(InitialAppOpenLocalStore.self),
-                backgroundScheduler: dependecies.resolve(ImmediateSchedulerType.self, name: background)
-            )
-        )
         dependecies.register(
             LastShownFeaturedMoviePlayTimeRepository.self,
             impl: LastShownFeaturedMoviePlayTimeRepositoryImpl(
@@ -170,7 +159,6 @@ final class DependenciesDefinition {
         dependecies.register(
             GetMainUseCase.self,
             impl: GetMainUseCaseImpl(
-                initialAppOpenRepository: dependecies.resolve(InitialAppOpenRepository.self),
                 mainBannerRepository: dependecies.resolve(MainBannerRepository.self),
                 mainNewsRepository: dependecies.resolve(MainNewsRepository.self),
                 featuredMovieRepository: dependecies.resolve(FeaturedMovieRepository.self),
@@ -257,18 +245,6 @@ final class DependenciesDefinition {
             )
         )
         dependecies.register(
-            GetInitialAppOpenUseCase.self,
-            impl: GetInitialAppOpenUseCaseImpl(
-                initialAppOpenRepository: dependecies.resolve(InitialAppOpenRepository.self)
-            )
-        )
-        dependecies.register(
-            ChangeFalseInitialAppOpenUseCase.self,
-            impl: ChangeFalseInitialAppOpenUseCaseImpl(
-                initialAppOpenRepository: dependecies.resolve(InitialAppOpenRepository.self)
-            )
-        )
-        dependecies.register(
             GetProfileUseCase.self,
             impl: GetProfileUseCaseImpl(
                 profileRepository: dependecies.resolve(ProfileRepository.self)
@@ -290,8 +266,6 @@ final class PresenterFactory {
             getMainUseCase: dependecies.resolve(GetMainUseCase.self),
             getFavoriteMainMoviesUseCase: dependecies.resolve(GetFavoriteMainMoviesUseCase.self),
             saveFavoriteMainMovieUseCase: dependecies.resolve(SaveFavoriteMainMovieUseCase.self),
-            getInitialAppOpenUseCase: dependecies.resolve(GetInitialAppOpenUseCase.self),
-            changeFalseInitialAppOpenUseCase: dependecies.resolve(ChangeFalseInitialAppOpenUseCase.self),
             mainScheduler: dependecies.resolve(ImmediateSchedulerType.self)
         )
     }

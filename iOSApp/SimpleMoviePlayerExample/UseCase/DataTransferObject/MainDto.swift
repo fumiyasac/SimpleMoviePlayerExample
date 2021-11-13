@@ -9,7 +9,6 @@ import Foundation
 
 final class MainDto: Equatable {
 
-    let shouldShowToolTip: Bool
     let mainBanners: [MainBannerEntity]
     let mainNews: [MainNewsEntity]
     let featuredMovies: [FeaturedMovieEntity]
@@ -18,13 +17,11 @@ final class MainDto: Equatable {
     // MARK: - Initializer
 
     init(
-        shouldShowToolTip: Bool,
         mainBanners: [MainBannerEntity],
         mainNews: [MainNewsEntity],
         featuredMovies: [FeaturedMovieEntity],
         mainMovies: [MainMovieEntity]
     ) {
-        self.shouldShowToolTip = shouldShowToolTip
         self.mainBanners = mainBanners
         self.mainNews = mainNews
         self.featuredMovies = featuredMovies
@@ -37,8 +34,7 @@ final class MainDto: Equatable {
         lhs: MainDto,
         rhs: MainDto
     ) -> Bool {
-        return lhs.shouldShowToolTip == rhs.shouldShowToolTip &&
-            lhs.mainBanners == rhs.mainBanners &&
+        return lhs.mainBanners == rhs.mainBanners &&
             lhs.mainNews == rhs.mainNews &&
             lhs.featuredMovies == rhs.featuredMovies &&
             lhs.mainMovies == rhs.mainMovies
