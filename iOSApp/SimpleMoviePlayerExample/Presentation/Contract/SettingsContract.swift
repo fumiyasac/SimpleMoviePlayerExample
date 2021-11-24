@@ -14,8 +14,8 @@ protocol SettingsView: AnyObject {
         movieSpeedViewObject: MovieSpeedViewObject,
         questionViewObjects: [QuestionViewObject]
     )
-    func applyNewMovieQualityViewObjectToDataSource(movieQualityViewObject: MovieQualityViewObject)
-    func applyNewMovieSpeedViewObjectToDataSource(movieSpeedViewObject: MovieSpeedViewObject)
+    func applyNewMovieQualityViewObjectToDataSource(movieQuality: MovieQuality)
+    func applyNewMovieSpeedViewObjectToDataSource(movieSpeed: MovieSpeed)
 }
 
 protocol SettingsPresenter: AnyObject {

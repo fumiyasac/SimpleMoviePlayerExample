@@ -19,31 +19,21 @@ protocol MovieSpeedRepository {
 final class MovieSpeedRepositoryImpl: MovieSpeedRepository {
 
     private let movieSpeedLocalStore: MovieSpeedLocalStore
-    private let backgroundScheduler: ImmediateSchedulerType
 
     // MARK: - Initializer
 
-    init(
-        movieSpeedLocalStore: MovieSpeedLocalStore,
-        backgroundScheduler: ImmediateSchedulerType
-    ) {
+    // MEMO: Backgroundスレッドを指定しなくとも処理自体にはあまり差し支えがないのでこの形としています。
+    init(movieSpeedLocalStore: MovieSpeedLocalStore) {
         self.movieSpeedLocalStore = movieSpeedLocalStore
-        self.backgroundScheduler = backgroundScheduler
     }
 
     // MARK: - MovieSpeedRepository
 
     func find() -> Single<MovieSpeed> {
         return movieSpeedLocalStore.get()
-            .subscribe(
-                on: backgroundScheduler
-            )
     }
 
     func save(movieSpeed: MovieSpeed) -> Completable {
         return movieSpeedLocalStore.set(movieSpeed: movieSpeed)
-            .subscribe(
-                on: backgroundScheduler
-            )
     }
 }

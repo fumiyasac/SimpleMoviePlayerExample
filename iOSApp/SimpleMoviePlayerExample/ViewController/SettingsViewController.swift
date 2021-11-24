@@ -131,48 +131,26 @@ extension SettingsViewController: SettingsView {
         dataSource.apply(newSnapshot, animatingDifferences: false)
     }
 
-    func applyNewMovieQualityViewObjectToDataSource(movieQualityViewObject: MovieQualityViewObject) {
-
-        let currentSnapshot = dataSource.snapshot()
+    func applyNewMovieQualityViewObjectToDataSource(movieQuality: MovieQuality) {
+        var currentSnapshot = dataSource.snapshot()
         let beforeMovieQualityViewObjects = currentSnapshot.itemIdentifiers(inSection: .movieQuality)
-        let beforeMovieSpeedViewObjects = currentSnapshot.itemIdentifiers(inSection: .movieSpeed)
-        let beforeQuestionViewObjects = currentSnapshot.itemIdentifiers(inSection: .questions)
-
-        let isEqualMovieQualityViewObject = (beforeMovieQualityViewObjects == [movieQualityViewObject])
-        if !isEqualMovieQualityViewObject {
-
-            var newSnapshot = NSDiffableDataSourceSnapshot<SettingsSection, AnyHashable>()
-            newSnapshot.appendSections(SettingsSection.allCases)
-            newSnapshot.appendItems([movieQualityViewObject], toSection: .movieQuality)
-            newSnapshot.appendItems(beforeMovieSpeedViewObjects, toSection: .movieSpeed)
-            newSnapshot.appendItems(beforeQuestionViewObjects, toSection: .questions)
-
-            DispatchQueue.main.asyncAfter(deadline: .now() + 0.4, execute: {
-                self.dataSource.apply(newSnapshot, animatingDifferences: true)
-            })
+        guard let movieQualityViewObject = beforeMovieQualityViewObjects.first as? MovieQualityViewObject else {
+            return
         }
+        movieQualityViewObject.update(movieQuality: movieQuality)
+        currentSnapshot.reloadItems([movieQualityViewObject])
+        dataSource.apply(currentSnapshot, animatingDifferences: true)
     }
 
-    func applyNewMovieSpeedViewObjectToDataSource(movieSpeedViewObject: MovieSpeedViewObject) {
-
-        let currentSnapshot = dataSource.snapshot()
-        let beforeMovieQualityViewObjects = currentSnapshot.itemIdentifiers(inSection: .movieQuality)
+    func applyNewMovieSpeedViewObjectToDataSource(movieSpeed: MovieSpeed) {
+        var currentSnapshot = dataSource.snapshot()
         let beforeMovieSpeedViewObjects = currentSnapshot.itemIdentifiers(inSection: .movieSpeed)
-        let beforeQuestionViewObjects = currentSnapshot.itemIdentifiers(inSection: .questions)
-
-        let isEqualMovieSpeedViewObject = (beforeMovieSpeedViewObjects == [movieSpeedViewObject])
-        if !isEqualMovieSpeedViewObject {
-
-            var newSnapshot = NSDiffableDataSourceSnapshot<SettingsSection, AnyHashable>()
-            newSnapshot.appendSections(SettingsSection.allCases)
-            newSnapshot.appendItems(beforeMovieQualityViewObjects, toSection: .movieQuality)
-            newSnapshot.appendItems([movieSpeedViewObject], toSection: .movieSpeed)
-            newSnapshot.appendItems(beforeQuestionViewObjects, toSection: .questions)
-
-            DispatchQueue.main.asyncAfter(deadline: .now() + 0.4, execute: {
-                self.dataSource.apply(newSnapshot, animatingDifferences: true)
-            })
+        guard let movieSpeedViewObject = beforeMovieSpeedViewObjects.first as? MovieSpeedViewObject else {
+            return
         }
+        movieSpeedViewObject.update(movieSpeed: movieSpeed)
+        currentSnapshot.reloadItems([movieSpeedViewObject])
+        dataSource.apply(currentSnapshot, animatingDifferences: true)
     }
 }
 

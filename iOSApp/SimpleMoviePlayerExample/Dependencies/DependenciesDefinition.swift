@@ -129,15 +129,13 @@ final class DependenciesDefinition {
         dependecies.register(
             MovieQualityRepository.self,
             impl: MovieQualityRepositoryImpl(
-                movieQualityLocalStore: dependecies.resolve(MovieQualityLocalStore.self),
-                backgroundScheduler: dependecies.resolve(ImmediateSchedulerType.self, name: background)
+                movieQualityLocalStore: dependecies.resolve(MovieQualityLocalStore.self)
             )
         )
         dependecies.register(
             MovieSpeedRepository.self,
             impl: MovieSpeedRepositoryImpl(
-                movieSpeedLocalStore: dependecies.resolve(MovieSpeedLocalStore.self),
-                backgroundScheduler: dependecies.resolve(ImmediateSchedulerType.self, name: background)
+                movieSpeedLocalStore: dependecies.resolve(MovieSpeedLocalStore.self)
             )
         )
         dependecies.register(

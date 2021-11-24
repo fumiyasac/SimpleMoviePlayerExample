@@ -19,32 +19,21 @@ protocol MovieQualityRepository {
 final class MovieQualityRepositoryImpl: MovieQualityRepository {
 
     private let movieQualityLocalStore: MovieQualityLocalStore
-    private let backgroundScheduler: ImmediateSchedulerType
 
     // MARK: - Initializer
 
-    init(
-        movieQualityLocalStore: MovieQualityLocalStore,
-        backgroundScheduler: ImmediateSchedulerType
-    ) {
+    // MEMO: Backgroundスレッドを指定しなくとも処理自体にはあまり差し支えがないのでこの形としています。
+    init(movieQualityLocalStore: MovieQualityLocalStore) {
         self.movieQualityLocalStore = movieQualityLocalStore
-        self.backgroundScheduler = backgroundScheduler
     }
 
     // MARK: - MovieQualityRepository
 
     func find() -> Single<MovieQuality> {
         return movieQualityLocalStore.get()
-            .subscribe(
-                on: backgroundScheduler
-            )
-
     }
 
     func save(movieQuality: MovieQuality) -> Completable {
         return movieQualityLocalStore.set(movieQuality: movieQuality)
-            .subscribe(
-                on: backgroundScheduler
-            )
     }
 }

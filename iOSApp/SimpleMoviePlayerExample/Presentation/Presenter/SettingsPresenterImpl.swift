@@ -87,7 +87,7 @@ final class SettingsPresenterImpl: SettingsPresenter {
                         return
                     }
                     weakSelf.view?.applyNewMovieQualityViewObjectToDataSource(
-                        movieQualityViewObject: MovieQualityViewObject(movieQuality: movieQuality)
+                        movieQuality: movieQuality
                     )
                 },
                 onError: { error in
@@ -108,7 +108,7 @@ final class SettingsPresenterImpl: SettingsPresenter {
                         return
                     }
                     weakSelf.view?.applyNewMovieSpeedViewObjectToDataSource(
-                        movieSpeedViewObject: MovieSpeedViewObject(movieSpeed: movieSpeed)
+                        movieSpeed: movieSpeed
                     )
                 },
                 onError: { error in
