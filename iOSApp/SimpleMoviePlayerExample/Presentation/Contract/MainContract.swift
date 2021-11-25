@@ -9,9 +9,6 @@ import Foundation
 
 // sourcery: AutoMockable
 protocol MainView: AnyObject {
-    func showToolTipIfNeeded(
-        shouldShowToolTip: Bool
-    )
     func applyAllViewObjectsToDataSource(
         mainBannerViewObjects: [MainBannerViewObject],
         mainNewsViewObject: [MainNewsViewObject],

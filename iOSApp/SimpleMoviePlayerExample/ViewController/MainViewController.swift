@@ -7,6 +7,13 @@
 
 import UIKit
 
+enum MainSection: Int, CaseIterable {
+    case mainBanner
+    case mainNews
+    case mainMovies
+    case featuredMovies
+}
+
 final class MainViewController: UIViewController {
 
     // MARK: - Property
@@ -46,10 +53,6 @@ final class MainViewController: UIViewController {
 // MARK: - MainView
 
 extension MainViewController: MainView {
-
-    func showToolTipIfNeeded(shouldShowToolTip: Bool) {
-        //
-    }
 
     func applyAllViewObjectsToDataSource(
         mainBannerViewObjects: [MainBannerViewObject],
