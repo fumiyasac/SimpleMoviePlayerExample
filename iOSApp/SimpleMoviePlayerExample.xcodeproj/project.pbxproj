@@ -471,6 +471,27 @@
 			path = FavoriteCell;
 			sourceTree = "<group>";
 		};
+		DE56B2DA27527F2000D05EB6 /* UseCase */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = UseCase;
+			sourceTree = "<group>";
+		};
+		DE56B2DB27527F2800D05EB6 /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Repository;
+			sourceTree = "<group>";
+		};
+		DE56B2DC27527F3300D05EB6 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
 		DE5F6E69267FBEEA00FCD3A1 /* Storyboard */ = {
 			isa = PBXGroup;
 			children = (
@@ -831,8 +852,11 @@
 		DEA47549263F40AC00090DA5 /* SimpleMoviePlayerExampleTests */ = {
 			isa = PBXGroup;
 			children = (
-				DEBB956927148436008748E7 /* Infrastructure */,
 				DEB529E9267FCE08000C33A2 /* Mock.generated.swift */,
+				DEBB956927148436008748E7 /* Infrastructure */,
+				DE56B2DB27527F2800D05EB6 /* Repository */,
+				DE56B2DA27527F2000D05EB6 /* UseCase */,
+				DE56B2DC27527F3300D05EB6 /* Presenter */,
 				DEA4754A263F40AC00090DA5 /* SimpleMoviePlayerExampleTests.swift */,
 				DEA4754C263F40AC00090DA5 /* Info.plist */,
 			);
