@@ -626,10 +626,26 @@
 			path = ViewObject;
 			sourceTree = "<group>";
 		};
+		DE7E1EB227664299004CB31F /* LocalStore */ = {
+			isa = PBXGroup;
+			children = (
+				DE0BFBDF271F131300FC0F32 /* MovieQualityLocalStoreSpec.swift */,
+				DE0BFBE1271F160000FC0F32 /* MovieSpeedLocalStoreSpec.swift */,
+			);
+			path = LocalStore;
+			sourceTree = "<group>";
+		};
+		DE7E1EB327664343004CB31F /* ApiClient */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ApiClient;
+			sourceTree = "<group>";
+		};
 		DE82CF1926A9B1E700033A62 /* Infrastructure */ = {
 			isa = PBXGroup;
 			children = (
-				DE8DFD7226BE7AE000CAB778 /* API */,
+				DE8DFD7226BE7AE000CAB778 /* ApiClient */,
 				DE8DFD7526BFB49E00CAB778 /* LocalStore */,
 				DE8DFDA626C7E2C700CAB778 /* SQLiteTable */,
 				DE8DFD7126BE7ACE00CAB778 /* Manager */,
@@ -702,14 +718,14 @@
 			path = Manager;
 			sourceTree = "<group>";
 		};
-		DE8DFD7226BE7AE000CAB778 /* API */ = {
+		DE8DFD7226BE7AE000CAB778 /* ApiClient */ = {
 			isa = PBXGroup;
 			children = (
 				DE8DFD7926BFB66E00CAB778 /* Stub */,
 				DE8DFD7826BFB65600CAB778 /* Mock */,
 				DE8DFD7326BE7C1900CAB778 /* ApiClient.swift */,
 			);
-			path = API;
+			path = ApiClient;
 			sourceTree = "<group>";
 		};
 		DE8DFD7526BFB49E00CAB778 /* LocalStore */ = {
@@ -955,8 +971,8 @@
 		DEBB956927148436008748E7 /* Infrastructure */ = {
 			isa = PBXGroup;
 			children = (
-				DE0BFBDF271F131300FC0F32 /* MovieQualityLocalStoreSpec.swift */,
-				DE0BFBE1271F160000FC0F32 /* MovieSpeedLocalStoreSpec.swift */,
+				DE7E1EB327664343004CB31F /* ApiClient */,
+				DE7E1EB227664299004CB31F /* LocalStore */,
 			);
 			path = Infrastructure;
 			sourceTree = "<group>";
