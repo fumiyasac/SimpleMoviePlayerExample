@@ -149,6 +149,8 @@
 		DEB9710C26D7DBF4004D7B56 /* FavoriteMainMovieEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEB9710B26D7DBF4004D7B56 /* FavoriteMainMovieEntity.swift */; };
 		DEB9710E26D7DFBD004D7B56 /* DeleteFavoriteMainMovieUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEB9710D26D7DFBD004D7B56 /* DeleteFavoriteMainMovieUseCase.swift */; };
 		DEB9711026D7E0E7004D7B56 /* SaveFavoriteMainMovieUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEB9710F26D7E0E7004D7B56 /* SaveFavoriteMainMovieUseCase.swift */; };
+		DEBFCC8A27787D580043234A /* MovieQualityRepositorySpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEBFCC8927787D580043234A /* MovieQualityRepositorySpec.swift */; };
+		DEBFCC8C27787D8C0043234A /* MovieSpeedRepositorySpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEBFCC8B27787D8C0043234A /* MovieSpeedRepositorySpec.swift */; };
 		DECA7FF226E19558005B05E2 /* ProfileRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = DECA7FF126E19558005B05E2 /* ProfileRepository.swift */; };
 		DECACEF626E30B36007459C1 /* GetProfileUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = DECACEF526E30B36007459C1 /* GetProfileUseCase.swift */; };
 		DECACEF826E30B5C007459C1 /* ProfileDto.swift in Sources */ = {isa = PBXBuildFile; fileRef = DECACEF726E30B5C007459C1 /* ProfileDto.swift */; };
@@ -331,6 +333,8 @@
 		DEB9710B26D7DBF4004D7B56 /* FavoriteMainMovieEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteMainMovieEntity.swift; sourceTree = "<group>"; };
 		DEB9710D26D7DFBD004D7B56 /* DeleteFavoriteMainMovieUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteFavoriteMainMovieUseCase.swift; sourceTree = "<group>"; };
 		DEB9710F26D7E0E7004D7B56 /* SaveFavoriteMainMovieUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveFavoriteMainMovieUseCase.swift; sourceTree = "<group>"; };
+		DEBFCC8927787D580043234A /* MovieQualityRepositorySpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieQualityRepositorySpec.swift; sourceTree = "<group>"; };
+		DEBFCC8B27787D8C0043234A /* MovieSpeedRepositorySpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieSpeedRepositorySpec.swift; sourceTree = "<group>"; };
 		DECA7FF126E19558005B05E2 /* ProfileRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileRepository.swift; sourceTree = "<group>"; };
 		DECACEF526E30B36007459C1 /* GetProfileUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetProfileUseCase.swift; sourceTree = "<group>"; };
 		DECACEF726E30B5C007459C1 /* ProfileDto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileDto.swift; sourceTree = "<group>"; };
@@ -481,6 +485,8 @@
 		DE56B2DB27527F2800D05EB6 /* Repository */ = {
 			isa = PBXGroup;
 			children = (
+				DEBFCC8927787D580043234A /* MovieQualityRepositorySpec.swift */,
+				DEBFCC8B27787D8C0043234A /* MovieSpeedRepositorySpec.swift */,
 			);
 			path = Repository;
 			sourceTree = "<group>";
@@ -1406,6 +1412,8 @@
 				DEA4754B263F40AC00090DA5 /* SimpleMoviePlayerExampleTests.swift in Sources */,
 				DE0BFBE2271F160000FC0F32 /* MovieSpeedLocalStoreSpec.swift in Sources */,
 				DE0BFBE0271F131400FC0F32 /* MovieQualityLocalStoreSpec.swift in Sources */,
+				DEBFCC8A27787D580043234A /* MovieQualityRepositorySpec.swift in Sources */,
+				DEBFCC8C27787D8C0043234A /* MovieSpeedRepositorySpec.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
