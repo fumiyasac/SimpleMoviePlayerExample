@@ -81,6 +81,9 @@
 		DE8DFDA426C7BE4E00CAB778 /* MoviePlayerError.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE8DFDA326C7BE4E00CAB778 /* MoviePlayerError.swift */; };
 		DE8DFDA826C7E30000CAB778 /* MainMovieTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE8DFDA726C7E30000CAB778 /* MainMovieTable.swift */; };
 		DE9F05BA2709FAD10035BEFB /* UICircularProgressRing in Frameworks */ = {isa = PBXBuildFile; productRef = DE9F05B92709FAD10035BEFB /* UICircularProgressRing */; };
+		DE9F9A0D277B273600EF32BB /* GetMovieSettingsUseCaseSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE9F9A0C277B273600EF32BB /* GetMovieSettingsUseCaseSpec.swift */; };
+		DE9F9A0F277B2F8A00EF32BB /* SaveMovieQualityUseCaseSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE9F9A0E277B2F8A00EF32BB /* SaveMovieQualityUseCaseSpec.swift */; };
+		DE9F9A11277B2FCA00EF32BB /* SaveMovieSpeedUseCaseSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE9F9A10277B2FCA00EF32BB /* SaveMovieSpeedUseCaseSpec.swift */; };
 		DEA3C08D26D9F1980080226E /* GetLastShownMainMoviePlayTimeUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEA3C08C26D9F1980080226E /* GetLastShownMainMoviePlayTimeUseCase.swift */; };
 		DEA3C08F26D9F1AB0080226E /* GetLastShownFeatureMoviePlayTimeUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEA3C08E26D9F1AB0080226E /* GetLastShownFeatureMoviePlayTimeUseCase.swift */; };
 		DEA3C09126D9F1D60080226E /* SaveLastShownMainMoviePlayTimeUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEA3C09026D9F1D60080226E /* SaveLastShownMainMoviePlayTimeUseCase.swift */; };
@@ -261,6 +264,9 @@
 		DE8DFD9D26C5642800CAB778 /* GetMainUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetMainUseCase.swift; sourceTree = "<group>"; };
 		DE8DFDA326C7BE4E00CAB778 /* MoviePlayerError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviePlayerError.swift; sourceTree = "<group>"; };
 		DE8DFDA726C7E30000CAB778 /* MainMovieTable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMovieTable.swift; sourceTree = "<group>"; };
+		DE9F9A0C277B273600EF32BB /* GetMovieSettingsUseCaseSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetMovieSettingsUseCaseSpec.swift; sourceTree = "<group>"; };
+		DE9F9A0E277B2F8A00EF32BB /* SaveMovieQualityUseCaseSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveMovieQualityUseCaseSpec.swift; sourceTree = "<group>"; };
+		DE9F9A10277B2FCA00EF32BB /* SaveMovieSpeedUseCaseSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveMovieSpeedUseCaseSpec.swift; sourceTree = "<group>"; };
 		DEA3C08C26D9F1980080226E /* GetLastShownMainMoviePlayTimeUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetLastShownMainMoviePlayTimeUseCase.swift; sourceTree = "<group>"; };
 		DEA3C08E26D9F1AB0080226E /* GetLastShownFeatureMoviePlayTimeUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetLastShownFeatureMoviePlayTimeUseCase.swift; sourceTree = "<group>"; };
 		DEA3C09026D9F1D60080226E /* SaveLastShownMainMoviePlayTimeUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveLastShownMainMoviePlayTimeUseCase.swift; sourceTree = "<group>"; };
@@ -478,6 +484,9 @@
 		DE56B2DA27527F2000D05EB6 /* UseCase */ = {
 			isa = PBXGroup;
 			children = (
+				DE9F9A0C277B273600EF32BB /* GetMovieSettingsUseCaseSpec.swift */,
+				DE9F9A0E277B2F8A00EF32BB /* SaveMovieQualityUseCaseSpec.swift */,
+				DE9F9A10277B2FCA00EF32BB /* SaveMovieSpeedUseCaseSpec.swift */,
 			);
 			path = UseCase;
 			sourceTree = "<group>";
@@ -1408,7 +1417,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DE9F9A11277B2FCA00EF32BB /* SaveMovieSpeedUseCaseSpec.swift in Sources */,
 				DEB529EA267FCE08000C33A2 /* Mock.generated.swift in Sources */,
+				DE9F9A0F277B2F8A00EF32BB /* SaveMovieQualityUseCaseSpec.swift in Sources */,
+				DE9F9A0D277B273600EF32BB /* GetMovieSettingsUseCaseSpec.swift in Sources */,
 				DEA4754B263F40AC00090DA5 /* SimpleMoviePlayerExampleTests.swift in Sources */,
 				DE0BFBE2271F160000FC0F32 /* MovieSpeedLocalStoreSpec.swift in Sources */,
 				DE0BFBE0271F131400FC0F32 /* MovieQualityLocalStoreSpec.swift in Sources */,
