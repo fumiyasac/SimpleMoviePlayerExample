@@ -30,6 +30,16 @@ struct QuestionEntity: Hashable, Decodable {
         self.answer = try container.decode(String.self, forKey: .answer)
     }
 
+    init(
+        id: Int,
+        question: String,
+        answer: String
+    ) {
+        self.id = QuestionId(value: id)
+        self.question = question
+        self.answer = answer
+    }
+
     // MARK: - Hashable
 
     func hash(into hasher: inout Hasher) {

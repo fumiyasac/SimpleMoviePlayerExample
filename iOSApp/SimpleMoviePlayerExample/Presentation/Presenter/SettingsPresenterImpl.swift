@@ -61,12 +61,15 @@ final class SettingsPresenterImpl: SettingsPresenter {
                     guard let weakSelf = self else {
                         return
                     }
+                    let movieQualityViewObject = MovieQualityViewObject(movieQuality: movieSettingsDto.movieQuality)
+                    let movieSpeedViewObject = MovieSpeedViewObject(movieSpeed: movieSettingsDto.movieSpeed)
+                    let questionViewObjects = questionDto.questions.map { questionEntity in
+                        QuestionViewObject(questionEntity: questionEntity)
+                    }
                     weakSelf.view?.applyAllViewObjectsToDataSource(
-                        movieQualityViewObject: MovieQualityViewObject(movieQuality: movieSettingsDto.movieQuality),
-                        movieSpeedViewObject: MovieSpeedViewObject(movieSpeed: movieSettingsDto.movieSpeed),
-                        questionViewObjects: questionDto.questions.map { questionEntity in
-                            QuestionViewObject(questionEntity: questionEntity)
-                        }
+                        movieQualityViewObject: movieQualityViewObject,
+                        movieSpeedViewObject: movieSpeedViewObject,
+                        questionViewObjects: questionViewObjects
                     )
                 },
                 onFailure: { error in
