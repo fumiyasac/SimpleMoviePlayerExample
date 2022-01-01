@@ -54,6 +54,38 @@ struct MainMovieEntity: Hashable, Decodable {
         self.tags = try container.decode(String.self, forKey: .tags)
     }
 
+    init(
+        id: Int,
+        category: String,
+        authorName: String,
+        pubilshedDate: String,
+        thumbnailUrl: String,
+        rating: Float,
+        totalViews: Int,
+        low: String,
+        medium: String,
+        high: String,
+        title: String,
+        description: String,
+        tags: String
+    ) {
+        self.id = MainMovieId(value: id)
+        self.category = category
+        self.authorName = authorName
+        self.pubilshedDate = pubilshedDate
+        self.thumbnailUrl = thumbnailUrl
+        self.rating = rating
+        self.totalViews = totalViews
+        self.movies = MoviesEntity(
+            low: low,
+            medium: medium,
+            high: high
+        )
+        self.title = title
+        self.description = description
+        self.tags = tags
+    }
+
     // MARK: - Hashable
 
     func hash(into hasher: inout Hasher) {

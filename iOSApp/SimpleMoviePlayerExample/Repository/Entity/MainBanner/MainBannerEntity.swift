@@ -39,6 +39,22 @@ struct MainBannerEntity: Hashable, Decodable {
         self.thumbnailUrl = try container.decode(String.self, forKey: .thumbnailUrl)
     }
 
+    init(
+        id: Int,
+        title: String,
+        category: String,
+        summary: String,
+        pubilshedDate: String,
+        thumbnailUrl: String
+    ) {
+        self.id = MainBannerId(value: id)
+        self.title = title
+        self.category = category
+        self.summary = summary
+        self.pubilshedDate = pubilshedDate
+        self.thumbnailUrl = thumbnailUrl
+    }
+
     // MARK: - Hashable
 
     func hash(into hasher: inout Hasher) {

@@ -7,6 +7,8 @@
 
 import Foundation
 
+// MEMO: 解像度が異なる動画URLを格納するEntity
+
 struct MoviesEntity: Decodable, Equatable {
 
     let low: String
@@ -28,6 +30,16 @@ struct MoviesEntity: Decodable, Equatable {
         self.low = try container.decode(String.self, forKey: .low)
         self.medium = try container.decode(String.self, forKey: .medium)
         self.high = try container.decode(String.self, forKey: .high)
+    }
+
+    init(
+        low: String,
+        medium: String,
+        high: String
+    ) {
+        self.low = low
+        self.medium = medium
+        self.high = high
     }
 
     // MARK: - Equatable

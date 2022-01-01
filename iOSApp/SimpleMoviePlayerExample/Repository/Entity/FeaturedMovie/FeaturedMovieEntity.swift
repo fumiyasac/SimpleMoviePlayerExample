@@ -42,6 +42,30 @@ struct FeaturedMovieEntity: Hashable, Decodable {
         self.description = try container.decode(String.self, forKey: .description)
     }
 
+    init(
+        id: Int,
+        authorName: String,
+        pubilshedDate: String,
+        thumbnailUrl: String,
+        low: String,
+        medium: String,
+        high: String,
+        title: String,
+        description: String
+    ) {
+        self.id = FeaturedMovieId(value: id)
+        self.authorName = authorName
+        self.pubilshedDate = pubilshedDate
+        self.thumbnailUrl = thumbnailUrl
+        self.movies = MoviesEntity(
+            low: low,
+            medium: medium,
+            high: high
+        )
+        self.title = title
+        self.description = description
+    }
+
     // MARK: - Hashable
 
     func hash(into hasher: inout Hasher) {
