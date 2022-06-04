@@ -36,35 +36,13 @@ extension DefaultsKeys {
     }
 }
 
+// MARK: - DefaultsSerializable
+// → Xcode13.3以降では、既存のSwiftyUserDefaultではエラーが発生するので、ワークアラウンドを追加する
+// 下記リンクから必要なものを見繕って追加すればOK
+// https://github.com/sunshinejr/SwiftyUserDefaults/issues/285#issuecomment-1066897689
+
 extension DefaultsSerializable {
     public static var _defaultsArray: DefaultsArrayBridge<[T]> { return DefaultsArrayBridge() }
-}
-extension Date: DefaultsSerializable {
-    public static var _defaults: DefaultsObjectBridge<Date> { return DefaultsObjectBridge() }
-}
-extension String: DefaultsSerializable {
-    public static var _defaults: DefaultsStringBridge { return DefaultsStringBridge() }
-}
-extension Int: DefaultsSerializable {
-    public static var _defaults: DefaultsIntBridge { return DefaultsIntBridge() }
-}
-extension Double: DefaultsSerializable {
-    public static var _defaults: DefaultsDoubleBridge { return DefaultsDoubleBridge() }
-}
-extension Bool: DefaultsSerializable {
-    public static var _defaults: DefaultsBoolBridge { return DefaultsBoolBridge() }
-}
-extension Data: DefaultsSerializable {
-    public static var _defaults: DefaultsDataBridge { return DefaultsDataBridge() }
-}
-
-extension URL: DefaultsSerializable {
-    #if os(Linux)
-    public static var _defaults: DefaultsKeyedArchiverBridge<URL> { return DefaultsKeyedArchiverBridge() }
-    #else
-    public static var _defaults: DefaultsUrlBridge { return DefaultsUrlBridge() }
-    #endif
-    public static var _defaultsArray: DefaultsKeyedArchiverBridge<[URL]> { return DefaultsKeyedArchiverBridge() }
 }
 
 extension DefaultsSerializable where Self: Codable {
@@ -80,23 +58,4 @@ extension DefaultsSerializable where Self: RawRepresentable {
 extension DefaultsSerializable where Self: NSCoding {
     public static var _defaults: DefaultsKeyedArchiverBridge<Self> { return DefaultsKeyedArchiverBridge() }
     public static var _defaultsArray: DefaultsKeyedArchiverBridge<[Self]> { return DefaultsKeyedArchiverBridge() }
-}
-
-extension Dictionary: DefaultsSerializable where Key == String {
-    public typealias T = [Key: Value]
-    public typealias Bridge = DefaultsObjectBridge<T>
-    public typealias ArrayBridge = DefaultsArrayBridge<[T]>
-    public static var _defaults: Bridge { return Bridge() }
-    public static var _defaultsArray: ArrayBridge { return ArrayBridge() }
-}
-extension Array: DefaultsSerializable where Element: DefaultsSerializable {
-    public typealias T = [Element.T]
-    public typealias Bridge = Element.ArrayBridge
-    public typealias ArrayBridge = DefaultsObjectBridge<[T]>
-    public static var _defaults: Bridge {
-        return Element._defaultsArray
-    }
-    public static var _defaultsArray: ArrayBridge {
-        fatalError("Multidimensional arrays are not supported yet")
-    }
 }
