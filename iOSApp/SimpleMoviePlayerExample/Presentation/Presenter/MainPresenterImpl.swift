@@ -16,21 +16,15 @@ final class MainPresenterImpl: MainPresenter {
     private weak var coodinator: MainCoodinator?
 
     private let getMainUseCase: GetMainUseCase
-    private let getFavoriteMainMoviesUseCase: GetFavoriteMainMoviesUseCase
-    private let saveFavoriteMainMovieUseCase: SaveFavoriteMainMovieUseCase
     private let mainScheduler: ImmediateSchedulerType
 
     // MARK: - Initializer
 
     init(
         getMainUseCase: GetMainUseCase,
-        getFavoriteMainMoviesUseCase: GetFavoriteMainMoviesUseCase,
-        saveFavoriteMainMovieUseCase: SaveFavoriteMainMovieUseCase,
         mainScheduler: ImmediateSchedulerType
     ) {
         self.getMainUseCase = getMainUseCase
-        self.getFavoriteMainMoviesUseCase = getFavoriteMainMoviesUseCase
-        self.saveFavoriteMainMovieUseCase = saveFavoriteMainMovieUseCase
         self.mainScheduler = mainScheduler
     }
 

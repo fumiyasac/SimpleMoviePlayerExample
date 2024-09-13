@@ -1,6 +1,15 @@
 {
-  "originHash" : "990602f943d142d26b1a5421abe2a243e2e1077d090e31e151c33e3ec768723e",
+  "originHash" : "e9faf50e08f5ec082bfb16533e9fff7e1fefafea96bc37bce97b55ca18b667e3",
   "pins" : [
+    {
+      "identity" : "rxswift",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/ReactiveX/RxSwift.git",
+      "state" : {
+        "revision" : "b06a8c8596e4c3e8e7788e08e720e3248563ce6a",
+        "version" : "6.7.1"
+      }
+    },
     {
       "identity" : "sdwebimage",
       "kind" : "remoteSourceControl",
@@ -8,6 +17,15 @@
       "state" : {
         "revision" : "76dd4b49110b8624317fc128e7fa0d8a252018bc",
         "version" : "5.11.1"
+      }
+    },
+    {
+      "identity" : "swiftyuserdefaults",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/sunshinejr/SwiftyUserDefaults.git",
+      "state" : {
+        "revision" : "f66bcd04088582c8fbb5cb8554d577e303bae396",
+        "version" : "5.3.0"
       }
     }
   ],

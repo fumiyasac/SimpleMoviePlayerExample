@@ -6,14 +6,13 @@
 //
 
 import UIKit
-import ActiveLabel
 
 final class QuestionListContentCell: UITableViewCell {
 
     // MARK: - @IBOutlet
 
     @IBOutlet private weak var questionLabel: UILabel!
-    @IBOutlet private weak var answerLabel: ActiveLabel!
+    @IBOutlet private weak var answerLabel: UILabel!
     @IBOutlet private weak var borderViewHeightConstraint: NSLayoutConstraint!
 
     // MARK: - Initializer

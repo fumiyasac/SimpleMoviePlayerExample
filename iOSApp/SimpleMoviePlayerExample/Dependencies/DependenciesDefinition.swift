@@ -69,12 +69,6 @@ final class DependenciesDefinition {
             impl:MovieSpeedLocalStoreImpl()
         )
 
-        // MEMO: (3) SQLite関連処理部分
-        dependecies.register(
-            SQLiteHelper.self,
-            impl: SQLiteManager.shared
-        )
-
         // MARK: - Repository
 
         dependecies.register(
@@ -116,13 +110,6 @@ final class DependenciesDefinition {
             MainNewsRepository.self,
             impl: MainNewsRepositoryImpl(
                 apiClient: dependecies.resolve(ApiClient.self),
-                backgroundScheduler: dependecies.resolve(ImmediateSchedulerType.self, name: background)
-            )
-        )
-        dependecies.register(
-            FavoriteMainMovieRepository.self,
-            impl: FavoriteMainMovieRepositoryImpl(
-                sqliteHelper: dependecies.resolve(SQLiteHelper.self),
                 backgroundScheduler: dependecies.resolve(ImmediateSchedulerType.self, name: background)
             )
         )
@@ -189,24 +176,6 @@ final class DependenciesDefinition {
             )
         )
         dependecies.register(
-            GetFavoriteMainMoviesUseCase.self,
-            impl: GetFavoriteMainMoviesUseCaseImpl(
-                favoriteMainMovieRepository: dependecies.resolve(FavoriteMainMovieRepository.self)
-            )
-        )
-        dependecies.register(
-            DeleteFavoriteMainMovieUseCase.self,
-            impl: DeleteFavoriteMainMovieUseCaseImpl(
-                favoriteMainMovieRepository: dependecies.resolve(FavoriteMainMovieRepository.self)
-            )
-        )
-        dependecies.register(
-            SaveFavoriteMainMovieUseCase.self,
-            impl: SaveFavoriteMainMovieUseCaseImpl(
-                favoriteMainMovieRepository: dependecies.resolve(FavoriteMainMovieRepository.self)
-            )
-        )
-        dependecies.register(
             GetLastShownFeatureMoviePlayTimeUseCase.self,
             impl: GetLastShownFeatureMoviePlayTimeUseCaseImpl(
                 lastShownFeaturedMoviePlayTimeRepository: dependecies.resolve(LastShownFeaturedMoviePlayTimeRepository.self)
@@ -262,16 +231,12 @@ final class PresenterFactory {
     static func createMainPresneter() -> MainPresenter {
         return MainPresenterImpl(
             getMainUseCase: dependecies.resolve(GetMainUseCase.self),
-            getFavoriteMainMoviesUseCase: dependecies.resolve(GetFavoriteMainMoviesUseCase.self),
-            saveFavoriteMainMovieUseCase: dependecies.resolve(SaveFavoriteMainMovieUseCase.self),
             mainScheduler: dependecies.resolve(ImmediateSchedulerType.self)
         )
     }
 
     static func createFavoritePresenter() -> FavoritePresenter {
         return FavoritePresenterImpl(
-            getFavoriteMainMoviesUseCase: dependecies.resolve(GetFavoriteMainMoviesUseCase.self),
-            deleteFavoriteMainMovieUseCase: dependecies.resolve(DeleteFavoriteMainMovieUseCase.self),
             mainScheduler: dependecies.resolve(ImmediateSchedulerType.self)
         )
     }

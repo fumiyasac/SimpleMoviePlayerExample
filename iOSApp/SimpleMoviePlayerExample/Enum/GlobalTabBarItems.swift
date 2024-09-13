@@ -6,7 +6,6 @@
 //
 
 import Foundation
-import FontAwesome_swift
 
 // MEMO: SFSymbolsではUIEdgeInsetでTabBarItemに表示する画像位置が調整できなかった
 // ➡️ ライブラリ「FontAwesome_swift」で代用する

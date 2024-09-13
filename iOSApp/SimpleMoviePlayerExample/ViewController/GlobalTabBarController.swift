@@ -6,7 +6,7 @@
 //
 
 import UIKit
-import FontAwesome_swift
+//import FontAwesome_swift
 
 protocol GlobalTabBarInitialViewControllerScrollable: AnyObject {
     func initialViewControllerScrollToTop()
