@@ -1,6 +1,24 @@
 {
-  "originHash" : "e9faf50e08f5ec082bfb16533e9fff7e1fefafea96bc37bce97b55ca18b667e3",
+  "originHash" : "a2c092c391d4003208855e1081f35d2cad7ed9f89e4ffa44a4aaa2b190ee10fd",
   "pins" : [
+    {
+      "identity" : "cosmos",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/evgenyneu/Cosmos.git",
+      "state" : {
+        "revision" : "40ba10aaf175bf50abefd0e518bd3b40862af3b1",
+        "version" : "25.0.1"
+      }
+    },
+    {
+      "identity" : "handmadecalendaradvance",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/fumiyasac/handMadeCalendarAdvance.git",
+      "state" : {
+        "revision" : "387eaf4dd385468be279f443df106f65ac3555dc",
+        "version" : "0.7.1"
+      }
+    },
     {
       "identity" : "rxswift",
       "kind" : "remoteSourceControl",
@@ -20,12 +38,39 @@
       }
     },
     {
+      "identity" : "swift-syntax",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/apple/swift-syntax.git",
+      "state" : {
+        "revision" : "cb53fa1bd3219b0b23ded7dfdd3b2baff266fd25",
+        "version" : "600.0.0"
+      }
+    },
+    {
+      "identity" : "swift-testing",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/apple/swift-testing.git",
+      "state" : {
+        "revision" : "69d59cfc76e5daf498ca61f5af409f594768eef9",
+        "version" : "0.10.0"
+      }
+    },
+    {
       "identity" : "swiftyuserdefaults",
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/sunshinejr/SwiftyUserDefaults.git",
       "state" : {
         "revision" : "f66bcd04088582c8fbb5cb8554d577e303bae396",
         "version" : "5.3.0"
+      }
+    },
+    {
+      "identity" : "webui",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/cybozu/WebUI.git",
+      "state" : {
+        "revision" : "3a6150781a35431e48634d63e05df0489754b55b",
+        "version" : "2.1.1"
       }
     }
   ],

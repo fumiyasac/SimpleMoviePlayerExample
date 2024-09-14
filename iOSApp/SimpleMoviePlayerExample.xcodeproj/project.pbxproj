@@ -44,6 +44,7 @@
 		DE576CE32C94679200249532 /* FontAwesomeBarButtonItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE576CD82C94679200249532 /* FontAwesomeBarButtonItem.swift */; };
 		DE576CE42C94679200249532 /* FontAwesomeSegmentedControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE576CD92C94679200249532 /* FontAwesomeSegmentedControl.swift */; };
 		DE576CE52C94679200249532 /* FontAwesomeExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE576CDA2C94679200249532 /* FontAwesomeExtension.swift */; };
+		DE576CEB2C95854700249532 /* Testing in Frameworks */ = {isa = PBXBuildFile; productRef = DE576CEA2C95854700249532 /* Testing */; };
 		DE5F6E79267FC11F00FCD3A1 /* CustomViewBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE5F6E78267FC11F00FCD3A1 /* CustomViewBase.swift */; };
 		DE5F6E7B267FC19F00FCD3A1 /* NSObjectProtocolExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE5F6E7A267FC19F00FCD3A1 /* NSObjectProtocolExtension.swift */; };
 		DE5F6E7D267FC1AB00FCD3A1 /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE5F6E7C267FC1AB00FCD3A1 /* UIColorExtension.swift */; };
@@ -356,6 +357,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DE576CEB2C95854700249532 /* Testing in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -949,6 +951,7 @@
 			);
 			name = SimpleMoviePlayerExampleTests;
 			packageProductDependencies = (
+				DE576CEA2C95854700249532 /* Testing */,
 			);
 			productName = SimpleMoviePlayerExampleTests;
 			productReference = DEA47546263F40AC00090DA5 /* SimpleMoviePlayerExampleTests.xctest */;
@@ -1007,6 +1010,10 @@
 				DEB529E5267FC87D000C33A2 /* XCRemoteSwiftPackageReference "SDWebImage" */,
 				DE576CBC2C94608F00249532 /* XCRemoteSwiftPackageReference "RxSwift" */,
 				DE576CC42C9461A300249532 /* XCRemoteSwiftPackageReference "SwiftyUserDefaults" */,
+				DE576CE62C95827600249532 /* XCRemoteSwiftPackageReference "handMadeCalendarAdvance" */,
+				DE576CE72C95832700249532 /* XCRemoteSwiftPackageReference "Cosmos" */,
+				DE576CE82C95849E00249532 /* XCRemoteSwiftPackageReference "WebUI" */,
+				DE576CE92C95854700249532 /* XCRemoteSwiftPackageReference "swift-testing" */,
 			);
 			productRefGroup = DEA47531263F40AA00090DA5 /* Products */;
 			projectDirPath = "";
@@ -1582,6 +1589,38 @@
 				minimumVersion = 5.3.0;
 			};
 		};
+		DE576CE62C95827600249532 /* XCRemoteSwiftPackageReference "handMadeCalendarAdvance" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/fumiyasac/handMadeCalendarAdvance.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.7.1;
+			};
+		};
+		DE576CE72C95832700249532 /* XCRemoteSwiftPackageReference "Cosmos" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/evgenyneu/Cosmos.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 25.0.1;
+			};
+		};
+		DE576CE82C95849E00249532 /* XCRemoteSwiftPackageReference "WebUI" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/cybozu/WebUI.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.1.1;
+			};
+		};
+		DE576CE92C95854700249532 /* XCRemoteSwiftPackageReference "swift-testing" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/apple/swift-testing.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.10.0;
+			};
+		};
 		DEB529E5267FC87D000C33A2 /* XCRemoteSwiftPackageReference "SDWebImage" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/SDWebImage/SDWebImage.git";
@@ -1602,6 +1641,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = DE576CC42C9461A300249532 /* XCRemoteSwiftPackageReference "SwiftyUserDefaults" */;
 			productName = SwiftyUserDefaults;
+		};
+		DE576CEA2C95854700249532 /* Testing */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DE576CE92C95854700249532 /* XCRemoteSwiftPackageReference "swift-testing" */;
+			productName = Testing;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
