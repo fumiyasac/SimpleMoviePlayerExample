@@ -45,6 +45,7 @@
 		DE576CE42C94679200249532 /* FontAwesomeSegmentedControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE576CD92C94679200249532 /* FontAwesomeSegmentedControl.swift */; };
 		DE576CE52C94679200249532 /* FontAwesomeExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE576CDA2C94679200249532 /* FontAwesomeExtension.swift */; };
 		DE576CEB2C95854700249532 /* Testing in Frameworks */ = {isa = PBXBuildFile; productRef = DE576CEA2C95854700249532 /* Testing */; };
+		DE576CEE2C9710DC00249532 /* SettingsViewStateProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE576CED2C9710DC00249532 /* SettingsViewStateProvider.swift */; };
 		DE5F6E79267FC11F00FCD3A1 /* CustomViewBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE5F6E78267FC11F00FCD3A1 /* CustomViewBase.swift */; };
 		DE5F6E7B267FC19F00FCD3A1 /* NSObjectProtocolExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE5F6E7A267FC19F00FCD3A1 /* NSObjectProtocolExtension.swift */; };
 		DE5F6E7D267FC1AB00FCD3A1 /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE5F6E7C267FC1AB00FCD3A1 /* UIColorExtension.swift */; };
@@ -218,6 +219,7 @@
 		DE576CD82C94679200249532 /* FontAwesomeBarButtonItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FontAwesomeBarButtonItem.swift; sourceTree = "<group>"; };
 		DE576CD92C94679200249532 /* FontAwesomeSegmentedControl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FontAwesomeSegmentedControl.swift; sourceTree = "<group>"; };
 		DE576CDA2C94679200249532 /* FontAwesomeExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FontAwesomeExtension.swift; sourceTree = "<group>"; };
+		DE576CED2C9710DC00249532 /* SettingsViewStateProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewStateProvider.swift; sourceTree = "<group>"; };
 		DE5F6E78267FC11F00FCD3A1 /* CustomViewBase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomViewBase.swift; sourceTree = "<group>"; };
 		DE5F6E7A267FC19F00FCD3A1 /* NSObjectProtocolExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSObjectProtocolExtension.swift; sourceTree = "<group>"; };
 		DE5F6E7C267FC1AB00FCD3A1 /* UIColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
@@ -471,6 +473,14 @@
 			path = Fonts;
 			sourceTree = "<group>";
 		};
+		DE576CEC2C9710BC00249532 /* ViewStateProvider */ = {
+			isa = PBXGroup;
+			children = (
+				DE576CED2C9710DC00249532 /* SettingsViewStateProvider.swift */,
+			);
+			path = ViewStateProvider;
+			sourceTree = "<group>";
+		};
 		DE5F6E69267FBEEA00FCD3A1 /* Storyboard */ = {
 			isa = PBXGroup;
 			children = (
@@ -574,6 +584,7 @@
 		DE5F6E70267FBFCB00FCD3A1 /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
+				DE576CEC2C9710BC00249532 /* ViewStateProvider */,
 				DE5F6E6F267FBFC400FCD3A1 /* Contract */,
 				DE82CF2226A9C7F700033A62 /* Presenter */,
 			);
@@ -1174,6 +1185,7 @@
 				DEB970F326D15983004D7B56 /* MovieSpeedLocalStore.swift in Sources */,
 				DEB2313A26EE4D5C009A839B /* FavoriteViewObject.swift in Sources */,
 				DE8DFD9226C55BDA00CAB778 /* MainBannerRepository.swift in Sources */,
+				DE576CEE2C9710DC00249532 /* SettingsViewStateProvider.swift in Sources */,
 				DECB815727010A2C008AE187 /* SaveMovieSpeedUseCase.swift in Sources */,
 				DE09FC7B2734266300B4BEB3 /* FavoriteCell.swift in Sources */,
 				DE576CDC2C94679200249532 /* FontAwesomeStateRequirement.swift in Sources */,
@@ -1415,7 +1427,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = S5BF5553KY;
 				INFOPLIST_FILE = SimpleMoviePlayerExample/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1435,7 +1447,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = S5BF5553KY;
 				INFOPLIST_FILE = SimpleMoviePlayerExample/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1455,7 +1467,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = S5BF5553KY;
 				INFOPLIST_FILE = SimpleMoviePlayerExampleTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1477,7 +1489,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = S5BF5553KY;
 				INFOPLIST_FILE = SimpleMoviePlayerExampleTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1498,6 +1510,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = S5BF5553KY;
 				INFOPLIST_FILE = SimpleMoviePlayerExampleUITests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1518,6 +1531,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = S5BF5553KY;
 				INFOPLIST_FILE = SimpleMoviePlayerExampleUITests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
