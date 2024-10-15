@@ -1632,7 +1632,7 @@
 			repositoryURL = "https://github.com/apple/swift-testing.git";
 			requirement = {
 				kind = upToNextMajorVersion;
-				minimumVersion = 0.10.0;
+				minimumVersion = 0.99.0;
 			};
 		};
 		DEB529E5267FC87D000C33A2 /* XCRemoteSwiftPackageReference "SDWebImage" */ = {
