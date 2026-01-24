@@ -1,15 +1,6 @@
 {
-  "originHash" : "5751b1e823cf6ca173ac4dd1b38f9c31a954868f1a2e68752d6e5aac542aa3ac",
+  "originHash" : "bb3eb33af222b5557fca324ced7c7b14b69c766bbbf862759e814216bd62125b",
   "pins" : [
-    {
-      "identity" : "cosmos",
-      "kind" : "remoteSourceControl",
-      "location" : "https://github.com/evgenyneu/Cosmos.git",
-      "state" : {
-        "revision" : "40ba10aaf175bf50abefd0e518bd3b40862af3b1",
-        "version" : "25.0.1"
-      }
-    },
     {
       "identity" : "rxswift",
       "kind" : "remoteSourceControl",
@@ -17,15 +8,6 @@
       "state" : {
         "revision" : "b529ef9b7fa3ba2b38d299df23fc2165f21abbb9",
         "version" : "6.10.0"
-      }
-    },
-    {
-      "identity" : "sdwebimage",
-      "kind" : "remoteSourceControl",
-      "location" : "https://github.com/SDWebImage/SDWebImage.git",
-      "state" : {
-        "revision" : "36e79ba485e9bb4d3cd4e3318908866dac5e7b51",
-        "version" : "5.21.5"
       }
     },
     {
